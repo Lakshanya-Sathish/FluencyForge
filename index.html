@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FluencyForge — English Skill Enhancer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= FLOATING BACKGROUND SHAPES ================= -->
+  <div class="bg-floating">
+    <div class="float star"></div>
+    <div class="float bubble"></div>
+    <div class="float wave"></div>
+    <div class="float dot"></div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+  <div class="brand">FluencyForge</div>
+
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="practice.html">Practice Tools</a></li>
+  </ul>
+
+  <div class="nav-buttons" id="authButtons">
+    <button class="login-btn" id="loginBtnNav">Login</button>
+    <button class="signup-btn" id="signupBtnNav">Signup</button>
+  </div>
+
+  <button class="logout-btn" id="logoutBtn" style="display:none;">Logout</button>
+</nav>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-left">
+        <h1 class="hero-title">Master English Through AI-Powered Learning</h1>
+        <p class="hero-subtitle">
+          Smart tools for reading, writing, listening & speaking with real-time tracking.
+        </p>
+
+        <button class="btn-primary" onclick="window.location.href='test.html'">
+          Take Free Mini Test →
+        </button>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/illustrations/hero-3d.png" alt="Learning Illustration" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURE SECTION ================= -->
+      <!-- ============= FEATURE SECTION ============= -->
+<section id="features" class="features-section">
+
+  <h2 class="section-title">Everything You Need To Improve</h2>
+
+  <div class="features-wrapper">
+
+    <div class="feature-box">
+      <img src="assets/icons/book.svg" class="feature-logo">
+      <h3>Reading Practice</h3>
+      <p>Build comprehension with structured, level-based passages.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="assets/icons/headphones.svg" class="feature-logo">
+      <h3>Listening Tasks</h3>
+      <p>Train your ear to understand accents & natural speech.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="assets/icons/pen.svg" class="feature-logo">
+      <h3>Writing Skills</h3>
+      <p>Learn clear academic writing with improvement patterns.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="assets/icons/ai.svg" class="feature-logo">
+      <h3>AI-Powered Feedback</h3>
+      <p>Instant suggestions to improve grammar & vocabulary.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="assets/icons/adaptives.svg" class="feature-logo">
+      <h3>Adaptive Test</h3>
+      <p>Difficulty adjusts automatically based on performance.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="assets/icons/chart.svg" class="feature-logo">
+      <h3>Progress Tracking</h3>
+      <p>Clean visual stats to track learning across all skills.</p>
+    </div>
+
+  </div>
+
+</section>
+  <!-- ================= AUTH SECTION ================= -->
+  <section id="auth" class="auth">
+
+    <div class="auth-card">
+      <h3>Login</h3>
+      <form id="loginForm">
+        <label>Email</label>
+        <input type="email" id="loginEmail" required>
+
+        <label>Password</label>
+        <input type="password" id="loginPass" required>
+
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+    </div>
+
+    <div class="auth-card">
+      <h3>Signup</h3>
+      <form id="signupForm">
+
+        <label>Full Name</label>
+        <input type="text" id="signupName" required>
+
+        <label>Email</label>
+        <input type="email" id="signupEmail" required>
+
+        <label>Password</label>
+        <input type="password" id="signupPass" required>
+
+        <button type="submit" class="btn-primary">Signup</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    © 2025 FluencyForge. All rights reserved.
+  </footer>
+
+  <!-- ================= FIREBASE AUTH ================= -->
+  <script type="module">
+    import { loginUser, signupUser } from "./auth.js";
+
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const res = await loginUser(loginEmail.value.trim(), loginPass.value);
+      if (res.success) window.location.href = "practice.html";
+      else alert(res.error);
+    });
+
+    signupForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const res = await signupUser(
+        signupEmail.value.trim(),
+        signupPass.value,
+        signupName.value.trim()
+      );
+      if (res.success) window.location.href = "index.html";
+      else alert(res.error);
+    });
+  </script>
+<script type="module">
+import { auth } from "./firebase.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
+/* Navigation buttons */
+const loginBtnNav = document.getElementById("loginBtnNav");
+const signupBtnNav = document.getElementById("signupBtnNav");
+const logoutBtn = document.getElementById("logoutBtn");
+const authButtons = document.getElementById("authButtons");
+
+/* When user clicks login/signup */
+loginBtnNav.onclick = () => {
+  document.getElementById("auth").scrollIntoView({ behavior: "smooth" });
+};
+signupBtnNav.onclick = () => {
+  document.getElementById("auth").scrollIntoView({ behavior: "smooth" });
+};
+
+/* Logout */
+logoutBtn.onclick = async () => {
+  await signOut(auth);
+  alert("Logged out!");
+  window.location.reload();
+};
+
+/* 🔥 Check if user is logged in */
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // Logged in
+    authButtons.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  } else {
+    // Logged out
+    authButtons.style.display = "flex";
+    logoutBtn.style.display = "none";
+  }
+});
+</script>
+
+</body>
+</html>
