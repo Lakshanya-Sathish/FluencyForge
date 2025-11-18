@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FluencyForge — Mini Test</title>
+
+  <!-- Site global styles (keep) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Test-specific overrides -->
+  <link rel="stylesheet" href="test.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Floating decorative icons (uses your assets/icons/floating/*) -->
+  <div class="bg-floating" aria-hidden="true">
+    <div class="float float-star"></div>
+    <div class="float float-bubble"></div>
+    <div class="float float-wave"></div>
+    <div class="float float-dot"></div>
+    <!-- also include SVG images for sharper icons -->
+    <img class="float-svg svg-1" src="assets/icons/floating/floating-star.svg" alt="">
+    <img class="float-svg svg-2" src="assets/icons/floating/floating-bubble.svg" alt="">
+    <img class="float-svg svg-3" src="assets/icons/floating/floating-wave.svg" alt="">
+    <img class="float-svg svg-4" src="assets/icons/floating/floating-dot.svg" alt="">
+  </div>
+
+  <!-- top header -->
+  <div class="tf-header" role="banner" aria-label="Test header">
+    <div class="brand">Mini Test</div>
+    <div class="top-fixed">
+      <div class="progress-wrap" aria-hidden="true">
+        <div class="progress-track" title="Test progress">
+          <div id="globalProgress" class="progress-bar" style="width:0%"></div>
+        </div>
+      </div>
+      <div id="fixedTimer" class="timer">Time Left: 5:00</div>
+    </div>
+  </div>
+
+  <main class="container test-shell" id="main">
+    <!-- Intro card -->
+    <section class="card card-hero" id="introCard" role="region" aria-labelledby="introTitle">
+      <div class="hero-left">
+        <span class="pill">5-minute mini test</span>
+        <h1 id="introTitle">Mini Test</h1>
+        <p class="lead">Short English assessment — reading, listening and writing. You must be signed in to take the test and you may take it only once.</p>
+        <div style="margin-top:16px">
+          <button id="getStartedBtn" class="btn btn-primary large">Start Test</button>
+          <button id="howItWorksBtn" class="btn btn-ghost" style="margin-left:10px">How it works</button>
+        </div>
+      </div>
+      <div class="hero-illustration" aria-hidden="true">
+        <img src="assets/illustrations/hero-3d.png" alt="" style="width:320px; max-width:100%;">
+      </div>
+    </section>
+
+    <!-- Reading -->
+    <section class="card" id="readingCard" role="region" aria-labelledby="readingTitle" hidden>
+      <h3 id="readingTitle">📖 Reading (3 questions)</h3>
+
+      <div class="passage" id="readingPassage">
+        Sleep is essential for good health. During sleep, the body repairs itself and the brain processes information from the day. People who don’t get enough sleep often feel tired, forgetful, and stressed. Experts recommend that adults sleep about seven to eight hours each night to stay healthy and focused.
+      </div>
+
+      <div class="question" aria-labelledby="q1">
+        <p id="q1">1. What happens during sleep?</p>
+        <label class="option"><input type="radio" name="r1" value="A"> The brain stops working</label>
+        <label class="option"><input type="radio" name="r1" value="B"> The body repairs itself</label>
+        <label class="option"><input type="radio" name="r1" value="C"> The body gets weaker</label>
+        <label class="option"><input type="radio" name="r1" value="D"> The heart rate increases</label>
+      </div>
+
+      <div class="question" aria-labelledby="q2">
+        <p id="q2">2. Experts recommend:</p>
+        <label class="option"><input type="radio" name="r2" value="A"> Less than 5 hours</label>
+        <label class="option"><input type="radio" name="r2" value="B"> 7–8 hours</label>
+        <label class="option"><input type="radio" name="r2" value="C"> Stay awake</label>
+        <label class="option"><input type="radio" name="r2" value="D"> Drink coffee</label>
+      </div>
+
+      <div class="question" aria-labelledby="q3">
+        <p id="q3">3. People who don’t sleep enough feel:</p>
+        <label class="option"><input type="radio" name="r3" value="A"> Energized</label>
+        <label class="option"><input type="radio" name="r3" value="B"> Tired</label>
+        <label class="option"><input type="radio" name="r3" value="C"> Wealthy</label>
+        <label class="option"><input type="radio" name="r3" value="D"> Indifferent</label>
+      </div>
+
+      <div class="card-footer">
+        <button id="toListeningBtn" class="btn btn-accent">Next → Listening</button>
+      </div>
+    </section>
+
+    <!-- Listening -->
+    <section class="card" id="listeningCard" role="region" aria-labelledby="listeningTitle" hidden>
+      <h3 id="listeningTitle">🎧 Listening (3 questions)</h3>
+
+      <div style="margin-bottom:12px">
+        <button id="playAudioBtn" class="btn btn-primary">Play Audio (once)</button>
+        <span style="margin-left:10px;color:#64748b;font-size:0.95rem">You may listen only once</span>
+      </div>
+
+      <audio id="listeningAudio" preload="auto" src="assets/audio/Mini_test.mp3"></audio>
+
+      <div class="question" aria-labelledby="q4">
+        <p id="q4">4. What is recycling?</p>
+        <label class="option"><input type="radio" name="l1" value="A"> Throwing away materials</label>
+        <label class="option"><input type="radio" name="l1" value="B"> Using materials to make new products</label>
+        <label class="option"><input type="radio" name="l1" value="C"> Buying new items</label>
+        <label class="option"><input type="radio" name="l1" value="D"> Saving money</label>
+      </div>
+
+      <div class="question" aria-labelledby="q5">
+        <p id="q5">5. Benefit of recycling?</p>
+        <label class="option"><input type="radio" name="l2" value="A"> More waste</label>
+        <label class="option"><input type="radio" name="l2" value="B"> Saves natural resources</label>
+        <label class="option"><input type="radio" name="l2" value="C"> Uses more plastic</label>
+        <label class="option"><input type="radio" name="l2" value="D"> Creates pollution</label>
+      </div>
+
+      <div class="question" aria-labelledby="q6">
+        <p id="q6">6. Plastic bottles can become:</p>
+        <label class="option"><input type="radio" name="l3" value="A"> Clothing</label>
+        <label class="option"><input type="radio" name="l3" value="B"> Cars</label>
+        <label class="option"><input type="radio" name="l3" value="C"> Food</label>
+        <label class="option"><input type="radio" name="l3" value="D"> Money</label>
+      </div>
+
+      <div class="card-footer">
+        <button id="toWritingBtn" class="btn btn-accent">Next → Writing</button>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section class="card" id="writingCard" role="region" aria-labelledby="writingTitle" hidden>
+      <h3 id="writingTitle">✍️ Writing</h3>
+
+      <p class="lead">
+        Write 3–5 sentences: <strong>“Reading books is better than watching movies.”</strong>
+      </p>
+
+      <p style="color:#64748b; margin-bottom:8px;">
+        Sample answer: I agree that reading books is better because books give more details and allow us to imagine the story in our own way. Movies are short and miss many parts of the story.
+      </p>
+
+      <textarea id="writingAnswer" placeholder="Write your response here..." aria-label="Write your response"></textarea>
+
+      <div class="card-footer">
+        <button id="submitAllBtn" class="btn btn-primary">Submit Test</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Results modal -->
+  <div class="modal" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultsTitle">
+    <div class="modal-card" role="document">
+      <h3 id="resultsTitle">Test Results</h3>
+
+      <div class="result-row">Reading: <strong id="readingScore">0</strong>/3</div>
+      <div class="result-row">Listening: <strong id="listeningScore">0</strong>/3</div>
+      <div class="result-row">Writing: <span id="writingNote">—</span></div>
+      <div class="result-row">Level: <span id="levelBadge" class="badge">Beginner</span></div>
+
+      <div style="margin-top:18px; display:flex; gap:10px; justify-content:center">
+        <button id="returnHomeBtn" class="btn btn-ghost">Return Home</button>
+        <button id="goProgressBtn" class="btn btn-accent">Go to Progress</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase + logic -->
+  <script type="module">
+    import { auth, db } from "./firebase.js";
+    import {
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    import {
+      doc,
+      getDoc,
+      updateDoc,
+      setDoc,
+      addDoc,
+      collection,
+      serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+
+    // Elements
+    const getStartedBtn = document.getElementById("getStartedBtn");
+    const howItWorksBtn = document.getElementById("howItWorksBtn");
+    const intro = document.getElementById("introCard");
+    const reading = document.getElementById("readingCard");
+    const listening = document.getElementById("listeningCard");
+    const writing = document.getElementById("writingCard");
+    const progressBar = document.getElementById("globalProgress");
+    const timerBox = document.getElementById("fixedTimer");
+    const playAudioBtn = document.getElementById("playAudioBtn");
+    const audio = document.getElementById("listeningAudio");
+    const submitBtn = document.getElementById("submitAllBtn");
+    const resultModal = document.getElementById("resultModal");
+    const returnHomeBtn = document.getElementById("returnHomeBtn");
+    const goProgressBtn = document.getElementById("goProgressBtn");
+
+    // Test state
+    const readingCorrect = { r1: "B", r2: "B", r3: "B" };
+    const listeningCorrect = { l1: "B", l2: "B", l3: "A" };
+    let audioPlayed = false;
+    let uid = null;
+    let timerInterval = null;
+    let timeLeft = 5 * 60; // 5 minutes
+
+    // helpers
+    function show(elem){ elem.hidden = false; elem.classList.add("active-card"); elem.scrollIntoView({behavior:"smooth", block:"center"}); }
+    function hide(elem){ elem.hidden = true; elem.classList.remove("active-card"); }
+    function updateProgress(widthPercent){ progressBar.style.width = widthPercent + "%"; }
+
+    function updateTimerText(){
+      const m = Math.floor(timeLeft/60);
+      const s = timeLeft % 60;
+      timerBox.textContent = `Time Left: ${m}:${s<10?"0":""}${s}`;
+    }
+
+    function startTimer(){
+      updateTimerText();
+      timerInterval = setInterval(()=>{
+        timeLeft--;
+        updateTimerText();
+        if(timeLeft <= 0){
+          clearInterval(timerInterval);
+          submitTest();
+        }
+      },1000);
+    }
+
+    // Block access unless logged in + check miniTestTaken flag
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) {
+        // not logged in → redirect to index
+        alert("Please login to take the mini test.");
+        location.href = "index.html";
+        return;
+      }
+      uid = user.uid;
+
+      // read user doc (you used setDoc during signup to users/{uid})
+      const userRef = doc(db, "users", uid);
+      const snap = await getDoc(userRef);
+      if (snap.exists()) {
+        const data = snap.data();
+        if (data.miniTestTaken) {
+          alert("You have already taken the mini test. Redirecting to Progress.");
+          location.href = "practice.html"; // keep filename, label changed on navbar
+          return;
+        }
+      } else {
+        // no user doc — create minimal doc just in case
+        await setDoc(userRef, { createdAt: serverTimestamp() }, { merge: true });
+      }
+    });
+
+    // Start test
+    getStartedBtn.onclick = () => {
+      // ensure user still logged
+      if (!auth.currentUser) { alert("Please login."); location.href = "index.html"; return; }
+      hide(intro);
+      show(reading);
+      updateProgress(33);
+      startTimer();
+    };
+
+    howItWorksBtn.onclick = () => {
+      alert("You must be logged in. Test is 5 minutes. Audio can be played only once. After submit your level is stored and you can't retake the test.");
+    };
+
+    // Play audio once only
+    playAudioBtn.onclick = async () => {
+      if (audioPlayed) return;
+      try {
+        await audio.play();
+        audioPlayed = true;
+        playAudioBtn.textContent = "Played";
+        playAudioBtn.classList.add("audio-btn-disabled");
+      } catch(e){
+        console.error(e);
+        alert("Audio play blocked. Click again or allow sound.");
+      }
+    };
+
+    // Navigation between sections
+    document.getElementById("toListeningBtn").onclick = () => {
+      hide(reading);
+      show(listening);
+      updateProgress(66);
+    };
+
+    document.getElementById("toWritingBtn").onclick = () => {
+      hide(listening);
+      show(writing);
+      updateProgress(100);
+    };
+
+    // Submit handler
+    async function submitTest(){
+      clearInterval(timerInterval);
+
+      // scores
+      let rScore = 0, lScore = 0;
+      Object.keys(readingCorrect).forEach(q => {
+        const el = document.querySelector(`input[name="${q}"]:checked`);
+        if (el && el.value === readingCorrect[q]) rScore++;
+      });
+      Object.keys(listeningCorrect).forEach(q => {
+        const el = document.querySelector(`input[name="${q}"]:checked`);
+        if (el && el.value === listeningCorrect[q]) lScore++;
+      });
+      const writingText = document.getElementById("writingAnswer").value.trim();
+      const writingNote = writingText.length > 10 ? "Submitted" : "Too short";
+
+      const total = rScore + lScore;
+      let level = "Beginner";
+      if (total >= 3 && total <= 4) level = "Intermediate";
+      else if (total >= 5) level = "Advanced";
+
+      // update UI
+      document.getElementById("readingScore").textContent = rScore;
+      document.getElementById("listeningScore").textContent = lScore;
+      document.getElementById("writingNote").textContent = writingNote;
+      const badge = document.getElementById("levelBadge");
+      badge.textContent = level;
+      badge.className = "badge " + level.toLowerCase();
+
+      // Save to localStorage for quick access on the Progress page
+      localStorage.setItem("fluencyLevel", level);
+
+      // Save to Firestore AND mark miniTestTaken = true
+      try {
+        if (uid) {
+          // save test result in subcollection testResults
+          await addDoc(collection(db, "users", uid, "testResults"), {
+            readingScore: rScore,
+            listeningScore: lScore,
+            writingText,
+            totalCorrect: total,
+            level,
+            timeTaken: (5*60) - timeLeft,
+            createdAt: serverTimestamp()
+          });
+          // mark as taken (top-level user doc)
+          await updateDoc(doc(db, "users", uid), { miniTestTaken: true });
+        }
+      } catch(err){
+        console.error("Firestore save failed:", err);
+      }
+
+      // show modal
+      resultModal.style.display = "flex";
+      resultModal.querySelector(".modal-card").focus();
+    }
+
+    submitBtn.onclick = submitTest;
+
+    // modal button actions
+    returnHomeBtn.onclick = () => { location.href = "index.html"; };
+    goProgressBtn.onclick = () => { location.href = "practice.html"; };
+
+    // keyboard close
+    resultModal.addEventListener("click", (e) => {
+      if (e.target === resultModal) resultModal.style.display = "none";
+    });
+
+    // ensure only progress area is accessible for logged-in users on progress page
+    // (progress page already checks auth — you included that earlier)
+
+  </script>
+
+</body>
+</html>

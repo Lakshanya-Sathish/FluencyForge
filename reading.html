@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="timer" id="timer">Time Left: 20:00</div>
+
+  <div class="reading-container">
+    <h1>Reading Practice</h1>
+    <div id="questions"></div>
+    <button id="submitBtn">Submit</button>
+  </div>
+
+  <script>
+    // Timer
+    let time = 20 * 60;
+    const timerElement = document.getElementById("timer");
+    const timer = setInterval(() => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      timerElement.textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      time--;
+
+      if (time < 0) {
+        clearInterval(timer);
+        alert("Time's up!");
+      }
+    }, 1000);
+
+    // Dummy Questions
+    const questions = [
+      {
+        text: "1. What is the primary purpose of the passage?",
+        options: ["To inform", "To persuade", "To entertain", "To criticize"]
+      },
+      {
+        text: "2. The word 'innovation' most nearly means:",
+        options: ["Tradition", "Invention", "Modification", "Imitation"]
+      }
+    ];
+
+    const container = document.getElementById("questions");
+    questions.forEach((q, index) => {
+      const div = document.createElement("div");
+      div.classList.add("question");
+      div.innerHTML = `
+        <p>${q.text}</p>
+        <div class="options">
+          ${q.options.map(opt => `<label><input type='radio' name='q${index}' value='${opt}'> ${opt}</label>`).join('')}
+        </div>
+      `;
+      container.appendChild(div);
+    });
+
+    document.getElementById("submitBtn").addEventListener("click", () => {
+      alert("Answers submitted successfully!");
+      localStorage.setItem("fluencyLevel", "Beginner");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
