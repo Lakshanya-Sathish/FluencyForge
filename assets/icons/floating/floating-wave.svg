@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <svg width="120" height="40" viewBox="0 0 120 40"
      xmlns="http://www.w3.org/2000/svg">
   <path d="M0 20 C20 5, 40 35, 60 20 S100 5, 120 20"
         stroke="white" stroke-width="4" fill="none" opacity="0.4"/>
 </svg>
+=======
+<svg width="120" height="40" viewBox="0 0 120 40"
+     xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 20 C20 5, 40 35, 60 20 S100 5, 120 20"
+        stroke="white" stroke-width="4" fill="none" opacity="0.4"/>
+</svg>
+>>>>>>> d7ba4a80866257bc5d682ba32ebc440dbb40eca0

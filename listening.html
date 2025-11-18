@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,3 +157,163 @@
 </body>
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listening Practice | Mini TOEFL Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e3f2fd, #f5f5f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1 {
+      color: #1976d2;
+      margin-bottom: 20px;
+      font-size: 1.9rem;
+    }
+
+    #timer {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-weight: bold;
+      color: #333;
+      background: #e3f2fd;
+      padding: 8px 15px;
+      border-radius: 25px;
+    }
+
+    audio {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .question {
+      text-align: left;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .options {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #1976d2;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1258a5;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="timer">Time Left: 20:00</div>
+    <h1>Listening Practice</h1>
+
+    <!-- Replace this audio with your own listening file -->
+    <audio controls>
+      <source src="audio/listening_sample.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="question">
+      <p><strong>1.</strong> What is the main topic discussed in the audio?</p>
+      <div class="options">
+        <label><input type="radio" name="q1"> Climate change effects</label>
+        <label><input type="radio" name="q1"> Global economics</label>
+        <label><input type="radio" name="q1"> Wildlife conservation</label>
+        <label><input type="radio" name="q1"> Modern architecture</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p><strong>2.</strong> What does the speaker suggest doing next?</p>
+      <div class="options">
+        <label><input type="radio" name="q2"> Start a project</label>
+        <label><input type="radio" name="q2"> Conduct research</label>
+        <label><input type="radio" name="q2"> Visit a museum</label>
+        <label><input type="radio" name="q2"> Take a break</label>
+      </div>
+    </div>
+
+    <button onclick="submitAnswers()">Submit</button>
+    <footer>© 2025 FluentForge</footer>
+  </div>
+
+  <script>
+    // Timer logic: 20 minutes countdown
+    let time = 20 * 60;
+    const timer = document.getElementById('timer');
+    const countdown = setInterval(() => {
+      let minutes = Math.floor(time / 60);
+      let seconds = time % 60;
+      timer.textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+      time--;
+      if (time < 0) {
+        clearInterval(countdown);
+        alert("Time's up! Submitting your answers automatically.");
+        submitAnswers();
+      }
+    }, 1000);
+
+    function submitAnswers() {
+      alert("Your answers have been submitted. Great job!");
+      window.location.href = "index.html"; // redirect or show result page
+    }
+  </script>
+</body>
+</html>
+
+>>>>>>> d7ba4a80866257bc5d682ba32ebc440dbb40eca0

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,3 +65,71 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup - FluencyForge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">FluencyForge</a>
+  </header>
+
+  <main class="auth-container">
+
+    <h2>Create Your Account</h2>
+
+    <!-- FORM START -->
+    <form id="signupForm" class="auth-form">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password" minlength="6" required />
+
+      <button type="submit" class="btn-primary">Sign Up</button>
+
+      <p class="switch-text">
+        Already have an account?
+        <a href="index.html">Login</a>
+      </p>
+    </form>
+    <!-- FORM END -->
+
+  </main>
+
+  <!-- SCRIPT -->
+  <script type="module">
+    import { signupUser } from "./auth.js";
+
+    document.getElementById("signupForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+
+      const res = await signupUser(email, password, name);
+
+      if (res.success) {
+        alert("Signup successful!");
+        window.location.href = "index.html"; // redirect to login
+      } else {
+        alert(res.error);
+      }
+    });
+  </script>
+
+</body>
+</html>
+>>>>>>> d7ba4a80866257bc5d682ba32ebc440dbb40eca0

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
      xmlns="http://www.w3.org/2000/svg">
   <path d="M32 4L39.8 22.2L60 24.6L45 38.4L49 58L32 48.2L15 58L19 38.4L4 24.6L24.2 22.2L32 4Z"
         fill="#ffffff" opacity="0.9"/>
 </svg>
+=======
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <path d="M32 4L39.8 22.2L60 24.6L45 38.4L49 58L32 48.2L15 58L19 38.4L4 24.6L24.2 22.2L32 4Z"
+        fill="#ffffff" opacity="0.9"/>
+</svg>
+>>>>>>> d7ba4a80866257bc5d682ba32ebc440dbb40eca0

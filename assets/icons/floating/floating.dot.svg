@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <svg width="22" height="22" viewBox="0 0 22 22"
      xmlns="http://www.w3.org/2000/svg">
   <circle cx="11" cy="11" r="10"
           fill="white" opacity="0.7"/>
 </svg>
+=======
+<svg width="22" height="22" viewBox="0 0 22 22"
+     xmlns="http://www.w3.org/2000/svg">
+  <circle cx="11" cy="11" r="10"
+          fill="white" opacity="0.7"/>
+</svg>
+>>>>>>> d7ba4a80866257bc5d682ba32ebc440dbb40eca0
