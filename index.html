@@ -12,14 +12,6 @@
 
 <body>
 
-  <!-- ================= FLOATING BACKGROUND SHAPES ================= -->
-  <div class="bg-floating">
-    <div class="float star"></div>
-    <div class="float bubble"></div>
-    <div class="float wave"></div>
-    <div class="float dot"></div>
-  </div>
-
   <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="brand">FluencyForge</div>
@@ -27,7 +19,7 @@
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="practice.html">Progress</a></li>
+      <li><a href="practice.html">Practice Tools</a></li>
     </ul>
 
     <div class="nav-buttons" id="authButtons">
@@ -43,9 +35,9 @@
     <div class="hero-inner">
 
       <div class="hero-left">
-        <h1 class="hero-title">Master English Through AI-Powered Learning</h1>
+        <h1 class="hero-title">Master TOEFL Through AI-Powered Learning</h1>
         <p class="hero-subtitle">
-          Smart tools for reading, writing, listening & speaking with real-time tracking.
+          Practice reading, writing, listening & speaking with personalized feedback.
         </p>
 
         <button class="btn-primary" onclick="window.location.href='test.html'">
@@ -60,7 +52,7 @@
     </div>
   </section>
 
-  <!-- ================= FEATURE SECTION ================= -->
+  <!-- ============= FEATURE SECTION ============= -->
   <section id="features" class="features-section">
 
     <h2 class="section-title">Everything You Need To Improve</h2>
@@ -70,41 +62,40 @@
       <div class="feature-box">
         <img src="assets/icons/book.svg" class="feature-logo">
         <h3>Reading Practice</h3>
-        <p>Build comprehension with structured, level-based passages.</p>
+        <p>Build comprehension with structured TOEFL-style passages.</p>
       </div>
 
       <div class="feature-box">
         <img src="assets/icons/headphones.svg" class="feature-logo">
         <h3>Listening Tasks</h3>
-        <p>Train your ear to understand accents & natural speech.</p>
+        <p>Improve listening accuracy with real accent audio clips.</p>
       </div>
 
       <div class="feature-box">
         <img src="assets/icons/pen.svg" class="feature-logo">
         <h3>Writing Skills</h3>
-        <p>Learn clear academic writing with improvement patterns.</p>
+        <p>Learn academic writing with improvement patterns.</p>
       </div>
 
       <div class="feature-box">
         <img src="assets/icons/ai.svg" class="feature-logo">
         <h3>AI-Powered Feedback</h3>
-        <p>Instant suggestions to improve grammar & vocabulary.</p>
+        <p>Instant grammar & vocabulary improvement suggestions.</p>
       </div>
 
       <div class="feature-box">
         <img src="assets/icons/adaptives.svg" class="feature-logo">
         <h3>Adaptive Test</h3>
-        <p>Difficulty adjusts automatically based on performance.</p>
+        <p>Difficulty adjusts based on performance.</p>
       </div>
 
       <div class="feature-box">
         <img src="assets/icons/chart.svg" class="feature-logo">
         <h3>Progress Tracking</h3>
-        <p>Clean visual stats to track learning across all skills.</p>
+        <p>Clean visual stats to track improvement over time.</p>
       </div>
 
     </div>
-
   </section>
 
   <!-- ================= AUTH SECTION ================= -->
@@ -188,7 +179,6 @@
 
     logoutBtn.onclick = async () => {
       await signOut(auth);
-      alert("Logged out!");
       window.location.reload();
     };
 
