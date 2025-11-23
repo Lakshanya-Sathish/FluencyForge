@@ -1,20 +1,20 @@
-<<<<<<< HEAD
 // firebase.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
 
-import { 
+import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 
-import { 
+import {
   getFirestore,
   doc,
-  setDoc
+  setDoc,
+  getDoc
 } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
-// ⭐ REPLACE with your real Firebase keys
+// ---------------- YOUR FIREBASE CONFIG ----------------
 const firebaseConfig = {
   apiKey: "AIzaSyAglxk-LFScrn_w0eTm1PU-02u2RfOMPpU",
   authDomain: "fluencyforge-219a5.firebaseapp.com",
@@ -25,63 +25,19 @@ const firebaseConfig = {
   measurementId: "G-9YRX24W8DJ"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 // Services
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Export everything needed
+// Export
 export {
   auth,
   db,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   doc,
-  setDoc
+  setDoc,
+  getDoc
 };
-=======
-// firebase.js
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-
-import { 
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-
-import { 
-  getFirestore,
-  doc,
-  setDoc
-} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
-
-// ⭐ REPLACE with your real Firebase keys
-const firebaseConfig = {
-  apiKey: "AIzaSyAglxk-LFScrn_w0eTm1PU-02u2RfOMPpU",
-  authDomain: "fluencyforge-219a5.firebaseapp.com",
-  projectId: "fluencyforge-219a5",
-  storageBucket: "fluencyforge-219a5.firebasestorage.app",
-  messagingSenderId: "952473992612",
-  appId: "1:952473992612:web:730fac5a3702ba98625531",
-  measurementId: "G-9YRX24W8DJ"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Services
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-// Export everything needed
-export {
-  auth,
-  db,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  doc,
-  setDoc
-};
->>>>>>> d7ba4a80866257bc5d682ba32ebc440dbb40eca0

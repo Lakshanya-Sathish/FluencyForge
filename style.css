@@ -1,5 +1,5 @@
 /* ===========================================
-   GLOBAL RESET + BASE STYLE
+   RESET & BASE
 =========================================== */
 * {
   margin: 0;
@@ -8,11 +8,27 @@
   font-family: "Poppins", sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #f7f9ff;
   color: #1a1a1a;
   overflow-x: hidden;
+}
+
+/* ===========================================
+   COLOR VARIABLES
+=========================================== */
+:root {
+  --primary: #6f4afa;
+  --primary-light: #ece8ff;
+  --gradient: linear-gradient(135deg, #7c3aed, #5eead4);
+  --text-dark: #1a1a1a;
+  --text-muted: #555;
+  --white: #fff;
+  --danger: #ef4444;
 }
 
 /* ===========================================
@@ -32,180 +48,189 @@ body {
   z-index: 1000;
 }
 
+/* Brand */
 .navbar .brand {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: #6f4afa;
-  letter-spacing: -0.5px;
+  color: var(--primary);
+  cursor: pointer;
 }
 
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 1.6rem;
+  align-items: center;
+  transition: 0.3s ease;
 }
 
 .nav-links a {
   text-decoration: none;
   font-weight: 500;
-  color: #333;
+  color: var(--text-dark);
   transition: 0.25s ease;
+  padding: 6px 4px;
+  border-radius: 6px;
 }
 
-.nav-links a:hover { color: #6f4afa; }
+.nav-links a:hover {
+  color: var(--primary);
+  background: var(--primary-light);
+}
 
-/* LOGIN BUTTONS */
+/* Buttons */
 .nav-buttons {
   display: flex;
   gap: 1rem;
 }
 
-.login-btn,
+button {
+  font-size: 0.9rem;
+}
+
+/* Login button */
+.login-btn {
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--primary);
+  transition: 0.25s;
+}
+
+.login-btn:hover {
+  background: var(--primary-light);
+}
+
+/* Signup button */
 .signup-btn {
   padding: 0.45rem 1rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-}
-
-.login-btn {
-  background: transparent;
-  border: 1px solid #6f4afa;
-  color: #6f4afa;
-}
-
-.signup-btn {
-  background: #6f4afa;
+  background: var(--primary);
+  border: none;
   color: white;
+  transition: 0.25s;
+}
+
+.signup-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Logout button */
+.logout-btn {
+  background: var(--danger);
+  color: white;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
 }
 
 /* ===========================================
-   FLOATING BACKGROUND SHAPES
+   MOBILE MENU BUTTON
 =========================================== */
-.bg-floating {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary);
 }
 
-.float {
+/* Mobile Expanded Menu */
+.nav-links.mobile-active {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(22px);
-  opacity: 0.16;
-  animation: floaty 8s ease-in-out infinite;
-}
-
-.float.star {
-  background: radial-gradient(circle, #fef3c7, #fbcfe8, transparent);
-  width: 130px;
-  height: 130px;
-  top: 12%;
-  left: 8%;
-}
-
-.float.bubble {
-  background: radial-gradient(circle, #c7f9ff, #a78bfa, transparent);
-  width: 180px;
-  height: 180px;
-  top: 18%;
-  right: 8%;
-}
-
-.float.wave {
-  background: linear-gradient(120deg, #60a5fa, #7c3aed);
-  width: 420px;
-  height: 360px;
-  bottom: -8%;
-  left: 20%;
-  opacity: 0.07;
-  animation: slowfloat 18s infinite linear;
-}
-
-.float.dot {
-  background: radial-gradient(circle, #7c3aed, #5eead4);
-  width: 100px;
-  height: 100px;
-  bottom: 12%;
-  right: 16%;
-}
-
-@keyframes floaty {
-  0% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-22px) translateX(14px); }
-  100% { transform: translateY(0) translateX(0); }
-}
-
-@keyframes slowfloat {
-  0%   { transform: translateY(0) rotate(-8deg); }
-  50%  { transform: translateY(-26px) rotate(-4deg); }
-  100% { transform: translateY(0) rotate(-8deg); }
+  top: 70px;
+  left: 0;
+  width: 100%;
+  padding: 1.8rem 0;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.09);
 }
 
 /* ===========================================
    HERO SECTION
 =========================================== */
 .hero {
-  padding: 9rem 2rem 6rem;
-  position: relative;
-  background: linear-gradient(135deg, #7c3aed, #5eead4);
-  overflow: hidden;
-  z-index: 2;
+  padding: 8rem 2rem 6rem;
+  background: var(--gradient);
 }
 
 .hero-inner {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  gap: 3rem;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
 }
 
 .hero-title {
   font-size: 3.2rem;
   font-weight: 700;
   color: white;
-  line-height: 1.1;
 }
 
 .hero-subtitle {
   margin-top: 1rem;
   font-size: 1.2rem;
   color: #e8eaff;
+  max-width: 550px;
 }
 
+/* Main CTA */
 .btn-primary {
   padding: 0.85rem 1.6rem;
   background: white;
-  color: #6f4afa;
+  color: var(--primary);
+  font-weight: 600;
   border-radius: 10px;
   border: none;
-  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .btn-primary:hover {
-  background: #ece8ff;
+  background: var(--primary-light);
 }
 
 .hero-image img {
   width: 420px;
-  animation: floatUpDown 4s ease-in-out infinite alternate;
+  animation: floatUp 4s ease-in-out infinite alternate;
 }
 
-@keyframes floatUpDown {
+/* Float Animation */
+@keyframes floatUp {
   from { transform: translateY(0); }
   to { transform: translateY(-18px); }
 }
 
 /* ===========================================
-   OLD FEATURES SECTION (CORRECT TOEFL VERSION)
+   FEATURES
 =========================================== */
 .features-section {
-  padding: 5rem 1.5rem;
-  background: #f7f9ff;
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2.5rem;
 }
 
 .features-wrapper {
@@ -217,12 +242,12 @@ body {
 }
 
 .feature-box {
-  background: #ffffff;
+  background: white;
   padding: 2rem 1.5rem;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  transition: 0.25s ease;
+  transition: 0.25s;
 }
 
 .feature-box:hover {
@@ -232,24 +257,25 @@ body {
 
 .feature-logo {
   width: 52px;
-  height: 52px;
   margin-bottom: 1rem;
+  opacity: 0.9;
+  filter: grayscale(1);
+  transition: 0.25s;
 }
 
-.feature-box h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
+.feature-box:hover .feature-logo {
+  filter: none;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .feature-box p {
   font-size: 0.95rem;
-  color: #666;
-  line-height: 1.45;
+  color: gray;
 }
 
 /* ===========================================
-   AUTH SECTION
+   AUTH FORMS
 =========================================== */
 .auth {
   margin-top: 120px;
@@ -260,16 +286,17 @@ body {
 }
 
 .auth-card {
-  width: 280px;
+  width: 300px;
   background: white;
   padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.12);
 }
 
 .auth-card h3 {
-  color: #6f4afa;
+  color: var(--primary);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .auth-card input {
@@ -284,18 +311,41 @@ body {
    FOOTER
 =========================================== */
 .footer {
-  background: #6f4afa;
+  background: var(--primary);
   color: white;
-  padding: 1.6rem;
   text-align: center;
+  padding: 1.6rem;
   margin-top: 4rem;
 }
 
 /* ===========================================
    RESPONSIVE
 =========================================== */
-@media (max-width: 900px) {
-  .hero-inner { flex-direction: column; text-align: center; }
-  .hero-image img { width: 280px; }
-  .auth { flex-direction: column; align-items: center; }
+@media (max-width: 950px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links,
+  .nav-buttons {
+    display: none;
+  }
+
+  .nav-links.mobile-active,
+  .nav-buttons.mobile-active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
