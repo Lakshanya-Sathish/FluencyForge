@@ -1,354 +1,165 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Practice Dashboard | FluencyForge</title>
+  <title>Practice — FluencyForge</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
   <style>
     body {
-      font-family: "Poppins", sans-serif;
       background: linear-gradient(135deg, #e6f0ff, #faf6ff);
-      color: #222;
-      margin: 0;
-      padding: 0;
       overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(90deg, #5c6bc0, #26a69a);
-      color: #fff;
+      background: var(--blue);
+      color: white;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    header button {
-      background: #ef4444;
+    .home-btn, #logoutBtn {
+      background: var(--purple);
+      color: white;
       border: none;
       padding: .5rem 1rem;
-      border-radius: 8px;
-      color: #fff;
+      border-radius: 6px;
       cursor: pointer;
       font-weight: 600;
+      transition: .3s;
     }
 
-    main {
-      padding: 2rem;
+    .home-btn:hover, #logoutBtn:hover {
+      background: var(--dusty-rose);
+    }
+
+    .practice-wrapper {
       max-width: 900px;
       margin: auto;
-    }
-
-    .level-heading {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #374785;
+      padding: 2rem;
     }
 
     .task-card {
-      background: #fff;
+      background: #ffffff;
       padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
+      margin: 1.2rem 0;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      transition: 0.3s;
+      cursor: pointer;
     }
 
     .task-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
     .progress {
-      height: 10px;
+      height: 8px;
       background: #ddd;
       border-radius: 10px;
-      margin-top: 10px;
       overflow: hidden;
+      margin-top: 8px;
     }
 
     .progress-bar {
-      height: 10px;
-      border-radius: 10px;
-      width: 0;
-      transition: width 1.5s ease;
+      width: 0%;
+      height: 100%;
+      transition: width 1.2s ease;
     }
 
-    .reading { background: #5c6bc0; }
-    .listening { background: #26a69a; }
-    .writing { background: #8e24aa; }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: #555;
-      font-size: 0.9rem;
-    }
+    .reading { background: var(--blue); }
+    .listening { background: var(--teal); }
+    .writing { background: var(--purple); }
+    .speaking { background: var(--dusty-rose); }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>FluencyForge Practice Tools</h1>
-    <a href="index.html" class="home-btn">🏠 Home</a>
+<header>
+  <h2>📘 Practice Tools</h2>
+  <div>
+    <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
     <button id="logoutBtn">Logout</button>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <h2 class="level-heading" id="welcomeMsg">Loading...</h2>
-    <div id="tasksContainer"></div>
-  </main>
+<section class="practice-wrapper">
+  <h2 id="welcomeMsg" style="text-align:center;">Loading...</h2>
 
-  <footer>© 2025 FluencyForge. All rights reserved.</footer>
+  <div id="tasksContainer"></div>
+</section>
 
-  <script type="module">
-    import { auth, db } from "./firebase.js";
-    import { onAuthStateChanged, signOut } 
-      from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-    import { doc, getDoc }
-      from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+<footer style="text-align:center; padding:1rem; font-size:.9rem;">
+  © 2025 FluencyForge — All rights reserved.
+</footer>
 
-    const welcomeMsg = document.getElementById("welcomeMsg");
-    const tasksContainer = document.getElementById("tasksContainer");
+<script type="module">
+import { auth, db } from "./firebase.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
-    // Redirect if not logged in
-    onAuthStateChanged(auth, async (user) => {
-      if (!user) {
-        window.location.href = "index.html";
-        return;
-      }
+const tasksContainer = document.getElementById("tasksContainer");
+const welcomeMsg = document.getElementById("welcomeMsg");
 
-      const uid = user.uid;
+// Mapping tasks → pages
+const pages = {
+  reading: "reading.html",
+  listening: "listening.html",
+  writing: "writing.html",
+  speaking: "speaking.html"
+};
 
-      // Load user from Firestore
-      const snap = await getDoc(doc(db, "users", uid));
+onAuthStateChanged(auth, async (user) => {
+  if (!user) return location.href = "index.html";
 
-      let name = "Learner";
-      if (snap.exists()) {
-        name = snap.data().name;
-      }
+  const snap = await getDoc(doc(db, "users", user.uid));
+  const name = snap.exists() ? snap.data().name : "Learner";
+  welcomeMsg.textContent = `Welcome, ${name} 👋`;
 
-      welcomeMsg.textContent = `Welcome, ${name} 👋`;
+  // Show modules
+  const modules = [
+    { title: "Reading Practice", type: "reading" },
+    { title: "Listening Practice", type: "listening" },
+    { title: "Writing Practice", type: "writing" },
+    { title: "Speaking Practice", type: "speaking" }
+  ];
 
-      // Display sample tasks
-      const tasks = [
-        { title: "Reading Practice", type: "reading" },
-        { title: "Listening Practice", type: "listening" },
-        { title: "Writing Practice", type: "writing" }
-      ];
+  modules.forEach(mod => {
+    const card = document.createElement("div");
+    card.className = "task-card";
+    const progress = Math.floor(Math.random() * 100);
 
-      tasks.forEach(task => {
-        const card = document.createElement("div");
-        card.className = "task-card";
+    card.innerHTML = `
+      <h3>${mod.title}</h3>
+      <div class="progress">
+        <div class="progress-bar ${mod.type}" style="width: ${progress}%"></div>
+      </div>
+      <p style="font-size:.9rem; color:#444; margin-top:6px;">Progress: ${progress}%</p>
+    `;
 
-        const progress = Math.floor(Math.random() * 50);
-
-        card.innerHTML = `
-          <h3>${task.title}</h3>
-          <div class="progress">
-            <div class="progress-bar ${task.type}" style="width: 0;"></div>
-          </div>
-          <p style="font-size:0.9rem;color:#666;margin-top:6px;">Progress: ${progress}%</p>
-        `;
-
-        tasksContainer.appendChild(card);
-
-        setTimeout(() => {
-          card.querySelector(".progress-bar").style.width = progress + "%";
-        }, 300);
-      });
+    card.addEventListener("click", () => {
+      window.location.href = pages[mod.type];
     });
 
-    // Logout
-    document.getElementById("logoutBtn").addEventListener("click", () => {
-      signOut(auth).then(() => {
-        window.location.href = "index.html";
-      });
-    });
-  </script>
+    tasksContainer.appendChild(card);
+  });
+});
+
+// Logout
+document.getElementById("logoutBtn").onclick = () =>
+  signOut(auth).then(() => location.href = "index.html");
+
+</script>
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Practice Dashboard | FluencyForge</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-
-  <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #e6f0ff, #faf6ff);
-      color: #222;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: linear-gradient(90deg, #5c6bc0, #26a69a);
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header button {
-      background: #ef4444;
-      border: none;
-      padding: .5rem 1rem;
-      border-radius: 8px;
-      color: #fff;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .level-heading {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #374785;
-    }
-
-    .task-card {
-      background: #fff;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .task-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .progress {
-      height: 10px;
-      background: #ddd;
-      border-radius: 10px;
-      margin-top: 10px;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      height: 10px;
-      border-radius: 10px;
-      width: 0;
-      transition: width 1.5s ease;
-    }
-
-    .reading { background: #5c6bc0; }
-    .listening { background: #26a69a; }
-    .writing { background: #8e24aa; }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: #555;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>FluencyForge Practice Tools</h1>
-    <button id="logoutBtn">Logout</button>
-  </header>
-
-  <main>
-    <h2 class="level-heading" id="welcomeMsg">Loading...</h2>
-    <div id="tasksContainer"></div>
-  </main>
-
-  <footer>© 2025 FluencyForge. All rights reserved.</footer>
-
-  <script type="module">
-    import { auth, db } from "./firebase.js";
-    import { onAuthStateChanged, signOut } 
-      from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-    import { doc, getDoc }
-      from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
-
-    const welcomeMsg = document.getElementById("welcomeMsg");
-    const tasksContainer = document.getElementById("tasksContainer");
-
-    // Redirect if not logged in
-    onAuthStateChanged(auth, async (user) => {
-      if (!user) {
-        window.location.href = "index.html";
-        return;
-      }
-
-      const uid = user.uid;
-
-      // Load user from Firestore
-      const snap = await getDoc(doc(db, "users", uid));
-
-      let name = "Learner";
-      if (snap.exists()) {
-        name = snap.data().name;
-      }
-
-      welcomeMsg.textContent = `Welcome, ${name} 👋`;
-
-      // Display sample tasks
-      const tasks = [
-        { title: "Reading Practice", type: "reading" },
-        { title: "Listening Practice", type: "listening" },
-        { title: "Writing Practice", type: "writing" }
-      ];
-
-      tasks.forEach(task => {
-        const card = document.createElement("div");
-        card.className = "task-card";
-
-        const progress = Math.floor(Math.random() * 50);
-
-        card.innerHTML = `
-          <h3>${task.title}</h3>
-          <div class="progress">
-            <div class="progress-bar ${task.type}" style="width: 0;"></div>
-          </div>
-          <p style="font-size:0.9rem;color:#666;margin-top:6px;">Progress: ${progress}%</p>
-        `;
-
-        tasksContainer.appendChild(card);
-
-        setTimeout(() => {
-          card.querySelector(".progress-bar").style.width = progress + "%";
-        }, 300);
-      });
-    });
-
-    // Logout
-    document.getElementById("logoutBtn").addEventListener("click", () => {
-      signOut(auth).then(() => {
-        window.location.href = "index.html";
-      });
-    });
-  </script>
-
-</body>
-</html>
->>>>>>> d7ba4a80866257bc5d682ba32ebc440dbb40eca0

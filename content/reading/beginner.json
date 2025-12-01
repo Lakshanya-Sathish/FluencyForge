@@ -1,0 +1,172 @@
+{
+  "level": "beginner",
+  "passages": [
+    {
+      "id": "B1",
+      "title": "The Importance of Urban Trees",
+      "text": "[In busy cities around the world, people often walk past trees without noticing them. These trees stand along roads, in parks, and near buildings, silently performing important roles that support the health and comfort of human life. Although they appear ordinary, urban trees live complex lives and face unique challenges. Understanding these hidden struggles can help us appreciate how essential they are to modern city environments.
+
+Urban trees differ greatly from forest trees. In natural forests, trees grow in large groups where soil, water, and nutrients are shared. Roots extend freely, and the ecosystem supports itself through organic processes like decomposing leaves and fallen branches. Urban trees, however, grow in limited spaces. Their roots are surrounded by concrete, metal pipes, and compacted soil. Because the soil is often packed tightly from foot traffic and construction activities, tree roots struggle to absorb water and nutrients. This stress makes urban trees more vulnerable to diseases and weak growth.
+
+Despite these challenges, urban trees provide remarkable benefits. One of the most important is controlling air quality. Trees absorb carbon dioxide and release oxygen through photosynthesis, a process essential for maintaining clean air. Additionally, they capture tiny particles from vehicles and industries. These particles often remain in the air in large cities, contributing to respiratory problems. By capturing them on their leaves, urban trees help reduce pollution levels and make the air safer to breathe.
+
+Another significant contribution comes from their ability to reduce what scientists call the “urban heat island effect.” Cities are usually hotter than rural areas due to concrete, asphalt, and metal surfaces absorbing and storing heat. During the day, these surfaces become extremely hot, making the environment uncomfortable. Trees help cool the air by providing shade and releasing water vapor through a process called transpiration. This natural cooling effect lowers temperatures by several degrees, making outdoor spaces more pleasant for people.
+
+Trees also play an important role in improving the mental well-being of city residents. Studies around the world show that green spaces reduce stress, improve mood, and increase productivity. Even small interactions, like walking near a row of trees while going to work, can positively affect mental health. Green spaces encourage outdoor activities such as walking, jogging, and cycling, leading to healthier lifestyles. Many cities now aim to include more trees in urban planning for this reason.
+
+However, planting and maintaining urban trees can be challenging for city planners. One major issue is the choice of tree species. Not all trees can survive city conditions. Some species require more space for their roots, while others cannot tolerate pollutions or high temperatures. Planting the wrong species increases maintenance costs and shortens the tree’s lifespan. Ideally, cities must select hardy species that can survive with limited water, high pollution, and restricted root space.
+
+Water management is another important factor. Trees need consistent water to grow, but cities often face water shortages. In many regions, rainfall is unpredictable, and manual watering requires time and money. To solve this, some cities have installed underground irrigation systems that deliver water directly to roots. Others use recycled water from homes and industries. These sustainable practices help reduce water waste while supporting tree growth.
+
+Urban trees also face threats from pests and diseases. These problems spread faster in cities because trees are often planted in long rows of the same species. When many identical trees grow close together, a single disease can kill them all. This happened in several countries when Dutch elm disease wiped out millions of elm trees. To avoid such disasters, cities now plant a mix of species. Biodiversity increases resilience and helps trees survive environmental challenges.
+
+Tree maintenance also requires community involvement. When residents understand the benefits of trees, they are more likely to take care of them. Some cities run volunteer programs where citizens water young trees, remove weeds, and report signs of disease. These programs strengthen community relationships and educate people about environmental care. School programs introduce children to tree planting and teach them about the importance of urban ecosystems.
+
+Technology is now transforming how cities care for trees. Sensors installed in the soil can measure moisture levels and nutrient content. Drones can monitor the health of trees from above, detecting early signs of disease. Computer models can predict which areas of a city get too hot or too polluted, helping planners decide where to plant more trees. These innovations improve efficiency and reduce maintenance costs.
+
+As climate change becomes a bigger challenge, urban trees will play an even more critical role. Rising temperatures, unpredictable weather, and stronger storms all affect city environments. Trees help reduce flooding by absorbing rainwater. Their roots stabilize soil and prevent erosion. Their shade cools homes, reducing the need for air-conditioning. All these benefits make urban trees essential elements of climate-resilient cities.
+
+In the future, many experts believe that cities will invest heavily in green infrastructure. This includes green roofs, vertical gardens, and tree-lined streets designed to make cities cleaner and more livable. Urban forests will become a central part of city planning rather than an afterthought. With proper care, urban trees can thrive and continue supporting human life in ways most people never notice.
+
+Urban trees might seem silent and still, but their hidden life is full of activity, struggle, and contribution. They clean the air, cool the streets, and improve the well-being of millions of people. As cities continue to grow, understanding and protecting these quiet companions will be essential for building healthier, more sustainable communities.]",
+      "questions": [
+        {
+          "question": "What is one major difference between urban trees and forest trees?",
+          "options": [
+            "Urban trees grow faster",
+            "Urban trees have less space for their roots",
+            "Forest trees need more sunlight",
+            "Urban trees require less water"
+          ],
+          "answer": "Urban trees have less space for their roots"
+        },
+        {
+          "question": "What is the main cause of the 'urban heat island effect'?",
+          "options": [
+            "Heavy rainfall",
+            "Large numbers of trees",
+            "Heat absorption by concrete and metal",
+            "Too many green spaces"
+          ],
+          "answer": "Heat absorption by concrete and metal"
+        },
+        {
+          "question": "Trees improve air quality mainly by:",
+          "options": [
+            "Eating insects",
+            "Releasing carbon dioxide",
+            "Absorbing dust and pollutants",
+            "Growing taller"
+          ],
+          "answer": "Absorbing dust and pollutants"
+        },
+        {
+          "question": "What psychological benefit do urban trees provide?",
+          "options": [
+            "Increased hunger",
+            "Reduced stress",
+            "Faster aging",
+            "Lower intelligence"
+          ],
+          "answer": "Reduced stress"
+        },
+        {
+          "question": "Why is choosing the right species important for city planners?",
+          "options": [
+            "Some trees grow too colorful",
+            "Not all trees survive city conditions",
+            "Some trees attract too many birds",
+            "All trees grow the same everywhere"
+          ],
+          "answer": "Not all trees survive city conditions"
+        },
+        {
+          "question": "What is one method cities use to manage water for trees?",
+          "options": [
+            "Coloring the leaves",
+            "Underground irrigation systems",
+            "Cutting roots regularly",
+            "Planting trees only in winter"
+          ],
+          "answer": "Underground irrigation systems"
+        },
+        {
+          "question": "Why are identical tree rows more vulnerable?",
+          "options": [
+            "They grow too slowly",
+            "Birds avoid them",
+            "Diseases spread quickly among similar species",
+            "They cannot photosynthesize"
+          ],
+          "answer": "Diseases spread quickly among similar species"
+        },
+        {
+          "question": "How does technology help in tree maintenance?",
+          "options": [
+            "By replacing natural trees",
+            "By increasing pollution",
+            "Through sensors, drones, and prediction tools",
+            "By removing all water needs"
+          ],
+          "answer": "Through sensors, drones, and prediction tools"
+        },
+        {
+          "question": "What role do trees play in climate resilience?",
+          "options": [
+            "Increasing flood risk",
+            "Absorbing rainwater and reducing heat",
+            "Melting ice",
+            "Creating storms"
+          ],
+          "answer": "Absorbing rainwater and reducing heat"
+        },
+        {
+          "question": "What is the main message of the passage?",
+          "options": [
+            "Urban trees are unimportant",
+            "Urban trees weaken cities",
+            "Urban trees are essential and must be protected",
+            "Urban trees create noise pollution"
+          ],
+          "answer": "Urban trees are essential and must be protected"
+        }
+      ]
+    },
+
+    {
+      "id": "B2",
+      "title": "The Evolution of Public Transportation",
+      "text": "[PASSAGE 2 FULL TEXT HERE]",
+      "questions": [
+        { "question": "What was one major drawback of horse-drawn streetcars?", "options": ["They were too fast","They required constant care","They used electricity","They could fly over traffic"], "answer": "They required constant care" },
+        { "question": "What major innovation revolutionized long-distance travel in the 19th century?", "options": ["Airplanes","Electric cars","Steam-powered trains","Private bicycles"], "answer": "Steam-powered trains" },
+        { "question": "Why did buses become more popular?", "options": ["They required metal tracks","They were slower","They were flexible and cheaper","They could only travel underground"], "answer": "They were flexible and cheaper" },
+        { "question": "What environmental problem do private cars cause?", "options": ["Increased bird populations","Reduced pollution","Traffic congestion and fuel use","Faster public buses"], "answer": "Traffic congestion and fuel use" },
+        { "question": "Why are subways important?", "options": ["They operate only at night","They avoid street traffic","They have no costs","They move slower than buses"], "answer": "They avoid street traffic" },
+        { "question": "What energy trend is influenced by climate concerns?", "options": ["More horse carts","Electric and hybrid transport","Stopping transit","Building more highways"], "answer": "Electric and hybrid transport" },
+        { "question": "How does technology improve transport?", "options": ["By removing roads","Real-time updates & smart ticketing","By making travel confusing","By replacing buses"], "answer": "Real-time updates & smart ticketing" },
+        { "question": "What role does public transportation play?", "options": ["Isolates people","Limits education","Promotes social equality","Only useful for tourists"], "answer": "Promotes social equality" },
+        { "question": "What is a challenge today?", "options": ["Too much funding","Overcrowding & maintenance issues","No technological tools","Unlimited space"], "answer": "Overcrowding & maintenance issues" },
+        { "question": "Main idea?", "options": ["Becoming less important","Evolved & remains essential","Only for wealthy","Replaced all travel"], "answer": "Evolved & remains essential" }
+      ]
+    },
+
+    {
+      "id": "B3",
+      "title": "The Science Behind Human Memory",
+      "text": "[PASSAGE 3 FULL TEXT HERE]",
+      "questions": [
+        { "question": "What is the first stage of memory?", "options": ["Storage","Retrieval","Encoding","Forgetting"], "answer": "Encoding" },
+        { "question": "Which type involves conscious recall?", "options": ["Implicit memory","Reflex memory","Explicit memory","Motor memory"], "answer": "Explicit memory" },
+        { "question": "Role of synaptic plasticity?", "options": ["Weakens memory","Forms physical changes storing memory","Blocks information","Erases memories"], "answer": "Forms physical changes storing memory" },
+        { "question": "Which technique helps short-term memory?", "options": ["Sleeping","Chunking","Sugar","Daydreaming"], "answer": "Chunking" },
+        { "question": "What supports consolidation?", "options": ["Lack of sleep","Avoiding repetition","Deep & REM sleep","Stress"], "answer": "Deep & REM sleep" },
+        { "question": "What does the hippocampus help with?", "options": ["Digestion","Forming new memories","Breathing","Moving muscles"], "answer": "Forming new memories" },
+        { "question": "Meaning of memory distortion?", "options": ["Perfect recall","Never change","Altered when recalled","Stops working"}, "answer": "Altered when recalled" },
+        { "question": "What harms memory?", "options": ["Exercise","Omega-3 foods","Chronic stress","Sleep"], "answer": "Chronic stress" },
+        { "question": "Retrieval failure means:", "options": ["Erased","Temporarily cannot recall","Becomes stronger","Replaces old memories"], "answer": "Temporarily cannot recall" },
+        { "question": "Main idea?", "options": ["Simple","Complex & influenced by many factors","Unimportant","Only scientists understand"], "answer": "Complex & influenced by many factors" }
+      ]
+    }
+  ]
+}
