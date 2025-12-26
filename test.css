@@ -381,3 +381,12 @@ textarea {
     padding: 20px;
   }
 }
+.feature-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.feature-link:hover .feature-box {
+  transform: translateY(-6px);
+}
