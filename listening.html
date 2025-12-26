@@ -1,242 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Listening | FluencyForge</title>
+<meta charset="UTF-8">
+<title>Listening | FluencyForge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-
-  <style>
-    body {
-      background: linear-gradient(135deg, #eef4ff, #faf6ff);
-      font-family: "Poppins", sans-serif;
-      padding-bottom: 60px;
-    }
-
-    .container {
-      max-width: 750px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .audio-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .question-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      display: none;
-    }
-
-    .question-card.active {
-      display: block;
-      animation: fadeIn .4s ease;
-    }
-
-    .options label {
-      display: block;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 1px solid #ddd;
-      transition: .3s;
-    }
-
-    .options input {
-      margin-right: 8px;
-    }
-
-    .options label:hover {
-      background: #e9f3ff;
-      border-color: #4a90e2;
-    }
-
-    .progress-track {
-      width: 100%;
-      height: 8px;
-      border-radius: 6px;
-      background: #ddd;
-      margin: 1.5rem 0;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      width: 0%;
-      background: #4a90e2;
-      height: 100%;
-      transition: width .4s ease;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: #4a90e2;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: .3s;
-      font-weight: 600;
-    }
-
-    .btn:hover { background: #326fbd; }
-
-    #replayCount {
-      font-size: 14px;
-      color: #666;
-      margin-top: 8px;
-    }
-  </style>
+<link rel="stylesheet" href="../style.css">
+<style>
+body{background:#f6f8ff;font-family:Poppins}
+.container{max-width:900px;margin:40px auto;background:#fff;padding:30px;border-radius:16px}
+button{padding:10px 16px;border:none;border-radius:10px;background:#1abc9c;color:#fff;cursor:pointer}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h2>🎧 Listening Practice</h2>
-    <p style="color:#555">Listen to the audio and answer the questions. You can replay the audio <strong>2 times maximum.</strong></p>
+<div class="container">
+  <h1>Listening Practice</h1>
 
-    <!-- AUDIO BLOCK -->
-    <div class="audio-box">
-      <audio id="audio" src="assets/audio/listening1.mp3"></audio>
-      <button id="playBtn" class="btn">▶ Play Audio</button>
-      <p id="replayCount">Remaining replays: 2</p>
-    </div>
+  <audio id="audio" src="../assets/audio/sample.mp3"></audio>
+  <p>Replays left: <span id="count">2</span></p>
+  <button onclick="playAudio()">Play</button>
 
-    <!-- PROGRESS BAR -->
-    <div class="progress-track">
-      <div id="progressBar" class="progress-bar"></div>
-    </div>
+  <div id="questions"></div>
+  <button onclick="submit()">Submit</button>
 
-    <!-- QUESTIONS -->
-    <div id="questionsContainer"></div>
+  <div id="result"></div>
+</div>
 
-    <!-- Continue -->
-    <button id="submitBtn" class="btn" style="display:none;">Submit Answers</button>
-    <button id="continueBtn" class="btn" style="display:none;" onclick="window.location.href='writing.html'">Continue to Writing ✍️</button>
-  </div>
+<script>
+let plays = 2;
+let correct = [];
 
-  <script type="module">
-    // FIREBASE IMPORTS (placeholders)
-    import { auth, db } from "./firebase.js";
-    import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+function playAudio(){
+  if(plays<=0) return alert("No replays left");
+  document.getElementById("audio").play();
+  plays--;
+  document.getElementById("count").textContent = plays;
+}
 
-    // --------------------
-    // Listening Data (Temporary Local JSON until backend sync)
-    // --------------------
-    const listeningQuestions = [
-      {
-        question: "What is recycling?",
-        options: ["Throwing old items away", "Making new products from old materials", "Buying everything new", "A type of sport"],
-        answer: 1
-      },
-      {
-        question: "Why is recycling important?",
-        options: ["It increases trash", "It reduces pollution and saves resources", "It wastes energy", "It is only for factories"],
-        answer: 1
-      },
-      {
-        question: "What can plastic bottles be recycled into?",
-        options: ["Food", "Clothing or other products", "Trees", "Glass"],
-        answer: 1
-      }
-    ];
+async function loadListening(){
+  const res = await fetch("../content/listening/beginner.json");
+  const data = await res.json();
+  const mod = data.modules[0];
 
-    let currentIndex = 0;
-    let answers = {};
-    let replayLimit = 2;
+  const qBox = document.getElementById("questions");
+  mod.questions.forEach((q,i)=>{
+    correct.push(q.answer);
+    qBox.innerHTML += `
+      <div>
+        <h3>${i+1}. ${q.question}</h3>
+        ${q.options.map(o=>`
+          <label><input type="radio" name="q${i}" value="${o}"> ${o}</label>
+        `).join("")}
+      </div>`;
+  });
+}
 
-    const playBtn = document.getElementById("playBtn");
-    const audio = document.getElementById("audio");
-    const replayText = document.getElementById("replayCount");
-    const qContainer = document.getElementById("questionsContainer");
-    const progressBar = document.getElementById("progressBar");
-    const submitBtn = document.getElementById("submitBtn");
-    const continueBtn = document.getElementById("continueBtn");
+function submit(){
+  let score=0;
+  correct.forEach((a,i)=>{
+    const s=document.querySelector(`input[name=q${i}]:checked`);
+    if(s && s.value===a) score++;
+  });
+  document.getElementById("result").textContent=`Score: ${score}/${correct.length}`;
+}
 
-    // Render questions one by one
-    function renderQuestions() {
-      listeningQuestions.forEach((item, i) => {
-        const card = document.createElement("div");
-        card.className = "question-card";
-        if (i === 0) card.classList.add("active");
-
-        card.innerHTML = `
-          <h3>${item.question}</h3>
-          <div class="options">
-            ${item.options.map((o, index) => `
-              <label>
-                <input type="radio" name="q${i}" value="${index}">
-                ${o}
-              </label>`).join("")}
-          </div>
-        `;
-        qContainer.appendChild(card);
-      });
-    }
-
-    renderQuestions();
-
-    // Handle Next Question
-    qContainer.addEventListener("change", () => {
-      const cards = document.querySelectorAll(".question-card");
-
-      // Store answer
-      const selected = document.querySelector(`input[name="q${currentIndex}"]:checked`);
-      if (!selected) return;
-      answers[currentIndex] = Number(selected.value);
-
-      // Progress update
-      progressBar.style.width = ((currentIndex + 1) / listeningQuestions.length) * 100 + "%";
-
-      // Move next
-      cards[currentIndex].classList.remove("active");
-      currentIndex++;
-
-      if (currentIndex < listeningQuestions.length) {
-        cards[currentIndex].classList.add("active");
-      } else {
-        submitBtn.style.display = "block";
-      }
-    });
-
-    // Audio replay logic
-    playBtn.onclick = () => {
-      if (replayLimit <= 0) return alert("Replay limit reached!");
-      audio.play();
-      replayLimit--;
-      replayText.textContent = `Remaining replays: ${replayLimit}`;
-    };
-
-    // Submit answers
-    submitBtn.onclick = async () => {
-      let score = 0;
-      listeningQuestions.forEach((q, i) => {
-        if (answers[i] === q.answer) score++;
-      });
-
-      alert(`Listening Score: ${score}/${listeningQuestions.length}`);
-
-      // Firebase Save (placeholder)
-      // await setDoc(doc(db, "progress", auth.currentUser.uid), { listening: score }, { merge: true });
-
-      submitBtn.style.display = "none";
-      continueBtn.style.display = "block";
-    };
-  </script>
+loadListening();
+</script>
 
 </body>
 </html>

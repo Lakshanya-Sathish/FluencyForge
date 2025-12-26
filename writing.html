@@ -1,185 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Writing Practice | FluencyForge</title>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Writing | FluencyForge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      background: linear-gradient(135deg, #e6f0ff, #faf6ff);
-      padding: 0;
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 100px auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 30px rgba(0,0,0,0.08);
-    }
-
-    h1 {
-      text-align: center;
-      color: #374785;
-      margin-bottom: 10px;
-    }
-
-    .prompt-box {
-      background: #f8f8ff;
-      padding: 15px;
-      border-left: 5px solid #6b5b95;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-
-    #response {
-      width: 100%;
-      min-height: 170px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      padding: 12px;
-      font-size: 1rem;
-      resize: vertical;
-    }
-
-    #submitBtn {
-      margin-top: 15px;
-      background: #6c5ce7;
-      border: none;
-      padding: 12px 22px;
-      border-radius: 10px;
-      color: #fff;
-      cursor: pointer;
-      font-size: 1.1rem;
-      transition: 0.3s ease;
-      width: 100%;
-    }
-
-    #submitBtn:hover {
-      background: #4b39c4;
-    }
-
-    #resultMsg {
-      text-align: center;
-      font-weight: 600;
-      color: #27ae60;
-      margin-top: 10px;
-      display: none;
-    }
-
-    #aiFeedbackBox {
-      display:none;
-      margin-top:20px;
-      background:#fff;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    #aiFeedbackBox h3 {
-      margin-bottom: 8px;
-      color:#5c6bc0;
-    }
-  </style>
+<link rel="stylesheet" href="../style.css">
+<style>
+body{background:#f6f8ff;font-family:Poppins}
+.container{max-width:800px;margin:40px auto;background:#fff;padding:30px;border-radius:16px}
+textarea{width:100%;height:160px;padding:12px;border-radius:10px}
+button{margin-top:16px;padding:12px;width:100%;border:none;border-radius:12px;background:#9b59b6;color:#fff}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>✍ Writing Practice</h1>
+<div class="container">
+  <h1>Writing Practice</h1>
+  <p>Do you agree or disagree: <b>Reading books is better than watching movies.</b></p>
 
-    <div class="prompt-box" id="writingPrompt">Loading prompt...</div>
+  <textarea id="text"></textarea>
+  <button onclick="submit()">Submit</button>
 
-    <textarea id="response" placeholder="Write your response here..."></textarea>
-
-    <button id="submitBtn">Submit Response</button>
-
-    <p id="resultMsg">Response submitted successfully ✔</p>
-
-    <!-- AI FEEDBACK BOX -->
-    <div id="aiFeedbackBox">
-      <h3>AI Feedback 🤖</h3>
-      <p id="feedbackText">Your writing is being analyzed...</p>
-    </div>
+  <div id="aiFeedbackBox" style="display:none;margin-top:20px;background:#f3f6ff;padding:20px;border-radius:12px">
+    <h3>AI Feedback 🤖</h3>
+    <p id="feedbackText"></p>
   </div>
+</div>
 
-  <script type="module">
-  import { auth, db } from "./firebase.js";
-  import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-  import { doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+<script>
+function submit(){
+  const text = document.getElementById("text").value.trim();
+  if(text.length<20) return alert("Write at least 3–4 sentences");
 
-  const promptBox = document.getElementById("writingPrompt");
-  const submitBtn = document.getElementById("submitBtn");
-  const responseInput = document.getElementById("response");
-  const resultMsg = document.getElementById("resultMsg");
-  const aiBox = document.getElementById("aiFeedbackBox");
-  const feedbackText = document.getElementById("feedbackText");
+  triggerAIFeedback(text);
+}
 
-  let userId = null;
-
-  async function loadPrompt(level) {
-    const snap = await getDoc(doc(db, "content", "writing"));
-    if (snap.exists()) {
-      const data = snap.data();
-      promptBox.textContent = data[level][0];
-    }
-  }
-
-  onAuthStateChanged(auth, async (user) => {
-    if (!user) return window.location.href = "index.html";
-
-    userId = user.uid;
-    const snap = await getDoc(doc(db, "users", userId));
-    const level = snap.exists() ? snap.data().level : "beginner";
-
-    await loadPrompt(level);
-  });
-
-  // ---- AI FEEDBACK ENGINE (Placeholder but structured) ----
-  function generateMockFeedback(text) {
-    const score = Math.floor(Math.random() * 11) + 15; // random 15–30 for placeholder
-
-    return `
-      ⭐ <strong>TOEFL Score:</strong> ${score}/30\n\n
-      📌 <strong>Strengths:</strong> Clear structure, relevant ideas.\n
-      ⚠️ <strong>Weaknesses:</strong> Limited vocabulary, repetitive phrasing.\n\n
-      ✍ <strong>Suggested Rewrite:</strong>\n
-      "${text.slice(0, 100)}..."\n\n
-      🔥 <strong>Brutal Truth:</strong> Good effort, but you’re still writing like a school exam. Add richer vocabulary and vary sentence structure.
-    `;
-  }
-
-  async function triggerAIFeedback(text){
-    aiBox.style.display = "block";
-    feedbackText.textContent = "⏳ Analyzing...";
-
-    setTimeout(() => {
-      feedbackText.innerHTML = generateMockFeedback(text).replace(/\n/g, "<br>");
-    }, 1200);
-  }
-
-  submitBtn.addEventListener("click", async () => {
-    const text = responseInput.value.trim();
-    if (text.length < 40) {
-      alert("Write at least 40+ words. This isn't WhatsApp.");
-      return;
-    }
-
-    resultMsg.style.display = "block";
-    triggerAIFeedback(text);
-
-    await updateDoc(doc(db, "users", userId), {
-      writingSubmitted: true
-    });
-  });
+async function triggerAIFeedback(text){
+  document.getElementById("aiFeedbackBox").style.display="block";
+  document.getElementById("feedbackText").textContent =
+    "✨ AI evaluation will appear here once backend is integrated.";
+}
 </script>
+
 </body>
 </html>

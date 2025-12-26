@@ -1,218 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reading Practice | FluencyForge</title>
+<meta charset="UTF-8">
+<title>Reading | FluencyForge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
 
-  <style>
-    body {
-      background: linear-gradient(135deg, #e6f0ff, #faf6ff);
-      font-family: "Poppins", sans-serif;
-      padding: 0;
-      margin: 0;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: var(--blue);
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header a {
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      margin-right: 15px;
-      transition: 0.3s;
-    }
-    header a:hover { color: var(--dusty-rose); }
-
-    header button {
-      background: var(--purple);
-      border: none;
-      padding: .6rem 1.2rem;
-      border-radius: 8px;
-      color: #fff;
-      cursor: pointer;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-    header button:hover { background: var(--teal); }
-
-    .container {
-      max-width: 850px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-      animation: fadeUp .6s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(25px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h1 { text-align: center; color: var(--purple); }
-    .passage { margin: 1.2rem 0; line-height: 1.6; }
-
-    .question { margin: 1rem 0; }
-    .question h3 { margin-bottom: 8px; }
-
-    label { display: block; margin: 6px 0; cursor: pointer; }
-
-    #submitBtn {
-      width: 100%;
-      margin-top: 1.5rem;
-      padding: 0.8rem;
-      background: var(--teal);
-      border: none;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: .3s;
-    }
-    #submitBtn:hover { background: var(--purple); }
-
-    .result-box {
-      text-align: center;
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: #eef6ff;
-      border-radius: 10px;
-      font-weight: 600;
-    }
-
-    .continue-btn {
-      margin-top: 1.5rem;
-      background: var(--dusty-rose);
-      padding: .7rem 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      color: #fff;
-      width: 100%;
-      font-size: 1rem;
-      transition: .3s;
-    }
-    .continue-btn:hover { background: var(--purple); }
-  </style>
+<style>
+body{background:#f6f8ff;font-family:Poppins}
+.container{max-width:900px;margin:40px auto;background:#fff;padding:30px;border-radius:16px}
+.question{margin:20px 0}
+label{display:block;margin:6px 0;cursor:pointer}
+button{margin-top:20px;width:100%;padding:14px;border:none;border-radius:12px;background:#4a90e2;color:#fff;font-size:16px;cursor:pointer}
+.result{margin-top:20px;font-weight:600;text-align:center}
+</style>
 </head>
 
 <body>
 
-<header>
-  <a href="../practice.html">⬅ Back</a>
-  <h2>Reading Practice</h2>
-  <button id="logoutBtn">Logout</button>
-</header>
-
 <div class="container">
-  <h1 id="levelLabel">Loading...</h1>
-  <p class="passage" id="passageText">Loading content...</p>
+  <h1 id="title">Reading Practice</h1>
+  <p id="passage">Loading passage...</p>
 
-  <div id="questionsContainer"></div>
+  <div id="questions"></div>
 
-  <button id="submitBtn" disabled>Submit Answers</button>
-
-  <div id="resultBox" class="result-box" style="display:none;"></div>
-  <button id="continueBtn" class="continue-btn" style="display:none;">Continue</button>
+  <button onclick="submitReading()">Submit</button>
+  <div class="result" id="result"></div>
 </div>
 
-<script type="module">
-  import { auth, db } from "../firebase.js";
-  import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-  import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+<script>
+let correct = [];
 
-  const logoutBtn = document.getElementById("logoutBtn");
-  const levelLabel = document.getElementById("levelLabel");
-  const passageText = document.getElementById("passageText");
-  const questionsContainer = document.getElementById("questionsContainer");
-  const submitBtn = document.getElementById("submitBtn");
-  const resultBox = document.getElementById("resultBox");
-  const continueBtn = document.getElementById("continueBtn");
+async function loadReading(){
+  const res = await fetch("../content/reading/beginner.json");
+  const data = await res.json();
 
-  let level = "beginner";
-  let data;
-  let correctAnswers = [];
+  const passage = data.passages[0]; // ONE module
+  document.getElementById("title").textContent = passage.title;
+  document.getElementById("passage").textContent = passage.text;
 
-  onAuthStateChanged(auth, async (user) => {
-    if (!user) return (window.location.href = "../index.html");
-
-    const snap = await getDoc(doc(db, "users", user.uid));
-    if (snap.exists()) level = snap.data().readingLevel || "beginner";
-
-    levelLabel.textContent = level.toUpperCase() + " Reading";
-
-    const res = await fetch(`../content/reading/${level}.json`);
-    data = await res.json();
-
-    passageText.textContent = data.passage;
-
-    data.questions.forEach((q, i) => {
-      correctAnswers.push(q.answer);
-
-      let div = document.createElement("div");
-      div.classList.add("question");
-      div.innerHTML = `<h3>${i+1}. ${q.q}</h3>` + 
-      q.options.map(opt => `
-        <label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label>
-      `).join("");
-      questionsContainer.append(div);
-    });
-
-    submitBtn.disabled = false;
+  const qBox = document.getElementById("questions");
+  passage.questions.forEach((q,i)=>{
+    correct.push(q.answer);
+    qBox.innerHTML += `
+      <div class="question">
+        <h3>${i+1}. ${q.question}</h3>
+        ${q.options.map(o=>`
+          <label><input type="radio" name="q${i}" value="${o}"> ${o}</label>
+        `).join("")}
+      </div>`;
   });
+}
 
-  submitBtn.addEventListener("click", async () => {
-    const user = auth.currentUser;
-    if (!user) return;
-
-    let score = 0;
-
-    correctAnswers.forEach((ans, i) => {
-      const selected = document.querySelector(`input[name="q${i}"]:checked`);
-      if (selected && selected.value === ans) score++;
-    });
-
-    resultBox.style.display = "block";
-    resultBox.textContent = `You scored: ${score}/${correctAnswers.length}`;
-
-    // level upgrade logic
-    let nextLevel = level;
-    const passingScore = Math.ceil(correctAnswers.length * 0.7);
-
-    if (score >= passingScore) {
-      if (level === "beginner") nextLevel = "intermediate";
-      else if (level === "intermediate") nextLevel = "advanced";
-    }
-
-    await setDoc(doc(db, "users", user.uid), {
-      readingLevel: nextLevel,
-      readingScore: score
-    }, { merge: true });
-
-    continueBtn.style.display = "block";
+function submitReading(){
+  let score = 0;
+  correct.forEach((ans,i)=>{
+    const sel = document.querySelector(`input[name=q${i}]:checked`);
+    if(sel && sel.value===ans) score++;
   });
+  document.getElementById("result").textContent =
+    `Score: ${score}/${correct.length}`;
+}
 
-  continueBtn.addEventListener("click", () => {
-    window.location.href = "../listening.html";
-  });
-
-  logoutBtn.addEventListener("click", () => {
-    signOut(auth).then(() => (window.location.href = "../index.html"));
-  });
+loadReading();
 </script>
 
 </body>
