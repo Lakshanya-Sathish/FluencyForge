@@ -1,65 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reading | FluencyForge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  background:#f6f8ff;
+  font-family:Poppins,sans-serif;
+  margin:0;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+}
+.question{margin:20px 0}
+label{display:block;margin:6px 0;cursor:pointer}
+button{
+  margin-top:20px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#4a90e2;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+.result{
+  margin-top:20px;
+  font-weight:600;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1 id="title">Loading...</h1>
+  <p id="passage">Loading passage...</p>
+
+  <div id="questions"></div>
+
+  <button id="submitBtn">Submit</button>
+  <div class="result" id="result"></div>
+</div>
+
 <script>
 let correctAnswers = [];
 
-// 1️⃣ GET PID FROM URL
-const params = new URLSearchParams(window.location.search);
-const pid = params.get("pid"); // example: R-B-1
+async function loadReading() {
+  try {
+    // 1️⃣ GET PID FROM URL
+    const params = new URLSearchParams(window.location.search);
+    const pid = params.get("pid"); // e.g. R-B-1
 
-async function loadReading(){
-  const res = await fetch("../content/reading/beginner.json");
-  const data = await res.json();
+    // 2️⃣ FETCH JSON (CORRECT PATH)
+    const res = await fetch("content/reading/beginner.json");
+    if (!res.ok) throw new Error("Failed to load reading JSON");
 
-  // 2️⃣ FIND PASSAGE BY PID
-  let passage;
+    const data = await res.json();
 
-  if(pid){
-    passage = data.passages.find(p => p.id === pid);
-  }
+    // 3️⃣ FIND PASSAGE BY PID
+    let passage = pid
+      ? data.passages.find(p => p.id === pid)
+      : data.passages[0];
 
-  // 3️⃣ FALLBACK (if pid missing or wrong)
-  if(!passage){
-    passage = data.passages[0];
-  }
+    // 4️⃣ HARD FALLBACK
+    if (!passage) passage = data.passages[0];
 
-  // 4️⃣ RENDER PASSAGE
-  document.getElementById("title").textContent = passage.title;
-  document.getElementById("passage").textContent = passage.text;
+    // 5️⃣ RENDER PASSAGE
+    document.getElementById("title").textContent = passage.title;
+    document.getElementById("passage").textContent = passage.text;
 
-  const qBox = document.getElementById("questions");
-  qBox.innerHTML = "";
-  correctAnswers = [];
+    const qBox = document.getElementById("questions");
+    qBox.innerHTML = "";
+    correctAnswers = [];
 
-  // 5️⃣ RENDER QUESTIONS
-  passage.questions.forEach((q, i) => {
-    correctAnswers.push(q.answer);
+    // 6️⃣ RENDER QUESTIONS
+    passage.questions.forEach((q, i) => {
+      correctAnswers.push(q.answer);
 
-    qBox.innerHTML += `
-      <div class="question">
-        <h3>${i+1}. ${q.question}</h3>
+      qBox.innerHTML += `
+        <div class="question">
+          <h3>${i + 1}. ${q.question}</h3>
+          ${Object.entries(q.options).map(([key, value]) => `
+            <label>
+              <input type="radio" name="q${i}" value="${key}">
+              (${key}) ${value}
+            </label>
+          `).join("")}
+        </div>
+      `;
+    });
 
-        ${Object.entries(q.options).map(([key, value]) => `
-          <label>
-            <input type="radio" name="q${i}" value="${key}">
-            (${key}) ${value}
-          </label>
-        `).join("")}
-      </div>
+  } catch (err) {
+    console.error(err);
+    document.body.innerHTML = `
+      <h2 style="text-align:center;margin-top:40px">
+        ❌ Failed to load reading module
+      </h2>
     `;
-  });
+  }
 }
 
-// 6️⃣ SUBMIT LOGIC
-document.getElementById("submitBtn").onclick = () => {
+// 7️⃣ SUBMIT LOGIC
+document.getElementById("submitBtn").addEventListener("click", () => {
   let score = 0;
 
   correctAnswers.forEach((ans, i) => {
     const selected = document.querySelector(`input[name="q${i}"]:checked`);
-    if(selected && selected.value === ans) score++;
+    if (selected && selected.value === ans) score++;
   });
 
   document.getElementById("result").textContent =
     `Score: ${score} / ${correctAnswers.length}`;
-};
+});
 
+// 8️⃣ INIT
 loadReading();
 </script>
+
+
+</body>
+</html>
