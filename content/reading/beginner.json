@@ -4,31 +4,171 @@
     {
       "id": "R-B-1",
       "title": "The Importance of Urban Trees",
-      "text": "In busy cities around the world, people often walk past trees without noticing them...",
+      "text": "In busy cities around the world, people often walk past trees without noticing them. These trees stand along roads, in parks, and near buildings, silently performing important roles that support the health and comfort of human life. Although they appear ordinary, urban trees live complex lives and face unique challenges. Understanding these hidden struggles can help us appreciate how essential they are to modern city environments.
+Urban trees differ greatly from forest trees. In natural forests, trees grow in large groups where soil, water, and nutrients are shared. Roots extend freely, and the ecosystem supports itself through organic processes like decomposing leaves and fallen branches. Urban trees, however, grow in limited spaces. Their roots are surrounded by concrete, metal pipes, and compacted soil. Because the soil is often packed tightly from foot traffic and construction activities, tree roots struggle to absorb water and nutrients. This stress makes urban trees more vulnerable to diseases and weak growth.
+Despite these challenges, urban trees provide remarkable benefits. One of the most important is controlling air quality. Trees absorb carbon dioxide and release oxygen through photosynthesis, a process essential for maintaining clean air. Additionally, they capture tiny particles from vehicles and industries. These particles often remain in the air in large cities, contributing to respiratory problems. By capturing them on their leaves, urban trees help reduce pollution levels and make the air safer to breathe.
+Another significant contribution comes from their ability to reduce what scientists call the “urban heat island effect.” Cities are usually hotter than rural areas due to concrete, asphalt, and metal surfaces absorbing and storing heat. During the day, these surfaces become extremely hot, making the environment uncomfortable. Trees help cool the air by providing shade and releasing water vapor through a process called transpiration. This natural cooling effect lowers temperatures by several degrees, making outdoor spaces more pleasant for people.
+Trees also play an important role in improving the mental well-being of city residents. Studies around the world show that green spaces reduce stress, improve mood, and increase productivity. Even small interactions, like walking near a row of trees while going to work, can positively affect mental health.
+Green spaces encourage outdoor activities such as walking, jogging, and cycling, leading to healthier lifestyles. Many cities now aim to include more trees in urban planning for this reason.
+However, planting and maintaining urban trees can be challenging for city planners. One major issue is the choice of tree species. Not all trees can survive city conditions. Some species require more space for their roots, while others cannot tolerate pollutions or high temperatures. Planting the wrong species increases maintenance costs and shortens the tree’s lifespan. Ideally, cities must select hardy species that can survive with limited water, high pollution, and restricted root space.
+Water management is another important factor. Trees need consistent water to grow, but cities often face water shortages. In many regions, rainfall is unpredictable, and manual watering requires time and money. To solve this, some cities have installed underground irrigation systems that deliver water directly to roots. Others use recycled water from homes and industries. These sustainable practices help reduce water waste while supporting tree growth.
+Urban trees also face threats from pests and diseases. These problems spread faster in cities because trees are often planted in long rows of the same species. When many identical trees grow close together, a single disease can kill them all. This happened in several countries when Dutch elm disease wiped out millions of elm trees. To avoid such disasters, cities now plant a mix of species. Biodiversity increases resilience and helps trees survive environmental challenges.
+Tree maintenance also requires community involvement. When residents understand the benefits of trees, they are more likely to take care of them. Some cities run volunteer programs where citizens water young trees, remove weeds, and report signs of disease. These programs strengthen community relationships and educate people about environmental care. School programs introduce children to tree planting and teach them about the importance of urban ecosystems.
+Technology is now transforming how cities care for trees. Sensors installed in the soil can measure moisture levels and nutrient content. Drones can monitor the health of trees from above, detecting early signs of disease. Computer models can predict which areas of a city get too hot or too polluted, helping planners decide where to plant more trees. These innovations improve efficiency and reduce maintenance costs.
+As climate change becomes a bigger challenge, urban trees will play an even more critical role. Rising temperatures, unpredictable weather, and stronger storms all affect city environments. Trees help reduce flooding by absorbing rainwater. Their roots stabilize soil and prevent erosion. Their shade cools homes, reducing the need for air-conditioning. All these benefits make urban trees essential elements of climate-resilient cities.
+In the future, many experts believe that cities will invest heavily in green infrastructure. This includes green roofs, vertical gardens, and tree-lined streets designed to make cities cleaner and more livable. Urban forests will become a central part of city planning rather than an afterthought. With proper care, urban trees can thrive and continue supporting human life in ways most people never notice.
+Urban trees might seem silent and still, but their hidden life is full of activity, struggle, and contribution. They clean the air, cool the streets, and improve the well-being of millions of people. As cities continue to grow, understanding and protecting these quiet companions will be essential for building healthier, more sustainable communities.",
+
       "questions": [
         {
-          "id": "Q1",
+          "id": "R-B-1-Q1",
           "question": "What is one major difference between urban trees and forest trees?",
-          "options": [
-            "Urban trees grow faster",
-            "Urban trees have less space for their roots",
-            "Forest trees need more sunlight",
-            "Urban trees require less water"
-          ],
-          "answer": "Urban trees have less space for their roots"
+          "options": {
+            "a": "Urban trees grow faster",
+            "b": "Urban trees have less space for their roots",
+            "c": "Forest trees need more sunlight",
+            "d": "Urban trees require less water"
+          },
+          "answer": "b"
         },
         {
-          "id": "Q2",
-          "question": "What causes the urban heat island effect?",
-          "options": [
-            "Heavy rainfall",
-            "More trees",
-            "Concrete and metal absorbing heat",
-            "Green spaces"
-          ],
-          "answer": "Concrete and metal absorbing heat"
+          "id": "R-B-1-Q2",
+          "question": "What is the main cause of the urban heat island effect?",
+          "options": {
+            "a": "Heavy rainfall",
+            "b": "Large numbers of trees",
+            "c": "Concrete and metal absorbing heat",
+            "d": "Too many green spaces"
+          },
+          "answer": "c"
+        },
+        {
+          "id": "R-B-1-Q3",
+          "question": "Trees improve air quality mainly by:",
+          "options": {
+            "a": "Eating insects",
+            "b": "Releasing carbon dioxide",
+            "c": "Absorbing dust and pollutants",
+            "d": "Growing taller"
+          },
+          "answer": "c"
+        },
+        {
+          "id": "R-B-1-Q4",
+          "question": "What psychological benefit do urban trees provide?",
+          "options": {
+            "a": "Increased hunger",
+            "b": "Reduced stress",
+            "c": "Faster aging",
+            "d": "Lower intelligence"
+          },
+          "answer": "b"
+        },
+        {
+          "id": "R-B-1-Q5",
+          "question": "Why is choosing the right species important for city planners?",
+          "options": {
+            "a": "Some trees grow too colorful",
+            "b": "Not all trees survive city conditions",
+            "c": "Some trees attract too many birds",
+            "d": "All trees grow the same everywhere"
+          },
+          "answer": "b"
+        },
+        {
+          "id": "R-B-1-Q6",
+          "question": "What is one method cities use to manage water for trees?",
+          "options": {
+            "a": "Coloring the leaves",
+            "b": "Underground irrigation systems",
+            "c": "Cutting roots regularly",
+            "d": "Planting trees only in winter"
+          },
+          "answer": "b"
+        },
+        {
+          "id": "R-B-1-Q7",
+          "question": "Why are identical tree rows more vulnerable?",
+          "options": {
+            "a": "They grow too slowly",
+            "b": "Birds avoid them",
+            "c": "Diseases spread quickly among similar species",
+            "d": "They cannot photosynthesize"
+          },
+          "answer": "c"
+        },
+        {
+          "id": "R-B-1-Q8",
+          "question": "How does technology help in tree maintenance?",
+          "options": {
+            "a": "By replacing natural trees",
+            "b": "By increasing pollution",
+            "c": "Through sensors, drones, and prediction tools",
+            "d": "By removing all water needs"
+          },
+          "answer": "c"
+        },
+        {
+          "id": "R-B-1-Q9",
+          "question": "What role do trees play in climate resilience?",
+          "options": {
+            "a": "Increasing flood risk",
+            "b": "Absorbing rainwater and reducing heat",
+            "c": "Melting ice",
+            "d": "Creating storms"
+          },
+          "answer": "b"
+        },
+        {
+          "id": "R-B-1-Q10",
+          "question": "What is the main message of the passage?",
+          "options": {
+            "a": "Urban trees are unimportant",
+            "b": "Urban trees weaken cities",
+            "c": "Urban trees are essential and must be protected",
+            "d": "Urban trees create noise pollution"
+          },
+          "answer": "c"
+        }
+      ]
+    },
+
+    {
+      "id": "R-B-2",
+      "title": "The Evolution of Public Transportation",
+      "text": "Public transportation has been an essential part of human civilization for centuries, allowing people to travel efficiently, connect with others, and access economic opportunities. While modern buses, trains, and subways may seem ordinary today, the evolution of public transportation is a long story of innovation, adaptation, and problem-solving. Understanding this journey helps us appreciate how transportation systems shape the way people live and how cities develop.
+Human mobility began with simple forms of shared transportation, long before engines or electricity existed. In ancient civilizations, communities relied on animal-drawn carts, horse-drawn stagecoaches, and small boats to move people from one place to another. These early systems were slow and limited, but they marked the beginning of organized public travel. In many places, people paid small fees to ride together, forming the earliest version of transport services. These early methods also demonstrated a basic principle that remains true today: transportation becomes more efficient when resources are shared.
+A major shift occurred in the early 19th century with the invention of the steam engine. Steam-powered trains revolutionized travel by connecting distant towns and cities at unprecedented speeds. Railroads expanded across continents, shaping economies, migration patterns, and even political relationships. Goods could be transported faster, and people gained easier access to education and jobs. For the first time, long-distance travel became accessible to ordinary citizens instead of being limited to the wealthy. This expansion set the foundation for modern transportation networks.
+As cities grew rapidly during the Industrial Revolution, new challenges arose. Urban populations increased, and narrow streets became crowded with pedestrians, animals, and carts. To ease congestion, several cities introduced horse-drawn streetcars that ran on metal tracks. These streetcars reduced friction, allowing horses to pull more passengers with less effort. However, horses required constant care, produced waste, and could not handle the growing demand for transportation.
+The development of electric power in the late 19th century brought the next major transformation. Electric streetcars replaced horse-drawn vehicles, providing a cleaner, faster, and more reliable mode of transportation. Many cities expanded their streetcar systems, and neighborhoods began to grow around major lines. This pattern of development, known as “streetcar suburbs,” influenced the structure of cities around the world. People could now live farther from their workplaces while still having easy access to transportation.
+The 20th century introduced buses and automobiles, which offered greater flexibility. Unlike streetcars, buses did not require tracks and could travel on existing roads. This made them cheaper to operate and allowed cities to adjust routes more easily. Over time, buses became the most common form of public transportation in many parts of the world. Meanwhile, the rise of private cars led to major changes in urban planning. Highways were built, and many cities expanded outward, creating suburban
+communities. While cars offered independence, they also contributed to pollution, traffic congestion, and increased fuel consumption.
+In response to growing traffic problems, many large cities developed rapid transit systems such as subways, metros, and elevated trains. These systems allowed people to move quickly across urban areas without being affected by street-level traffic. Subways became particularly important in densely populated cities like New York, Tokyo, and London. They enabled millions of people to commute daily, supporting economic growth and reducing road congestion. However, building and maintaining such systems required significant investment and long-term planning.
+In recent decades, concerns about climate change have influenced public transportation policies. Governments and city planners now prioritize environmentally friendly transportation options. Electric buses, hybrid vehicles, and light-rail systems have become more common. Efforts to promote cycling and walking have also increased. Many cities have introduced bike-sharing programs and built dedicated cycling lanes. These initiatives reduce carbon emissions and encourage healthier lifestyles.
+Technology continues to play a major role in shaping public transportation. Modern ticketing systems allow passengers to pay using smartphones or smart cards, making travel more convenient. GPS tracking and real-time updates help commuters plan their routes and avoid delays. Artificial intelligence is now used to manage traffic flow and optimize bus routes. Some cities are testing autonomous buses that can navigate streets without human drivers. While still in development, these technologies may transform public transportation in the future.
+Another major trend is the rise of ride-sharing services such as app-based taxis and on-demand shuttles. These services blend private transportation with public convenience, offering flexible options for passengers. Although ride-sharing provides comfort and accessibility, it sometimes increases road traffic and competes with traditional public transit. Policymakers continue to debate how to integrate these services into existing transportation networks in a balanced and sustainable way.
+Public transportation also plays a crucial role in promoting social equality. Affordable and accessible transportation connects people to schools, hospitals, and workplaces. Without it, many individuals—especially low-income families, the elderly, and people with disabilities—would face major challenges. Modern transportation systems aim to be inclusive by offering wheelchair-accessible vehicles, priority seating, and audio-visual announcements for passengers with disabilities. These features help ensure that transportation systems serve all members of society.
+The future of public transportation is expected to be shaped by sustainability, technology, and urban growth. Cities may develop integrated systems where buses, trains, bicycles, and walking paths connect
+seamlessly. Electric and hydrogen-powered vehicles are likely to become more common, reducing pollution and energy consumption. Vertical mobility solutions, such as cable cars and aerial trams, may become more popular in hilly or crowded areas. Some researchers even imagine flying taxis or personal air vehicles becoming part of the transportation landscape, though these ideas are still experimental.
+Despite the rapid advancements, public transportation continues to face challenges. Funding shortages, maintenance issues, and overcrowding are common concerns. Natural disasters, pandemics, and political conflicts can disrupt transportation systems. However, the long history of public transportation shows that innovation and adaptability have always been key to meeting these challenges. As cities continue to grow and societies become more interconnected, public transportation will remain essential for creating efficient, sustainable, and inclusive communities.
+From ancient animal-drawn carts to high-speed trains and futuristic autonomous vehicles, public transportation has evolved alongside human civilization. Each innovation reflects the changing needs of society and the creativity of people who seek better, smarter ways to move from one place to another. By understanding this evolution, we can appreciate the vital role transportation plays in shaping modern life and look forward to the exciting possibilities ahead.",
+
+      "questions": [
+        {
+          "id": "R-B-2-Q1",
+          "question": "What was one major drawback of horse-drawn streetcars?",
+          "options": {
+            "a": "They were too fast",
+            "b": "They required constant care",
+            "c": "They used electricity",
+            "d": "They could fly over traffic"
+          },
+          "answer": "b"
         }
       ]
     }
+      
+    
+    
   ]
 }
