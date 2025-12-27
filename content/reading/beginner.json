@@ -353,8 +353,825 @@
       "answer": "b"
     }
   ]
+},
+{
+  "id": "R-B-4",
+  "title": "The World of Coral Reefs",
+  "text": "Coral reefs are among the most vibrant and diverse ecosystems on Earth. Found in warm, shallow waters near tropical coastlines, these underwater habitats support thousands of species, from tiny fish to giant sea turtles. Despite covering less than 1% of the ocean floor, coral reefs are home to almost 25% of all marine life.\n\nA coral reef is made up of tiny living organisms called polyps. Each polyp builds a hard skeleton of calcium carbonate, which forms the reef structure. Coral reefs grow very slowly, making them vulnerable to environmental changes.\n\nCorals depend on microscopic algae called zooxanthellae, which perform photosynthesis and provide nutrients. When corals are stressed by heat or pollution, they expel these algae, causing coral bleaching.\n\nCoral reefs support marine biodiversity and protect coastlines by reducing wave impact. Humans rely on reefs for food, tourism, and coastal protection.\n\nHowever, climate change, pollution, and overfishing threaten coral reefs. Rising temperatures cause mass bleaching, while pollution and destructive fishing damage reef ecosystems.\n\nScientists are working to protect reefs through marine protected areas, coral transplantation, and technology such as underwater drones. Conservation efforts and responsible tourism are essential for the future of coral reefs.",
+  "questions": [
+    {
+      "id": "R-B-4-Q1",
+      "question": "What are coral reefs primarily made up of?",
+      "options": {
+        "a": "Rocks",
+        "b": "Sea plants",
+        "c": "Calcium carbonate from coral polyps",
+        "d": "Sand"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-4-Q2",
+      "question": "What causes coral bleaching?",
+      "options": {
+        "a": "Too much food",
+        "b": "Pollutants and temperature stress",
+        "c": "Increased fish population",
+        "d": "Excessive sunlight"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-4-Q3",
+      "question": "What role do zooxanthellae play?",
+      "options": {
+        "a": "They hunt fish",
+        "b": "They produce nutrients through photosynthesis",
+        "c": "They eat coral polyps",
+        "d": "They build reef skeletons"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-4-Q4",
+      "question": "How do coral reefs benefit humans?",
+      "options": {
+        "a": "By creating deserts",
+        "b": "By protecting coastlines",
+        "c": "By increasing pollution",
+        "d": "By melting ice"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-4-Q5",
+      "question": "Which activity does not harm coral reefs?",
+      "options": {
+        "a": "Overfishing",
+        "b": "Clean beach practices",
+        "c": "Oil spills",
+        "d": "Sedimentation"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-4-Q6",
+      "question": "Why are parrotfish important?",
+      "options": {
+        "a": "They create pollution",
+        "b": "They prevent algae from overwhelming reefs",
+        "c": "They destroy coral skeletons",
+        "d": "They cause bleaching"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-4-Q7",
+      "question": "What is one major threat caused by climate change?",
+      "options": {
+        "a": "Lower sea levels",
+        "b": "Mass coral bleaching",
+        "c": "Increased coral growth",
+        "d": "Stronger coral skeletons"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-4-Q8",
+      "question": "What is one method scientists use to restore reefs?",
+      "options": {
+        "a": "Planting trees underwater",
+        "b": "Transplanting coral fragments",
+        "c": "Removing all fish",
+        "d": "Drying out the ocean"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-4-Q9",
+      "question": "What is an advantage of marine protected areas?",
+      "options": {
+        "a": "Increased pollution",
+        "b": "Less control over fishing",
+        "c": "Preservation of marine habitats",
+        "d": "Encouraging destructive fishing"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-4-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Coral reefs are unimportant",
+        "b": "Coral reefs are fragile ecosystems that need protection",
+        "c": "Coral reefs destroy marine life",
+        "d": "Coral reefs only benefit tourists"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-B-5",
+  "title": "The Rise of Renewable Energy",
+  "text": "For much of human history, people relied on energy sources such as wood, coal, and oil to power their homes, industries, and transportation systems. These sources fueled economic growth but also caused environmental challenges. In recent decades, the world has turned its attention to renewable energy—energy from natural sources that do not run out and cause far less pollution.\n\nRenewable energy comes from sunlight, wind, water, and geothermal heat. Unlike fossil fuels, these resources are naturally replenished, making them ideal for long-term energy planning. The shift toward renewables is driven by concerns about climate change, rising fuel costs, and growing energy demand.\n\nSolar power is one of the most popular renewable sources. Solar panels use photovoltaic cells to convert sunlight into electricity. Wind energy uses turbines to generate power from moving air, especially in open or offshore areas. Hydropower uses flowing water to turn turbines, while geothermal energy relies on heat from inside the Earth.\n\nAnother renewable source is biomass energy, produced from organic materials like plant waste and crops. While renewable, biomass must be managed sustainably to avoid deforestation and pollution.\n\nTechnological advancements such as battery storage and smart grids have accelerated renewable adoption. However, challenges remain, including high initial costs, energy storage limitations, and land use concerns.\n\nGovernment incentives and global agreements encourage renewable energy development. Beyond environmental benefits, renewable energy creates jobs and improves access to electricity. Overall, renewable energy represents a critical step toward a sustainable future.",
+  "questions": [
+    {
+      "id": "R-B-5-Q1",
+      "question": "What makes renewable energy different from fossil fuels?",
+      "options": {
+        "a": "It is more expensive",
+        "b": "It is naturally replenished",
+        "c": "It is always available at night",
+        "d": "It produces more pollution"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-5-Q2",
+      "question": "What do photovoltaic cells do?",
+      "options": {
+        "a": "Store wind energy",
+        "b": "Convert sunlight into electricity",
+        "c": "Measure air temperature",
+        "d": "Heat buildings directly"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-5-Q3",
+      "question": "Why are offshore locations ideal for wind farms?",
+      "options": {
+        "a": "They have strong and steady winds",
+        "b": "They have more tourists",
+        "c": "They are easier to build on",
+        "d": "They reduce turbine size"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-B-5-Q4",
+      "question": "What is one disadvantage of hydropower?",
+      "options": {
+        "a": "It cannot produce electricity",
+        "b": "It increases fossil fuel use",
+        "c": "It can disrupt river ecosystems",
+        "d": "It requires wind to operate"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-5-Q5",
+      "question": "Geothermal energy comes from:",
+      "options": {
+        "a": "Ocean waves",
+        "b": "The Earth’s internal heat",
+        "c": "Solar panels",
+        "d": "Burning coal"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-5-Q6",
+      "question": "What is a concern with biomass energy?",
+      "options": {
+        "a": "It cannot produce fuel",
+        "b": "It is not renewable",
+        "c": "Unsustainable production can harm forests",
+        "d": "It produces no emissions"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-5-Q7",
+      "question": "What technology helps store extra solar or wind energy?",
+      "options": {
+        "a": "Televisions",
+        "b": "Battery storage systems",
+        "c": "Refrigerators",
+        "d": "GPS devices"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-5-Q8",
+      "question": "Why do some countries offer incentives for renewable energy?",
+      "options": {
+        "a": "To increase fossil fuel use",
+        "b": "To reduce carbon emissions",
+        "c": "To stop technological development",
+        "d": "To discourage solar panels"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-5-Q9",
+      "question": "Which renewable energy source is extremely reliable due to stable heat?",
+      "options": {
+        "a": "Solar",
+        "b": "Wind",
+        "c": "Geothermal",
+        "d": "Biomass"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-5-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Renewable energy is unnecessary",
+        "b": "Renewable energy is harmful",
+        "c": "Renewable energy is rising globally and supports a sustainable future",
+        "d": "Fossil fuels are better than renewable energy"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-B-6",
+  "title": "The History and Impact of Photography",
+  "text": "Photography is so common today that people rarely stop to think about how revolutionary it once was. With smartphones, digital cameras, and social media, taking and sharing photos has become part of daily life. Yet the history of photography is a fascinating journey of scientific discovery, artistic experimentation, and technological innovation.\n\nLong before cameras existed, people used simple optical devices like the camera obscura. This dark box projected an inverted image onto a surface, helping artists draw accurately and inspiring later photographic inventions.\n\nIn 1826, Joseph Nicéphore Niépce created the world’s earliest surviving photograph using heliography. His partner, Louis Daguerre, later introduced the daguerreotype, producing sharp images on silver plates. However, daguerreotypes could not be reproduced and involved toxic chemicals.\n\nWilliam Henry Fox Talbot developed the calotype process, which used paper negatives to create multiple copies. This negative-to-positive method became the foundation of modern film photography.\n\nIn 1888, George Eastman introduced affordable roll-film cameras through Kodak, making photography accessible to the public. Photography soon became a tool for journalism, documenting wars, social issues, and historical events.\n\nColor photography brought realism and emotional depth, transforming advertising, fashion, and cinema. Later, digital photography replaced film with electronic sensors, allowing instant viewing, easy editing, and mass storage.\n\nSmartphones and social media turned photography into a universal activity, but also introduced challenges such as image manipulation, privacy concerns, and misinformation.\n\nDespite these issues, photography remains essential in art, science, medicine, and communication. With advances like artificial intelligence, drones, and virtual reality, photography continues to evolve and shape how humans see and record the world.",
+  "questions": [
+    {
+      "id": "R-B-6-Q1",
+      "question": "What was the main purpose of the camera obscura?",
+      "options": {
+        "a": "To take permanent photos",
+        "b": "To help artists draw accurately",
+        "c": "To print newspapers",
+        "d": "To store digital images"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-6-Q2",
+      "question": "Who created the first surviving photograph?",
+      "options": {
+        "a": "George Eastman",
+        "b": "Louis Daguerre",
+        "c": "Joseph Nicéphore Niépce",
+        "d": "William Talbot"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-6-Q3",
+      "question": "What was a major advantage of the calotype process?",
+      "options": {
+        "a": "It produced digital images",
+        "b": "It used roll film",
+        "c": "It created multiple copies using negatives",
+        "d": "It required no chemicals"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-6-Q4",
+      "question": "What innovation made photography widely accessible to the public?",
+      "options": {
+        "a": "Silver plates",
+        "b": "Roll film cameras by Kodak",
+        "c": "Long exposure techniques",
+        "d": "Camera obscura"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-6-Q5",
+      "question": "How did photography influence journalism?",
+      "options": {
+        "a": "It slowed down news reporting",
+        "b": "It made articles longer",
+        "c": "It helped document real events visually",
+        "d": "It replaced newspapers"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-6-Q6",
+      "question": "What improvement did color photography bring?",
+      "options": {
+        "a": "Faster printing",
+        "b": "More realistic and expressive images",
+        "c": "More expensive cameras",
+        "d": "Invisible images"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-6-Q7",
+      "question": "What is a major benefit of digital photography?",
+      "options": {
+        "a": "Photos cannot be edited",
+        "b": "Images are available instantly",
+        "c": "It uses dangerous chemicals",
+        "d": "It requires darkrooms"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-6-Q8",
+      "question": "What challenge has emerged with modern digital photography?",
+      "options": {
+        "a": "Lack of storage",
+        "b": "Fewer photos being taken",
+        "c": "Concerns about image authenticity",
+        "d": "Decreased access to cameras"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-6-Q9",
+      "question": "How is photography used in science?",
+      "options": {
+        "a": "To create novels",
+        "b": "To document wildlife and environmental changes",
+        "c": "To replace microscopes",
+        "d": "To paint landscapes"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-6-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Photography is no longer important",
+        "b": "Photography has evolved greatly and impacts society",
+        "c": "Only professionals benefit from photography",
+        "d": "Photography has remained unchanged for centuries"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-B-7",
+  "title": "The Development of Robots in Everyday Life",
+  "text": "Robots have long captured human imagination, appearing in early science-fiction stories as machines that could think and act like humans. Today, robots are becoming a real part of everyday life, appearing in homes, hospitals, schools, and workplaces.\n\nThe earliest robots were mechanical arms used in factories during the mid-20th century. They performed tasks such as lifting heavy objects and assembling products with speed and accuracy, improving safety and efficiency.\n\nA major breakthrough came with computer programming, allowing robots to be reprogrammed for different tasks. Robots then began assisting with dangerous jobs such as exploring volcanoes, cleaning chemical spills, and inspecting deep-sea environments.\n\nIn healthcare, robots assist surgeons with precise movements, help deliver supplies in hospitals, and support patient rehabilitation. These robots reduce recovery time and ease the workload of medical staff.\n\nRobots are also common in homes. Robotic vacuum cleaners, lawn mowers, and smart assistants help people save time and manage daily tasks more easily.\n\nEducation benefits from robotics as well. Educational robots help teach coding and problem-solving and support students with special needs by providing consistent and patient instruction.\n\nTransportation is another growing area. Self-driving cars use sensors and artificial intelligence to navigate roads, potentially reducing accidents caused by human error. Delivery robots and warehouse robots are also increasingly used.\n\nDespite their advantages, robots raise concerns about job replacement, safety, and privacy. While robots may replace some tasks, they also create new job opportunities that require technical skills.\n\nThe future of robotics is promising, with developments such as soft robots made of flexible materials, learning robots that improve over time, and robots used in space and ocean exploration.\n\nRobots are tools that extend human abilities. They help solve problems, perform dangerous tasks, and improve quality of life. As they become more advanced, robots will continue to shape modern society.",
+  "questions": [
+    {
+      "id": "R-B-7-Q1",
+      "question": "What were the earliest robots mainly used for?",
+      "options": {
+        "a": "Space exploration",
+        "b": "Factory tasks like lifting and assembling",
+        "c": "Teaching students",
+        "d": "Home cleaning"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-7-Q2",
+      "question": "What major development allowed robots to become more useful?",
+      "options": {
+        "a": "Painting tools",
+        "b": "Computer programming",
+        "c": "Wooden materials",
+        "d": "Larger engines"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-7-Q3",
+      "question": "How do robots assist doctors in hospitals?",
+      "options": {
+        "a": "By diagnosing diseases",
+        "b": "By performing precise surgical tasks",
+        "c": "By replacing all nurses",
+        "d": "By running the hospital office"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-7-Q4",
+      "question": "Why are educational robots helpful for children?",
+      "options": {
+        "a": "They never make mistakes",
+        "b": "They replace teachers",
+        "c": "They keep students engaged and support learning",
+        "d": "They can fly"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-7-Q5",
+      "question": "What is a potential advantage of self-driving cars?",
+      "options": {
+        "a": "Increased traffic jams",
+        "b": "More accidents",
+        "c": "Safer travel due to fewer human errors",
+        "d": "They require no testing"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-7-Q6",
+      "question": "What is one concern about robots in society?",
+      "options": {
+        "a": "They eat too much electricity",
+        "b": "They may collect personal data",
+        "c": "They always break down",
+        "d": "They cannot perform repetitive tasks"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-7-Q7",
+      "question": "What are soft robots made from?",
+      "options": {
+        "a": "Metal",
+        "b": "Glass",
+        "c": "Flexible materials",
+        "d": "Water"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-7-Q8",
+      "question": "What can learning robots do?",
+      "options": {
+        "a": "Eat food",
+        "b": "Improve their performance over time",
+        "c": "Replace all human workers",
+        "d": "Sleep like humans"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-7-Q9",
+      "question": "How are robots used in space exploration?",
+      "options": {
+        "a": "They build houses on Mars",
+        "b": "They take pictures and collect samples",
+        "c": "They transport tourists",
+        "d": "They only orbit Earth"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-7-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Robots are dangerous and should be avoided",
+        "b": "Robots have stopped developing",
+        "c": "Robots are becoming more advanced and influencing everyday life",
+        "d": "Robots only exist in science fiction"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-B-8",
+  "title": "The Global Importance of Freshwater",
+  "text": "Freshwater is one of the most essential resources on Earth. It sustains life, supports ecosystems, and enables human civilizations to grow and thrive. Although most of the planet is covered with water, less than 3% is freshwater, and much of it is trapped in glaciers or underground, making accessible freshwater extremely scarce.\n\nFreshwater exists in rivers, lakes, streams, groundwater, and glaciers. Early civilizations developed near rivers because they provided drinking water, transportation, and fertile land for agriculture. Even today, many cities are located near freshwater sources.\n\nFreshwater is vital for drinking and sanitation. Millions of people still lack access to clean water, and contaminated water can spread diseases such as cholera and typhoid. Ensuring safe water requires proper filtration and purification systems.\n\nAgriculture is the largest consumer of freshwater. Irrigation helps grow food, but overuse can damage ecosystems, dry wetlands, reduce fish populations, and increase soil salinity. Sustainable practices help conserve water.\n\nIndustry also depends heavily on freshwater for cooling, cleaning, and manufacturing. Hydroelectric power relies on flowing water, but industrial pollution can contaminate rivers and groundwater if waste is not managed properly.\n\nPollution from cities, agriculture, and industries threatens freshwater quality. Fertilizers can cause harmful algal blooms, while plastics and microplastics pollute water sources and harm ecosystems.\n\nClimate change affects freshwater through increased evaporation, droughts, floods, melting glaciers, and warmer water temperatures that disrupt ecosystems.\n\nGroundwater supplies wells and aquifers but is often overused. Excessive pumping can cause wells to dry up and lead to land subsidence.\n\nProtecting freshwater requires technology, government policies, and international cooperation. Water treatment plants, pollution control laws, and conservation strategies help manage water resources.\n\nIndividuals can help by reducing water waste, fixing leaks, using eco-friendly products, and supporting conservation efforts.\n\nFreshwater ecosystems support diverse life and provide benefits such as flood control and water filtration. As demand grows, sustainable solutions are essential to protect freshwater for future generations.",
+  "questions": [
+    {
+      "id": "R-B-8-Q1",
+      "question": "Why is freshwater considered scarce?",
+      "options": {
+        "a": "Most water on Earth is salty",
+        "b": "Lakes are disappearing",
+        "c": "Rainfall is constant",
+        "d": "Rivers contain unlimited water"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-B-8-Q2",
+      "question": "Why did early civilizations form near rivers?",
+      "options": {
+        "a": "Rivers provided entertainment",
+        "b": "Rivers offered water, transport, and fertile land",
+        "c": "Rivers were easy to cross",
+        "d": "Rivers contained gold"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-8-Q3",
+      "question": "What is a major cause of waterborne diseases?",
+      "options": {
+        "a": "Clean drinking water",
+        "b": "Contaminated water sources",
+        "c": "Frequent rainfall",
+        "d": "Cold temperatures"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-8-Q4",
+      "question": "Which sector uses the most freshwater worldwide?",
+      "options": {
+        "a": "Tourism",
+        "b": "Agriculture",
+        "c": "Banking",
+        "d": "Entertainment"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-8-Q5",
+      "question": "What problem can agricultural overuse of water cause?",
+      "options": {
+        "a": "Cleaner rivers",
+        "b": "Healthier soil",
+        "c": "Ecosystem damage and soil salinity",
+        "d": "More rainfall"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-8-Q6",
+      "question": "What is a drawback of industrial water use?",
+      "options": {
+        "a": "Industries never use freshwater",
+        "b": "Industries can pollute freshwater sources",
+        "c": "Factories only use seawater",
+        "d": "Industry reduces groundwater pollution"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-8-Q7",
+      "question": "What effect does climate change have on freshwater?",
+      "options": {
+        "a": "More glaciers form",
+        "b": "Increased evaporation and unpredictable rainfall",
+        "c": "More stable water levels",
+        "d": "Rivers stop flowing"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-8-Q8",
+      "question": "What is a risk of over-pumping groundwater?",
+      "options": {
+        "a": "More lakes appear",
+        "b": "Aquifers grow larger",
+        "c": "Wells dry up and land may sink",
+        "d": "Oceans rise instantly"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-8-Q9",
+      "question": "What is one way wetlands help the environment?",
+      "options": {
+        "a": "They produce plastic",
+        "b": "They store floodwater and filter pollutants",
+        "c": "They create deserts",
+        "d": "They reduce biodiversity"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-8-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Freshwater is unlimited",
+        "b": "Freshwater is important and needs protection",
+        "c": "Freshwater is not needed for human life",
+        "d": "Freshwater only benefits animals"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-B-9",
+  "title": "The Exploration of the Deep Ocean",
+  "text": "The deep ocean is one of the least explored regions on Earth. Although humans have traveled across continents, reached the poles, and even visited the Moon, we still know surprisingly little about what lies beneath the waves. The deep sea begins at about 200 meters below the surface, where sunlight no longer reaches. Beyond this point, the ocean becomes a world of darkness, extreme pressure, and freezing temperatures.\n\nFor centuries, people believed the deep ocean was empty and lifeless because there was no way to explore it deeply. Early exploration tools were limited, and myths filled the imagination. In the late 19th century, scientists discovered strange fish, giant squid, and corals, proving life existed at great depths.\n\nAs depth increases, pressure rises dramatically and temperatures remain near freezing. Despite the lack of sunlight, many organisms survive through unique adaptations such as enhanced senses or complete blindness.\n\nOne remarkable feature of deep-sea life is bioluminescence. Many organisms produce their own light to attract prey, avoid predators, or communicate. Anglerfish use glowing lures to capture prey.\n\nIn 1960, the bathyscaphe Trieste reached the deepest known part of the ocean, the Mariana Trench. Modern submersibles, ROVs, and AUVs now collect samples, photographs, and detailed maps of the ocean floor.\n\nHydrothermal vents discovered in 1977 revealed ecosystems that survive through chemosynthesis instead of sunlight. These discoveries changed scientific understanding of life.\n\nThe deep ocean plays a vital role in regulating Earth’s climate by storing heat and carbon dioxide and circulating water globally.\n\nHuman activities threaten the deep ocean through mining, pollution, and climate change. These activities can damage ecosystems that take thousands of years to develop.\n\nAdvanced technology such as sonar, underwater drones, and AI now helps scientists explore and understand the deep sea.\n\nThe deep ocean remains mysterious, full of life, and essential to Earth’s systems. Protecting it is crucial for biodiversity and future scientific discoveries.",
+  "questions": [
+    {
+      "id": "R-B-9-Q1",
+      "question": "Why was the deep ocean once considered lifeless?",
+      "options": {
+        "a": "It had no water",
+        "b": "There was no way to explore it deeply",
+        "c": "Scientists knew it was empty",
+        "d": "It contained only plants"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-9-Q2",
+      "question": "What makes survival difficult in the deep ocean?",
+      "options": {
+        "a": "Bright sunlight",
+        "b": "Warm temperatures",
+        "c": "High pressure and darkness",
+        "d": "Lack of saltwater"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-9-Q3",
+      "question": "What is bioluminescence?",
+      "options": {
+        "a": "Sound produced by fish",
+        "b": "Light produced by organisms",
+        "c": "Heat from hydrothermal vents",
+        "d": "Movement of ocean currents"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-9-Q4",
+      "question": "What was significant about the Trieste mission in 1960?",
+      "options": {
+        "a": "It discovered new continents",
+        "b": "It reached the deepest part of the ocean",
+        "c": "It invented scuba diving",
+        "d": "It found life on Mars"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-9-Q5",
+      "question": "What makes hydrothermal vent ecosystems unique?",
+      "options": {
+        "a": "They depend on sunlight",
+        "b": "They are found on land",
+        "c": "They rely on chemosynthesis",
+        "d": "They are completely dry"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-9-Q6",
+      "question": "What role does the deep ocean play in Earth’s climate?",
+      "options": {
+        "a": "It produces rainfall",
+        "b": "It stores heat and carbon dioxide",
+        "c": "It warms the atmosphere directly",
+        "d": "It increases air pressure"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-9-Q7",
+      "question": "What is a major concern about deep-sea mining?",
+      "options": {
+        "a": "It increases fish populations",
+        "b": "It is inexpensive",
+        "c": "It can destroy delicate ecosystems",
+        "d": "It produces clean energy"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-9-Q8",
+      "question": "What type of pollution is commonly found in the deep ocean?",
+      "options": {
+        "a": "Microplastics",
+        "b": "Newspaper waste",
+        "c": "Sand",
+        "d": "Clean drinking water"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-B-9-Q9",
+      "question": "Which technology helps create detailed maps of the ocean floor?",
+      "options": {
+        "a": "Satellites",
+        "b": "Sonar",
+        "c": "Paper maps",
+        "d": "Weather balloons"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-9-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "The deep ocean is empty and unimportant",
+        "b": "The deep ocean is fully understood by scientists",
+        "c": "The deep ocean is mysterious, important, and worth protecting",
+        "d": "The deep ocean is easy to explore"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-B-10",
+  "title": "The Changing World of Global Migration",
+  "text": "Migration—the movement of people from one place to another—has shaped human history for thousands of years. From ancient nomadic tribes to modern travelers seeking new opportunities, migration has always been a part of human society. Today, global migration is more widespread and complex than ever before.\n\nHistorically, people migrated to find food, escape harsh weather, or seek fertile lands. Trade routes encouraged the exchange of goods, ideas, and cultures, while wars and natural disasters forced communities to flee their homes.\n\nIn the modern era, advances in transportation and communication have made migration global. Air travel allows fast movement, and digital communication helps migrants stay connected with families.\n\nEconomic opportunity is one of the most common reasons for migration. Migrants fill labor shortages and send remittances back home to support their families.\n\nEducation also drives migration, with students traveling abroad to gain skills and international experience.\n\nForced migration occurs when people flee war, persecution, or natural disasters. Refugees often face discrimination and legal challenges while rebuilding their lives.\n\nClimate change is increasingly influencing migration through rising sea levels, droughts, and extreme weather.\n\nMigration brings cultural benefits by promoting diversity, innovation, and shared traditions, but it can also cause social tension and conflict.\n\nSuccessful integration involves language learning, education, and community support.\n\nTechnology and global cooperation will shape the future of migration, making it safer and more sustainable.\n\nMigration remains a powerful force shaping the modern world.",
+  "questions": [
+    {
+      "id": "R-B-10-Q1",
+      "question": "What is one historical reason early humans migrated?",
+      "options": {
+        "a": "To reach airports",
+        "b": "To find food and resources",
+        "c": "To attend universities",
+        "d": "To become tourists"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-10-Q2",
+      "question": "What has made modern migration more global?",
+      "options": {
+        "a": "Slower transportation",
+        "b": "Lack of communication",
+        "c": "Air travel and digital communication",
+        "d": "Fewer job opportunities"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-10-Q3",
+      "question": "Why do many people migrate for economic reasons?",
+      "options": {
+        "a": "To avoid learning new skills",
+        "b": "To find better job opportunities",
+        "c": "To escape education",
+        "d": "To reduce salaries"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-10-Q4",
+      "question": "What are remittances?",
+      "options": {
+        "a": "Money migrants send home",
+        "b": "Travel documents",
+        "c": "Student visas",
+        "d": "New languages"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-B-10-Q5",
+      "question": "Why do refugees migrate?",
+      "options": {
+        "a": "For tourism",
+        "b": "To enjoy new foods",
+        "c": "To escape war or danger",
+        "d": "For entertainment"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-B-10-Q6",
+      "question": "How does climate change affect migration?",
+      "options": {
+        "a": "By making weather more stable",
+        "b": "By forcing people to relocate due to environmental changes",
+        "c": "By reducing sea levels",
+        "d": "By improving farming conditions"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-10-Q7",
+      "question": "What is one cultural benefit of migration?",
+      "options": {
+        "a": "Less diversity",
+        "b": "Cultural exchange and new traditions",
+        "c": "Fewer festivals",
+        "d": "Reduced creativity"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-10-Q8",
+      "question": "What challenge do migrants often face?",
+      "options": {
+        "a": "Unlimited job opportunities",
+        "b": "Discrimination and isolation",
+        "c": "Free housing everywhere",
+        "d": "No need for documents"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-B-10-Q9",
+      "question": "What helps migrants integrate into society?",
+      "options": {
+        "a": "Learning the local language",
+        "b": "Avoiding local people",
+        "c": "Hiding their culture",
+        "d": "Not attending school"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-B-10-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Migration destroys cultures",
+        "b": "Migration is simple and temporary",
+        "c": "Migration is complex, important, and shapes the modern world",
+        "d": "Migration only benefits wealthy countries"
+      },
+      "answer": "c"
+    }
+  ]
 }
-
-
   ]
 }
