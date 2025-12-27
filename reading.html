@@ -6,63 +6,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
 
 <style>
-body{background:#f6f8ff;font-family:Poppins}
-.container{max-width:900px;margin:40px auto;background:#fff;padding:30px;border-radius:16px}
+body{
+  background:#f6f8ff;
+  font-family:Poppins,sans-serif;
+  margin:0;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+}
 .question{margin:20px 0}
 label{display:block;margin:6px 0;cursor:pointer}
-button{margin-top:20px;width:100%;padding:14px;border:none;border-radius:12px;background:#4a90e2;color:#fff;font-size:16px;cursor:pointer}
-.result{margin-top:20px;font-weight:600;text-align:center}
+button{
+  margin-top:20px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#4a90e2;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+.result{
+  margin-top:20px;
+  font-weight:600;
+  text-align:center;
+}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-  <h1 id="title">Reading Practice</h1>
+  <h1 id="title">Loading...</h1>
   <p id="passage">Loading passage...</p>
 
   <div id="questions"></div>
 
-  <button onclick="submitReading()">Submit</button>
+  <button id="submitBtn">Submit</button>
   <div class="result" id="result"></div>
 </div>
 
 <script>
-let correct = [];
+let correctAnswers = [];
 
 async function loadReading(){
   const res = await fetch("../content/reading/beginner.json");
   const data = await res.json();
 
-  const passage = data.passages[0]; // ONE module
+  // ONE PASSAGE = ONE MODULE
+  const passage = data.passages[0];
+
   document.getElementById("title").textContent = passage.title;
   document.getElementById("passage").textContent = passage.text;
 
   const qBox = document.getElementById("questions");
-  passage.questions.forEach((q,i)=>{
-    correct.push(q.answer);
+  qBox.innerHTML = "";
+  correctAnswers = [];
+
+  passage.questions.forEach((q, i) => {
+    correctAnswers.push(q.answer);
+
     qBox.innerHTML += `
       <div class="question">
         <h3>${i+1}. ${q.question}</h3>
-        ${q.options.map(o=>`
-          <label><input type="radio" name="q${i}" value="${o}"> ${o}</label>
+        ${q.options.map(opt => `
+          <label>
+            <input type="radio" name="q${i}" value="${opt}">
+            ${opt}
+          </label>
         `).join("")}
-      </div>`;
+      </div>
+    `;
   });
 }
 
-function submitReading(){
+document.getElementById("submitBtn").onclick = () => {
   let score = 0;
-  correct.forEach((ans,i)=>{
-    const sel = document.querySelector(`input[name=q${i}]:checked`);
-    if(sel && sel.value===ans) score++;
+
+  correctAnswers.forEach((ans, i) => {
+    const selected = document.querySelector("input[name=\"q" + i + "\"]:checked");
+    if(selected && selected.value === ans) score++;
   });
+
   document.getElementById("result").textContent =
-    `Score: ${score}/${correct.length}`;
-}
+    "Score: " + score + " / " + correctAnswers.length;
+};
 
 loadReading();
 </script>
