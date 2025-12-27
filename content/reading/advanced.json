@@ -1,0 +1,1175 @@
+{
+  "level": "advanced",
+  "passages": [
+ {
+  "id": "R-A-1",
+  "title": "The Fragile Balance of Global Water Systems",
+  "text": "Water covers more than 70% of Earth’s surface, yet only a tiny fraction of it—less than 1%—is readily available as fresh water for human use. The global water system operates through an intricate network of rivers, lakes, groundwater, glaciers, and atmospheric moisture. These systems sustain ecosystems, regulate climate, and support agriculture and industry. However, the global water cycle is becoming increasingly unstable due to rising temperatures, population growth, and unsustainable water management practices. As a result, scientists warn that humanity may soon face unprecedented water challenges.\n\nOne fundamental component of the global water system is the hydrological cycle, the continuous movement of water between the atmosphere, land, and oceans. Evaporation from oceans creates clouds, which eventually release precipitation. Some of this water flows into rivers, replenishes lakes, or seeps into aquifers deep underground. However, rising global temperatures are accelerating evaporation rates. While this increases moisture in the atmosphere, it does not guarantee rainfall where it is most needed. In fact, many regions are experiencing prolonged droughts even as others suffer from heavier rainfall and flooding.\n\nAnother issue is the rising demand for freshwater. Agriculture accounts for approximately 70% of global water use, and this demand is growing as the world’s population expands. Large-scale irrigation systems often withdraw water faster than aquifers can replenish. In regions such as South Asia and the Middle East, groundwater levels are dropping rapidly, threatening long-term water security. Complicating matters further, industrial activities—from textile factories to semiconductor manufacturing—require massive amounts of clean water, straining local supplies.\n\nClimate change has also intensified the uneven distribution of water resources. Polar ice caps and mountain glaciers, which act as long-term freshwater storage, are melting at alarming rates. These glaciers feed some of the world’s most important rivers, including the Indus, Yangtze, and Colorado. When glaciers shrink, rivers become less predictable. Initially, melting increases water flow, but eventually, river volumes decline sharply, leaving millions without reliable water sources.\n\nPollution presents another major threat. In many developing countries, untreated industrial waste, agricultural runoff, and sewage enter rivers and lakes. Excessive nutrients from fertilizers cause harmful algal blooms, which deplete oxygen in the water and kill fish. Microplastic pollution, once considered a minor issue, is now found in rivers, groundwater, and even drinking water. These particles can absorb toxic chemicals and pose unknown long-term health risks.\n\nTo address these challenges, nations are turning to technological solutions. Desalination plants convert seawater into drinking water but require enormous amounts of energy, making them costly and environmentally taxing. Wastewater recycling treats sewage water for reuse, though public resistance often slows adoption. Nature-based solutions such as wetlands, reforestation, and green infrastructure restore natural water systems and reduce environmental damage.\n\nInternational cooperation is essential because many major rivers cross national borders. Without coordinated management, conflicts over water rights can arise. Despite the severity of these challenges, improved monitoring technologies, sustainable farming, and water-efficient innovations offer hope. Securing Earth’s water future requires a balance between technology, conservation, and global cooperation.",
+  "questions": [
+    {
+      "id": "R-A-1-Q1",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Water scarcity is caused solely by pollution",
+        "b": "The global water system is becoming unstable due to multiple interacting factors",
+        "c": "Technology alone can solve all global water problems",
+        "d": "Freshwater is abundant but poorly distributed"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-1-Q2",
+      "question": "Why do rising temperatures not guarantee increased rainfall in needed areas?",
+      "options": {
+        "a": "Cloud formation is decreasing worldwide",
+        "b": "Evaporation accelerates but precipitation patterns become irregular",
+        "c": "The oceans are shrinking rapidly",
+        "d": "Atmospheric moisture evaporates before forming clouds"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-1-Q3",
+      "question": "What is a major consequence of overusing groundwater for agriculture?",
+      "options": {
+        "a": "Rivers become permanently wider",
+        "b": "Aquifers fail to recharge, reducing long-term water availability",
+        "c": "Soil salinity always decreases",
+        "d": "Rainfall increases to compensate for groundwater loss"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-1-Q4",
+      "question": "What does glacier loss lead to?",
+      "options": {
+        "a": "More reliable long-term river flow",
+        "b": "An increase in aquifer levels",
+        "c": "Initially higher river flow followed by long-term decline",
+        "d": "No significant impact on water systems"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-1-Q5",
+      "question": "What is one challenge associated with desalination?",
+      "options": {
+        "a": "It produces too much freshwater",
+        "b": "It requires large amounts of energy, making it costly",
+        "c": "It pollutes the atmosphere with carbon monoxide",
+        "d": "It can only be used in cold climates"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-1-Q6",
+      "question": "Why do nature-based solutions appeal to scientists and policymakers?",
+      "options": {
+        "a": "They eliminate the need for all technology",
+        "b": "They restore natural water processes with lower environmental impact",
+        "c": "They are faster and more predictable than engineering solutions",
+        "d": "They completely replace agriculture and industry"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-1-Q7",
+      "question": "What is one danger of pollution mentioned in the passage?",
+      "options": {
+        "a": "Microplastics make water taste sweet",
+        "b": "Nutrient runoff causes algal blooms that reduce oxygen levels",
+        "c": "Pollution always reduces evaporation rates",
+        "d": "Polluted water instantly becomes harmless after filtration"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-1-Q8",
+      "question": "What does the passage imply about international rivers?",
+      "options": {
+        "a": "They rarely create political tension",
+        "b": "Most countries willingly share water equally",
+        "c": "They require collaborative management to prevent conflicts",
+        "d": "They are less important than local water sources"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-1-Q9",
+      "question": "Which factor MOST contributes to the growing instability of the global water cycle?",
+      "options": {
+        "a": "Reduced global temperatures",
+        "b": "Human activity combined with climate change",
+        "c": "Increased volcanic activity",
+        "d": "Expansion of polar ice sheets"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-1-Q10",
+      "question": "What is the author's overall attitude toward solving water challenges?",
+      "options": {
+        "a": "Pessimistic—no solutions are realistic",
+        "b": "Neutral—water problems will fix themselves",
+        "c": "Balanced—solutions exist but require coordinated effort",
+        "d": "Optimistic—technology alone will solve everything"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-A-2",
+  "title": "The Cognitive Science Behind Decision-Making",
+  "text": "Human decision-making appears simple on the surface—people choose between options based on preference, logic, or intuition. Yet cognitive scientists argue that decision-making is one of the most complex processes the brain performs. It involves memory, emotion, reasoning, and prediction working together in ways that are not always conscious or rational. Recent research has revealed that the choices people make are shaped not only by information but also by hidden cognitive biases, environmental cues, and the brain’s effort to conserve mental energy.\n\nOne of the foundations of decision-making is dual-processing theory, which proposes that the brain uses two systems to evaluate choices. System 1 is fast, automatic, and emotional. It helps people respond quickly to danger, recognize patterns, and make snap judgments. System 2, by contrast, is slow, deliberate, and analytical. It handles complex decisions such as solving a math problem or evaluating long-term consequences. Although System 2 is more accurate, it requires significantly more effort. As a result, people often rely on System 1, especially when stressed, tired, or overwhelmed.\n\nCognitive biases arise when System 1 shortcuts lead to systematic errors in judgment. One common bias is confirmation bias, the tendency to favor information that supports existing beliefs while ignoring contradictory evidence. Another well-studied bias is loss aversion, the idea that people feel the pain of losing more strongly than the pleasure of gaining. These biases influence financial decisions, risk-taking behavior, and social interactions.\n\nMemory also plays a critical role in decision-making, but it is not always reliable. The brain tends to remember dramatic or emotionally charged events more vividly than ordinary ones—a phenomenon known as the availability heuristic. People often rely on easily recalled memories when making judgments, even if they are not the most accurate.\n\nEmotion further complicates the decision-making process. Neuroscientist António Damásio showed that people with damage to emotional centers struggled to make even simple decisions, demonstrating that emotion is essential for effective judgment. However, intense emotions such as fear or anger can narrow focus and reduce consideration of long-term outcomes.\n\nEnvironment and social context also shape decisions. The framing effect shows that different presentations of the same information can lead to different choices. Social pressure influences people to follow group norms, often unconsciously.\n\nModern technology introduces new challenges. Social media algorithms amplify confirmation bias by showing users content aligned with their interests. Constant notifications divide attention, increasing reliance on automatic judgments rather than careful analysis.\n\nUnderstanding decision-making has important applications in medicine, economics, and public policy. Governments use behavioral insights called nudges to influence choices without restricting freedom. Although shortcuts help manage complexity, the best decisions balance intuition, logic, emotion, and evidence.",
+  "questions": [
+    {
+      "id": "R-A-2-Q1",
+      "question": "What is the main argument of the passage?",
+      "options": {
+        "a": "Decisions are purely rational processes controlled by logic",
+        "b": "Human decision-making is complex and influenced by multiple cognitive factors",
+        "c": "Technology has made human judgment unnecessary",
+        "d": "Memory and emotion rarely affect decisions"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-2-Q2",
+      "question": "What does dual-processing theory suggest?",
+      "options": {
+        "a": "The brain uses a single system for all decisions",
+        "b": "System 1 is slow and System 2 is emotional",
+        "c": "Decisions involve both fast intuitive processing and slower analytical reasoning",
+        "d": "System 2 is more common in everyday decisions"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-2-Q3",
+      "question": "Which example BEST illustrates confirmation bias?",
+      "options": {
+        "a": "Choosing a product because it is cheaper",
+        "b": "Seeking information that supports one's existing beliefs",
+        "c": "Preferring immediate rewards over long-term benefits",
+        "d": "Overestimating rare events due to vivid memories"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-2-Q4",
+      "question": "What does the availability heuristic rely on?",
+      "options": {
+        "a": "The most statistically accurate information",
+        "b": "Memories that are easiest to recall",
+        "c": "Logical analysis of risks",
+        "d": "Emotion-free reasoning"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-2-Q5",
+      "question": "According to the passage, what did Damásio’s research show?",
+      "options": {
+        "a": "Emotion interferes with all rational decisions",
+        "b": "People do not need emotions to make decisions",
+        "c": "Emotion is necessary for effective decision-making",
+        "d": "System 1 is superior to System 2"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-2-Q6",
+      "question": "Which statement BEST reflects the framing effect?",
+      "options": {
+        "a": "People ignore labels entirely",
+        "b": "People prefer information presented positively",
+        "c": "People always choose healthier options",
+        "d": "People analyze both labels deeply before deciding"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-2-Q7",
+      "question": "How does modern technology influence decision-making?",
+      "options": {
+        "a": "It eliminates most cognitive biases",
+        "b": "It encourages slow, deliberate thinking",
+        "c": "It amplifies confirmation bias through targeted content",
+        "d": "It reduces reliance on intuition"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-2-Q8",
+      "question": "Which field uses 'nudges' to influence decision-making?",
+      "options": {
+        "a": "Astronomy",
+        "b": "Public policy",
+        "c": "Geology",
+        "d": "Linguistics"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-2-Q9",
+      "question": "What does the passage imply about cognitive shortcuts?",
+      "options": {
+        "a": "They are always harmful",
+        "b": "They allow the brain to function efficiently but can cause errors",
+        "c": "They work best in scientific decision-making",
+        "d": "They replace the need for reasoning"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-2-Q10",
+      "question": "What is the author's overall stance on decision-making?",
+      "options": {
+        "a": "Decisions can be perfect with enough information",
+        "b": "Only emotional decisions are trustworthy",
+        "c": "Decisions require balancing intuition, logic, and awareness of bias",
+        "d": "The brain should avoid using shortcuts entirely"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-A-3",
+  "title": "The Hidden Complexity of Urban Ecosystems",
+  "text": "Many people view cities as the opposite of nature—concrete landscapes filled with buildings, traffic, and technology. Yet ecological research increasingly shows that cities are vibrant ecosystems with unique species interactions, energy flows, and evolutionary pressures. Urban environments reshape the behavior, physiology, and survival strategies of plants and animals in ways that scientists are only beginning to understand. The study of urban ecology reveals that cities are not biological “dead zones” but dynamic environments that influence the natural world as profoundly as forests, deserts, or oceans.\n\nUrban ecosystems differ from natural ones in several important ways. Cities experience the urban heat island effect, where temperatures are significantly higher than surrounding rural areas due to heat-absorbing surfaces and reduced wind circulation. These microclimates affect both human comfort and wildlife behavior. Some species thrive in these warmer conditions, while others struggle to survive.\n\nPollution is another defining characteristic of urban environments. Air pollution harms respiratory systems, light pollution disrupts biological rhythms, and noise pollution alters animal communication. Birds near busy roads often sing at higher pitches to be heard, affecting mating and territorial behavior.\n\nDespite these challenges, many species adapt remarkably well to city life. Birds nest on skyscrapers, mammals navigate traffic-filled streets, and insects exploit new food sources. Some species undergo rapid evolutionary changes, such as lizards developing longer limbs and stickier toe pads to climb smooth surfaces.\n\nHumans shape urban ecosystems through landscaping and gardening. Non-native plants may escape and become invasive, while well-designed green spaces provide habitats, reduce pollution, and improve mental health.\n\nUrban water systems add further complexity. Drainage infrastructure reduces natural water absorption, increasing flooding and reducing groundwater recharge. Sustainable urban drainage systems use permeable surfaces and natural features to restore balance.\n\nUrban ecosystems are connected globally. Migratory species rely on city green spaces, and international travel introduces new organisms. Climate change intensifies these interactions, making urban ecology increasingly important.\n\nResearchers argue that conservation must expand beyond untouched habitats to include cities. Integrating wildlife into urban planning benefits both ecosystems and human populations.\n\nCities serve as laboratories for studying adaptation and evolution. Recognizing them as ecosystems helps protect biodiversity while improving urban life as global urbanization continues.",
+  "questions": [
+    {
+      "id": "R-A-3-Q1",
+      "question": "What is the main purpose of the passage?",
+      "options": {
+        "a": "To argue that cities cannot support wildlife",
+        "b": "To show that urban areas are complex ecosystems with unique ecological processes",
+        "c": "To prove that urbanization eliminates all biodiversity",
+        "d": "To compare forests to deserts"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-3-Q2",
+      "question": "What is the urban heat island effect?",
+      "options": {
+        "a": "A decrease in city temperatures at night",
+        "b": "A phenomenon where cities are warmer due to heat-absorbing surfaces",
+        "c": "A weather pattern caused by ocean currents",
+        "d": "A type of pollution produced by factories"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-3-Q3",
+      "question": "Which example BEST shows the impact of noise pollution on wildlife?",
+      "options": {
+        "a": "Plants growing faster in warm temperatures",
+        "b": "Birds singing at higher pitches near roads",
+        "c": "Insects attracted to artificial lights",
+        "d": "Animals avoiding polluted water"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-3-Q4",
+      "question": "What does the passage suggest about evolutionary changes in cities?",
+      "options": {
+        "a": "They occur slowly and rarely",
+        "b": "Only plants evolve under urban pressure",
+        "c": "Some species adapt rapidly to urban conditions",
+        "d": "Evolution cannot be studied in cities"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-3-Q5",
+      "question": "What is a potential risk of introducing non-native plants into cities?",
+      "options": {
+        "a": "They always improve soil quality",
+        "b": "They can escape landscaping and become invasive",
+        "c": "They completely replace urban heat islands",
+        "d": "They eliminate the need for pollinators"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-3-Q6",
+      "question": "What is the primary purpose of sustainable urban drainage systems (SUDS)?",
+      "options": {
+        "a": "To reduce air pollution",
+        "b": "To manage water using natural processes",
+        "c": "To increase city temperatures",
+        "d": "To provide transportation routes for wildlife"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-3-Q7",
+      "question": "What does the passage imply about global ecological connections?",
+      "options": {
+        "a": "Cities are isolated from global ecosystems",
+        "b": "Migratory species do not depend on urban areas",
+        "c": "Urban environments influence and are influenced by global ecological processes",
+        "d": "Global travel rarely introduces new species"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-3-Q8",
+      "question": "How does the passage characterize traditional conservation strategies?",
+      "options": {
+        "a": "Completely effective for modern cities",
+        "b": "Focused mainly on untouched natural habitats",
+        "c": "Designed specifically for urban wildlife",
+        "d": "Unnecessary for protecting biodiversity"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-3-Q9",
+      "question": "What is the author's perspective on integrating nature into cities?",
+      "options": {
+        "a": "It is unrealistic and ineffective",
+        "b": "It should be avoided to preserve ecosystems",
+        "c": "It is necessary for both human and ecological well-being",
+        "d": "It only benefits large animals"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-3-Q10",
+      "question": "What is the overall tone of the passage regarding urban ecosystems?",
+      "options": {
+        "a": "Dismissive",
+        "b": "Alarmist",
+        "c": "Analytical and informative",
+        "d": "Uncertain and speculative"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-A-4",
+  "title": "The Mystery of Antimatter in the Universe",
+  "text": "One of the most puzzling questions in modern physics concerns a fundamental imbalance in the universe: the surprising absence of antimatter. According to widely accepted theories, the Big Bang should have produced matter and antimatter in equal amounts. Yet the observable universe is overwhelmingly composed of matter. Antimatter exists only in trace amounts, created briefly in high-energy events such as cosmic rays or particle accelerators.\n\nEvery particle of matter has a corresponding antiparticle. When matter and antimatter meet, they annihilate each other, releasing enormous energy. This symmetry suggests that matter and antimatter should have canceled each other out completely at the universe’s birth. Instead, a tiny surplus of matter survived, eventually forming all the structures we observe today.\n\nPhysicists propose several explanations for this imbalance. One involves CP violation, where the laws of physics apply slightly differently to matter and antimatter. Although experiments confirm this effect, the amount observed is too small to fully explain the imbalance.\n\nAnother theory, baryogenesis, suggests that exotic particles in the early universe produced more matter than antimatter. Many versions rely on hypothetical particles predicted by advanced theories, but these particles have not yet been observed.\n\nScientists have searched for antimatter regions in space. If antimatter galaxies existed, their boundaries with matter would emit detectable gamma rays. However, no strong evidence of such regions has been found.\n\nNeutrinos may also hold clues. Some theories suggest they may be their own antiparticles, potentially influencing early matter formation. Experiments searching for rare neutrino behaviors remain inconclusive.\n\nLaboratory experiments also contribute to the mystery. Facilities like CERN produce antihydrogen and test whether antimatter behaves differently from matter. So far, results show nearly identical behavior.\n\nThe imbalance raises philosophical questions about symmetry, chance, and whether the universe’s laws could have been different. Despite decades of research, the mystery remains unsolved, continuing to drive scientific discovery and deepen our understanding of why the universe exists.",
+  "questions": [
+    {
+      "id": "R-A-4-Q1",
+      "question": "What is the central problem discussed in the passage?",
+      "options": {
+        "a": "Why antimatter is dangerous to humans",
+        "b": "Why the universe contains much more matter than antimatter",
+        "c": "How galaxies form from antimatter",
+        "d": "Whether antimatter can replace fossil fuels"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-4-Q2",
+      "question": "What would likely have happened if equal amounts of matter and antimatter were produced?",
+      "options": {
+        "a": "More stars would exist",
+        "b": "The universe would collapse",
+        "c": "Most particles would annihilate each other",
+        "d": "Antimatter galaxies would dominate"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-4-Q3",
+      "question": "Why is CP violation important in this context?",
+      "options": {
+        "a": "It proves antimatter cannot exist",
+        "b": "It shows matter and antimatter behave differently",
+        "c": "It eliminates the need for accelerators",
+        "d": "It fully explains the imbalance"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-4-Q4",
+      "question": "What limits current baryogenesis theories?",
+      "options": {
+        "a": "They are mathematically incorrect",
+        "b": "They depend on particles not yet observed",
+        "c": "They assume antimatter is heavier",
+        "d": "They predict too much antimatter"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-4-Q5",
+      "question": "Why would antimatter galaxies be detectable?",
+      "options": {
+        "a": "They contain no stars",
+        "b": "They emit gamma rays at matter boundaries",
+        "c": "They strongly attract matter",
+        "d": "They reflect light differently"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-4-Q6",
+      "question": "Why are neutrinos important to this mystery?",
+      "options": {
+        "a": "They control cosmic expansion",
+        "b": "They may influence early matter formation",
+        "c": "They lack antimatter counterparts",
+        "d": "They are easy to detect"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-4-Q7",
+      "question": "What do antihydrogen experiments attempt to test?",
+      "options": {
+        "a": "If antimatter falls upward",
+        "b": "If antimatter behaves differently from matter",
+        "c": "If antimatter can cure diseases",
+        "d": "If antimatter replaces dark matter"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-4-Q8",
+      "question": "What philosophical issue does the passage raise?",
+      "options": {
+        "a": "Replacing humans with machines",
+        "b": "Whether physical laws involve chance",
+        "c": "Whether Earth is unique",
+        "d": "Whether antimatter is superior"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-4-Q9",
+      "question": "What does current evidence suggest about antimatter regions?",
+      "options": {
+        "a": "They are widespread",
+        "b": "They exist near black holes",
+        "c": "They have no boundaries",
+        "d": "There is no strong evidence for large regions"
+      },
+      "answer": "d"
+    },
+    {
+      "id": "R-A-4-Q10",
+      "question": "What is the author's tone toward the antimatter mystery?",
+      "options": {
+        "a": "Dismissive",
+        "b": "Frustrated",
+        "c": "Curious and open-ended",
+        "d": "Certain and conclusive"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-A-5",
+  "title": "The Uncertain Future of Cultural Memory in a Digital Age",
+  "text": "Throughout most of human history, cultural memory was preserved through physical forms such as manuscripts, monuments, and oral storytelling. In the digital age, however, cultural memory has shifted to electronic formats like cloud storage, social media, and online databases. While this shift provides unprecedented access to information, it also introduces new vulnerabilities.\n\nOne major challenge is the instability of digital storage. Digital files require constant maintenance, and technological obsolescence can render information unreadable. Scholars warn of a possible \"digital dark age,\" in which vast amounts of information become inaccessible due to outdated formats.\n\nAnother concern is the centralization of digital information under private corporations. These entities control access, preservation, and deletion of data, placing cultural memory at risk if services are discontinued. Social media platforms further complicate preservation by limiting user control over personal archives.\n\nDigital bias also affects cultural memory. Algorithms influence which narratives are amplified, often privileging dominant cultures and marginalizing others. As a result, digital records may reflect societal inequalities.\n\nEnvironmental pressures threaten digital preservation as well. Data centers require massive energy and water resources, making them vulnerable to climate change and sustainability challenges.\n\nIn response, archivists are developing distributed archives, long-term storage materials, and software emulation systems. While promising, these solutions highlight the complexity of preserving digital information over time.\n\nThe digital age has also altered how humans relate to memory. Easy access to information may reduce reliance on personal recall, though some argue digital tools extend cognitive capacity.\n\nFinally, the overwhelming volume of digital data presents challenges for future historians. Unlike selective traditional archives, digital systems store everything, making it difficult to distinguish meaningful records.\n\nPreserving cultural memory in the digital age requires balancing accessibility, durability, ethics, and responsibility. While digital systems offer immense opportunities, they also reveal the fragility of modern memory.",
+  "questions": [
+    {
+      "id": "R-A-5-Q1",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Digital memory is superior to traditional memory in every way",
+        "b": "Cultural memory is improving due to digital tools",
+        "c": "Digital preservation offers benefits but introduces new vulnerabilities",
+        "d": "Physical archives are no longer necessary"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-5-Q2",
+      "question": "What does the term \"digital dark age\" refer to?",
+      "options": {
+        "a": "A global loss of electricity",
+        "b": "The end of internet access",
+        "c": "A future where digital files become inaccessible due to technological change",
+        "d": "A return to physical books"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-5-Q3",
+      "question": "Why is data centralization considered risky?",
+      "options": {
+        "a": "It ensures long-term preservation",
+        "b": "It gives private companies control over cultural archives",
+        "c": "It increases public ownership",
+        "d": "It improves user privacy"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-5-Q4",
+      "question": "How do algorithms influence cultural memory?",
+      "options": {
+        "a": "They remove bias completely",
+        "b": "They shape which narratives and voices are visible",
+        "c": "They preserve all cultures equally",
+        "d": "They discourage digital archiving"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-5-Q5",
+      "question": "Why do environmental factors threaten digital archives?",
+      "options": {
+        "a": "Digital files directly pollute ecosystems",
+        "b": "Data centers require large amounts of energy and water",
+        "c": "Technology will stop developing",
+        "d": "Internet use will be restricted globally"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-5-Q6",
+      "question": "What is the purpose of geographically distributed archives?",
+      "options": {
+        "a": "To restrict access",
+        "b": "To confuse users",
+        "c": "To prevent total loss through redundancy",
+        "d": "To reduce digital storage"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-5-Q7",
+      "question": "What challenge might future historians face?",
+      "options": {
+        "a": "Too little information",
+        "b": "Excessive filtering of archives",
+        "c": "An overwhelming amount of trivial digital content",
+        "d": "Lack of interest in history"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-5-Q8",
+      "question": "What is implied about memory in the digital age?",
+      "options": {
+        "a": "People memorize more information",
+        "b": "People rely less on internal memory",
+        "c": "Human cognition is unaffected",
+        "d": "Search engines weaken intelligence"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-5-Q9",
+      "question": "Why is digital storage more fragile than physical records?",
+      "options": {
+        "a": "It stores less information",
+        "b": "It depends on ongoing technological compatibility",
+        "c": "It is immune to environmental damage",
+        "d": "It lasts longer but costs more"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-5-Q10",
+      "question": "What is the overall tone of the passage?",
+      "options": {
+        "a": "Alarmist",
+        "b": "Dismissive",
+        "c": "Balanced and analytical",
+        "d": "Highly optimistic"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-A-6",
+  "title": "The Ethics and Consequences of Human Gene Editing",
+  "text": "The development of CRISPR-Cas9 and other genome-editing technologies has transformed genetics by allowing scientists to modify DNA with unprecedented precision. These tools have accelerated research on hereditary diseases, improved crop resilience, and enabled personalized medicine. However, they also raise serious ethical, social, and political concerns about altering the biological foundations of life.\n\nA major debate involves germline editing, which modifies sperm, eggs, or embryos and can be inherited by future generations. While supporters believe it could prevent severe genetic disorders, critics argue that unknown long-term effects make it risky and potentially irreversible.\n\nEquity and access present another concern. Gene-editing technologies are expensive and may widen social inequality if used for enhancement traits like intelligence or physical appearance. This could lead to genetic privilege, reinforcing divisions through engineered biological differences.\n\nThere are also fears of misuse for non-medical purposes. Governments or organizations might exploit gene editing for ideological or military goals, creating organisms or humans with predetermined traits. Although largely theoretical, such risks are taken seriously due to historical misuse of scientific advances.\n\nEnvironmental consequences further complicate the issue. Techniques like gene drives can rapidly spread genetic traits through populations, potentially eliminating disease-carrying species. However, releasing genetically modified organisms into ecosystems could cause unpredictable ecological disruptions.\n\nRegulatory challenges exist globally. Laws vary widely across countries, leading to regulatory tourism, where researchers move to regions with fewer restrictions. The 2018 case of gene-edited babies highlighted ethical violations and bypassed international standards.\n\nPublic opinion is divided. Many support gene editing for treating diseases but oppose enhancements, fearing loss of natural human variation. Others argue there is a moral duty to reduce suffering if technology allows.\n\nControl over gene-editing decisions remains contested among scientists, policymakers, and the public. A balanced approach involving expert knowledge, democratic input, and ethical oversight is widely considered essential.\n\nDespite risks, gene editing offers significant benefits, including treatments for genetic diseases, improved agriculture, and more precise therapies. The challenge is ensuring these advances are applied responsibly.\n\nUltimately, gene editing forces societies to reconsider ideas about fairness, human nature, and scientific limits. Its future depends on careful regulation, global cooperation, and ethical reflection, as today’s choices will shape humanity’s biological future.",
+  "questions": [
+    {
+      "id": "R-A-6-Q1",
+      "question": "What is the primary focus of the passage?",
+      "options": {
+        "a": "How CRISPR technology was invented",
+        "b": "The ethical and societal implications of modern gene editing",
+        "c": "The history of genetic disorders",
+        "d": "The economic benefits of DNA manipulation"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-6-Q2",
+      "question": "Why is germline editing considered riskier than somatic editing?",
+      "options": {
+        "a": "It is less precise",
+        "b": "Its effects can be inherited by future generations",
+        "c": "It only works on adults",
+        "d": "It cannot treat diseases"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-6-Q3",
+      "question": "What does the passage imply about genetic enhancement?",
+      "options": {
+        "a": "It is widely accepted and affordable",
+        "b": "It could increase social inequality",
+        "c": "It is safer than disease-related gene editing",
+        "d": "It will eliminate all human differences"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-6-Q4",
+      "question": "What is a major concern related to gene drives?",
+      "options": {
+        "a": "They improve ecosystems too quickly",
+        "b": "They may cause unpredictable environmental effects",
+        "c": "They only work on mammals",
+        "d": "They are already banned worldwide"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-6-Q5",
+      "question": "What does \"regulatory tourism\" refer to?",
+      "options": {
+        "a": "Traveling to study ecosystems",
+        "b": "Moving research to countries with fewer restrictions",
+        "c": "Using gene editing for space exploration",
+        "d": "International scientific collaboration"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-6-Q6",
+      "question": "Why was the birth of the first gene-edited babies controversial?",
+      "options": {
+        "a": "It showed gene editing does not work",
+        "b": "It violated international ethical standards",
+        "c": "It cured a widespread disease",
+        "d": "It involved multiple governments"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-6-Q7",
+      "question": "What tension does public opinion reveal about gene editing?",
+      "options": {
+        "a": "People support enhancements but reject medical uses",
+        "b": "People prefer environmental gene editing",
+        "c": "People accept therapeutic uses but question enhancements",
+        "d": "People reject all genetic modification"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-6-Q8",
+      "question": "What challenge does the passage identify regarding regulation?",
+      "options": {
+        "a": "Scientists should control all decisions",
+        "b": "Policymakers fully understand genetics",
+        "c": "Responsibility must be shared among experts, policymakers, and the public",
+        "d": "Public involvement is unnecessary"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-6-Q9",
+      "question": "How does the author view the potential benefits of gene editing?",
+      "options": {
+        "a": "They are unrealistic",
+        "b": "They are outweighed entirely by risks",
+        "c": "They are significant if used responsibly",
+        "d": "They apply only to farming"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-6-Q10",
+      "question": "What is the overall tone of the passage?",
+      "options": {
+        "a": "Strongly optimistic",
+        "b": "Purely descriptive",
+        "c": "Cautious and evaluative",
+        "d": "Dismissive"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-A-7",
+  "title": "The Debate Over Rewilding and the Return of Lost Species",
+  "text": "Rewilding is a conservation strategy that aims to restore ecosystems by reintroducing species that once inhabited a region. Unlike traditional conservation, which focuses on preserving what remains, rewilding seeks to revive lost ecological processes disrupted by extinction, habitat destruction, and human activity. Supporters argue that rewilding can repair damaged ecosystems, while critics warn of ecological, ethical, and social risks.\n\nThe concept gained attention with efforts to reintroduce keystone species such as wolves and bison. These species strongly influence ecosystems by regulating populations and shaping habitats. The reintroduction of wolves to Yellowstone National Park demonstrated a trophic cascade, where predator control of herbivores allowed vegetation recovery and broader ecological benefits.\n\nMore ambitious ideas include Pleistocene rewilding, which proposes restoring species lost thousands of years ago, including genetically engineered substitutes for extinct animals like the woolly mammoth. Supporters believe these species could enhance biodiversity and stabilize ecosystems, while critics question the ethics and practicality of recreating extinct life.\n\nA major concern is that ecosystems have changed significantly over time. Reintroduced species may behave unpredictably, threaten livestock, spread disease, or disrupt current ecological balances. These risks raise concerns for communities living near rewilding areas.\n\nEthical debates focus on human responsibility. Some argue humans must repair ecosystems they damaged, viewing rewilding as restitution. Others see it as ecological arrogance, warning that ecosystems naturally evolve and cannot be recreated precisely.\n\nSocial and political factors complicate rewilding efforts. Conflicts often arise when predators are reintroduced near agricultural lands, raising economic and safety concerns. Indigenous and local communities emphasize the need for inclusion, consultation, and respect for land rights. Successful projects usually involve compensation, dialogue, and long-term monitoring.\n\nTechnological advances, including gene-editing tools, have expanded rewilding possibilities but also ethical concerns. De-extinction efforts may divert resources from protecting existing endangered species, and revived organisms may lack the ability to survive in modern ecosystems.\n\nDespite controversies, carefully planned rewilding has shown benefits. Wetland restoration improves water quality and reduces flooding, beaver reintroductions increase habitat diversity, and large herbivores have revitalized abandoned farmland. These outcomes suggest rewilding can succeed when guided by science and community involvement.\n\nAs climate change accelerates, rewilding may help build ecosystem resilience. However, it requires caution, humility, and ethical consideration. The debate ultimately reflects broader questions about humanity’s role in shaping nature amid rapid environmental change.",
+  "questions": [
+    {
+      "id": "R-A-7-Q1",
+      "question": "What is the central purpose of the passage?",
+      "options": {
+        "a": "To argue that rewilding should replace all conservation methods",
+        "b": "To explore the scientific, ethical, and social debates surrounding rewilding",
+        "c": "To promote the reintroduction of extinct species",
+        "d": "To show that rewilding inevitably harms ecosystems"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-7-Q2",
+      "question": "What does the Yellowstone example illustrate?",
+      "options": {
+        "a": "Rewilding only benefits predators",
+        "b": "Trophic cascades can occur when keystone species are restored",
+        "c": "Rewilding decreases biodiversity",
+        "d": "Wolves are easy to manage in modern ecosystems"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-7-Q3",
+      "question": "Which criticism is often made against Pleistocene rewilding?",
+      "options": {
+        "a": "It is less effective than wetland restoration",
+        "b": "It ignores how ecosystems have changed over thousands of years",
+        "c": "It guarantees immediate ecological recovery",
+        "d": "It is supported by all local communities"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-7-Q4",
+      "question": "What is a major ethical concern discussed in the passage?",
+      "options": {
+        "a": "That rewilded animals may evolve too quickly",
+        "b": "That rewilding promotes scientific neutrality",
+        "c": "That resurrecting species may be an overreach of human control",
+        "d": "That rewilding eliminates traditional conservation needs"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-7-Q5",
+      "question": "What challenge arises when rewilding affects rural communities?",
+      "options": {
+        "a": "They always support predator reintroduction",
+        "b": "Rewilded species cannot survive near humans",
+        "c": "Conflicts occur due to livestock risk and economic concerns",
+        "d": "Farmers demand more predators to balance ecosystems"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-7-Q6",
+      "question": "Why do some critics oppose de-extinction efforts?",
+      "options": {
+        "a": "They worry it will lead to rapid climate change",
+        "b": "They believe it could overshadow efforts to protect existing species",
+        "c": "They argue extinct species cannot be genetically modified",
+        "d": "They think de-extinction is less expensive than conservation"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-7-Q7",
+      "question": "What can be inferred about successful rewilding projects?",
+      "options": {
+        "a": "They require minimal human involvement",
+        "b": "They benefit from long-term monitoring and community cooperation",
+        "c": "They achieve results immediately",
+        "d": "They rely primarily on genetic engineering"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-7-Q8",
+      "question": "What does the passage imply about ecosystems?",
+      "options": {
+        "a": "They cannot recover without human intervention",
+        "b": "They are static systems best restored to ancient conditions",
+        "c": "They are dynamic and may respond unpredictably to reintroductions",
+        "d": "They are unaffected by species loss"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-7-Q9",
+      "question": "How does climate change influence the rewilding debate?",
+      "options": {
+        "a": "It eliminates the need for rewilding",
+        "b": "It increases urgency for strategies that boost ecosystem resilience",
+        "c": "It guarantees the success of de-extinction",
+        "d": "It stabilizes food webs"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-7-Q10",
+      "question": "What is the overall tone of the passage?",
+      "options": {
+        "a": "Strongly pro-rewilding",
+        "b": "Highly skeptical and negative",
+        "c": "Balanced and analytical",
+        "d": "Emotional and persuasive"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-A-8",
+  "title": "Time Perception and the Elastic Nature of Human Experience",
+  "text": "Time is often treated as an objective and constant quantity, yet human experience of time is highly subjective. Psychological research shows that time perception is shaped by attention, emotion, memory, context, biology, and culture. Rather than flowing uniformly, time expands or contracts depending on how the brain processes experience.\n\nAttention strongly influences perceived time. During intense focus or flow states, time seems to pass quickly because the brain is deeply engaged. In contrast, boredom or waiting increases awareness of time, making it feel slower. This suggests that perceived duration depends on mental activity rather than actual clock time.\n\nEmotion further alters time perception. Threatening situations often feel as though time slows because the brain encodes events in greater detail. Positive emotions, on the other hand, tend to compress time, causing enjoyable experiences to feel brief. These effects arise from differences in how efficiently the brain processes information.\n\nMemory introduces an additional paradox. Experiences filled with novelty feel long while occurring but seem short in hindsight, whereas routine periods feel short in the moment but long when remembered. Childhood often appears longer in memory because it contains more novel experiences, while adulthood seems faster due to repetition.\n\nCultural norms shape how people experience time. Some cultures emphasize punctuality and linear scheduling, while others value flexibility and present-focused timing. These differences affect how individuals interpret delays and pacing in daily life.\n\nTechnology has introduced new distortions of time perception. Continuous digital engagement, especially through smartphones and social media, creates temporal dissociation, where time passes unnoticed. Multitasking and constant stimulation fragment attention, producing a sense of both time scarcity and time loss.\n\nNeuroscience reveals that time perception involves multiple brain regions, including the basal ganglia, cerebellum, and prefrontal cortex. Dopamine plays a key role in regulating internal timing. Higher dopamine activity speeds up internal clocks, making external time feel slower, while lower dopamine can make time feel faster.\n\nStress and mindfulness further demonstrate time’s flexibility. Chronic stress accelerates subjective time by reducing focus, while mindfulness practices slow time by increasing attention to the present moment. These findings show that subjective time can be influenced by mental states.\n\nThe study of time perception raises philosophical questions about whether time is measured objectively or constructed psychologically. While physics treats time as a universal dimension, human experience of time emerges from neural processes shaped by meaning and awareness.\n\nUnderstanding time perception has practical benefits, including improving mental health, learning, and workplace design. Although physical time cannot be controlled, individuals can influence how time is experienced, highlighting that time is as much psychological as it is physical.",
+  "questions": [
+    {
+      "id": "R-A-8-Q1",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Time always moves at a constant rate for everyone",
+        "b": "Human perception of time is subjective and influenced by multiple factors",
+        "c": "Technology has made time irrelevant",
+        "d": "Clocks are unreliable measures of temporal experience"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-8-Q2",
+      "question": "Why does time feel slower during threatening events?",
+      "options": {
+        "a": "The brain runs out of energy",
+        "b": "External time physically slows",
+        "c": "The brain encodes more detailed information",
+        "d": "People focus less during danger"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-8-Q3",
+      "question": "What paradox does the passage identify regarding memory and time?",
+      "options": {
+        "a": "Boring days feel longer in memory",
+        "b": "Childhood feels shorter despite many new experiences",
+        "c": "New experiences feel long in the moment but short later",
+        "d": "Routine days seem longer while they are happening"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-8-Q4",
+      "question": "How do cultural differences influence time perception?",
+      "options": {
+        "a": "All cultures measure time identically",
+        "b": "Cultural norms shape how individuals interpret delays and pacing",
+        "c": "Cultural differences have no impact on time perception",
+        "d": "Only polychronic cultures distort time"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-8-Q5",
+      "question": "What is “temporal dissociation” in the context of technology?",
+      "options": {
+        "a": "Feeling time move faster when reading books",
+        "b": "Losing track of time during digital engagement",
+        "c": "A medical disorder caused by screen use",
+        "d": "The ability to measure time accurately online"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-8-Q6",
+      "question": "What role does dopamine play in subjective time?",
+      "options": {
+        "a": "It eliminates biological timing systems",
+        "b": "High dopamine slows down internal time",
+        "c": "It regulates the speed of the brain’s internal clock",
+        "d": "It makes time perception completely stable"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-8-Q7",
+      "question": "Which statement BEST reflects the passage’s view of stressful environments?",
+      "options": {
+        "a": "Stress slows time by making people more aware",
+        "b": "Stress accelerates subjective time and fragments attention",
+        "c": "Stress has no effect on time perception",
+        "d": "Stress improves memory and expands time"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-8-Q8",
+      "question": "What is implied about mindfulness practices?",
+      "options": {
+        "a": "They distort time dangerously",
+        "b": "They make time feel meaningless",
+        "c": "They slow subjective time by increasing present-moment attention",
+        "d": "They eliminate emotional influence on perception"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-8-Q9",
+      "question": "What philosophical question does the passage raise?",
+      "options": {
+        "a": "Whether clocks should be abolished",
+        "b": "Whether time is created by humans or exists independently",
+        "c": "Whether the brain can stop time",
+        "d": "Whether technology can replace biological timing"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-8-Q10",
+      "question": "What is the tone of the passage?",
+      "options": {
+        "a": "Analytical and reflective",
+        "b": "Strongly argumentative",
+        "c": "Humorous and casual",
+        "d": "Pessimistic and alarmed"
+      },
+      "answer": "a"
+    }
+  ]
+},
+{
+  "id": "R-A-9",
+  "title": "The Economics of Scarcity in a World of Abundance",
+  "text": "For most of human history, economies have been shaped by scarcity. Limited access to food, materials, and labor influenced trade, governance, and technology. Classical economic theory assumes finite resources and focuses on allocating scarce goods. Yet the modern world presents a paradox: despite apparent abundance in information, energy, and manufactured goods, scarcity continues to define economic behavior.\n\nOne reason scarcity persists is that abundance creates new limitations. The internet provides vast information, but human attention remains limited. Companies compete for attention, and information overload restricts people’s ability to process or prioritize content. Thus, abundance in information leads to scarcity of attention.\n\nEnvironmental limits further explain this paradox. Technological advances have increased food production and energy generation, but these gains depend on finite natural systems such as freshwater, soil, and stable climates. When these systems degrade through overuse, pollution, or climate change, scarcity returns. Abundance is therefore conditional on ecological stability.\n\nInequality also plays a central role. While global production exceeds basic human needs, distribution is uneven. Wealthier nations enjoy surpluses while poorer regions face shortages. Scarcity, in this sense, is shaped by political and social decisions rather than absolute resource limits.\n\nDigital technologies complicate the picture further. Digital goods can be reproduced endlessly at low cost, challenging traditional supply and demand models. However, access is often restricted through subscriptions, paywalls, and licensing. Here, scarcity is intentionally created by policy rather than nature.\n\nEnergy systems provide another example. Renewable energy appears abundant but depends on infrastructure, storage, and rare materials. Without sufficient investment, potential abundance cannot be realized, and geopolitical competition over key resources reintroduces scarcity.\n\nBehavioral economics suggests that human desires are limitless. As material conditions improve, expectations rise, creating perpetual scarcity. Luxury goods rely on exclusivity rather than utility, demonstrating how scarcity can be socially engineered.\n\nEconomists debate whether technology will eliminate scarcity. Post-scarcity theorists argue that automation and artificial intelligence could reduce material scarcity. Critics counter that environmental limits, political inequality, and psychological desires will continue to produce scarcity.\n\nResponses to this paradox vary. Some advocate for sustainability and equitable distribution, others for open-access systems or behavioral interventions. These perspectives reflect tension between optimism and caution.\n\nUltimately, scarcity persists not because resources are always limited, but because it emerges from interactions among human psychology, technology, environmental constraints, and political choices. Managing abundance responsibly is a defining challenge of modern economies.",
+  "questions": [
+    {
+      "id": "R-A-9-Q1",
+      "question": "What is the central argument of the passage?",
+      "options": {
+        "a": "Scarcity has been eliminated by technological progress",
+        "b": "Scarcity persists because it arises from multiple interconnected factors",
+        "c": "Abundance is harmful and should be avoided",
+        "d": "Classical economics no longer applies to modern society"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-9-Q2",
+      "question": "According to the passage, why does information abundance create scarcity?",
+      "options": {
+        "a": "People lose interest in learning",
+        "b": "Attention becomes a limited and valuable resource",
+        "c": "The internet blocks access to important knowledge",
+        "d": "Information becomes more expensive"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-9-Q3",
+      "question": "What does the passage suggest about environmental foundations?",
+      "options": {
+        "a": "They can support unlimited economic growth",
+        "b": "They are irrelevant due to advanced technology",
+        "c": "They impose limits that can cause abundance to collapse",
+        "d": "They are unaffected by resource extraction"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-9-Q4",
+      "question": "How does inequality contribute to scarcity?",
+      "options": {
+        "a": "It reduces the total amount of global production",
+        "b": "It prevents equal distribution of abundant goods",
+        "c": "It forces rich nations to consume less",
+        "d": "It eliminates shortages in poorer countries"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-9-Q5",
+      "question": "Why might digital goods still be scarce despite being easily reproducible?",
+      "options": {
+        "a": "They require physical resources to exist",
+        "b": "Platforms restrict access through economic policies",
+        "c": "They cannot be shared across borders",
+        "d": "They degrade over time like physical products"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-9-Q6",
+      "question": "What is implied about renewable energy?",
+      "options": {
+        "a": "It is functionally infinite in all circumstances",
+        "b": "It eliminates geopolitical tension",
+        "c": "It depends on infrastructure that may reintroduce scarcity",
+        "d": "It requires little investment to be effective"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-9-Q7",
+      "question": "Which idea from behavioral economics is highlighted?",
+      "options": {
+        "a": "Human desires expand endlessly, creating perpetual scarcity",
+        "b": "People prefer scarcity to abundance",
+        "c": "Scarcity is solely caused by unmet physical needs",
+        "d": "Human desires diminish as wealth increases"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-A-9-Q8",
+      "question": "What is the main criticism of post-scarcity theory?",
+      "options": {
+        "a": "It ignores psychological forms of scarcity",
+        "b": "It predicts the end of technology",
+        "c": "It assumes inequality will disappear automatically",
+        "d": "It underestimates environmental and political constraints"
+      },
+      "answer": "d"
+    },
+    {
+      "id": "R-A-9-Q9",
+      "question": "Which of the following BEST captures the author's tone?",
+      "options": {
+        "a": "Strongly pessimistic",
+        "b": "Neutral but descriptive",
+        "c": "Analytical and cautiously balanced",
+        "d": "Optimistic about eliminating scarcity entirely"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-9-Q10",
+      "question": "What broader implication does the passage highlight?",
+      "options": {
+        "a": "Managing abundance responsibly is as important as managing scarcity",
+        "b": "Economic systems will soon become irrelevant",
+        "c": "Scarcity will disappear with better technology",
+        "d": "Psychological scarcity is more important than environmental limits"
+      },
+      "answer": "a"
+    }
+  ]
+},
+{
+  "id": "R-A-10",
+  "title": "The Uncertain Future of Antarctic Ice and Global Sea Levels",
+  "text": "Antarctica contains the largest reservoir of freshwater ice on Earth—enough to raise global sea levels by nearly 60 meters if fully melted. Scientists have long monitored Antarctic ice sheets to understand their stability, but recent research suggests the continent may be nearing critical tipping points. Once crossed, these thresholds could trigger rapid ice loss, reshaping coastlines and disrupting global climate systems.\n\nThe Antarctic ice sheet is divided into the East Antarctic Ice Sheet (EAIS) and the West Antarctic Ice Sheet (WAIS). The EAIS is larger and traditionally viewed as more stable due to its higher elevation. The WAIS, however, rests on bedrock below sea level, making it highly vulnerable to ocean-driven melting. Warm ocean currents can erode glaciers from below, weakening ice shelves that normally slow glacier flow. When these shelves collapse, glaciers accelerate into the ocean.\n\nA key concern is marine ice-sheet instability, where retreating grounding lines trigger self-sustaining ice loss. As grounding lines move into deeper basins, glaciers become increasingly unstable, creating feedback loops that accelerate melting. In extreme scenarios, this process could collapse large sections of the WAIS within centuries or even decades.\n\nAnother alarming mechanism is marine ice-cliff instability. As protective ice shelves disappear, tall ice cliffs can form and collapse under their own weight. This could result in abrupt ice loss far exceeding historical rates. Satellite data showing fractured ice fronts have increased concern about these mechanisms.\n\nClimate models attempt to predict Antarctic ice loss but face uncertainty due to the complexity of interactions between ocean currents, atmospheric warming, ice dynamics, and feedback systems. Some models indicate that warming beyond 2°C could destabilize parts of the WAIS regardless of future emission reductions, increasing urgency for climate mitigation.\n\nEven gradual sea-level rise poses serious risks. Moderate increases can intensify storm surges, contaminate freshwater systems, and accelerate coastal erosion. Major cities and low-lying island nations face severe socioeconomic and humanitarian challenges as sea levels rise.\n\nPolitical decisions may strongly influence Antarctica’s future. Rapid emission reductions could slow warming and delay ice instability, while delayed action could commit the planet to centuries of rising seas. Climate policy thus becomes a determining factor in long-term outcomes.\n\nGeoengineering proposals—such as underwater barriers, artificial snow production, or sediment pumping—have been suggested to stabilize glaciers. These approaches remain controversial due to feasibility, risk, and ethical concerns, and critics argue they distract from emission reduction efforts.\n\nOngoing monitoring remains essential. Satellites, underwater vehicles, and ice-penetrating radar provide crucial long-term data, helping scientists identify trends and anticipate thresholds. Such data guide adaptation strategies for vulnerable communities.\n\nUltimately, Antarctica represents a convergence of scientific uncertainty, climate risk, and human vulnerability. Although outcomes remain uncertain, this ambiguity does not justify inaction. Instead, it underscores the need for precautionary policies, adaptive planning, and global cooperation. Decisions made today will shape global sea levels for generations.",
+  "questions": [
+    {
+      "id": "R-A-10-Q1",
+      "question": "What is the central focus of the passage?",
+      "options": {
+        "a": "Tourism development in Antarctica",
+        "b": "The mechanisms and consequences of Antarctic ice instability",
+        "c": "The history of scientific exploration in polar regions",
+        "d": "How sea-level rise can be reversed easily"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-10-Q2",
+      "question": "Why is the West Antarctic Ice Sheet considered especially vulnerable?",
+      "options": {
+        "a": "It is located farther from the ocean",
+        "b": "It rests on bedrock below sea level",
+        "c": "It receives more snowfall than other regions",
+        "d": "It is melting due to volcanic activity alone"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-10-Q3",
+      "question": "What is marine ice-sheet instability?",
+      "options": {
+        "a": "A predictable fluctuation in ice thickness",
+        "b": "A process where grounding-line retreat triggers self-reinforcing ice loss",
+        "c": "A temporary melting event caused by summer temperatures",
+        "d": "A model error caused by faulty satellite measurements"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-10-Q4",
+      "question": "What role do ice shelves play in glacier stability?",
+      "options": {
+        "a": "They accelerate glacier flow",
+        "b": "They act as barriers that slow glacier movement",
+        "c": "They warm the ocean beneath glaciers",
+        "d": "They have no effect on glacier behavior"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-10-Q5",
+      "question": "Why are climate model predictions uncertain?",
+      "options": {
+        "a": "The models do not include atmospheric data",
+        "b": "Ice sheets behave too simply to model accurately",
+        "c": "They must represent complex interactions between multiple climate systems",
+        "d": "Scientists lack any satellite observations"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-10-Q6",
+      "question": "What broader implication does sea-level rise have?",
+      "options": {
+        "a": "It affects only uninhabited coastal regions",
+        "b": "It primarily influences wildlife migration",
+        "c": "It poses socioeconomic and humanitarian risks for major cities",
+        "d": "It does not matter if warming stays below 2°C"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-10-Q7",
+      "question": "What is one critique of geoengineering proposals?",
+      "options": {
+        "a": "They are guaranteed to reverse ice loss",
+        "b": "They ignore the existence of ocean currents",
+        "c": "They may be risky, impractical, or ethically questionable",
+        "d": "They require no political involvement"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-10-Q8",
+      "question": "What do the monitoring technologies mentioned in the passage help accomplish?",
+      "options": {
+        "a": "Reduce global warming",
+        "b": "Improve understanding of long-term ice-sheet dynamics",
+        "c": "Stop grounding-line retreat instantly",
+        "d": "Predict volcanic eruptions"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-A-10-Q9",
+      "question": "Which statement BEST reflects the passage’s overall tone?",
+      "options": {
+        "a": "Alarmist and speculative",
+        "b": "Dismissive of scientific uncertainty",
+        "c": "Analytical with cautious concern",
+        "d": "Optimistic about rapid Antarctic recovery"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-A-10-Q10",
+      "question": "What broader message does the passage convey about uncertainty?",
+      "options": {
+        "a": "Uncertainty should delay climate action",
+        "b": "Uncertainty justifies dismissing climate science",
+        "c": "Uncertainty reinforces the need for precautionary policies",
+        "d": "Uncertainty proves Antarctica is stable"
+      },
+      "answer": "c"
+    }
+  ]
+}
+  ]
+}

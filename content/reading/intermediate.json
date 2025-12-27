@@ -1,0 +1,1176 @@
+{
+  "level": "intermediate",
+  "passages": [
+  {
+  "id": "R-I-1",
+  "title": "The Expansion of Renewable Transportation",
+  "text": "As cities continue to grow and populations increase, transportation has become one of the most important environmental challenges of the 21st century. Traditional vehicles powered by gasoline and diesel produce large amounts of carbon dioxide, contributing to climate change and air pollution. In response, governments, scientists, and companies are working to expand renewable forms of transportation that rely on cleaner energy sources. These new technologies not only reduce emissions but also reshape how people move within and between cities.\n\nElectric vehicles, commonly known as EVs, are one of the most rapidly growing forms of renewable transportation. Instead of burning fuel, EVs use batteries charged with electricity. When powered by renewable energy sources such as solar or wind, EVs produce almost no pollution. Over the past decade, major advances in battery technology have increased the driving range of electric cars, making them more practical for everyday use. Many countries now offer financial incentives, such as tax discounts or purchase subsidies, to encourage people to switch from gasoline-powered cars to electric ones.\n\nHowever, electric vehicles still face challenges. Charging stations are not evenly distributed, especially in rural or developing regions. Drivers may experience range anxiety, a fear of running out of power before reaching a charging station. Additionally, producing EV batteries requires rare minerals such as lithium and cobalt. Mining these materials can harm the environment and raise ethical concerns. For electric vehicles to be truly sustainable, both battery production and recycling methods must improve.\n\nAnother promising development in renewable transportation is hydrogen-powered vehicles. Instead of long charging times like EVs, hydrogen vehicles can be refueled quickly. They run on fuel cells that combine hydrogen with oxygen, producing electricity to power the vehicle. The only by-product is water vapor, making them one of the cleanest transportation methods available. However, hydrogen vehicles require specialized fueling stations, which are expensive and limited.\n\nPublic transportation systems are also undergoing major changes as cities work to reduce emissions. Electric buses and trains powered by renewable energy are becoming more common. These vehicles can transport large numbers of people efficiently, reducing the need for individual car travel. Some cities have introduced smart transportation networks that use digital sensors and real-time data to manage traffic and reduce congestion.\n\nCycling and walking are also essential parts of renewable transportation. Many cities are expanding bike lanes, creating pedestrian-only zones, and introducing bike-sharing programs. These solutions promote healthier lifestyles and reduce dependence on motor vehicles.\n\nRenewable transportation also includes innovations in aviation. Researchers are developing biofuels made from plants, algae, and agricultural waste. These fuels produce fewer emissions than traditional jet fuel. Some companies are also testing electric airplanes for short-distance flights.\n\nShipping is another major transportation sector transitioning toward renewable solutions. Hybrid ships use combinations of wind power and cleaner fuels. Some ships use large computer-controlled sails to reduce fuel consumption by capturing ocean wind.\n\nDespite these advancements, renewable transportation requires cooperation among governments, businesses, and individuals. Policies such as stricter fuel standards and investments in public transit can accelerate progress. The transition is challenging but necessary for a sustainable future.",
+  "questions": [
+    {
+      "id": "R-I-1-Q1",
+      "question": "What is the main purpose of renewable transportation?",
+      "options": {
+        "a": "To increase car prices",
+        "b": "To reduce pollution and emissions",
+        "c": "To eliminate public transport",
+        "d": "To slow technological progress"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-1-Q2",
+      "question": "What has helped electric vehicles become more practical?",
+      "options": {
+        "a": "Lower fuel prices",
+        "b": "Improvements in battery technology",
+        "c": "More expensive charging",
+        "d": "Weaker environmental laws"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-1-Q3",
+      "question": "What is a major concern related to EV batteries?",
+      "options": {
+        "a": "They last forever",
+        "b": "Mining minerals can harm the environment",
+        "c": "They cannot be recycled",
+        "d": "They work only in cold climates"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-1-Q4",
+      "question": "What advantage do hydrogen vehicles have over electric ones?",
+      "options": {
+        "a": "They are slower",
+        "b": "They require longer charging",
+        "c": "They can be refueled quickly",
+        "d": "They produce carbon dioxide"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-1-Q5",
+      "question": "What limits the expansion of hydrogen vehicles?",
+      "options": {
+        "a": "Lack of bicycles",
+        "b": "Expensive and limited fueling stations",
+        "c": "Low demand for clean energy",
+        "d": "Too many charging stations"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-1-Q6",
+      "question": "How do smart transportation networks improve cities?",
+      "options": {
+        "a": "By increasing car ownership",
+        "b": "By adjusting schedules and reducing congestion",
+        "c": "By removing public transit",
+        "d": "By banning pedestrians"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-1-Q7",
+      "question": "Why are cycling and walking important for sustainability?",
+      "options": {
+        "a": "They reduce the need for fuel-powered vehicles",
+        "b": "They are the fastest travel methods",
+        "c": "They require advanced technology",
+        "d": "They increase road traffic"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-1-Q8",
+      "question": "What is one challenge of renewable aviation?",
+      "options": {
+        "a": "Aircraft cannot be used at night",
+        "b": "Airplanes need large amounts of energy",
+        "c": "Biofuels cannot be made from plants",
+        "d": "Pilots dislike renewable energy"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-1-Q9",
+      "question": "What innovation is helping reduce emissions from cargo ships?",
+      "options": {
+        "a": "Faster engines",
+        "b": "Computer-controlled sails",
+        "c": "Carbon-heavy fuel",
+        "d": "More passengers"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-1-Q10",
+      "question": "What does the passage suggest about the future of renewable transportation?",
+      "options": {
+        "a": "It is impossible to achieve",
+        "b": "It requires cooperation and long-term commitment",
+        "c": "It will replace all cars immediately",
+        "d": "It is only a temporary trend"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-I-2",
+  "title": "The Science of Memory and Forgetting",
+  "text": "Human memory is one of the most fascinating and complex abilities of the brain. From remembering a friend’s birthday to recalling how to ride a bicycle, memory allows people to learn, adapt, and function in daily life. However, memory is not a perfect system. People forget names, misplace objects, and sometimes recall events incorrectly. Scientists have long studied how memory works and why forgetting occurs, revealing that both processes play important roles in how the brain operates.\n\nMemory is generally divided into three main stages: encoding, storage, and retrieval. Encoding is the process of converting information into a form the brain can understand. For example, when someone reads a phone number, the brain translates the numbers into a mental pattern. Storage refers to keeping that information over time, similar to saving a file on a computer. Retrieval is accessing the stored information when needed. Problems at any of these stages can lead to forgetting.\n\nThere are also different types of memory. Short-term memory holds small amounts of information for a brief period, usually less than 30 seconds. Long-term memory can store information for days, years, or even a lifetime. Working memory allows people to actively use information, such as doing mental calculations or following directions.\n\nForgetting is not a weakness but an important brain function. The brain receives more information than it can store, and forgetting helps remove unnecessary details. This process, known as memory pruning, allows important information to be accessed more easily.\n\nForgetting can occur due to decay, interference, or retrieval failure. Decay happens when information fades over time due to lack of use. Interference occurs when new information disrupts old information. Retrieval failure happens when memories exist but cannot be accessed at a particular moment.\n\nEmotions strongly influence memory. Emotional experiences activate the amygdala, strengthening memory formation. However, extreme stress can interfere with encoding, leading to memory problems.\n\nSleep plays a crucial role in memory consolidation. During deep sleep, the brain strengthens and organizes memories. Poor sleep habits can weaken recall and concentration.\n\nTechnology also affects memory. Reliance on digital devices may weaken natural memory skills, a phenomenon known as digital dependence. However, it can also free mental space for complex thinking.\n\nScientists continue to study memory improvement strategies such as repetition, organization, and creating associations. Physical exercise also improves memory by increasing blood flow to the brain. Research into memory disorders aims to improve treatments and brain health.\n\nMemory and forgetting work together to keep the brain efficient. While memory allows learning and planning, forgetting helps manage information overload. Together, they shape human understanding and behavior.",
+  "questions": [
+    {
+      "id": "R-I-2-Q1",
+      "question": "What are the three main stages of memory?",
+      "options": {
+        "a": "Learning, repeating, forgetting",
+        "b": "Encoding, storage, retrieval",
+        "c": "Seeing, thinking, reacting",
+        "d": "Thinking, writing, recalling"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-2-Q2",
+      "question": "What is short-term memory mainly used for?",
+      "options": {
+        "a": "Lifelong skills",
+        "b": "Holding information briefly",
+        "c": "Storing childhood memories",
+        "d": "Remembering emotional events"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-2-Q3",
+      "question": "What does memory pruning refer to?",
+      "options": {
+        "a": "Strengthening old memories",
+        "b": "Removing unnecessary information",
+        "c": "Creating new neurons",
+        "d": "Forgetting important details"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-2-Q4",
+      "question": "What is interference in memory?",
+      "options": {
+        "a": "Forgetting due to lack of sleep",
+        "b": "New information disrupting old information",
+        "c": "Losing memories from childhood",
+        "d": "Emotional memories replacing regular ones"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-2-Q5",
+      "question": "Why do emotional memories last longer?",
+      "options": {
+        "a": "They are repeated often",
+        "b": "The amygdala strengthens them",
+        "c": "They are stored separately",
+        "d": "They are always happy memories"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-2-Q6",
+      "question": "What role does sleep play in memory?",
+      "options": {
+        "a": "It deletes old memories",
+        "b": "It weakens stressful memories",
+        "c": "It consolidates and strengthens memories",
+        "d": "It stops interference from happening"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-2-Q7",
+      "question": "What is one negative effect of digital dependence?",
+      "options": {
+        "a": "Improved concentration",
+        "b": "Better organization",
+        "c": "Weaker natural memory skills",
+        "d": "Faster learning"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-2-Q8",
+      "question": "Which strategy is helpful for remembering information?",
+      "options": {
+        "a": "Reading silently",
+        "b": "Rewriting everything",
+        "c": "Creating associations",
+        "d": "Listening to loud music"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-2-Q9",
+      "question": "What do scientists hope future research will achieve?",
+      "options": {
+        "a": "Replace human memory with computers",
+        "b": "Eliminate short-term memory",
+        "c": "Improve understanding of memory disorders",
+        "d": "Remove emotional memories"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-2-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Forgetting is more important than remembering",
+        "b": "Memory and forgetting work together and are essential processes",
+        "c": "Technology will replace human memory",
+        "d": "Memory is completely reliable"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-I-3",
+  "title": "The Rise of Urban Farming",
+  "text": "As the world’s population continues to grow, cities face increasing pressure to provide enough food for their residents. Traditionally, food has been produced in rural areas and transported long distances to urban markets. However, this system is becoming less sustainable due to rising fuel costs, climate change, and limited agricultural land. To address these challenges, many cities are turning to urban farming—an innovative approach that brings food production directly into urban environments.\n\nUrban farming takes many forms, ranging from small community gardens to large rooftop farms. In community gardens, local residents work together to plant vegetables, fruits, and herbs. These gardens not only provide fresh produce but also strengthen social connections among neighbors. Rooftop farms use the open spaces on top of buildings to grow crops, often relying on lightweight soil mixtures and efficient irrigation systems.\n\nAnother modern form of urban farming is vertical farming, where crops are grown in tall structures using artificial lights and controlled environments. Vertical farms can operate year-round because they are not affected by weather changes or seasonal limitations. They often use hydroponics or aeroponics, which consume less water and require far less land.\n\nUrban farming also contributes to environmental sustainability. Plants grown in cities help reduce the urban heat island effect. Green roofs absorb heat and provide insulation, lowering building energy use. Urban farms also reduce the need for long-distance food transportation, decreasing carbon emissions. Some cities use compost from food waste to fertilize gardens, creating circular systems.\n\nDespite its benefits, urban farming faces challenges. Space is limited and expensive in cities. Pollution is another concern, as urban soil may contain harmful chemicals. In such cases, raised beds or imported soil are used to ensure food safety.\n\nUrban farming also requires education and training. Many beginners lack farming experience, so cities offer workshops, volunteer programs, and technological tools such as mobile apps to guide plant care.\n\nEconomically, urban farming varies in success. Community gardens focus on social benefits, while rooftop and vertical farms can be profitable by supplying high-demand crops like herbs and leafy vegetables to local markets.\n\nUrban farming provides educational opportunities for schools and universities, teaching nutrition, biology, and sustainability. Students involved in gardening often develop healthier habits and environmental awareness.\n\nAs climate change disrupts traditional agriculture, urban farming offers stability through controlled environments that remain productive during extreme weather. Experts believe combining urban and traditional farming is essential for future food security.\n\nUrban farming is not a complete solution, but it supports sustainable food systems by reducing environmental impact, strengthening communities, and increasing local food access.",
+  "questions": [
+    {
+      "id": "R-I-3-Q1",
+      "question": "What is the main reason cities are exploring urban farming?",
+      "options": {
+        "a": "To replace rural farming completely",
+        "b": "To reduce reliance on long-distance food transport",
+        "c": "To reduce the number of restaurants",
+        "d": "To make cities more crowded"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q2",
+      "question": "What is one benefit of community gardens?",
+      "options": {
+        "a": "They require no maintenance",
+        "b": "They strengthen social connections",
+        "c": "They eliminate all food waste",
+        "d": "They grow only fruit"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q3",
+      "question": "What is a key advantage of rooftop farms?",
+      "options": {
+        "a": "They need no water",
+        "b": "They use unused building space",
+        "c": "They require heavy soil",
+        "d": "They only grow flowers"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q4",
+      "question": "Why can vertical farms operate year-round?",
+      "options": {
+        "a": "They use natural sunlight only",
+        "b": "They are protected from weather and seasons",
+        "c": "They grow only one type of crop",
+        "d": "They use traditional soil"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q5",
+      "question": "What environmental benefit do urban farms provide?",
+      "options": {
+        "a": "They increase city temperatures",
+        "b": "They reduce pollution from transportation",
+        "c": "They require more fuel",
+        "d": "They increase noise levels"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q6",
+      "question": "Why might urban soil be unsafe for farming?",
+      "options": {
+        "a": "It contains too many nutrients",
+        "b": "It may be polluted",
+        "c": "It is too soft",
+        "d": "It cannot hold water"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q7",
+      "question": "How do cities help beginner farmers?",
+      "options": {
+        "a": "By banning gardening tools",
+        "b": "By offering workshops and training",
+        "c": "By removing community gardens",
+        "d": "By restricting access to seeds"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q8",
+      "question": "What type of crops are often grown in profitable urban farms?",
+      "options": {
+        "a": "Slow-growing crops",
+        "b": "Crops that need large fields",
+        "c": "Quick-growing vegetables and herbs",
+        "d": "Wild plants"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-3-Q9",
+      "question": "Why is urban farming valuable in the context of climate change?",
+      "options": {
+        "a": "It depends entirely on rain",
+        "b": "Controlled environments remain stable during extreme weather",
+        "c": "It stops all climate disasters",
+        "d": "It increases flooding"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-3-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Urban farming will replace all traditional farms",
+        "b": "Urban farming is a sustainable way to support food systems in cities",
+        "c": "Urban farming is too expensive and not useful",
+        "d": "Cities should stop farming completely"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-I-4",
+  "title": "The Role of Bees in Global Ecosystems",
+  "text": "Bees are often associated with honey, but their importance extends far beyond producing a sweet treat. They are one of the most essential pollinators on Earth, responsible for supporting ecosystems, food production, and biodiversity. Without bees, many plants would struggle to reproduce, leading to serious environmental and economic consequences.\n\nPollination is the process in which pollen is transferred from one flower to another, allowing plants to produce seeds and fruit. While wind and water can carry pollen, animal pollinators—especially bees—are far more efficient. Bees collect nectar for food, and in the process, pollen sticks to their bodies. As they move from flower to flower, they unintentionally transfer pollen, helping plants reproduce.\n\nAbout one-third of the world’s food production depends on pollinators, with bees playing the biggest role. Crops like apples, almonds, blueberries, and cucumbers rely heavily on bee pollination. Even livestock indirectly depend on bees, since many plants used as animal feed require pollination. In economic terms, bees contribute billions of dollars to global agriculture each year.\n\nHowever, bee populations around the world are declining. One major threat is habitat loss. As cities expand and farmland replaces natural landscapes, bees lose access to the wildflowers and diverse plants they need for food. Another threat is the use of pesticides, which can affect bees’ ability to navigate, feed, and reproduce.\n\nClimate change is also impacting bee populations. Rising temperatures can cause flowers to bloom earlier or later than usual, disrupting food availability. Extreme weather events and diseases such as the varroa mite have further weakened bee colonies.\n\nDespite these threats, many solutions are being developed. Farmers reduce pesticide use, plant pollinator-friendly crops, and create flower strips along fields. Urban areas support bee conservation through rooftop gardens, native plants, and urban beekeeping programs.\n\nScientists are also studying bees’ genetics and experimenting with robotic pollinators. However, most agree that protecting natural bee populations is far more effective than artificial alternatives.\n\nThe decline of bees is a warning about ecosystem fragility. Bees support plant diversity, which forms the foundation of forests, grasslands, and food chains.\n\nProtecting bees is a global responsibility. Governments, farmers, scientists, and citizens must work together to preserve bee populations and ensure the health of ecosystems and food systems worldwide.",
+  "questions": [
+    {
+      "id": "R-I-4-Q1",
+      "question": "What is the main purpose of bees in ecosystems?",
+      "options": {
+        "a": "Producing honey",
+        "b": "Pollinating plants",
+        "c": "Making nests",
+        "d": "Cleaning forests"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-4-Q2",
+      "question": "What happens during pollination?",
+      "options": {
+        "a": "Bees drink water",
+        "b": "Bees build hives",
+        "c": "Pollen moves from one flower to another",
+        "d": "Plants grow taller automatically"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-4-Q3",
+      "question": "How much of the world’s food production depends on pollinators?",
+      "options": {
+        "a": "Very little",
+        "b": "One-third",
+        "c": "Half",
+        "d": "Almost all"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-4-Q4",
+      "question": "What is one major cause of declining bee populations?",
+      "options": {
+        "a": "Increased rainfall",
+        "b": "Habitat loss",
+        "c": "Too many flowers",
+        "d": "Cold temperatures"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-4-Q5",
+      "question": "How do pesticides harm bees?",
+      "options": {
+        "a": "They make bees larger",
+        "b": "They weaken navigation and reproduction",
+        "c": "They improve pollination",
+        "d": "They make bees faster"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-4-Q6",
+      "question": "What effect does climate change have on bees?",
+      "options": {
+        "a": "Flowers bloom at the wrong time",
+        "b": "More nectar is produced",
+        "c": "Bees grow stronger",
+        "d": "Bees stop pollinating entirely"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-4-Q7",
+      "question": "What is one method farmers use to support bee populations?",
+      "options": {
+        "a": "Planting flower strips",
+        "b": "Increasing pesticide use",
+        "c": "Cutting down forests",
+        "d": "Using only one type of crop"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-4-Q8",
+      "question": "How do cities help bee conservation?",
+      "options": {
+        "a": "By building more roads",
+        "b": "By encouraging bee-friendly gardens",
+        "c": "By removing green spaces",
+        "d": "By discouraging beekeeping"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-4-Q9",
+      "question": "What technological approach is mentioned in the passage?",
+      "options": {
+        "a": "Flying cars",
+        "b": "Robotic pollinators",
+        "c": "Artificial pesticides",
+        "d": "Digital flowers"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-4-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Bees are disappearing and nothing can be done",
+        "b": "Bees are harmful and should be controlled",
+        "c": "Bees are essential and protecting them is crucial",
+        "d": "Honey production is the world’s main industry"
+      },
+      "answer": "c"
+    }
+  ]
+},
+{
+  "id": "R-I-5",
+  "title": "The Evolution of Communication Technology",
+  "text": "Human communication has undergone dramatic changes throughout history. From ancient cave paintings to instant digital messaging, each new form of communication has helped societies share knowledge, preserve culture, and connect across great distances. Today, communication technology continues to evolve rapidly, influencing how people interact, learn, and understand the world.\n\nEarly humans communicated primarily through gestures, sounds, and drawings. Cave paintings found in Europe, Africa, and Asia show that people used images to record stories, hunting scenes, and cultural rituals. Over time, symbols developed into written languages, allowing humans to store information more accurately and permanently. The invention of writing marked a turning point in communication, enabling governments to keep records, scientists to document discoveries, and civilizations to pass on knowledge to future generations.\n\nAnother major milestone was the invention of the printing press in the 15th century by Johannes Gutenberg. Before the printing press, books had to be copied by hand, which was slow, expensive, and prone to errors. The printing press allowed books and newspapers to be produced quickly and in large numbers. As reading materials became more accessible, literacy rates increased, and ideas spread across continents.\n\nIn the 19th and 20th centuries, communication technology transformed again with the invention of the telegraph, telephone, and radio. The telegraph allowed messages to travel across countries in minutes instead of weeks. The telephone enabled real-time voice communication, shrinking distances even further. Radio brought news, music, and entertainment directly into people’s homes.\n\nThe digital revolution of the late 20th century changed communication even more dramatically. Computers, satellites, and the Internet made it possible to send information instantly across the world. Email replaced traditional letters, and social media platforms enabled users to share content with global audiences.\n\nHowever, digital communication also brought challenges. Misinformation can spread quickly online, social media may affect mental health, and online interaction can reduce face-to-face communication.\n\nDespite these challenges, communication technology continues to evolve. Virtual reality enables immersive interaction, artificial intelligence supports real-time translation, and video conferencing allows remote work and education.\n\nLooking ahead, experts predict more immersive and intelligent communication technologies, such as holograms, AI assistants, and brain-computer interfaces. While exciting, these developments raise ethical concerns about privacy and data security.\n\nThe evolution of communication technology reflects humanity’s desire to connect. Although tools change, the purpose remains the same: sharing ideas, building relationships, and understanding one another.",
+  "questions": [
+    {
+      "id": "R-I-5-Q1",
+      "question": "What was the main advantage of the printing press?",
+      "options": {
+        "a": "It replaced all spoken communication",
+        "b": "It allowed books to be produced quickly and cheaply",
+        "c": "It created digital messages",
+        "d": "It made writing unnecessary"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-5-Q2",
+      "question": "What did early humans use to communicate before written language?",
+      "options": {
+        "a": "Phones",
+        "b": "Cave paintings and sounds",
+        "c": "Books",
+        "d": "Social media"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-5-Q3",
+      "question": "How did the telegraph change communication?",
+      "options": {
+        "a": "It made communication slower",
+        "b": "It allowed long-distance messages to be sent quickly",
+        "c": "It replaced all newspapers",
+        "d": "It produced printed books"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-5-Q4",
+      "question": "What does the passage suggest about the Internet?",
+      "options": {
+        "a": "It has stopped global communication",
+        "b": "It allows instant access to information",
+        "c": "It has made libraries unnecessary",
+        "d": "It only helps scientists"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-5-Q5",
+      "question": "What is one challenge of digital communication?",
+      "options": {
+        "a": "It improves all relationships",
+        "b": "It always provides accurate information",
+        "c": "It can spread misinformation quickly",
+        "d": "It makes reading impossible"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-5-Q6",
+      "question": "How does social media affect some people?",
+      "options": {
+        "a": "It reduces pressure to appear perfect",
+        "b": "It can influence mental health",
+        "c": "It eliminates all communication problems",
+        "d": "It improves face-to-face skills"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-5-Q7",
+      "question": "What is one benefit of virtual reality communication?",
+      "options": {
+        "a": "It copies newspapers",
+        "b": "It allows people to interact in 3D environments",
+        "c": "It removes the need for computers",
+        "d": "It slows down learning"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-5-Q8",
+      "question": "What ethical concern is mentioned about future technologies?",
+      "options": {
+        "a": "People will stop using the Internet",
+        "b": "Books will become more expensive",
+        "c": "Privacy and data security",
+        "d": "Communication will return to handwritten letters"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-5-Q9",
+      "question": "What do all communication technologies have in common?",
+      "options": {
+        "a": "They aim to reduce human interaction",
+        "b": "They help people express and share ideas",
+        "c": "They make communication more complicated",
+        "d": "They eliminate the need for language"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-5-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Communication technology has evolved and continues to shape human interaction",
+        "b": "Modern communication is worse than ancient methods",
+        "c": "Technology will eventually stop evolving",
+        "d": "Communication has remained mostly the same"
+      },
+      "answer": "a"
+    }
+  ]
+},
+{
+  "id": "R-I-6",
+  "title": "The Discovery of Penicillin and Its Global Impact",
+  "text": "Before the 20th century, even minor infections such as a small cut or sore throat could become deadly. Bacterial diseases like pneumonia, tuberculosis, and wound infections caused millions of deaths every year. Doctors had limited tools to fight these illnesses, and many treatments were ineffective or even harmful. Everything changed in 1928 when Alexander Fleming, a Scottish scientist, discovered the world’s first true antibiotic: penicillin.\n\nFleming was studying bacteria in his laboratory when he noticed something unusual. One of his petri dishes, which contained a harmful bacterium called Staphylococcus, had been accidentally contaminated by a mold. Instead of growing normally, the bacteria around the mold had died. Fleming observed that the mold, later identified as Penicillium notatum, released a substance that killed bacteria. He named this substance penicillin.\n\nAlthough Fleming recognized its potential, he could not purify penicillin or produce it in large quantities. For more than a decade, penicillin remained a scientific curiosity rather than a practical medicine. It wasn’t until the early 1940s that two researchers, Howard Florey and Ernst Chain, developed a method to mass-produce penicillin. With the support of British and American laboratories, they created a stable, usable drug just in time for World War II.\n\nThe impact was immediate and extraordinary. Penicillin saved thousands of wounded soldiers by preventing deadly infections. After the war, the drug became widely available to the public and revolutionized modern medicine. For the first time, doctors could reliably treat bacterial infections that were once considered fatal. Penicillin opened the door to the discovery of many other antibiotics, transforming healthcare and dramatically increasing life expectancy around the world.\n\nDespite its success, penicillin also brought new challenges. Over time, some bacteria developed resistance to the drug. When antibiotics are used too often or incorrectly, bacteria evolve and become harder to kill. This phenomenon, known as antibiotic resistance, now threatens global health.\n\nTo address this issue, scientists are researching new antibiotics and alternative treatments. Some are studying substances in plants, soil, and marine organisms, while others are developing bacteriophage therapy, which uses viruses that attack bacteria. Doctors also emphasize responsible antibiotic use.\n\nThe story of penicillin shows how scientific discoveries can reshape society. Fleming’s accidental observation led to one of the most important medical breakthroughs in history, while also highlighting the need for careful use of medical resources.",
+  "questions": [
+    {
+      "id": "R-I-6-Q1",
+      "question": "What problem did people face before the discovery of penicillin?",
+      "options": {
+        "a": "Lack of doctors",
+        "b": "Minor infections could become deadly",
+        "c": "Too many medical treatments",
+        "d": "No one understood bacteria"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-6-Q2",
+      "question": "What did Fleming notice in his contaminated petri dish?",
+      "options": {
+        "a": "The mold was growing unusually fast",
+        "b": "The bacteria died around the mold",
+        "c": "The mold and bacteria grew together",
+        "d": "The mold turned into bacteria"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-6-Q3",
+      "question": "Why didn’t Fleming immediately turn penicillin into a medicine?",
+      "options": {
+        "a": "He forgot about it",
+        "b": "He couldn’t purify or mass-produce it",
+        "c": "He didn’t believe it worked",
+        "d": "It was too expensive to study"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-6-Q4",
+      "question": "Who helped develop penicillin into a usable drug?",
+      "options": {
+        "a": "Darwin and Pasteur",
+        "b": "Florey and Chain",
+        "c": "Watson and Crick",
+        "d": "Newton and Einstein"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-6-Q5",
+      "question": "When did penicillin become widely used?",
+      "options": {
+        "a": "In the 1800s",
+        "b": "During World War II",
+        "c": "After Fleming retired",
+        "d": "Before it was tested"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-6-Q6",
+      "question": "What major effect did penicillin have on medicine?",
+      "options": {
+        "a": "It reduced the need for hospitals",
+        "b": "It allowed doctors to treat bacterial infections effectively",
+        "c": "It replaced all other medicines",
+        "d": "It made surgery unnecessary"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-6-Q7",
+      "question": "What is antibiotic resistance?",
+      "options": {
+        "a": "A shortage of antibiotics",
+        "b": "Bacteria becoming harder to kill",
+        "c": "People refusing treatment",
+        "d": "Antibiotics working faster than before"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-6-Q8",
+      "question": "What contributes to antibiotic resistance?",
+      "options": {
+        "a": "Using antibiotics only when needed",
+        "b": "Storing antibiotics carefully",
+        "c": "Overuse or incorrect use of antibiotics",
+        "d": "Eating healthy foods"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-6-Q9",
+      "question": "What is one alternative treatment scientists are studying?",
+      "options": {
+        "a": "Virus-based therapy that targets bacteria",
+        "b": "Water purification",
+        "c": "Artificial molds",
+        "d": "Laser surgery"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-6-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Penicillin is no longer useful",
+        "b": "Penicillin changed medicine but led to new challenges",
+        "c": "Fleming discovered all antibiotics",
+        "d": "Antibiotics are dangerous and should be avoided"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-I-7",
+  "title": "The Debate Over Space Tourism",
+  "text": "Space was once a destination reserved for astronauts, scientists, and highly trained professionals. Today, however, a new industry—space tourism—is rapidly emerging. Private companies are building spacecraft designed to take ordinary people beyond Earth’s atmosphere. While space tourism promises excitement, scientific opportunities, and economic growth, it also raises concerns about safety, environmental impact, and inequality.\n\nSpace tourism became realistic in the early 2000s when private companies invested in commercial rockets. By the 2020s, several companies launched paying customers into suborbital space. Supporters argue that space tourism is a step toward making space more accessible and encouraging future human exploration beyond Earth.\n\nOne benefit of space tourism is its ability to inspire interest in science. Many tourists experience the “overview effect,” a shift in perspective after seeing Earth from space, which can increase environmental awareness and global unity. Investments in space tourism also drive innovation in rocket design, materials, and energy systems.\n\nCritics, however, raise concerns about safety. Space travel is risky, and technical failures can be fatal. Unlike airplanes, spacecraft lack long safety histories and standardized regulations. Training passengers to endure physical stress is also challenging.\n\nEnvironmental impact is another concern. Rocket launches release carbon dioxide and black carbon particles that contribute to climate change and ozone damage. Critics argue that resources should prioritize protecting Earth rather than luxury space travel.\n\nInequality is also debated, as tickets cost hundreds of thousands or millions of dollars, limiting access to the wealthy. Supporters argue that early technologies are expensive but become affordable over time.\n\nDespite debates, space tourism continues to develop. Governments are creating safety regulations, and scientists are researching cleaner fuels and reusable spacecraft. The future of space tourism remains uncertain but raises important ethical and social questions.",
+  "questions": [
+    {
+      "id": "R-I-7-Q1",
+      "question": "What is the primary focus of the passage?",
+      "options": {
+        "a": "The history of NASA",
+        "b": "The benefits and concerns of space tourism",
+        "c": "How rockets are designed",
+        "d": "Why astronauts train for space"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-7-Q2",
+      "question": "What is one benefit supporters see in space tourism?",
+      "options": {
+        "a": "It makes space travel free for everyone",
+        "b": "It increases interest in science and global awareness",
+        "c": "It reduces the need for scientific missions",
+        "d": "It eliminates environmental problems"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-7-Q3",
+      "question": "What is the “overview effect”?",
+      "options": {
+        "a": "A type of rocket engine",
+        "b": "A feeling of fear during launch",
+        "c": "A perspective gained from viewing Earth from space",
+        "d": "A scientific measurement tool"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-7-Q4",
+      "question": "Why is safety a concern in space tourism?",
+      "options": {
+        "a": "Rockets have long safety records",
+        "b": "Spacecraft are identical to airplanes",
+        "c": "Small technical failures can be fatal",
+        "d": "Passengers never need training"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-7-Q5",
+      "question": "What environmental problem is linked to space tourism?",
+      "options": {
+        "a": "Excessive rainfall",
+        "b": "Pollutants released during rocket launches",
+        "c": "Too many airplanes",
+        "d": "Deforestation"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-7-Q6",
+      "question": "Why do some critics view space tourism as unequal?",
+      "options": {
+        "a": "Rockets are too slow",
+        "b": "Tickets are extremely expensive",
+        "c": "Everyone must pass medical tests",
+        "d": "Spaceports are far from cities"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-7-Q7",
+      "question": "What argument do supporters make about ticket prices?",
+      "options": {
+        "a": "Governments should pay for trips",
+        "b": "Costs will decrease with innovation",
+        "c": "Only astronauts should travel",
+        "d": "Prices should increase"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-7-Q8",
+      "question": "What role are governments playing in space tourism?",
+      "options": {
+        "a": "Banning private companies",
+        "b": "Developing safety and environmental regulations",
+        "c": "Replacing satellites",
+        "d": "Ending scientific missions"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-7-Q9",
+      "question": "How are scientists reducing environmental impact?",
+      "options": {
+        "a": "Building taller rockets",
+        "b": "Using reusable spacecraft and cleaner fuels",
+        "c": "Increasing launch frequency",
+        "d": "Using older rocket designs"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-7-Q10",
+      "question": "What is the main idea of the conclusion?",
+      "options": {
+        "a": "Space tourism should be banned",
+        "b": "Space tourism has potential but raises ethical questions",
+        "c": "Space tourism will solve climate change",
+        "d": "Space tourism will become cheap soon"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-I-8",
+  "title": "Understanding Ocean Currents and Their Influence",
+  "text": "Ocean currents are powerful, continuous movements of seawater that flow through the world’s oceans. They play a crucial role in regulating Earth’s climate, transporting heat, and supporting marine life. Ocean currents are shaped by wind, temperature, salinity, and the rotation of the Earth.\n\nOne of the main drivers of ocean currents is wind. Surface currents occur in the upper layers of the ocean and are driven by global wind patterns. Temperature also plays a role: warm water rises and moves toward the poles, while cold water sinks and flows toward the equator, helping distribute heat around the planet.\n\nSalinity affects water density. Saltier water becomes denser and sinks, while less salty water rises. These differences drive deep ocean currents as part of the thermohaline circulation, a global conveyor belt that moves water slowly across the oceans over long periods.\n\nEarth’s rotation causes the Coriolis effect, which deflects moving water to the right in the Northern Hemisphere and to the left in the Southern Hemisphere. This causes currents to curve and form large rotating systems called gyres.\n\nOcean currents strongly influence climate. The Gulf Stream carries warm water to northern Europe, keeping it warmer than it would otherwise be. Cold currents like the California Current cool nearby land. Changes in currents can trigger climate events such as El Niño and La Niña.\n\nCurrents also support marine life by transporting nutrients. Upwelling brings cold, nutrient-rich water to the surface, supporting productive fisheries. Disruptions to currents can reduce nutrients and harm ecosystems.\n\nClimate change may alter ocean currents. Melting ice adds fresh water, reducing salinity and potentially weakening thermohaline circulation. This could lead to colder regional climates and extreme weather.\n\nScientists study ocean currents using satellites, underwater sensors, and computer models. Understanding currents is essential for predicting weather, managing fisheries, and preparing for environmental change.\n\nOcean currents are vital to Earth’s systems. They regulate climate, support marine life, and influence global weather patterns. Protecting and understanding them is essential for the planet’s future.",
+  "questions": [
+    {
+      "id": "R-I-8-Q1",
+      "question": "What is the main purpose of ocean currents?",
+      "options": {
+        "a": "To create waves",
+        "b": "To regulate climate and transport heat",
+        "c": "To move ships faster",
+        "d": "To reduce ocean salinity"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-8-Q2",
+      "question": "What mainly drives surface currents?",
+      "options": {
+        "a": "Earthquakes",
+        "b": "Wind patterns",
+        "c": "Volcanic eruptions",
+        "d": "Marine animals"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-8-Q3",
+      "question": "What is thermohaline circulation based on?",
+      "options": {
+        "a": "Wind and tides",
+        "b": "Temperature and salinity differences",
+        "c": "Coral reef growth",
+        "d": "Ocean floor shape"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-8-Q4",
+      "question": "What does the Coriolis effect cause?",
+      "options": {
+        "a": "Oceans to warm instantly",
+        "b": "Currents to move in straight lines",
+        "c": "Currents to curve and rotate",
+        "d": "Seas to dry up"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-8-Q5",
+      "question": "What is one major climate effect of the Gulf Stream?",
+      "options": {
+        "a": "It cools northern Europe",
+        "b": "It warms northern Europe",
+        "c": "It dries out Africa",
+        "d": "It reduces storms"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-8-Q6",
+      "question": "What is upwelling?",
+      "options": {
+        "a": "Warm water moving downward",
+        "b": "Cold, nutrient-rich water rising to the surface",
+        "c": "Currents stopping suddenly",
+        "d": "Ocean water evaporating"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-8-Q7",
+      "question": "Why are scientists concerned about melting ice?",
+      "options": {
+        "a": "It increases ocean salinity",
+        "b": "It strengthens ocean currents",
+        "c": "It reduces salinity and may weaken circulation",
+        "d": "It heats the deep ocean"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-8-Q8",
+      "question": "What tools do scientists use to study ocean currents?",
+      "options": {
+        "a": "Telescopes",
+        "b": "Satellites and underwater sensors",
+        "c": "Air balloons",
+        "d": "Mining equipment"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-8-Q9",
+      "question": "What could happen if major currents slow down significantly?",
+      "options": {
+        "a": "More stable temperatures",
+        "b": "Colder temperatures in some regions",
+        "c": "Less rainfall worldwide",
+        "d": "Immediate warming of Europe"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-8-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Ocean currents are dangerous and unpredictable",
+        "b": "Ocean currents affect climate and marine life and may change due to climate change",
+        "c": "Ocean currents only help move ships",
+        "d": "Ocean currents never change"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-I-9",
+  "title": "The Influence of Ancient Trade Routes on Civilization",
+  "text": "Long before modern transportation and global markets existed, ancient trade routes connected cultures across continents. These routes were not just pathways for goods—they were lifelines of communication, innovation, and cultural exchange. Through them, civilizations shared ideas, technologies, languages, and beliefs, shaping the development of human societies in powerful and lasting ways.\n\nOne of the most famous ancient trade networks was the Silk Road, which stretched from China through Central Asia, the Middle East, and into Europe. Contrary to its name, it was not a single road but a vast web of land and sea routes. Silk was one of the most valuable products traded, but merchants also transported spices, glassware, metals, and artwork. Along the way, travelers exchanged knowledge about astronomy, medicine, mathematics, and architecture. As goods moved, so did cultures, contributing to the spread of religions such as Buddhism, Islam, and Christianity.\n\nAnother significant route was the Indian Ocean trade network. Unlike the Silk Road, this system relied on predictable monsoon winds to guide ships between East Africa, the Middle East, South Asia, and Southeast Asia. Traders carried gold, ivory, ceramics, and spices across vast distances. Coastal cities, such as Kilwa, Calicut, and Malacca, became prosperous centers of culture and commerce. The Indian Ocean trade also encouraged the development of advanced shipbuilding techniques and navigation tools.\n\nIn the Americas, the Inca Empire created an impressive road system high in the Andes Mountains. Although the Incas did not use wheeled vehicles, their roads allowed runners to deliver messages and goods quickly across the empire. These roads supported political unity and helped the government transport food during times of shortage. Similarly, Native American trade routes in North America connected tribes, enabling the exchange of pottery, shells, copper, and agricultural products.\n\nWhile trade routes brought prosperity, they also carried risks. Diseases sometimes traveled along the same paths as merchants and travelers. The Black Death, for example, is believed to have spread from Asia to Europe through Silk Road connections, devastating populations and altering European history. Conflicts also arose when groups competed for control of profitable trade centers or resources.\n\nDespite these challenges, the cultural impact of ancient trade routes was overwhelmingly positive. They created multicultural societies where different languages, traditions, and beliefs mixed. Art styles blended, scientific knowledge expanded, and new technologies spread quickly. These exchanges contributed to major historical developments, such as the growth of large cities, the rise of powerful empires, and the spread of literacy.\n\nEven today, the legacy of ancient trade routes remains visible. Modern highways, railroads, and shipping lanes often follow the same paths established thousands of years ago. The foods people eat, the words they speak, and the technologies they use often have origins linked to ancient exchanges. In this way, ancient trade routes continue to shape the modern world.",
+  "questions": [
+    {
+      "id": "R-I-9-Q1",
+      "question": "What was the primary function of ancient trade routes?",
+      "options": {
+        "a": "To provide travel for tourists",
+        "b": "To connect cultures and exchange goods and ideas",
+        "c": "To separate civilizations",
+        "d": "To create military borders"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-9-Q2",
+      "question": "What was the Silk Road?",
+      "options": {
+        "a": "A single road connecting China and Europe",
+        "b": "A network of land and sea routes for trade",
+        "c": "A route used only for religious travel",
+        "d": "A system built for transporting armies"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-9-Q3",
+      "question": "Besides silk, what else traveled along the Silk Road?",
+      "options": {
+        "a": "Wood and water",
+        "b": "Only food items",
+        "c": "Knowledge and religions",
+        "d": "Modern technology"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-9-Q4",
+      "question": "What made the Indian Ocean trade network unique?",
+      "options": {
+        "a": "It required no ships",
+        "b": "It depended on predictable monsoon winds",
+        "c": "It connected only two countries",
+        "d": "It carried only gold"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-9-Q5",
+      "question": "What contributed to the prosperity of coastal cities like Kilwa and Malacca?",
+      "options": {
+        "a": "Their isolation from trade",
+        "b": "Their role as major trade centers",
+        "c": "Their cold climate",
+        "d": "Their lack of ports"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-9-Q6",
+      "question": "How did the Inca road system support their empire?",
+      "options": {
+        "a": "By transporting wheeled vehicles",
+        "b": "By helping runners deliver messages quickly",
+        "c": "By blocking trade with neighbors",
+        "d": "By stopping cultural exchange"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-9-Q7",
+      "question": "What was a negative consequence of trade routes?",
+      "options": {
+        "a": "Increased literacy",
+        "b": "Spread of diseases",
+        "c": "Improved navigation",
+        "d": "Cultural blending"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-9-Q8",
+      "question": "How did ancient trade routes influence art and science?",
+      "options": {
+        "a": "They prevented new ideas from spreading",
+        "b": "They caused cultures to lose their identity entirely",
+        "c": "They allowed styles and knowledge to spread across regions",
+        "d": "They forced everyone to use one language"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-9-Q9",
+      "question": "What evidence of ancient trade routes can still be seen today?",
+      "options": {
+        "a": "Modern transport systems following old routes",
+        "b": "Ancient ships still sailing",
+        "c": "No physical traces remain",
+        "d": "People no longer trade globally"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-9-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "Ancient trade routes were dangerous and unhelpful",
+        "b": "Ancient trade routes shaped civilizations through exchange and interaction",
+        "c": "Trade routes only benefited Europe",
+        "d": "Civilizations developed without any outside influence"
+      },
+      "answer": "b"
+    }
+  ]
+},
+{
+  "id": "R-I-10",
+  "title": "The Future of Artificial Intelligence in the Workplace",
+  "text": "Artificial intelligence (AI) has rapidly evolved from a theoretical concept into a practical tool used in industries around the world. From diagnosing diseases to translating languages, AI has become increasingly integrated into daily life. As technology advances, its influence on the workplace is growing, raising questions about efficiency, employment, and the balance between human and machine roles.\n\nOne of the most significant advantages of AI is its ability to perform repetitive, time-consuming tasks with accuracy. In manufacturing, AI-powered robots can assemble products quickly and consistently, reducing errors and increasing productivity. In the financial sector, AI systems can analyze large amounts of data to detect fraud, predict market trends, or assist with investment decisions. These capabilities allow companies to complete complex tasks faster than would be possible with human labor alone.\n\nAI is also transforming the healthcare industry. Machine-learning algorithms can review medical images, identify early signs of disease, and assist doctors in creating treatment plans. Unlike humans, AI does not get tired, which makes it well suited for analyzing thousands of patient records or detecting patterns that might be overlooked. While AI does not replace doctors, it enhances their ability to make accurate and timely decisions.\n\nDespite its benefits, AI has sparked concerns about job displacement. Some jobs that rely on routine tasks—such as data entry, basic customer service, or simple manufacturing work—may become automated. This shift could leave many workers needing new skills or training to stay competitive in the job market. Economists predict that while AI will eliminate certain jobs, it will also create new roles in areas like AI maintenance, programming, and data analysis.\n\nHowever, many experts agree that not all jobs can—or should—be replaced by AI. Tasks that require creativity, emotional intelligence, or complex problem-solving remain challenging for machines. Professions such as teaching, therapy, design, and management rely heavily on human understanding and interpersonal communication. AI may support these jobs by providing useful tools, but humans are still essential for empathy-based interactions and nuanced decision-making.\n\nEthical concerns are another major issue surrounding the future of AI. AI systems trained on biased data can produce unfair or discriminatory outcomes. Facial recognition systems have been shown to be less accurate for certain groups, raising questions about privacy and civil rights. Relying too heavily on AI for decision-making can also lead to a lack of transparency.\n\nTo address these concerns, governments and technology companies are working on regulations to ensure that AI is used safely and responsibly. Organizations are creating guidelines for fairness, accountability, and transparency. Training workers to use AI tools effectively is also becoming a priority.\n\nIn the future, AI is expected to become even more advanced and integrated into everyday work. Instead of replacing people entirely, AI is likely to become a partner—handling complex data tasks while humans focus on creativity, empathy, and strategic thinking.\n\nAs society navigates this technological shift, the goal is not to choose between humans and machines, but to find ways for both to work together effectively. The future of AI in the workplace offers great potential, but it also requires careful planning to ensure that technology benefits everyone.",
+  "questions": [
+    {
+      "id": "R-I-10-Q1",
+      "question": "What is one major benefit of AI in the workplace?",
+      "options": {
+        "a": "It makes all jobs unnecessary",
+        "b": "It performs repetitive tasks accurately",
+        "c": "It replaces human creativity",
+        "d": "It increases human error"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-10-Q2",
+      "question": "How is AI used in the healthcare industry?",
+      "options": {
+        "a": "It performs surgeries alone",
+        "b": "It analyzes medical images and helps doctors",
+        "c": "It replaces all hospital staff",
+        "d": "It stops doctors from making decisions"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-10-Q3",
+      "question": "What concern do people have about AI and jobs?",
+      "options": {
+        "a": "AI will make work easier",
+        "b": "AI might automate some human jobs",
+        "c": "AI increases the number of routine jobs",
+        "d": "AI will reduce technology use"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-10-Q4",
+      "question": "Which type of work is least likely to be replaced by AI?",
+      "options": {
+        "a": "Emotional and creative work",
+        "b": "Routine data processing",
+        "c": "Simple manufacturing",
+        "d": "Basic customer service"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-10-Q5",
+      "question": "What problem can biased data cause in AI systems?",
+      "options": {
+        "a": "Faster learning",
+        "b": "More accurate decisions",
+        "c": "Unfair or discriminatory outcomes",
+        "d": "Better financial predictions"
+      },
+      "answer": "c"
+    },
+    {
+      "id": "R-I-10-Q6",
+      "question": "What is one example of an ethical concern related to AI?",
+      "options": {
+        "a": "AI improving transportation",
+        "b": "Facial recognition accuracy differences",
+        "c": "AI making computers slower",
+        "d": "Robots learning languages"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-10-Q7",
+      "question": "Why is transparency important in AI decision-making?",
+      "options": {
+        "a": "People need to understand how AI reaches decisions",
+        "b": "It makes AI work faster",
+        "c": "It stops computers from overheating",
+        "d": "Companies prefer secret systems"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-10-Q8",
+      "question": "How are governments and companies responding to ethical issues?",
+      "options": {
+        "a": "By banning AI completely",
+        "b": "By creating rules and guidelines for responsible use",
+        "c": "By encouraging unfair AI systems",
+        "d": "By removing all human workers"
+      },
+      "answer": "b"
+    },
+    {
+      "id": "R-I-10-Q9",
+      "question": "What does the passage suggest about the future of work?",
+      "options": {
+        "a": "Humans and AI will likely work together",
+        "b": "AI will replace every job",
+        "c": "Only robots will be employed",
+        "d": "AI will make workplaces disappear"
+      },
+      "answer": "a"
+    },
+    {
+      "id": "R-I-10-Q10",
+      "question": "What is the main idea of the passage?",
+      "options": {
+        "a": "AI will end the need for human workers",
+        "b": "AI will destroy the economy",
+        "c": "AI is transforming the workplace but requires ethical and balanced use",
+        "d": "AI has no benefits for modern society"
+      },
+      "answer": "c"
+    }
+  ]
+}
+  ]
+}
+
