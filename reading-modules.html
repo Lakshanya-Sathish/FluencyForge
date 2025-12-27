@@ -1,0 +1,26 @@
+<h2>Reading Practice Modules</h2>
+<div id="modules"></div>
+
+<script>
+fetch("../content/reading/beginner.json")
+  .then(res => res.json())
+  .then(data => {
+    const box = document.getElementById("modules");
+
+    data.passages.forEach((p, index) => {
+      const card = document.createElement("div");
+      card.className = "task-card";
+      card.innerHTML = `
+        <h3>Module ${index + 1}</h3>
+        <p>${p.title}</p>
+      `;
+
+      card.onclick = () => {
+        window.location.href = 
+          `reading-player.html?pid=${p.id}`;
+      };
+
+      box.appendChild(card);
+    });
+  });
+</script>
