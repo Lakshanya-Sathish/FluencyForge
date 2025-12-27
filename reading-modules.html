@@ -1,26 +1,48 @@
-<h2>Reading Practice Modules</h2>
-<div id="modules"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reading Modules</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{background:#f6f8ff;font-family:Poppins}
+.container{max-width:900px;margin:40px auto}
+.module{
+  background:#fff;
+  padding:20px;
+  margin:14px 0;
+  border-radius:14px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  cursor:pointer;
+}
+.module:hover{background:#eef3ff}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🧠 Reading Practice Modules</h1>
+
+  <div class="module" onclick="openModule('R-B-1')">Module 1</div>
+  <div class="module" onclick="openModule('R-B-2')">Module 2</div>
+  <div class="module" onclick="openModule('R-B-3')">Module 3</div>
+  <div class="module" onclick="openModule('R-B-4')">Module 4</div>
+  <div class="module" onclick="openModule('R-B-5')">Module 5</div>
+  <div class="module" onclick="openModule('R-B-6')">Module 6</div>
+  <div class="module" onclick="openModule('R-B-7')">Module 7</div>
+  <div class="module" onclick="openModule('R-B-8')">Module 8</div>
+  <div class="module" onclick="openModule('R-B-9')">Module 9</div>
+  <div class="module" onclick="openModule('R-B-10')">Module 10</div>
+</div>
 
 <script>
-fetch("../content/reading/beginner.json")
-  .then(res => res.json())
-  .then(data => {
-    const box = document.getElementById("modules");
-
-    data.passages.forEach((p, index) => {
-      const card = document.createElement("div");
-      card.className = "task-card";
-      card.innerHTML = `
-        <h3>Module ${index + 1}</h3>
-        <p>${p.title}</p>
-      `;
-
-      card.onclick = () => {
-        window.location.href = 
-          `reading-player.html?pid=${p.id}`;
-      };
-
-      box.appendChild(card);
-    });
-  });
+function openModule(pid){
+  location.href = `reading.html?pid=${pid}`;
+}
 </script>
+
+</body>
+</html>
