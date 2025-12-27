@@ -38,45 +38,91 @@ button{
   font-weight:600;
   text-align:center;
 }
+.card{
+  padding:20px;
+  margin:15px 0;
+  border-radius:12px;
+  border:2px solid #4a90e2;
+  cursor:pointer;
+  text-align:center;
+}
+.locked{
+  opacity:0.4;
+  pointer-events:none;
+}
 </style>
 </head>
 
 <body>
 
+<!-- LEVEL SELECTION -->
 <div class="container">
-  <h1 id="title">Loading...</h1>
-  <p id="passage">Loading passage...</p>
+  <h1>Reading Practice</h1>
+
+  <div class="card" id="easyCard" onclick="openLevel('easy')">
+    <h2>Beginner</h2>
+  </div>
+
+  <div class="card locked" id="intermediateCard" onclick="openLevel('intermediate')">
+    <h2>Intermediate</h2>
+  </div>
+
+  <div class="card locked" id="advancedCard" onclick="openLevel('advanced')">
+    <h2>Advanced</h2>
+  </div>
+</div>
+
+<!-- READING CONTENT -->
+<div class="container">
+  <h1 id="title">Select a level to start</h1>
+  <p id="passage"></p>
 
   <div id="questions"></div>
 
-  <button id="submitBtn">Submit</button>
+  <button id="submitBtn" style="display:none;">Submit</button>
   <div class="result" id="result"></div>
 </div>
 
 <script>
 let correctAnswers = [];
+let currentLevel = null;
 
-async function loadReading() {
-  try {
-    // 1️⃣ GET PID FROM URL
-    const params = new URLSearchParams(window.location.search);
-    const pid = params.get("pid"); // e.g. R-B-1
+/* LOAD PROGRESS */
+let progress = JSON.parse(localStorage.getItem("readingProgress")) || {
+  easy: null,
+  intermediate: null,
+  advanced: null
+};
 
-    // 2️⃣ FETCH JSON (CORRECT PATH)
-    const res = await fetch("content/reading/beginner.json");
-    if (!res.ok) throw new Error("Failed to load reading JSON");
+/* UNLOCK LEVELS BASED ON PROGRESS */
+if (progress.easy !== null && progress.easy >= 51) {
+  document.getElementById("intermediateCard").classList.remove("locked");
+}
+
+if (progress.intermediate !== null && progress.intermediate >= 51) {
+  document.getElementById("advancedCard").classList.remove("locked");
+}
+
+/* OPEN LEVEL */
+function openLevel(level){
+  currentLevel = level;
+  loadReading();
+}
+
+/* LOAD READING */
+async function loadReading(){
+  try{
+    let jsonFile =
+      currentLevel === "easy" ? "content/reading/beginner.json" :
+      currentLevel === "intermediate" ? "content/reading/intermediate.json" :
+      "content/reading/advanced.json";
+
+    const res = await fetch(jsonFile);
+    if(!res.ok) throw new Error("JSON not found");
 
     const data = await res.json();
+    const passage = data.passages[0];
 
-    // 3️⃣ FIND PASSAGE BY PID
-    let passage = pid
-      ? data.passages.find(p => p.id === pid)
-      : data.passages[0];
-
-    // 4️⃣ HARD FALLBACK
-    if (!passage) passage = data.passages[0];
-
-    // 5️⃣ RENDER PASSAGE
     document.getElementById("title").textContent = passage.title;
     document.getElementById("passage").textContent = passage.text;
 
@@ -84,50 +130,54 @@ async function loadReading() {
     qBox.innerHTML = "";
     correctAnswers = [];
 
-    // 6️⃣ RENDER QUESTIONS
-    passage.questions.forEach((q, i) => {
+    passage.questions.forEach((q,i)=>{
       correctAnswers.push(q.answer);
-
       qBox.innerHTML += `
         <div class="question">
-          <h3>${i + 1}. ${q.question}</h3>
-          ${Object.entries(q.options).map(([key, value]) => `
+          <h3>${i+1}. ${q.question}</h3>
+          ${Object.entries(q.options).map(([k,v])=>`
             <label>
-              <input type="radio" name="q${i}" value="${key}">
-              (${key}) ${value}
+              <input type="radio" name="q${i}" value="${k}">
+              (${k}) ${v}
             </label>
           `).join("")}
         </div>
       `;
     });
 
-  } catch (err) {
-    console.error(err);
-    document.body.innerHTML = `
-      <h2 style="text-align:center;margin-top:40px">
-        ❌ Failed to load reading module
-      </h2>
-    `;
+    document.getElementById("submitBtn").style.display = "block";
+    document.getElementById("result").textContent = "";
+
+  }catch(err){
+    alert("Failed to load reading content");
   }
 }
 
-// 7️⃣ SUBMIT LOGIC
-document.getElementById("submitBtn").addEventListener("click", () => {
+/* SUBMIT */
+document.getElementById("submitBtn").addEventListener("click", ()=>{
   let score = 0;
 
-  correctAnswers.forEach((ans, i) => {
-    const selected = document.querySelector(`input[name="q${i}"]:checked`);
-    if (selected && selected.value === ans) score++;
+  correctAnswers.forEach((ans,i)=>{
+    const sel = document.querySelector(`input[name="q${i}"]:checked`);
+    if(sel && sel.value === ans) score++;
   });
 
+  const percent = Math.round((score / correctAnswers.length) * 100);
+
   document.getElementById("result").textContent =
-    `Score: ${score} / ${correctAnswers.length}`;
+    `Score: ${score}/${correctAnswers.length} (${percent}%)`;
+
+  progress[currentLevel] = percent;
+  localStorage.setItem("readingProgress", JSON.stringify(progress));
+
+  if(currentLevel === "easy" && percent >= 51){
+    document.getElementById("intermediateCard").classList.remove("locked");
+  }
+
+  if(currentLevel === "intermediate" && percent >= 51){
+    document.getElementById("advancedCard").classList.remove("locked");
+  }
 });
-
-// 8️⃣ INIT
-loadReading();
 </script>
-
-
 </body>
 </html>
