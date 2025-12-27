@@ -9,43 +9,24 @@
         {
           "id": "Q1",
           "question": "What is one major difference between urban trees and forest trees?",
-          "options": {
-            "a": "Urban trees grow faster",
-            "b": "Urban trees have less space for their roots",
-            "c": "Forest trees need more sunlight",
-            "d": "Urban trees require less water"
-          },
-          "answer": "b"
+          "options": [
+            "Urban trees grow faster",
+            "Urban trees have less space for their roots",
+            "Forest trees need more sunlight",
+            "Urban trees require less water"
+          ],
+          "answer": "Urban trees have less space for their roots"
         },
         {
           "id": "Q2",
           "question": "What causes the urban heat island effect?",
-          "options": {
-            "a": "Heavy rainfall",
-            "b": "More trees",
-            "c": "Concrete and metal absorbing heat",
-            "d": "Green spaces"
-          },
-          "answer": "c"
-        }
-      ]
-    },
-
-    {
-      "id": "R-B-2",
-      "title": "Public Transportation Evolution",
-      "text": "Public transportation has been an essential part of human civilization...",
-      "questions": [
-        {
-          "id": "Q1",
-          "question": "What powered early public transport?",
-          "options": {
-            "a": "Electric engines",
-            "b": "Steam engines",
-            "c": "Animal-drawn carts",
-            "d": "Solar energy"
-          },
-          "answer": "c"
+          "options": [
+            "Heavy rainfall",
+            "More trees",
+            "Concrete and metal absorbing heat",
+            "Green spaces"
+          ],
+          "answer": "Concrete and metal absorbing heat"
         }
       ]
     }
