@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Listening Modules | FluencyForge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  background:#f6f8ff;
+  font-family:Poppins,sans-serif;
+  margin:0;
+}
+.container{
+  max-width:900px;
+  margin:50px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+}
+.card{
+  padding:18px;
+  margin:14px 0;
+  border-radius:12px;
+  border:2px solid #4a90e2;
+  cursor:pointer;
+  text-align:center;
+}
+.locked{
+  opacity:0.4;
+  pointer-events:none;
+}
+button{
+  margin-top:20px;
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  background:#4a90e2;
+  color:#fff;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LEVEL SELECTION -->
+<div class="container" id="levelBox">
+  <h1>Listening Modules</h1>
+
+  <div class="card" onclick="openModules('easy')">
+    Beginner
+  </div>
+
+  <div class="card locked" id="intermediateCard" onclick="openModules('intermediate')">
+    Intermediate
+  </div>
+
+  <div class="card locked" id="advancedCard" onclick="openModules('advanced')">
+    Advanced
+  </div>
+
+  <button onclick="location.href='listening-home.html'">⬅ Back</button>
+</div>
+
+<!-- MODULE LIST -->
+<div class="container" id="moduleBox" style="display:none">
+  <h2 id="moduleTitle"></h2>
+  <div id="modules"></div>
+
+  <button onclick="backToLevels()">⬅ Back</button>
+</div>
+
+<script>
+let currentLevel = null;
+
+/* LOAD PROGRESS */
+let progress = JSON.parse(localStorage.getItem("listeningProgress")) || {
+  easy: false,
+  intermediate: false
+};
+
+/* UNLOCK LEVELS */
+if(progress.easy){
+  document.getElementById("intermediateCard").classList.remove("locked");
+}
+if(progress.intermediate){
+  document.getElementById("advancedCard").classList.remove("locked");
+}
+
+/* OPEN MODULE LIST */
+function openModules(level){
+  currentLevel = level;
+
+  document.getElementById("levelBox").style.display = "none";
+  document.getElementById("moduleBox").style.display = "block";
+
+  document.getElementById("moduleTitle").textContent =
+    level.charAt(0).toUpperCase()+level.slice(1)+" Listening Tasks";
+
+  const box = document.getElementById("modules");
+  box.innerHTML = "";
+
+  for(let i=1;i<=10;i++){
+    box.innerHTML += `
+      <div class="card" onclick="openTask(${i})">
+        Task ${i}
+      </div>
+    `;
+  }
+}
+
+/* OPEN TASK */
+function openTask(num){
+  window.location.href =
+    `listening.html?level=${currentLevel}&task=${num}`;
+}
+
+/* BACK */
+function backToLevels(){
+  document.getElementById("moduleBox").style.display = "none";
+  document.getElementById("levelBox").style.display = "block";
+}
+</script>
+
+</body>
+</html>
