@@ -64,34 +64,33 @@ audio{
 
 <script>
 let correctAnswers = [];
-let currentLevel = null;
-let currentModule = null;
 
-/* GET LEVEL + MODULE */
 const params = new URLSearchParams(window.location.search);
-currentLevel = params.get("level");      // easy / intermediate / advanced
-currentModule = parseInt(params.get("module")); // 1–10
+const currentLevel = params.get("level");
+const taskParam = params.get("task");
+const currentTaskIndex = parseInt(taskParam, 10) - 1;
 
-if(!currentLevel || !currentModule){
-  alert("Invalid listening module");
+if (!currentLevel || isNaN(currentTaskIndex)) {
+  alert("Invalid listening task");
+  throw new Error("Invalid params");
 }
 
-/* LOAD LISTENING */
 async function loadListening(){
   try{
     const res = await fetch(`content/listening/${currentLevel}.json`);
     const data = await res.json();
 
-    const task = data.tasks[currentModule - 1];
+    const task = data.tasks[currentTaskIndex];
+    if (!task) {
+      alert("Listening task not found");
+      return;
+    }
 
     document.getElementById("title").textContent = task.title;
 
-    /* AUDIO */
     const audio = document.getElementById("audio");
     audio.src = task.audio;
-    audio.controls = true;
 
-    /* QUESTIONS */
     const qBox = document.getElementById("questions");
     qBox.innerHTML = "";
     correctAnswers = [];
@@ -111,13 +110,12 @@ async function loadListening(){
       `;
     });
 
-  }catch(err){
+  } catch(err){
     console.error(err);
     alert("Failed to load listening content");
   }
 }
 
-/* SUBMIT */
 document.getElementById("submitBtn").addEventListener("click",()=>{
   let score = 0;
 
@@ -127,22 +125,14 @@ document.getElementById("submitBtn").addEventListener("click",()=>{
   });
 
   const percent = Math.round((score / correctAnswers.length) * 100);
-
   document.getElementById("result").textContent =
     `Score: ${score}/${correctAnswers.length} (${percent}%)`;
 
-  /* SAVE PROGRESS */
-  let progress = JSON.parse(localStorage.getItem("listeningProgress")) || {
-    easy:null,
-    intermediate:null,
-    advanced:null
-  };
-
+  let progress = JSON.parse(localStorage.getItem("listeningProgress")) || {};
   progress[currentLevel] = percent;
-  localStorage.setItem("listeningProgress",JSON.stringify(progress));
+  localStorage.setItem("listeningProgress", JSON.stringify(progress));
 });
 
-/* INIT */
 loadListening();
 </script>
 
