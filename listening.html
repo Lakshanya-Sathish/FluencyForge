@@ -5,68 +5,236 @@
 <title>Listening | FluencyForge</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
-body{background:#f6f8ff;font-family:Poppins}
-.container{max-width:900px;margin:40px auto;background:#fff;padding:30px;border-radius:16px}
-button{padding:10px 16px;border:none;border-radius:10px;background:#1abc9c;color:#fff;cursor:pointer}
+body{
+  background:#f6f8ff;
+  font-family:Poppins,sans-serif;
+  margin:0;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+}
+.card{
+  padding:20px;
+  margin:15px 0;
+  border-radius:12px;
+  border:2px solid #4a90e2;
+  cursor:pointer;
+  text-align:center;
+}
+.locked{
+  opacity:0.4;
+  pointer-events:none;
+}
+.question{margin:20px 0}
+label{display:block;margin:6px 0}
+button{
+  margin-top:20px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#4a90e2;
+  color:#fff;
+  font-size:16px;
+}
+.result{
+  margin-top:20px;
+  font-weight:600;
+  text-align:center;
+}
+audio{
+  width:100%;
+  margin:20px 0;
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- LEVELS -->
+<div class="container" id="levelContainer">
   <h1>Listening Practice</h1>
 
-  <audio id="audio" src="../assets/audio/sample.mp3"></audio>
-  <p>Replays left: <span id="count">2</span></p>
-  <button onclick="playAudio()">Play</button>
+  <div class="card" onclick="openModules('easy')">Beginner</div>
+  <div class="card locked" id="intermediateCard" onclick="openModules('intermediate')">Intermediate</div>
+  <div class="card locked" id="advancedCard" onclick="openModules('advanced')">Advanced</div>
+</div>
+
+<!-- MODULES -->
+<div class="container" id="moduleContainer" style="display:none">
+  <h1 id="moduleTitle"></h1>
+  <div id="modules"></div>
+  <button onclick="backToLevels()">⬅ Back</button>
+</div>
+
+<!-- LISTENING CONTENT -->
+<div class="container" id="listeningContainer" style="display:none">
+  <h1 id="title"></h1>
+
+  <audio id="audio" controls controlsList="nodownload noplaybackrate"></audio>
 
   <div id="questions"></div>
-  <button onclick="submit()">Submit</button>
 
-  <div id="result"></div>
+  <button id="submitBtn">Submit</button>
+  <div class="result" id="result"></div>
 </div>
 
 <script>
-let plays = 2;
-let correct = [];
+let correctAnswers = [];
+let currentLevel = null;
+let currentModule = null;
+let audioPlayed = false;
 
-function playAudio(){
-  if(plays<=0) return alert("No replays left");
-  document.getElementById("audio").play();
-  plays--;
-  document.getElementById("count").textContent = plays;
+function lockAudioIfPlayed(){
+  const key = `listeningAudio_${currentLevel}_${currentModule}`;
+  if(localStorage.getItem(key)==="played"){
+    audioPlayed = true;
+    const audio=document.getElementById("audio");
+    audio.pause();
+    audio.controls=false;
+    audio.style.opacity="0.5";
+  }
 }
 
+
+/* PROGRESS */
+let progress = JSON.parse(localStorage.getItem("listeningProgress")) || {
+  easy:null,
+  intermediate:null,
+  advanced:null
+};
+
+/* UNLOCK */
+if(progress.easy >= 51){
+  document.getElementById("intermediateCard").classList.remove("locked");
+}
+if(progress.intermediate >= 51){
+  document.getElementById("advancedCard").classList.remove("locked");
+}
+
+/* MODULE LIST */
+function openModules(level){
+  currentLevel = level;
+  document.getElementById("levelContainer").style.display="none";
+  document.getElementById("moduleContainer").style.display="block";
+  document.getElementById("listeningContainer").style.display="none";
+
+  document.getElementById("moduleTitle").textContent =
+    level.toUpperCase()+" MODULES";
+
+  const box=document.getElementById("modules");
+  box.innerHTML="";
+
+  for(let i=1;i<=10;i++){
+    box.innerHTML+=`
+      <div class="card" onclick="openModule('${level}',${i})">
+        Module ${i}
+      </div>
+    `;
+  }
+}
+
+/* OPEN MODULE */
+function openModule(level,num){
+  currentLevel=level;
+  currentModule=num;
+
+  document.getElementById("moduleContainer").style.display="none";
+  document.getElementById("listeningContainer").style.display="block";
+
+  loadListening();
+}
+
+/* LOAD LISTENING */
 async function loadListening(){
-  const res = await fetch("../content/listening/beginner.json");
-  const data = await res.json();
-  const mod = data.modules[0];
+  let file =
+    currentLevel==="easy" ? "content/listening/beginner.json" :
+    currentLevel==="intermediate" ? "content/listening/intermediate.json" :
+    "content/listening/advanced.json";
 
-  const qBox = document.getElementById("questions");
-  mod.questions.forEach((q,i)=>{
-    correct.push(q.answer);
-    qBox.innerHTML += `
-      <div>
+  const res = await fetch(file);
+  const data = await res.json();
+
+  const passage = data.passages[currentModule-1];
+
+  document.getElementById("title").textContent = passage.title;
+  document.getElementById("audio").src = passage.audio;
+  audioPlayed = false;
+const audio=document.getElementById("audio");
+audio.controls=true;
+audio.style.opacity="1";
+
+lockAudioIfPlayed();
+
+audio.onended = () => {
+  const key = `listeningAudio_${currentLevel}_${currentModule}`;
+  localStorage.setItem(key,"played");
+};
+audio.onplay = () => {
+  if(audioPlayed){
+    audio.pause();
+  }
+};
+
+
+  const qBox=document.getElementById("questions");
+  qBox.innerHTML="";
+  correctAnswers=[];
+
+  passage.questions.forEach((q,i)=>{
+    correctAnswers.push(q.answer);
+    qBox.innerHTML+=`
+      <div class="question">
         <h3>${i+1}. ${q.question}</h3>
-        ${q.options.map(o=>`
-          <label><input type="radio" name="q${i}" value="${o}"> ${o}</label>
+        ${Object.entries(q.options).map(([k,v])=>`
+          <label>
+            <input type="radio" name="q${i}" value="${k}">
+            (${k}) ${v}
+          </label>
         `).join("")}
-      </div>`;
+      </div>
+    `;
   });
+
+  document.getElementById("result").textContent="";
 }
 
-function submit(){
+/* SUBMIT */
+document.getElementById("submitBtn").onclick=()=>{
   let score=0;
-  correct.forEach((a,i)=>{
-    const s=document.querySelector(`input[name=q${i}]:checked`);
+  correctAnswers.forEach((a,i)=>{
+    const s=document.querySelector(`input[name="q${i}"]:checked`);
     if(s && s.value===a) score++;
   });
-  document.getElementById("result").textContent=`Score: ${score}/${correct.length}`;
-}
 
-loadListening();
+  const percent=Math.round(score/correctAnswers.length*100);
+  document.getElementById("result").textContent =
+    `Score: ${score}/${correctAnswers.length} (${percent}%)`;
+
+  progress[currentLevel]=percent;
+  localStorage.setItem("listeningProgress",JSON.stringify(progress));
+
+  if(currentLevel==="easy" && percent>=51){
+    document.getElementById("intermediateCard").classList.remove("locked");
+  }
+  if(currentLevel==="intermediate" && percent>=51){
+    document.getElementById("advancedCard").classList.remove("locked");
+  }
+};
+
+/* BACK */
+function backToLevels(){
+  document.getElementById("moduleContainer").style.display="none";
+  document.getElementById("listeningContainer").style.display="none";
+  document.getElementById("levelContainer").style.display="block";
+}
 </script>
 
 </body>
