@@ -1,0 +1,84 @@
+{
+    "level": "intermediate",
+  "modules": [
+    {
+      "id": "S-I-1",
+      "type": "independent",
+      "task": "Do you agree that students should wear uniforms?",
+      "sampleAnswer": "I agree that students should wear uniforms because they promote equality. Uniforms reduce pressure about fashion and help students focus on studies. Additionally, they create discipline and a sense of belonging in schools. Therefore, uniforms are beneficial for students.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-2",
+      "type": "independent",
+      "task": "Describe a teacher who influenced you.",
+      "sampleAnswer": "One teacher who influenced me was my English teacher. She encouraged students to speak confidently and corrected mistakes patiently. Because of her support, my communication skills improved significantly. She inspired me to work harder and believe in myself.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-3",
+      "type": "independent",
+      "task": "Is it better to study alone or in a group?",
+      "sampleAnswer": "I believe studying in a group is better because students can exchange ideas. Group discussions help clarify doubts quickly. For example, when preparing for exams with friends, we explain concepts to each other, which improves understanding.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-4",
+      "type": "independent",
+      "task": "Do you think technology improves education?",
+      "sampleAnswer": "Yes, technology improves education by making learning more accessible. Online resources, videos, and digital tools help students learn anytime. Technology also makes classes more interactive and engaging.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-5",
+      "type": "independent",
+      "task": "Should students have part-time jobs?",
+      "sampleAnswer": "I think students should have part-time jobs because they learn responsibility and time management. Working also helps students gain practical experience and financial independence.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-6",
+      "type": "integrated",
+      "reading": "The university plans to reduce parking spaces.",
+      "listening": "A student disagrees with the plan.",
+      "task": "Summarize the student’s opinion and reasons.",
+      "sampleAnswer": "The student disagrees with the university’s plan to reduce parking spaces. He explains that many students commute from far places and depend on cars. He also says that public transportation is unreliable. Therefore, reducing parking spaces will create problems for students.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-7",
+      "type": "integrated",
+      "reading": "A new attendance policy is introduced.",
+      "listening": "A student supports the policy.",
+      "task": "Explain why the student supports the attendance policy.",
+      "sampleAnswer": "The student supports the new attendance policy because it encourages regular class participation. She believes attending lectures helps students understand topics better. She also mentions that regular attendance improves academic performance.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-8",
+      "type": "integrated",
+      "reading": "Motivation is the reason people act toward goals.",
+      "listening": "The professor explains intrinsic motivation.",
+      "task": "Explain intrinsic motivation using the lecture.",
+      "sampleAnswer": "Intrinsic motivation refers to doing something because it is enjoyable. The professor explains that students who enjoy learning study without pressure. For example, a student who loves music practices daily because of interest, not rewards.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-9",
+      "type": "integrated",
+      "reading": "Renewable energy comes from natural sources.",
+      "listening": "A lecture on solar energy.",
+      "task": "Explain why solar energy is renewable.",
+      "sampleAnswer": "The professor explains that solar energy is a renewable source because it comes from sunlight. He explains how solar panels convert sunlight into electricity. Solar energy reduces pollution and is environmentally friendly.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-I-10",
+      "type": "lecture",
+      "listening": "A lecture on the causes of stress.",
+      "task": "Summarize the causes of stress mentioned in the lecture.",
+      "sampleAnswer": "The lecturer explains that stress is caused by heavy workload, lack of sleep, and poor time management. He mentions that students who do not plan their schedules often feel overwhelmed.",
+      "expectedDurationSeconds": 60
+    }
+  ]
+}

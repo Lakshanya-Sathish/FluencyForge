@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Speaking Modules</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{background:#f6f8ff;font-family:Poppins}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+}
+.card{
+  padding:20px;
+  margin:15px 0;
+  border-radius:12px;
+  border:2px solid #4a90e2;
+  cursor:pointer;
+  text-align:center;
+}
+.locked{
+  opacity:0.4;
+  pointer-events:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="levelBox">
+  <h1>Choose Level</h1>
+
+  <div class="card" onclick="openModules('easy')">Beginner</div>
+  <div class="card locked" id="intermediate">Intermediate</div>
+  <div class="card locked" id="advanced">Advanced</div>
+</div>
+
+<div class="container" id="moduleBox" style="display:none">
+  <h1 id="title"></h1>
+  <div id="modules"></div>
+  <button onclick="back()">⬅ Back</button>
+</div>
+
+<script>
+const progress = JSON.parse(localStorage.getItem("speakingProgress")) || {easy:true, intermediate:false, advanced:false};
+
+if(progress.intermediate) document.getElementById("intermediate").classList.remove("locked");
+if(progress.advanced) document.getElementById("advanced").classList.remove("locked");
+
+function openModules(level){
+  document.getElementById("levelBox").style.display="none";
+  document.getElementById("moduleBox").style.display="block";
+  document.getElementById("title").innerText = level.toUpperCase()+" MODULES";
+
+  const box = document.getElementById("modules");
+  box.innerHTML="";
+  for(let i=1;i<=10;i++){
+    box.innerHTML += `
+      <div class="card" onclick="location.href='speaking.html?level=${level}&module=${i}'">
+        Module ${i}
+      </div>`;
+  }
+}
+function back(){
+  document.getElementById("moduleBox").style.display="none";
+  document.getElementById("levelBox").style.display="block";
+}
+</script>
+
+</body>
+</html>

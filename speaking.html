@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Speaking | FluencyForge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  background:#f6f8ff;
+  font-family:Poppins,sans-serif;
+  margin:0;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+}
+.card{
+  padding:20px;
+  margin:15px 0;
+  border-radius:12px;
+  border:2px solid #4a90e2;
+  cursor:pointer;
+  text-align:center;
+}
+.locked{
+  opacity:0.4;
+  pointer-events:none;
+}
+button{
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  background:#4a90e2;
+  color:#fff;
+  cursor:pointer;
+  font-size:15px;
+  margin:6px 4px;
+}
+audio{
+  width:100%;
+  margin-top:15px;
+}
+.timer{
+  font-weight:600;
+  margin:10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= LEVEL SELECTION ================= -->
+<div class="container" id="levelBox">
+  <h1>Speaking Practice</h1>
+
+  <div class="card" onclick="openModules('easy')">
+    <h2>Beginner</h2>
+  </div>
+
+  <div class="card locked" id="intermediateCard" onclick="openModules('intermediate')">
+    <h2>Intermediate</h2>
+  </div>
+
+  <div class="card locked" id="advancedCard" onclick="openModules('advanced')">
+    <h2>Advanced</h2>
+  </div>
+</div>
+
+<!-- ================= MODULE SELECTION ================= -->
+<div class="container" id="moduleBox" style="display:none">
+  <h2 id="moduleTitle"></h2>
+  <div id="modules"></div>
+  <button onclick="backToLevels()">⬅ Back</button>
+</div>
+
+<!-- ================= TASK VIEW ================= -->
+<div class="container" id="taskBox" style="display:none">
+  <h2 id="taskTitle"></h2>
+  <p id="taskPrompt"></p>
+
+  <div class="timer">Time: <span id="time">0</span>s</div>
+
+  <button onclick="startRecording()">🎤 Start</button>
+  <button onclick="stopRecording()">⏹ Stop</button>
+
+  <audio id="playback" controls></audio>
+
+  <br><br>
+  <button onclick="markCompleted()">✅ Mark Completed</button>
+  <button onclick="backToModules()">⬅ Back</button>
+</div>
+
+<script>
+/* ================= STATE ================= */
+let currentLevel = null;
+let currentModule = null;
+let mediaRecorder = null;
+let audioChunks = [];
+let timer = 0;
+let timerInterval = null;
+
+/* ================= PROGRESS ================= */
+let progress = JSON.parse(localStorage.getItem("speakingProgress")) || {
+  easy: false,
+  intermediate: false,
+  advanced: false
+};
+
+if(progress.easy){
+  document.getElementById("intermediateCard").classList.remove("locked");
+}
+if(progress.intermediate){
+  document.getElementById("advancedCard").classList.remove("locked");
+}
+
+/* ================= OPEN MODULES ================= */
+function openModules(level){
+  currentLevel = level;
+
+  document.getElementById("levelBox").style.display = "none";
+  document.getElementById("moduleBox").style.display = "block";
+  document.getElementById("taskBox").style.display = "none";
+
+  document.getElementById("moduleTitle").textContent =
+    level.charAt(0).toUpperCase() + level.slice(1) + " Modules";
+
+  const box = document.getElementById("modules");
+  box.innerHTML = "";
+
+  for(let i=1;i<=10;i++){
+    box.innerHTML += `
+      <div class="card" onclick="openTask(${i})">
+        Task ${i}
+      </div>
+    `;
+  }
+}
+
+/* ================= OPEN TASK ================= */
+async function openTask(num){
+  currentModule = num;
+
+  document.getElementById("moduleBox").style.display = "none";
+  document.getElementById("taskBox").style.display = "block";
+
+  document.getElementById("time").textContent = "0";
+  document.getElementById("playback").src = "";
+
+  const res = await fetch(`content/speaking/${currentLevel}.json`);
+  if(!res.ok){
+    alert("Failed to load speaking content");
+    return;
+  }
+
+  const data = await res.json();
+  const task = data.tasks[num - 1];
+
+  document.getElementById("taskTitle").textContent = task.title;
+  document.getElementById("taskPrompt").textContent = task.prompt;
+}
+
+/* ================= RECORDING ================= */
+async function startRecording(){
+  audioChunks = [];
+  timer = 0;
+  document.getElementById("time").textContent = timer;
+
+  const stream = await navigator.mediaDevices.getUserMedia({ audio:true });
+  mediaRecorder = new MediaRecorder(stream);
+
+  mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+  mediaRecorder.start();
+
+  timerInterval = setInterval(()=>{
+    timer++;
+    document.getElementById("time").textContent = timer;
+  },1000);
+}
+
+function stopRecording(){
+  if(!mediaRecorder) return;
+
+  mediaRecorder.stop();
+  clearInterval(timerInterval);
+
+  mediaRecorder.onstop = ()=>{
+    const blob = new Blob(audioChunks,{type:'audio/webm'});
+    const url = URL.createObjectURL(blob);
+    document.getElementById("playback").src = url;
+  };
+}
+
+/* ================= MARK COMPLETED ================= */
+function markCompleted(){
+  if(currentLevel === "easy"){
+    progress.easy = true;
+    document.getElementById("intermediateCard").classList.remove("locked");
+  }
+
+  if(currentLevel === "intermediate"){
+    progress.intermediate = true;
+    document.getElementById("advancedCard").classList.remove("locked");
+  }
+
+  localStorage.setItem("speakingProgress", JSON.stringify(progress));
+  alert("Task marked as completed!");
+}
+
+/* ================= NAVIGATION ================= */
+function backToModules(){
+  document.getElementById("taskBox").style.display = "none";
+  document.getElementById("moduleBox").style.display = "block";
+}
+
+function backToLevels(){
+  document.getElementById("moduleBox").style.display = "none";
+  document.getElementById("taskBox").style.display = "none";
+  document.getElementById("levelBox").style.display = "block";
+}
+</script>
+
+</body>
+</html>

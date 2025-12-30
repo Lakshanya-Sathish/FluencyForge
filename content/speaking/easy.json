@@ -1,0 +1,84 @@
+{
+  "level": "beginner",
+  "modules": [
+    {
+      "id": "S-B-1",
+      "type": "independent",
+      "task": "Do you prefer studying in the morning or at night? Explain why.",
+      "sampleAnswer": "I prefer studying in the morning because my mind feels fresh and active. When I study early in the day, I can concentrate better and understand topics faster. In contrast, at night I usually feel tired after a long day, which makes it harder to focus. For example, when I study in the morning before school, I remember information more clearly during exams. Therefore, morning study is more effective for me.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-2",
+      "type": "independent",
+      "task": "What is your favorite way to spend a weekend?",
+      "sampleAnswer": "My favorite way to spend a weekend is relaxing at home with my family. During weekdays, I am usually busy with studies, so weekends give me time to rest. I like watching movies, helping my parents, and talking with my family members. This helps me reduce stress and feel refreshed for the next week.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-3",
+      "type": "independent",
+      "task": "Do you prefer learning from books or videos? Give reasons.",
+      "sampleAnswer": "I prefer learning from videos because they are more interesting and easier to understand. Videos use visuals and examples, which help explain difficult concepts clearly. For instance, when I watch educational videos, I can see diagrams and demonstrations that make learning faster. Therefore, videos are more effective for me than books.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-4",
+      "type": "independent",
+      "task": "Describe a place you like to visit often.",
+      "sampleAnswer": "A place I like to visit often is a nearby park. It is peaceful and full of greenery. I usually go there in the evening to walk and relax. Spending time in the park helps me clear my mind and feel calm after a busy day.",
+      "expectedDurationSeconds": 45
+    },
+    {
+      "id": "S-B-5",
+      "type": "independent",
+      "task": "Do you prefer working alone or with others? Why?",
+      "sampleAnswer": "I prefer working with others because teamwork allows people to share ideas. When I work in a group, I can learn from others and complete tasks faster. Also, group work improves communication skills. Therefore, I enjoy working with others more than working alone.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-6",
+      "type": "integrated",
+      "reading": "The university plans to extend library hours until midnight.",
+      "listening": "A student agrees with the plan.",
+      "task": "Summarize the student’s opinion and reasons.",
+      "sampleAnswer": "The student agrees with the university’s decision to extend library hours. He explains that many students have classes during the day and cannot study properly until evening. He also mentions that the library provides a quiet environment, which helps students concentrate better than studying in dorm rooms. Therefore, extended hours will help students prepare well for exams.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-7",
+      "type": "integrated",
+      "reading": "The college introduces online submission of assignments.",
+      "listening": "A professor supports this change.",
+      "task": "Explain why the professor supports online submission.",
+      "sampleAnswer": "The professor supports online assignment submission for two main reasons. First, it saves paper and is environmentally friendly. Second, it allows teachers to organize and review assignments more easily. The professor believes this system will benefit both students and faculty members.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-8",
+      "type": "integrated",
+      "reading": "Time management means planning how to use time efficiently.",
+      "listening": "The professor explains the concept with examples.",
+      "task": "Explain the concept of time management using the lecture.",
+      "sampleAnswer": "Time management refers to organizing time effectively to complete tasks. The professor explains that students who plan their schedules can balance studies and personal life. For example, he mentions a student who creates a daily timetable and finishes assignments early. This shows that good time management leads to better performance and less stress.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-9",
+      "type": "integrated",
+      "reading": "A healthy lifestyle includes good diet and exercise.",
+      "listening": "The lecturer discusses benefits.",
+      "task": "Summarize the benefits of a healthy lifestyle.",
+      "sampleAnswer": "The lecturer explains that a healthy lifestyle improves both physical and mental health. According to the lecture, eating nutritious food provides energy, while regular exercise reduces stress. For example, the lecturer mentions that people who exercise daily feel more active and positive. Therefore, a healthy lifestyle is essential for overall well-being.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-B-10",
+      "type": "lecture",
+      "listening": "A lecture about the benefits of exercise.",
+      "task": "Summarize the main points of the lecture.",
+      "sampleAnswer": "The lecturer talks about several benefits of exercise. First, exercise improves physical health by strengthening muscles and the heart. Second, it improves mental health by reducing stress and anxiety. Finally, regular exercise increases energy levels, helping people stay active throughout the day.",
+      "expectedDurationSeconds": 60
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+    "level": "advanced",
+  "modules": [
+    {
+      "id": "S-A-1",
+      "type": "independent",
+      "task": "Is success more important than happiness?",
+      "sampleAnswer": "I disagree that success is more important than happiness. While success provides achievement, happiness gives long-term satisfaction. People who are unhappy may feel stressed even if they are successful. Therefore, happiness should be prioritized.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-2",
+      "type": "independent",
+      "task": "Is competition good for students?",
+      "sampleAnswer": "I believe competition is good for students because it motivates them to work harder. Healthy competition encourages improvement and discipline. However, it should be balanced to avoid excessive stress.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-3",
+      "type": "independent",
+      "task": "Should governments invest more in education than defense?",
+      "sampleAnswer": "I believe governments should invest more in education because it shapes future generations. Education improves skills, innovation, and economic growth. A well-educated population contributes more positively to society in the long run.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-4",
+      "type": "independent",
+      "task": "Do failures help people succeed?",
+      "sampleAnswer": "Yes, failures help people succeed because they teach valuable lessons. People learn from mistakes and improve their strategies. Many successful individuals achieved success only after experiencing multiple failures.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-5",
+      "type": "independent",
+      "task": "Is social media more harmful than useful?",
+      "sampleAnswer": "I believe social media is more harmful when overused. Excessive use affects mental health, productivity, and attention span. However, when used in moderation, it can be useful for communication, networking, and learning.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-6",
+      "type": "integrated",
+      "reading": "The university plans to replace exams with projects.",
+      "listening": "A professor supports the idea.",
+      "task": "Summarize the professor’s opinion and reasons.",
+      "sampleAnswer": "The professor supports replacing exams with projects because projects test practical skills. He explains that projects allow students to apply knowledge in real-life situations. Unlike exams, projects improve deeper understanding instead of memorization.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-7",
+      "type": "integrated",
+      "reading": "Cafeteria food prices will increase.",
+      "listening": "A student disagrees with the change.",
+      "task": "Explain why the student disagrees.",
+      "sampleAnswer": "The student disagrees with the price increase because many students have limited budgets. He explains that higher prices may force students to skip meals or choose unhealthy food options.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-8",
+      "type": "integrated",
+      "reading": "Cognitive dissonance is discomfort caused by conflicting beliefs.",
+      "listening": "The professor explains the concept with an example.",
+      "task": "Explain cognitive dissonance using the lecture.",
+      "sampleAnswer": "Cognitive dissonance occurs when a person’s actions conflict with their beliefs. The professor gives an example of someone who believes smoking is harmful but continues to smoke, which creates psychological discomfort.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-9",
+      "type": "integrated",
+      "reading": "Climate adaptation means adjusting to environmental changes.",
+      "listening": "A lecture on animal adaptation.",
+      "task": "Explain climate adaptation using the lecture.",
+      "sampleAnswer": "The lecturer explains that animals adapt to climate changes by modifying their behavior and physical features. For example, animals in colder regions may develop thicker fur to survive harsh conditions.",
+      "expectedDurationSeconds": 60
+    },
+    {
+      "id": "S-A-10",
+      "type": "lecture",
+      "listening": "A lecture on factors affecting memory.",
+      "task": "Summarize the factors affecting memory.",
+      "sampleAnswer": "The lecturer explains that memory is affected by attention, repetition, and emotional connection. He states that information associated with strong emotions is remembered for a longer time.",
+      "expectedDurationSeconds": 60
+    }
+  ]
+}
