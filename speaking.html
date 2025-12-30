@@ -40,7 +40,7 @@ button{
   color:#fff;
   cursor:pointer;
   font-size:15px;
-  margin:6px 4px;
+  margin:6px 6px 6px 0;
 }
 audio{
   width:100%;
@@ -55,7 +55,7 @@ audio{
 
 <body>
 
-<!-- ================= LEVEL SELECTION ================= -->
+<!-- LEVEL SELECTION -->
 <div class="container" id="levelBox">
   <h1>Speaking Practice</h1>
 
@@ -72,14 +72,14 @@ audio{
   </div>
 </div>
 
-<!-- ================= MODULE SELECTION ================= -->
+<!-- MODULE SELECTION -->
 <div class="container" id="moduleBox" style="display:none">
   <h2 id="moduleTitle"></h2>
   <div id="modules"></div>
   <button onclick="backToLevels()">⬅ Back</button>
 </div>
 
-<!-- ================= TASK VIEW ================= -->
+<!-- TASK VIEW -->
 <div class="container" id="taskBox" style="display:none">
   <h2 id="taskTitle"></h2>
   <p id="taskPrompt"></p>
@@ -97,7 +97,6 @@ audio{
 </div>
 
 <script>
-/* ================= STATE ================= */
 let currentLevel = null;
 let currentModule = null;
 let mediaRecorder = null;
@@ -105,7 +104,7 @@ let audioChunks = [];
 let timer = 0;
 let timerInterval = null;
 
-/* ================= PROGRESS ================= */
+/* PROGRESS */
 let progress = JSON.parse(localStorage.getItem("speakingProgress")) || {
   easy: false,
   intermediate: false,
@@ -119,10 +118,9 @@ if(progress.intermediate){
   document.getElementById("advancedCard").classList.remove("locked");
 }
 
-/* ================= OPEN MODULES ================= */
+/* OPEN MODULES */
 function openModules(level){
   currentLevel = level;
-
   document.getElementById("levelBox").style.display = "none";
   document.getElementById("moduleBox").style.display = "block";
   document.getElementById("taskBox").style.display = "none";
@@ -142,15 +140,11 @@ function openModules(level){
   }
 }
 
-/* ================= OPEN TASK ================= */
+/* OPEN TASK */
 async function openTask(num){
   currentModule = num;
-
   document.getElementById("moduleBox").style.display = "none";
   document.getElementById("taskBox").style.display = "block";
-
-  document.getElementById("time").textContent = "0";
-  document.getElementById("playback").src = "";
 
   const res = await fetch(`content/speaking/${currentLevel}.json`);
   if(!res.ok){
@@ -159,22 +153,29 @@ async function openTask(num){
   }
 
   const data = await res.json();
-  const task = data.tasks[num - 1];
+  const task = data.tasks[num-1];
 
   document.getElementById("taskTitle").textContent = task.title;
   document.getElementById("taskPrompt").textContent = task.prompt;
+
+  document.getElementById("playback").src = "";
+  document.getElementById("time").textContent = "0";
 }
 
-/* ================= RECORDING ================= */
+/* START RECORDING */
 async function startRecording(){
   audioChunks = [];
   timer = 0;
   document.getElementById("time").textContent = timer;
+  document.getElementById("playback").src = "";
 
   const stream = await navigator.mediaDevices.getUserMedia({ audio:true });
   mediaRecorder = new MediaRecorder(stream);
 
-  mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+  mediaRecorder.ondataavailable = e => {
+    if(e.data.size > 0) audioChunks.push(e.data);
+  };
+
   mediaRecorder.start();
 
   timerInterval = setInterval(()=>{
@@ -183,6 +184,7 @@ async function startRecording(){
   },1000);
 }
 
+/* STOP RECORDING */
 function stopRecording(){
   if(!mediaRecorder) return;
 
@@ -190,13 +192,13 @@ function stopRecording(){
   clearInterval(timerInterval);
 
   mediaRecorder.onstop = ()=>{
-    const blob = new Blob(audioChunks,{type:'audio/webm'});
+    const blob = new Blob(audioChunks,{type:"audio/webm"});
     const url = URL.createObjectURL(blob);
     document.getElementById("playback").src = url;
   };
 }
 
-/* ================= MARK COMPLETED ================= */
+/* MARK COMPLETED */
 function markCompleted(){
   if(currentLevel === "easy"){
     progress.easy = true;
@@ -209,10 +211,10 @@ function markCompleted(){
   }
 
   localStorage.setItem("speakingProgress", JSON.stringify(progress));
-  alert("Task marked as completed!");
+  alert("Marked as completed!");
 }
 
-/* ================= NAVIGATION ================= */
+/* NAVIGATION */
 function backToModules(){
   document.getElementById("taskBox").style.display = "none";
   document.getElementById("moduleBox").style.display = "block";
@@ -220,7 +222,6 @@ function backToModules(){
 
 function backToLevels(){
   document.getElementById("moduleBox").style.display = "none";
-  document.getElementById("taskBox").style.display = "none";
   document.getElementById("levelBox").style.display = "block";
 }
 </script>
