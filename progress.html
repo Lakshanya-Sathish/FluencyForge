@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Progress | FluencyForge</title>
+<style>
+body{font-family:Poppins;background:#f6f8ff}
+.card{background:#fff;padding:20px;margin:20px;border-radius:12px}
+.bar{height:12px;background:#ddd;border-radius:6px;overflow:hidden}
+.fill{height:100%;background:#4a90e2}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center">Your Progress</h1>
+
+<div class="card" id="speaking"></div>
+<div class="card" id="listening"></div>
+<div class="card" id="reading"></div>
+
+<script>
+const progress = JSON.parse(localStorage.getItem("progress"));
+
+function renderSkill(id, title, data){
+  let html = `<h2>${title}</h2>`;
+  for(const level in data){
+    const val = data[level];
+    const percent = val === true ? 100 : val === null ? 0 : val;
+    html += `
+      <p>${level}</p>
+      <div class="bar"><div class="fill" style="width:${percent}%"></div></div>
+    `;
+  }
+  document.getElementById(id).innerHTML = html;
+}
+
+renderSkill("speaking","Speaking",progress.speaking);
+renderSkill("listening","Listening",progress.listening);
+renderSkill("reading","Reading",progress.reading);
+</script>
+
+</body>
+</html>

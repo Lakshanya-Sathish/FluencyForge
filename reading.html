@@ -219,6 +219,28 @@ function backToLevels(){
   document.getElementById("readingContainer").style.display = "none";
   document.getElementById("levelContainer").style.display = "block";
 }
+function initProgress() {
+  if (!localStorage.getItem("progress")) {
+    localStorage.setItem("progress", JSON.stringify({
+      speaking: {
+        beginner: false,
+        intermediate: false,
+        advanced: false
+      },
+      listening: {
+        beginner: null,
+        intermediate: null,
+        advanced: null
+      },
+      reading: {
+        beginner: null,
+        intermediate: null,
+        advanced: null
+      }
+    }));
+  }
+}
+initProgress();
 </script>
 
 </body>

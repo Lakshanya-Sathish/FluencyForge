@@ -214,16 +214,19 @@ function stopRecording(){
 
 /* MARK COMPLETED */
 function markCompleted(){
-  progress[currentLevel] = true;
+  const progress = JSON.parse(localStorage.getItem("progress"));
 
-  if(currentLevel === "beginner"){
-    document.getElementById("intermediateCard").classList.remove("locked");
+  if(currentLevel === "easy"){
+    progress.speaking.beginner = true;
   }
   if(currentLevel === "intermediate"){
-    document.getElementById("advancedCard").classList.remove("locked");
+    progress.speaking.intermediate = true;
+  }
+  if(currentLevel === "advanced"){
+    progress.speaking.advanced = true;
   }
 
-  localStorage.setItem("speakingProgress", JSON.stringify(progress));
+  localStorage.setItem("progress", JSON.stringify(progress));
   alert("Marked as completed!");
 }
 
@@ -237,7 +240,30 @@ function backToLevels(){
   document.getElementById("moduleBox").style.display = "none";
   document.getElementById("levelBox").style.display = "block";
 }
+function initProgress() {
+  if (!localStorage.getItem("progress")) {
+    localStorage.setItem("progress", JSON.stringify({
+      speaking: {
+        beginner: false,
+        intermediate: false,
+        advanced: false
+      },
+      listening: {
+        beginner: null,
+        intermediate: null,
+        advanced: null
+      },
+      reading: {
+        beginner: null,
+        intermediate: null,
+        advanced: null
+      }
+    }));
+  }
+}
+initProgress();
 </script>
 
 </body>
 </html>
+
