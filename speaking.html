@@ -150,7 +150,7 @@ async function openTask(num){
     const res = await fetch(`content/speaking/${currentLevel}.json`);
     const data = await res.json();
 
-    const task = data.modules[num - 1];
+    const task = data.modules[num + 1];
     if(!task){
       alert("Task not found");
       return;
