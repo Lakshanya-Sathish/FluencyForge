@@ -1,0 +1,168 @@
+{
+  "level": "beginner",
+  "tasks": [
+
+    {
+      "id": "B1",
+      "title": "Conversation: Student & Librarian",
+      "audio": "assets/audio/easy1.mp3",
+      "questions": [
+        {"question":"What topic is the student researching?","options":{"A":"Animals","B":"Plant growth","C":"Chemistry","D":"History"},"answer":"B"},
+        {"question":"Where is the biology section?","options":{"A":"First floor","B":"Second floor","C":"Basement","D":"Third floor"},"answer":"B"},
+        {"question":"What label should the student look for?","options":{"A":"Animal Biology","B":"Plant Science","C":"Earth Science","D":"Physics"},"answer":"B"},
+        {"question":"What kind of books does the student want?","options":{"A":"Fiction","B":"Picture textbooks","C":"Storybooks","D":"Travel guides"},"answer":"B"},
+        {"question":"How long can books be borrowed?","options":{"A":"7 days","B":"10 days","C":"14 days","D":"30 days"},"answer":"C"},
+        {"question":"Can the student renew the books?","options":{"A":"Yes","B":"No","C":"Only in person","D":"Only with a fee"},"answer": "A"},
+        {"question":"How can books be renewed?","options":{"A":"By phone","B":"Online","C":"Through email","D":"They cannot be renewed"},"answer":"B"},
+        {"question":"Who helps the student?","options":{"A":"Teacher","B":"Librarian","C":"Classmate","D":"Friend"},"answer":"B"},
+        {"question":"What kind of project is the student doing?","options":{"A":"Art","B":"Science","C":"Math","D":"Music"},"answer":"B"},
+        {"question":"What is the librarian’s attitude?","options":{"A":"Rude","B":"Unclear","C":"Helpful","D":"Angry"},"answer":"C"}
+      ]
+    },
+
+    {
+      "id": "B2",
+      "title": "Conversation: Student & Professor",
+      "audio": "assets/audio/easy2.mp3",
+      "questions": [
+        {"question":"What topic is the student asking about?","options":{"A":"Math","B":"Ecosystems","C":"History","D":"Physics"},"answer":"B"},
+        {"question":"What is the student confused about?","options":{"A":"Food chains","B":"Weather","C":"Producers vs consumers","D":"Soil types"},"answer":"C"},
+        {"question":"Producers are organisms that:","options":{"A":"Eat plants","B":"Make their own food","C":"Sleep","D":"Live underwater"},"answer":"B"},
+        {"question":"Consumers are organisms that:","options":{"A":"Make food","B":"Eat other organisms","C":"Grow quickly","D":"Produce oxygen"},"answer":"B"},
+        {"question":"How many examples must be included?","options":{"A":"One","B":"Two","C":"Three","D":"Five"},"answer":"B"},
+        {"question":"When is the homework due?","options":{"A":"Wednesday","B":"Friday","C":"Monday","D":"Saturday"},"answer": "B"},
+        {"question":"What time is the deadline?","options":{"A":"10 a.m.","B":"Noon","C":"3 p.m.","D":"Midnight"},"answer":"B"},
+        {"question":"How should homework be submitted?","options":{"A":"Email","B":"Printed","C":"Course portal","D":"USB"},"answer":"C"},
+        {"question":"Who gives clarification?","options":{"A":"Friend","B":"Librarian","C":"Professor","D":"Tutor"},"answer":"C"},
+        {"question":"Professor’s attitude?","options":{"A":"Impatient","B":"Helpful","C":"Angry","D":"Confused"},"answer":"B"}
+      ]
+    },
+
+    {
+      "id": "B3",
+      "title": "Conversation: Two Students",
+      "audio": "assets/audio/easy3.mp3",
+      "questions": [
+        {"question":"Which class is the project for?","options":{"A":"English","B":"History","C":"Math","D":"Art"},"answer":"B"},
+        {"question":"What is Student B working on?","options":{"A":"Intro","B":"Timeline","C":"Conclusion","D":"Slides"},"answer":"B"},
+        {"question":"When is the project due?","options":{"A":"Today","B":"Tomorrow morning","C":"Next week","D":"Tonight"},"answer":"B"},
+        {"question":"When will Student B finish?","options":{"A":"Tomorrow","B":"Tonight","C":"Next week","D":"Afternoon"},"answer":"B"},
+        {"question":"What has Student A completed?","options":{"A":"Timeline","B":"Conclusion","C":"Introduction","D":"References"},"answer":"C"},
+        {"question":"What does Student A still need to do?","options":{"A":"Edit","B":"Research","C":"Rewrite","D":"Submit"},"answer": "A"},
+        {"question":"Who offers help?","options":{"A":"Student A","B":"Librarian","C":"Student B","D":"Teacher"},"answer":"C"},
+        {"question":"Where will they meet?","options":{"A":"Classroom","B":"Library","C":"Cafeteria","D":"Home"},"answer":"B"},
+        {"question":"What time will they meet?","options":{"A":"5 p.m.","B":"6 p.m.","C":"7 p.m.","D":"8 p.m."},"answer":"B"},
+        {"question":"Overall attitude?","options":{"A":"Angry","B":"Worried","C":"Cooperative","D":"Confused"},"answer":"C"}
+      ]
+    },
+
+    {
+      "id": "B4",
+      "title": "Conversation: Campus Office",
+      "audio": "assets/audio/easy4.mp3",
+      "questions": [
+        {"question":"Which club does the student want to join?","options":{"A":"Drama","B":"Photography","C":"Sports","D":"Music"},"answer":"B"},
+        {"question":"How can the student sign up?","options":{"A":"Phone","B":"In person","C":"Online","D":"Email"},"answer":"C"},
+        {"question":"Who can join?","options":{"A":"Final years","B":"Majors only","C":"All students","D":"Staff"},"answer":"C"},
+        {"question":"What must students attend?","options":{"A":"Workshop","B":"First meeting","C":"Test","D":"Contest"},"answer":"B"},
+        {"question":"When is the meeting?","options":{"A":"Monday","B":"Tuesday","C":"Wednesday","D":"Friday"},"answer": "B"},
+        {"question": "What time is it?", "options": {"A": "2 p.m.", "B": "3 p.m.", "C": "4 p.m.", "D": "5 p.m."}, "answer": "C"},
+        {"question":"Where is it held?","options":{"A":"A101","B":"B204","C":"Auditorium","D":"Library"},"answer":"B"},
+        {"question":"What equipment is asked about?","options":{"A":"Tripod","B":"Camera","C":"Laptop","D":"Lights"},"answer":"B"},
+        {"question":"Membership fee?","options":{"A":"₹100","B":"₹150","C":"₹200","D":"₹500"},"answer":"C"},
+        {"question":"Staff attitude?","options":{"A":"Unhelpful","B":"Busy","C":"Helpful","D":"Confused"},"answer":"C"}
+      ]
+    },
+
+    {
+      "id": "B5",
+      "title": "Conversation: Cafeteria Worker",
+      "audio": "assets/audio/easy5.mp3",
+      "questions": [
+        {"question":"What is today’s special?","options":{"A":"Pizza","B":"Pasta & chicken","C":"Soup","D":"Curry"},"answer":"B"},
+        {"question":"What does the student ask about pasta?","options":{"A":"Spicy","B":"Dairy","C":"Cold","D":"Vegan"},"answer":"B"},
+        {"question":"What ingredient does pasta contain?","options":{"A":"Butter","B":"None","C":"Cheese","D":"Cream"},"answer":"C"},
+        {"question":"What does the student choose?","options":{"A":"Pasta","B":"Salad","C":"Juice","D":"Chicken"},"answer":"D"},
+        {"question":"What comes with chicken?","options":{"A":"Pasta","B":"Rice & salad","C":"Noodles","D":"Bread"},"answer":"B"},
+        {"question": "Cost of meal?", "options": {"A": "₹80", "B": "₹100", "C": "₹120", "D": "₹150"}, "answer": "C"},
+        {"question":"How does student pay?","options":{"A":"Cash","B":"Card","C":"Coupons","D":"Check"},"answer":"B"},
+        {"question":"Accepted payment?","options":{"A":"Cash only","B":"Card only","C":"Online only","D":"Card & digital"},"answer":"D"},
+        {"question":"When is meal ready?","options":{"A":"Immediately","B":"In a moment","C":"One hour","D":"Closing"},"answer":"B"},
+        {"question":"Worker’s attitude?","options":{"A":"Rude","B":"Confused","C":"Polite","D":"Angry"},"answer":"C"}
+      ]
+    },
+
+    {
+      "id": "B6",
+      "title": "Lecture: Volcanoes",
+      "audio": "assets/audio/easy6.mp3",
+      "questions": [
+        {"question":"What is magma?","options":{"A":"Melted rock","B":"Frozen water","C":"Stone","D":"Ocean"},"answer":"A"},
+        {"question":"Magma on surface is called?","options":{"A":"Rock","B":"Lava","C":"Soil","D":"Dust"},"answer":"B"},
+        {"question":"Where do volcanoes form?","options":{"A":"Beach","B":"Desert","C":"Plate edges","D":"Cities"},"answer":"C"},
+        {"question":"Cause of eruption?","options":{"A":"Rain","B":"Pressure","C":"Cold","D":"Wind"},"answer":"B"},
+        {"question":"What do volcanoes release?","options":{"A":"Water","B":"Snow","C":"Ash & gas","D":"Sand"},"answer":"C"},
+        {"question": "Most dangerous eruptions?", "options": {"A": "Gentle", "B": "Explosive", "C": "Quiet", "D": "Cold"}, "answer": "B"},
+        {"question":"What can volcanoes create?","options":{"A":"New land","B":"Oceans","C":"Deserts","D":"Metal"},"answer":"A"},
+        {"question":"Why people live nearby?","options":{"A":"Cheap","B":"Fertile soil","C":"Air","D":"Safe"},"answer":"B"},
+        {"question":"One risk?","options":{"A":"Rain","B":"Lava","C":"Water","D":"Wind"},"answer":"B"},
+        {"question":"Main topic?","options":{"A":"Weather","B":"Volcanoes","C":"Farming","D":"Earthquakes"},"answer":"B"}
+      ]
+    },
+
+    {
+      "id": "B7",
+      "title": "Lecture: Water Cycle",
+      "audio": "assets/audio/easy7.mp3",
+      "questions": [
+        {"question":"Main topic?","options":{"A":"Animals","B":"Water cycle","C":"Storms","D":"Soil"},"answer":"B"},
+        {"question":"First stage?","options":{"A":"Condensation","B":"Collection","C":"Evaporation","D":"Precipitation"},"answer":"C"},
+        {"question":"Cause of evaporation?","options":{"A":"Wind","B":"Sun","C":"Clouds","D":"Rain"},"answer":"B"},
+        {"question":"Water becomes?","options":{"A":"Ice","B":"Vapor","C":"Snow","D":"Sand"},"answer":"B"},
+        {"question":"Condensation is?","options":{"A":"Vapor to cloud","B":"Rain","C":"Freeze","D":"Gas"},"answer":"A"},
+        {"question": "Precipitation is?", "options": {"A": "Storage", "B": "Gas", "C": "Rain/snow", "D": "Evaporation"}, "answer": "C"},
+        {"question":"Water collects where?","options":{"A":"Sky","B":"Oceans","C":"Mountains","D":"Clouds"},"answer":"B"},
+        {"question":"Clouds heavy due to?","options":{"A":"Dust","B":"Condensed water","C":"Wind","D":"Sun"},"answer":"B"},
+        {"question":"Why important?","options":{"A":"Mountains","B":"Fresh water","C":"Freeze","D":"Stop rivers"},"answer":"B"},
+        {"question":"After collection?","options":{"A":"Stops","B":"Repeats","C":"Freezes","D":"Disappears"},"answer":"B"}
+      ]
+    },
+
+    {
+      "id": "B8",
+      "title": "Lecture: Dinosaurs",
+      "audio": "assets/audio/easy8.mp3",
+      "questions": [
+        {"question":"Lecture is about?","options":{"A":"Reptiles","B":"Dinosaurs","C":"Birds","D":"Oceans"},"answer":"B"},
+        {"question":"Lived for how long?","options":{"A":"10 yrs","B":"1000 yrs","C":"160 million yrs","D":"2 months"},"answer":"C"},
+        {"question":"First appeared?","options":{"A":"200 yrs","B":"230 million yrs","C":"20 million","D":"2 million"},"answer":"B"},
+        {"question":"Size of dinosaurs?","options":{"A":"Tiny","B":"Huge","C":"Same","D":"Many sizes"},"answer":"D"},
+        {"question":"Plant eaters called?","options":{"A":"Carnivores","B":"Herbivores","C":"Omnivores","D":"Insectivores"},"answer":"B"},
+        {"question":"Meat eaters called?","options":{"A":"Herbivores","B":"Carnivores","C":"Frugivores","D":"Detritivores"},"answer": "B"},
+        {"question":"Why disappeared?","options":{"A":"Rain","B":"Asteroid","C":"Sun","D":"Reptiles"},"answer":"B"},
+        {"question":"Asteroid caused?","options":{"A":"Weather change","B":"Bigger dinos","C":"More plants","D":"Oceans"},"answer":"A"},
+        {"question":"Scientists study?","options":{"A":"Buildings","B":"Stars","C":"Fossils","D":"Flowers"},"answer":"C"},
+        {"question":"Fossils help understand?","options":{"A":"Cooking","B":"Behavior","C":"Humans","D":"Weather"},"answer":"B"}
+      ]
+    },
+
+    {
+      "id": "B9",
+      "title": "Lecture: Solar Energy",
+      "audio": "assets/audio/easy9.mp3.mp3",
+      "questions": [
+        {"question":"Main topic?","options":{"A":"Wind","B":"Solar","C":"Oil","D":"Rain"},"answer":"B"},
+        {"question":"Energy source?","options":{"A":"Ocean","B":"Sun","C":"Mountain","D":"River"},"answer":"B"},
+        {"question":"Device used?","options":{"A":"Generator","B":"Solar panels","C":"Windmill","D":"Engine"},"answer":"B"},
+        {"question":"Cells convert?","options":{"A":"Food","B":"Water","C":"Sunlight","D":"Air"},"answer":"C"},
+        {"question":"Panels work best?","options":{"A":"Dark","B":"Sunny","C":"Rainy","D":"Cold"},"answer":"B"},
+        {"question": "Why clean?", "options": {"A": "Taste", "B": "Pollution", "C": "No pollution", "D": "Chemicals"}, "answer": "C"},
+        {"question":"Why unlimited?","options":{"A":"Sun lasts","B":"Battery","C":"Stored","D":"No sun"},"answer":"A"},
+        {"question":"Problem?","options":{"A":"Noise","B":"Night","C":"Burns trees","D":"Cold"},"answer":"B"},
+        {"question":"Energy stored in?","options":{"A":"Rocks","B":"Air","C":"Batteries","D":"Soil"},"answer":"C"},
+        {"question":"Used where?","options":{"A":"Deserts","B":"Cars","C":"Homes & schools","D":"Factories"},"answer":"C"}
+      ]
+    }
+
+  ]
+}
