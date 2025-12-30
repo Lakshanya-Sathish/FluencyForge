@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Speaking | FluencyForge</title>
+<title>Speaking Practice | FluencyForge</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -59,7 +59,7 @@ audio{
 <div class="container" id="levelBox">
   <h1>Speaking Practice</h1>
 
-  <div class="card" onclick="openModules('easy')">
+  <div class="card" onclick="openModules('beginner')">
     <h2>Beginner</h2>
   </div>
 
@@ -72,7 +72,7 @@ audio{
   </div>
 </div>
 
-<!-- MODULE SELECTION -->
+<!-- MODULE LIST -->
 <div class="container" id="moduleBox" style="display:none">
   <h2 id="moduleTitle"></h2>
   <div id="modules"></div>
@@ -106,12 +106,12 @@ let timerInterval = null;
 
 /* PROGRESS */
 let progress = JSON.parse(localStorage.getItem("speakingProgress")) || {
-  easy: false,
-  intermediate: false,
-  advanced: false
+  beginner:false,
+  intermediate:false,
+  advanced:false
 };
 
-if(progress.easy){
+if(progress.beginner){
   document.getElementById("intermediateCard").classList.remove("locked");
 }
 if(progress.intermediate){
@@ -146,20 +146,30 @@ async function openTask(num){
   document.getElementById("moduleBox").style.display = "none";
   document.getElementById("taskBox").style.display = "block";
 
-  const res = await fetch(`content/speaking/${currentLevel}.json`);
-  if(!res.ok){
+  try{
+    const res = await fetch(`content/speaking/${currentLevel}.json`);
+    const data = await res.json();
+
+    const task = data.modules[num - 1];
+    if(!task){
+      alert("Task not found");
+      return;
+    }
+
+    document.getElementById("taskTitle").textContent =
+      `Speaking Task ${num}`;
+
+    document.getElementById("taskPrompt").textContent = task.task;
+
+    document.getElementById("time").textContent = 0;
+    document.getElementById("playback").src = "";
+
+    window.maxTime = task.expectedDurationSeconds;
+
+  }catch(err){
+    console.error(err);
     alert("Failed to load speaking content");
-    return;
   }
-
-  const data = await res.json();
-  const task = data.tasks[num-1];
-
-  document.getElementById("taskTitle").textContent = task.title;
-  document.getElementById("taskPrompt").textContent = task.prompt;
-
-  document.getElementById("playback").src = "";
-  document.getElementById("time").textContent = "0";
 }
 
 /* START RECORDING */
@@ -181,6 +191,10 @@ async function startRecording(){
   timerInterval = setInterval(()=>{
     timer++;
     document.getElementById("time").textContent = timer;
+
+    if(window.maxTime && timer >= window.maxTime){
+      stopRecording();
+    }
   },1000);
 }
 
@@ -200,13 +214,12 @@ function stopRecording(){
 
 /* MARK COMPLETED */
 function markCompleted(){
-  if(currentLevel === "easy"){
-    progress.easy = true;
+  progress[currentLevel] = true;
+
+  if(currentLevel === "beginner"){
     document.getElementById("intermediateCard").classList.remove("locked");
   }
-
   if(currentLevel === "intermediate"){
-    progress.intermediate = true;
     document.getElementById("advancedCard").classList.remove("locked");
   }
 
