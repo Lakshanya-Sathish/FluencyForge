@@ -86,8 +86,8 @@ audio{
 
   <div class="timer">Time: <span id="time">0</span>s</div>
 
-  <button onclick="startRecording()">🎤 Start</button>
-  <button onclick="stopRecording()">⏹ Stop</button>
+  <button onclick="startRecording(); startSpeechToText()">🎤 Start</button>
+<button onclick="stopRecording(); stopSpeechToText()">⏹ Stop</button>
 
   <audio id="playback" controls></audio>
 
@@ -213,23 +213,26 @@ function stopRecording(){
 }
 
 /* MARK COMPLETED */
-function markCompleted(){
-  const progress = JSON.parse(localStorage.getItem("progress"));
+async function markCompleted() {
+  const spokenText =
+    transcriptText || `User spoke for ${timer} seconds`;
 
-  if(currentLevel === "easy"){
-    progress.speaking.beginner = true;
-  }
-  if(currentLevel === "intermediate"){
-    progress.speaking.intermediate = true;
-  }
-  if(currentLevel === "advanced"){
-    progress.speaking.advanced = true;
+  const aiFeedback = await sendToAI(spokenText);
+
+  alert("AI Feedback:\n\n" + aiFeedback);
+
+  if (currentLevel === "easy") {
+    progress.easy = true;
+    document.getElementById("intermediateCard").classList.remove("locked");
   }
 
-  localStorage.setItem("progress", JSON.stringify(progress));
-  alert("Marked as completed!");
+  if (currentLevel === "intermediate") {
+    progress.intermediate = true;
+    document.getElementById("advancedCard").classList.remove("locked");
+  }
+
+  localStorage.setItem("speakingProgress", JSON.stringify(progress));
 }
-
 /* NAVIGATION */
 function backToModules(){
   document.getElementById("taskBox").style.display = "none";
@@ -262,6 +265,48 @@ function initProgress() {
   }
 }
 initProgress();
+let transcriptText = "";
+
+function startSpeechToText(){
+  const SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if(!SpeechRecognition){
+    alert("Speech recognition not supported");
+    return;
+  }
+
+  const recognition = new SpeechRecognition();
+  recognition.lang = "en-US";
+  recognition.continuous = true;
+  recognition.interimResults = false;
+
+  recognition.onresult = (event)=>{
+    transcriptText = "";
+    for(let i=0; i<event.results.length; i++){
+      transcriptText += event.results[i][0].transcript + " ";
+    }
+  };
+
+  recognition.start();
+  window.recognition = recognition;
+}
+
+function stopSpeechToText(){
+  if(window.recognition){
+    window.recognition.stop();
+  }
+}
+async function sendToAI(text) {
+  const res = await fetch("http://localhost:3000/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: text })
+  });
+
+  const data = await res.json();
+  return data.reply;
+}
 </script>
 
 </body>
