@@ -20,7 +20,6 @@
       height: 100vh;
     }
 
-    /* LEFT PANE - Task Details */
     #leftPane {
       flex: 1;
       background: #ffffff;
@@ -51,7 +50,6 @@
       border-left: 4px solid #f5a623;
     }
 
-    /* RIGHT PANE - Answer & Controls */
     #rightPane {
       width: 40%;
       background: #fafafa;
@@ -79,11 +77,8 @@
       color: white;
     }
 
-    #taskProgress {
-      font-weight: 600;
-    }
-
-    #micBtn {
+    #micBtn,
+    #submitBtn {
       margin-top: 20px;
       padding: 12px 20px;
       width: 100%;
@@ -96,15 +91,7 @@
     }
 
     #submitBtn {
-      margin-top: 15px;
-      padding: 12px 20px;
-      width: 100%;
-      border: none;
-      border-radius: 8px;
       background: #28a745;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
     }
 
     #reviewScreen {
@@ -119,6 +106,16 @@
       margin: 10px 0;
       border-radius: 8px;
     }
+
+    #aiFeedbackBox {
+      display: none;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 
@@ -126,7 +123,7 @@
 
   <div class="main">
 
-    <!-- LEFT: Task Info -->
+    <!-- LEFT -->
     <div id="leftPane">
       <h2 id="taskHeader">Loading...</h2>
 
@@ -136,7 +133,7 @@
       <div id="taskPrompt" style="margin-top:20px; font-size:18px;"></div>
     </div>
 
-    <!-- RIGHT: Timer + Recording + Submit -->
+    <!-- RIGHT -->
     <div id="rightPane">
 
       <div class="stickyHeader">
@@ -152,126 +149,142 @@
         <div id="reviewList"></div>
 
         <button onclick="finishModule()" style="
-        margin-top:20px; padding:12px; width:100%;
-        background:#4a90e2; color:#fff; border:none; border-radius:8px;">
+          margin-top:20px;padding:12px;width:100%;
+          background:#4a90e2;color:#fff;border:none;border-radius:8px;">
           Finish Module
         </button>
       </div>
+
+      <!-- AI FEEDBACK -->
+      <div id="aiFeedbackBox"></div>
 
     </div>
 
   </div>
 
   <script>
+    const API_BASE = "http://localhost:3001";
+    /* GET MODULE FROM URL */
     let params = new URLSearchParams(window.location.search);
     let moduleId = params.get("id");
-    let level = moduleId.split("-")[1] === "B" ? "beginner" :
-      moduleId.split("-")[1] === "I" ? "intermediate" :
-        moduleId.split("-")[1] === "A" ? "advanced" : null;
+
+    if (!moduleId) {
+      alert("Invalid module");
+      window.location.href = "speaking-modules.html";
+    }
+
+    let level =
+      moduleId.includes("-B") ? "beginner" :
+        moduleId.includes("-I") ? "intermediate" :
+          "advanced";
 
     let tasks = [];
     let current = 0;
+
     let recording = false;
     let recorder;
     let audioChunks = [];
+
     let timerInterval;
 
-    /* ---------------- LOAD JSON ---------------- */
+    /* LOAD SPEAKING MODULE */
     async function loadSpeaking() {
-      const res = await fetch(`content/speaking/${level}.json`);
-      const data = await res.json();
+      try {
+        const res = await fetch(`content/speaking/${level}.json`);
+        const data = await res.json();
 
-      let mod = data.modules.find(m => m.id === moduleId);
-      tasks = mod.tasks;
+        const mod = data.modules.find(m => m.id === moduleId);
+        if (!mod) throw new Error("Module not found");
 
-      loadTask();
+        tasks = mod.tasks;
+        loadTask();
+      } catch (err) {
+        alert("Error loading module");
+      }
     }
 
+    /* LOAD CURRENT TASK */
     function loadTask() {
       const t = tasks[current];
 
-      document.getElementById("taskHeader").innerText = t.type.toUpperCase() + " Task";
-      document.getElementById("taskProgress").innerText = `Task ${current + 1} of ${tasks.length}`;
+      document.getElementById("taskHeader").innerText =
+        `${t.type.toUpperCase()} Task`;
+      document.getElementById("taskProgress").innerText =
+        `Task ${current + 1} of ${tasks.length}`;
 
-      /* READING */
-      if (t.reading) {
-        document.getElementById("readingContainer").innerHTML =
-          `<div class="readingBlock"><strong>Reading:</strong><br>${t.reading}</div>`;
-      } else {
-        document.getElementById("readingContainer").innerHTML = "";
-      }
+      document.getElementById("readingContainer").innerHTML =
+        t.reading
+          ? `<div class="readingBlock"><strong>Reading:</strong><br>${t.reading}</div>`
+          : "";
 
-      /* LISTENING */
-      if (t.audio) {
-        document.getElementById("listeningContainer").innerHTML =
-          `<div class="listeningBlock">
-         <strong>Listening:</strong><br>
-         <audio controls src="${t.audio}"></audio>
-       </div>`;
-      } else {
-        document.getElementById("listeningContainer").innerHTML = "";
-      }
+      document.getElementById("listeningContainer").innerHTML =
+        t.audio
+          ? `<div class="listeningBlock"><strong>Listening:</strong><br><audio controls src="${t.audio}"></audio></div>`
+          : "";
 
-      /* PROMPT */
-      document.getElementById("taskPrompt").innerHTML = `<strong>Task:</strong> ${t.task}`;
+      document.getElementById("taskPrompt").innerHTML =
+        `<strong>Task:</strong> ${t.task}`;
 
       startTimer(t.expectedDurationSeconds);
     }
 
-    /* ---------------- TIMER ---------------- */
+    /* TIMER */
     function startTimer(seconds) {
       clearInterval(timerInterval);
+
       let s = seconds;
 
       timerInterval = setInterval(() => {
-        if (s <= 0) {
-          clearInterval(timerInterval);
-          return;
-        }
+        if (s <= 0) return clearInterval(timerInterval);
+
         s--;
         let m = Math.floor(s / 60);
         let sec = s % 60;
+
         document.getElementById("timer").innerText =
           `${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
       }, 1000);
     }
 
-    /* ---------------- RECORDING ---------------- */
-    document.getElementById("micBtn").onclick = async function () {
-      if (!recording) {
-        startRecording();
-      } else {
-        stopRecording();
-      }
+    /* RECORDING HANDLER */
+    document.getElementById("micBtn").onclick = () => {
+      if (!recording) startRecording();
+      else stopRecording();
     };
 
     async function startRecording() {
-      recording = true;
-      audioChunks = [];
+      try {
+        let stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
-      let stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      recorder = new MediaRecorder(stream);
+        recording = true;
+        audioChunks = [];
 
-      recorder.start();
-      recorder.ondataavailable = e => audioChunks.push(e.data);
+        recorder = new MediaRecorder(stream);
+        recorder.start();
 
-      document.getElementById("micBtn").innerText = "⏹ Stop Recording";
+        recorder.ondataavailable = e => audioChunks.push(e.data);
+
+        document.getElementById("micBtn").innerText = "⏹ Stop Recording";
+      } catch (err) {
+        alert("Microphone access denied");
+      }
     }
 
     function stopRecording() {
       recording = false;
+
       recorder.stop();
       recorder.onstop = () => {
         let blob = new Blob(audioChunks, { type: "audio/mp3" });
 
-        // User audio stored in memory for review (not saved permanently)
         tasks[current].userAudio = blob;
+        sendForAI(blob);
 
         document.getElementById("micBtn").innerText = "🎤 Start Recording";
       };
     }
 
-    /* ---------------- SUBMIT TASK ---------------- */
+    /* SUBMIT TASK */
     function submitTask() {
       if (current < tasks.length - 1) {
         current++;
@@ -281,34 +294,85 @@
       }
     }
 
-    /* ---------------- REVIEW SCREEN ---------------- */
+    /* REVIEW SCREEN */
     function showReview() {
       document.getElementById("reviewScreen").style.display = "block";
       document.getElementById("micBtn").style.display = "none";
       document.getElementById("submitBtn").style.display = "none";
-      document.getElementById("taskProgress").style.display = "none";
 
       let list = document.getElementById("reviewList");
       list.innerHTML = "";
 
       tasks.forEach((t, i) => {
         list.innerHTML += `
-      <div class="review-item">
-        <strong>Task ${i + 1}</strong><br>
-        ${t.userAudio ? "🎤 Response recorded" : "⚠ No audio recorded"}
-      </div>
-    `;
+          <div class="review-item">
+            <strong>Task ${i + 1}</strong><br>
+            ${t.userAudio ? "🎤 Response recorded" : "⚠ No audio submitted"}
+          </div>`;
       });
     }
 
-    /* ---------------- FINISH MODULE ---------------- */
+    /* SEND AUDIO TO BACKEND */
+    async function sendForAI(blob) {
+      const fd = new FormData();
+      fd.append("audio", blob);
+      fd.append("moduleId", moduleId);
+
+      showAIFeedback("<em>Evaluating... please wait</em>");
+
+      try {
+        const res = await fetch(`${API_BASE}/api/evaluate-speaking`, {
+          method: "POST",
+          body: fd
+        });
+
+        const data = await res.json();
+
+        if (data.error) {
+          showAIFeedback("Error evaluating response.");
+          return;
+        }
+
+        showAIFeedback(data.feedback || "No feedback returned.");
+
+        updateAdaptiveLevel(data.score);
+      } catch (err) {
+        showAIFeedback("Server unreachable.");
+      }
+    }
+
+    /* DISPLAY FEEDBACK */
+    function showAIFeedback(text) {
+      const box = document.getElementById("aiFeedbackBox");
+      box.style.display = "block";
+      box.innerHTML = `<h2>AI Evaluation</h2>${text.replace(/\n/g, "<br>")}`;
+    }
+
+    /* ADAPTIVE UNLOCK */
+    function updateAdaptiveLevel(score) {
+      if (!score) return;
+
+      if (score >= 85) {
+        localStorage.setItem("speaking-level-intermediate", "unlocked");
+        localStorage.setItem("speaking-level-advanced", "unlocked");
+      } else if (score >= 70) {
+        localStorage.setItem("speaking-level-intermediate", "unlocked");
+      }
+
+      let done = JSON.parse(localStorage.getItem("speakingCompleted") || "{}");
+      done[moduleId] = true;
+      localStorage.setItem("speakingCompleted", JSON.stringify(done));
+    }
+
+    /* FINISH MODULE */
     function finishModule() {
-      alert("Module completed!");
       window.location.href = "speaking-modules.html";
     }
 
     loadSpeaking();
   </script>
+
+  <script src="theme.js"></script>
 
 </body>
 

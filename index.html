@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,231 +8,237 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script defer src="theme.js"></script>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <div class="brand">FluencyForge</div>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar neon-nav">
+    <div class="brand">FluencyForge</div>
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="progress.html">Progress</a></li>
-  </ul>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="progress.html">Progress</a></li>
+    </ul>
 
-  <div class="nav-buttons" id="authButtons">
-    <button class="login-btn" id="loginBtnNav">Login</button>
-    <button class="signup-btn" id="signupBtnNav">Signup</button>
-  </div>
+    <div class="nav-right">
 
-  <button class="logout-btn" id="logoutBtn" style="display:none;">Logout</button>
-</nav>
-
-
-<!-- ================= HERO ================= -->
-<section id="hero" class="hero">
-  <div class="hero-inner">
-    <div class="hero-left">
-      <h1 class="hero-title">Master TOEFL Through AI-Powered Learning</h1>
-      <p class="hero-subtitle">Practice reading, listening, speaking & writing with adaptive guidance.</p>
-
-      <button class="btn-primary" id="miniTestBtn">Take Free Mini Test →</button>
-    </div>
-
-    <div class="hero-image">
-      <img src="assets/illustrations/hero-3d.png" alt="Learning Illustration" />
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= FEATURES ================= -->
-<section id="features" class="features-section">
-  <h2 class="section-title">Everything You Need To Improve</h2>
-
-  <div class="features-wrapper">
-
-  <a href="reading-home.html" class="feature-link">
-    <div class="feature-box">
-      <img src="assets/icons/book.svg" class="feature-logo">
-      <h3>Reading</h3>
-      <p>Improve comprehension with TOEFL-like passages.</p>
-    </div>
-  </a>
-
-  <a href="listening-home.html" class="feature-link">
-    <div class="feature-box">
-      <img src="assets/icons/headphones.svg" class="feature-logo">
-      <h3>Listening</h3>
-      <p>Real exam-style audio with practice questions.</p>
-    </div>
-  </a>
-
-  <a href="writing-home.html" class="feature-link">
-    <div class="feature-box">
-      <img src="assets/icons/pen.svg" class="feature-logo">
-      <h3>Writing</h3>
-      <p>Structured writing modules with scoring.(coming soon)</p>
-    </div>
-  </a>
-
-  <a href="speaking-home.html" class="feature-link">
-    <div class="feature-box">
-      <img src="assets/icons/ai.svg" class="feature-logo">
-      <h3>Speaking + AI</h3>
-      <p>Pronunciation scoring </p>
-    </div>
-  </a>
-
-</div>
-
-  </div>
-</section>
-
-
-
-<!-- ================= AUTH ================= -->
-<section id="auth" class="auth">
-
-  <!-- Login -->
-  <div class="auth-card" id="loginCard">
-    <h3>Login</h3>
-    <form id="loginForm">
-
-      <label>Email</label>
-      <input type="email" id="loginEmail" placeholder="example@email.com" required>
-
-      <label>Password</label>
-      <div class="password-wrap">
-        <input type="password" id="loginPass" required>
-        <span class="toggle-pass" data-target="loginPass">👁</span>
+      <!-- DARK MODE -->
+      <div class="theme-toggle" id="themeToggle">
+        <span id="themeIcon">🌙</span>
       </div>
 
-      <button type="submit" class="btn-primary">Login</button>
-    </form>
-  </div>
-
-  <!-- Signup -->
-  <div class="auth-card" id="signupCard">
-    <h3>Signup</h3>
-    <form id="signupForm">
-
-      <label>Full Name</label>
-      <input type="text" id="signupName" required>
-
-      <label>Email</label>
-      <input type="email" id="signupEmail" required>
-
-      <label>Password</label>
-      <div class="password-wrap">
-        <input type="password" id="signupPass" minlength="6" required>
-        <span class="toggle-pass" data-target="signupPass">👁</span>
+      <!-- AUTH BUTTONS -->
+      <div class="nav-buttons" id="authButtons">
+        <button class="login-btn" id="loginBtnNav">Login</button>
+        <button class="signup-btn" id="signupBtnNav">Signup</button>
       </div>
 
-      <button type="submit" class="btn-primary">Signup</button>
-    </form>
-  </div>
-
-</section>
+      <button class="logout-btn" id="logoutBtn" style="display:none;">Logout</button>
+    </div>
+  </nav>
 
 
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1 class="hero-title">Master TOEFL Through AI-Powered Learning</h1>
+        <p class="hero-subtitle">Practice reading, listening, speaking & writing with adaptive guidance.</p>
+      </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">© 2025 FluencyForge. All rights reserved.</footer>
-
-
-
-<!-- ================= LOGIC ================= -->
-<script type="module">
-
-  import { auth } from "./firebase.js";
-  import { signupUser, loginUser } from "./auth.js";
-  import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-
-  const loginForm = document.getElementById("loginForm");
-  const signupForm = document.getElementById("signupForm");
-  const loginBtnNav = document.getElementById("loginBtnNav");
-  const signupBtnNav = document.getElementById("signupBtnNav");
-  const logoutBtn = document.getElementById("logoutBtn");
-  const authButtons = document.getElementById("authButtons");
-  const miniTestBtn = document.getElementById("miniTestBtn");
-  const practiceLink = document.getElementById("practiceLink");
-
-  // Scroll to auth on navbar click
-  loginBtnNav.onclick = () => document.getElementById("auth").scrollIntoView({ behavior: "smooth" });
-  signupBtnNav.onclick = () => document.getElementById("auth").scrollIntoView({ behavior: "smooth" });
+      <div class="hero-image">
+        <img src="assets/illustrations/hero-3d.png" alt="Learning Illustration" />
+      </div>
+    </div>
+  </section>
 
 
+  <!-- ================= FEATURES ================= -->
+  <section id="features" class="features-section">
+    <h2 class="section-title">Everything You Need To Improve</h2>
 
-  /* ================= LOGIN ================= */
-  loginForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const res = await loginUser(loginEmail.value.trim(), loginPass.value);
+    <div class="features-wrapper">
 
-    if (res.success) {
-      alert("Login successful!");
-      window.location.href = "practice.html";
-    } else alert(res.error);
-  });
+      <a href="reading-home.html" class="feature-link">
+        <div class="feature-box locked-card">
+          <img src="assets/icons/book.svg" class="feature-logo">
+          <h3>Reading</h3>
+          <p>Improve comprehension with TOEFL-like passages</p>
+        </div>
+      </a>
 
+      <a href="listening-home.html" class="feature-link">
+        <div class="feature-box locked-card">
+          <img src="assets/icons/headphones.svg" class="feature-logo">
+          <h3>Listening</h3>
+          <p>Real exam-style audio with practice questions</p>
+        </div>
+      </a>
 
-  /* ================= SIGNUP ================= */
-  signupForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
+      <a href="writing-home.html" class="feature-link">
+        <div class="feature-box locked-card">
+          <img src="assets/icons/pen.svg" class="feature-logo">
+          <h3>Writing</h3>
+          <p>Structured writing modules with scoring</p>
+        </div>
+      </a>
 
-    const res = await signupUser(
-      signupEmail.value.trim(),
-      signupPass.value,
-      signupName.value.trim()
-    );
+      <a href="speaking-home.html" class="feature-link">
+        <div class="feature-box locked-card">
+          <img src="assets/icons/ai.svg" class="feature-logo">
+          <h3>Speaking</h3>
+          <p>Pronunciation scoring</p>
+        </div>
+      </a>
 
-    if (res.success) {
-      alert("Account created!");
-      window.location.href = "index.html";
-    } else alert(res.error);
-  });
-
-
-  /* ================= AUTH STATE ================= */
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      authButtons.style.display = "none";
-      logoutBtn.style.display = "inline-block";
-    } else {
-      authButtons.style.display = "flex";
-      logoutBtn.style.display = "none";
-    }
-  });
-
-
-  logoutBtn.onclick = async () => {
-    await signOut(auth);
-    window.location.reload();
-  };
+    </div>
+  </section>
 
 
-  /* ================= MINI TEST ACCESS ================= */
-  miniTestBtn.onclick = () => {
-    if (!auth.currentUser) {
-      alert("Please login first to take the mini test.");
-      document.getElementById("auth").scrollIntoView({ behavior: "smooth" });
-      return;
-    }
-    window.location.href = "test.html";
-  };
+  <!-- ================= AUTH ================= -->
+  <section id="auth" class="auth">
+
+    <!-- Login -->
+    <div class="auth-card" id="loginCard">
+      <h3>Login</h3>
+      <form id="loginForm">
+
+        <label>Email</label>
+        <input type="email" id="loginEmail" required>
+
+        <label>Password</label>
+        <div class="password-wrap">
+          <input type="password" id="loginPass" required>
+          <span class="toggle-pass" data-target="loginPass">👁</span>
+        </div>
+
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+    </div>
+
+    <!-- Signup -->
+    <div class="auth-card" id="signupCard">
+      <h3>Signup</h3>
+      <form id="signupForm">
+
+        <label>Full Name</label>
+        <input type="text" id="signupName" required>
+
+        <label>Email</label>
+        <input type="email" id="signupEmail" required>
+
+        <label>Password</label>
+        <div class="password-wrap">
+          <input type="password" id="signupPass" minlength="6" required>
+          <span class="toggle-pass" data-target="signupPass">👁</span>
+        </div>
+
+        <button type="submit" class="btn-primary">Signup</button>
+      </form>
+    </div>
+
+  </section>
 
 
-  /* ================= PASSWORD SHOW/HIDE ================= */
-  document.querySelectorAll(".toggle-pass").forEach(icon => {
-    icon.addEventListener("click", () => {
-      const target = document.getElementById(icon.dataset.target);
-      target.type = target.type === "password" ? "text" : "password";
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">© 2025 FluencyForge. All rights reserved.</footer>
+
+
+  <!-- ================= AUTH LOGIC ================= -->
+  <script type="module">
+
+    import { auth } from "./firebase.js";
+    import { signupUser, loginUser } from "./auth.js";
+    import { onAuthStateChanged, signOut, updateProfile } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
+    const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signupForm");
+    const loginBtnNav = document.getElementById("loginBtnNav");
+    const signupBtnNav = document.getElementById("signupBtnNav");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const authButtons = document.getElementById("authButtons");
+
+    const featureLinks = document.querySelectorAll(".feature-link");
+
+    /* Scroll to forms */
+    loginBtnNav.onclick = () => document.getElementById("auth").scrollIntoView({ behavior: "smooth" });
+    signupBtnNav.onclick = () => document.getElementById("auth").scrollIntoView({ behavior: "smooth" });
+
+    /* LOGIN */
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const res = await loginUser(loginEmail.value.trim(), loginPass.value);
+
+      if (res.success) {
+        window.location.reload();
+      } else alert(res.error);
     });
-  });
 
-</script>
+    /* SIGNUP */
+    signupForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const res = await signupUser(
+        signupEmail.value.trim(),
+        signupPass.value,
+        signupName.value.trim()
+      );
+
+      if (res.success) {
+        await updateProfile(auth.currentUser, {
+          displayName: signupName.value.trim()
+        });
+
+        window.location.reload();
+      } else alert(res.error);
+    });
+
+    /* AUTH STATE */
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // Hide auth forms
+        document.getElementById("auth").style.display = "none";
+
+        // Hide login/signup buttons
+        authButtons.style.display = "none";
+        logoutBtn.style.display = "inline-block";
+
+        // Unlock cards
+        featureLinks.forEach(link => link.classList.remove("disabled-card"));
+      } else {
+        document.getElementById("auth").style.display = "flex";
+        authButtons.style.display = "flex";
+        logoutBtn.style.display = "none";
+
+        // Lock cards
+        featureLinks.forEach(link => {
+          link.classList.add("disabled-card");
+          link.onclick = (e) => {
+            e.preventDefault();
+            alert("Please login to access practice tools.");
+          };
+        });
+      }
+    });
+
+    logoutBtn.onclick = async () => {
+      await signOut(auth);
+      window.location.reload();
+    };
+
+    /* Show / hide password */
+    document.querySelectorAll(".toggle-pass").forEach(icon => {
+      icon.addEventListener("click", () => {
+        const target = document.getElementById(icon.dataset.target);
+        target.type = target.type === "password" ? "text" : "password";
+      });
+    });
+
+  </script>
 
 </body>
+
 </html>

@@ -138,7 +138,7 @@
   </div>
 
   <script>
-    /* ---------------- READ MODULE ID FROM URL ---------------- */
+    /* ---------------- READ MODULE ID ---------------- */
     const params = new URLSearchParams(window.location.search);
     let moduleId = params.get("id");
 
@@ -152,26 +152,19 @@
     let currentLevel =
       prefix === "B" ? "beginner" :
         prefix === "I" ? "intermediate" :
-          prefix === "A" ? "advanced" :
-            null;
-
-    if (!currentLevel) {
-      alert("Invalid module level.");
-      window.location.href = "reading-modules.html";
-    }
+          prefix === "A" ? "advanced" : null;
 
     let questionsData = [];
     let userAnswers = {};
     let timerSeconds = 600;
     let selectedInsert = null;
 
-    /* ---------------- LOAD READING MODULE ---------------- */
+    /* ---------------- LOAD MODULE ---------------- */
     async function loadReading() {
       try {
         const res = await fetch(`content/reading/${currentLevel}.json`);
         const data = await res.json();
 
-        /* FIND THE MODULE BY ID */
         let module = data.modules.find(m => m.id === moduleId);
 
         if (!module) {
@@ -179,7 +172,7 @@
           return;
         }
 
-        /* PASSAGE PROCESSING */
+        /* PASSAGE */
         let processed = module.passage
           .replace(/■/g, `<span class="insert-spot" onclick="selectInsert(this)">■</span>`)
           .replace(/\[HIGHLIGHT\](.*?)\[END\]/g, `<span class="toefl-highlight">$1</span>`);
@@ -232,7 +225,7 @@
       });
     }
 
-    /* ---------------- INSERT SENTENCE ---------------- */
+    /* ---------------- INSERT HANDLER ---------------- */
     function selectInsert(el) {
       document.querySelectorAll(".insert-spot").forEach(s => s.classList.remove("selected"));
       el.classList.add("selected");
@@ -255,7 +248,7 @@
       }, 1000);
     }
 
-    /* ---------------- COLLECT ---------------- */
+    /* ---------------- COLLECT ANSWERS ---------------- */
     function collectAnswers() {
       userAnswers = {};
 
@@ -275,13 +268,13 @@
       });
     }
 
-    /* ---------------- SCORE ---------------- */
+    /* ---------------- SCORE CALCULATION ---------------- */
     function calculateScore() {
       let score = 0;
 
       questionsData.forEach((q, i) => {
         if (q.type === "mcq" && userAnswers[i] === q.answer) score++;
-        if (q.type === "ctest" && userAnswers[i].toLowerCase() === q.answer.toLowerCase()) score++;
+        if (q.type === "ctest" && userAnswers[i]?.toLowerCase() === q.answer.toLowerCase()) score++;
         if (q.type === "insert" && Number(userAnswers[i]) === Number(q.correctSpot)) score++;
       });
 
@@ -317,17 +310,32 @@
       });
     }
 
-    /* ---------------- FINISH ---------------- */
-    function finishReading() {
+    /* ---------------- FINISH + ADAPTIVE UNLOCK ---------------- */
+    function finishModule() {
       const percent = calculateScore();
 
       alert(`Score: ${percent}%`);
+
+      // save completion
+      let completed = JSON.parse(localStorage.getItem("readingCompleted") || "{}");
+      completed[moduleId] = true;
+      localStorage.setItem("readingCompleted", JSON.stringify(completed));
+
+      // adaptive unlocking
+      if (currentLevel === "beginner" && percent >= 80) {
+        localStorage.setItem("reading-level-intermediate", "unlocked");
+      }
+
+      if (currentLevel === "intermediate" && percent >= 85) {
+        localStorage.setItem("reading-level-advanced", "unlocked");
+      }
+
       window.location.href = "reading-modules.html";
     }
 
     loadReading();
   </script>
-
+  <script src="theme.js"></script>
 </body>
 
 </html>

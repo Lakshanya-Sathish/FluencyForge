@@ -20,7 +20,6 @@
       height: 100vh;
     }
 
-    /* LEFT PANE */
     #readingPane {
       flex: 1;
       background: #ffffff;
@@ -29,7 +28,6 @@
       border-right: 2px solid #e2e2e2;
     }
 
-    /* RIGHT PANE */
     #writingPane {
       width: 45%;
       background: #fafafa;
@@ -78,34 +76,30 @@
       font-family: "Poppins", sans-serif;
     }
 
-    .submit-btn {
-      margin-top: 20px;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      border-radius: 8px;
-      background: #4a90e2;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    /* REVIEW SCREEN */
-    #reviewScreen {
-      display: none;
-      padding: 10px;
-    }
-
+    .submit-btn,
     .completed-btn {
       margin-top: 20px;
       padding: 12px;
       width: 100%;
       border: none;
       border-radius: 8px;
-      background: #43c267;
-      color: #fff;
       font-size: 16px;
       cursor: pointer;
+    }
+
+    .submit-btn {
+      background: #4a90e2;
+      color: #fff;
+    }
+
+    .completed-btn {
+      background: #43c267;
+      color: #fff;
+    }
+
+    #reviewScreen {
+      display: none;
+      padding: 10px;
     }
   </style>
 </head>
@@ -133,46 +127,54 @@
 
       <textarea id="userResponse" placeholder="Start writing here..."></textarea>
 
-      <button class="submit-btn" onclick="submitWriting()">Next Task</button>
+      <button class="submit-btn" onclick="handleNext()">Next Task</button>
 
       <div id="reviewScreen">
         <h2>Review Complete</h2>
-        <p>Your answer has been saved.</p>
+        <p>Your answer has been evaluated.</p>
         <button class="completed-btn" onclick="finishWriting()">Finish Module</button>
+      </div>
+
+      <div id="aiFeedbackBox"
+        style="display:none;background:white;border:1px solid #ddd;padding:20px;border-radius:10px;line-height:1.6;margin-top:20px;">
       </div>
 
     </div>
   </div>
 
   <script>
-    /* GET MODULE */
+    /* ============================================================
+       BACKEND BASE URL
+    ============================================================ */
+    const API_BASE = "http://localhost:3001";
+
+    /* ============================================================
+       MODULE + LEVEL
+    ============================================================ */
     const params = new URLSearchParams(window.location.search);
     const moduleId = params.get("id");
-
     if (!moduleId) window.location.href = "writing-modules.html";
 
     const levelCode = moduleId.split("-")[1];
-    const level = levelCode === "B" ? "beginner" :
-      levelCode === "I" ? "intermediate" :
-        "advanced";
+    const level =
+      levelCode === "B" ? "beginner" :
+        levelCode === "I" ? "intermediate" :
+          "advanced";
 
     let currentTaskIndex = 0;
     let moduleData = null;
 
-    /* TIMER CONFIG */
     const INTEGRATED_TIME = 20 * 60;
     const INDEPENDENT_TIME = 30 * 60;
     let seconds = 0;
     let timerInterval;
 
-    /* WORD LIMITS */
-    const INTEGRATED_MIN = 150;
-    const INTEGRATED_MAX = 225;
+    const INTEGRATED_MIN = 150, INTEGRATED_MAX = 225;
+    const INDEPENDENT_MIN = 300, INDEPENDENT_MAX = 400;
 
-    const INDEPENDENT_MIN = 300;
-    const INDEPENDENT_MAX = 400;
-
-    /* LOAD MODULE DATA */
+    /* ============================================================
+       LOAD MODULE
+    ============================================================ */
     async function loadModule() {
       const res = await fetch(`content/writing/${level}.json`);
       const data = await res.json();
@@ -181,11 +183,14 @@
       loadTask();
     }
 
+    /* ============================================================
+       LOAD TASK
+    ============================================================ */
     function loadTask() {
       const task = moduleData.tasks[currentTaskIndex];
 
       document.getElementById("taskTitle").textContent =
-        `Task ${currentTaskIndex + 1} (${task.type.charAt(0).toUpperCase() + task.type.slice(1)})`;
+        `Task ${currentTaskIndex + 1} (${task.type.toUpperCase()})`;
 
       document.getElementById("promptContent").innerHTML = task.task;
 
@@ -199,7 +204,6 @@
         seconds = INDEPENDENT_TIME;
       }
 
-      // Load saved response
       const saved = localStorage.getItem(`write-${moduleId}-task${currentTaskIndex}`);
       document.getElementById("userResponse").value = saved || "";
       updateWordCount();
@@ -207,6 +211,9 @@
       startTimer();
     }
 
+    /* ============================================================
+       TIMER
+    ============================================================ */
     function startTimer() {
       clearInterval(timerInterval);
 
@@ -216,30 +223,28 @@
         seconds--;
         let m = Math.floor(seconds / 60);
         let s = seconds % 60;
+
         document.getElementById("timer").textContent =
           `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
       }, 1000);
     }
 
-    /* WORD COUNT */
+    /* ============================================================
+       WORD COUNT
+    ============================================================ */
     function updateWordCount() {
       const text = userResponse.value.trim();
       const words = text ? text.split(/\s+/).length : 0;
 
-      document.getElementById("wordCount").textContent = "Words: " + words;
+      document.getElementById("wordCount").textContent = `Words: ${words}`;
 
       const task = moduleData.tasks[currentTaskIndex];
-
-      if (task.type === "integrated") {
+      if (task.type === "integrated")
         validateWordLimit(words, INTEGRATED_MIN, INTEGRATED_MAX);
-      } else {
+      else
         validateWordLimit(words, INDEPENDENT_MIN, INDEPENDENT_MAX);
-      }
 
-      localStorage.setItem(
-        `write-${moduleId}-task${currentTaskIndex}`,
-        userResponse.value
-      );
+      localStorage.setItem(`write-${moduleId}-task${currentTaskIndex}`, userResponse.value);
     }
 
     function validateWordLimit(words, min, max) {
@@ -250,7 +255,7 @@
         status.textContent = `Need at least ${min} words`;
       } else if (words > max) {
         status.style.color = "orange";
-        status.textContent = `Above recommended limit (${max} words)`;
+        status.textContent = `Above recommended limit (${max})`;
       } else {
         status.style.color = "green";
         status.textContent = "Within required word range ✔";
@@ -259,29 +264,89 @@
 
     userResponse.addEventListener("input", updateWordCount);
 
-    /* NEXT TASK */
-    function submitWriting() {
+    /* ============================================================
+       NEXT BUTTON
+    ============================================================ */
+    function handleNext() {
       clearInterval(timerInterval);
 
       currentTaskIndex++;
 
       if (currentTaskIndex >= moduleData.tasks.length) {
-        document.getElementById("userResponse").style.display = "none";
-        document.querySelector(".submit-btn").style.display = "none";
-        document.getElementById("reviewScreen").style.display = "block";
+        evaluateFinalWriting();
       } else {
         loadTask();
       }
     }
 
-    /* FINISH MODULE */
+    /* ============================================================
+       AI EVALUATION — FIXED URL !!
+    ============================================================ */
+    async function evaluateFinalWriting() {
+      const text = userResponse.value.trim();
+
+      const res = await fetch(`${API_BASE}/api/evaluate-writing`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          moduleId,
+          text
+        })
+      });
+
+      const data = await res.json();
+
+      showAIFeedback(data.feedback);
+      applyAdaptiveUnlock(data.score);
+
+      document.getElementById("userResponse").style.display = "none";
+      document.querySelector(".submit-btn").style.display = "none";
+      document.getElementById("reviewScreen").style.display = "block";
+    }
+
+    /* ============================================================
+       SHOW FEEDBACK
+    ============================================================ */
+    function showAIFeedback(feed) {
+      const box = document.getElementById("aiFeedbackBox");
+      box.style.display = "block";
+      box.innerHTML = `
+        <h2>AI Evaluation</h2>
+        <p>${feed.replace(/\n/g, "<br>")}</p>
+      `;
+    }
+
+    /* ============================================================
+       ADAPTIVE UNLOCK
+    ============================================================ */
+    function applyAdaptiveUnlock(score) {
+      const n = Number(score);
+
+      if (n >= 85) {
+        localStorage.setItem("writing-level-intermediate", "unlocked");
+        localStorage.setItem("writing-level-advanced", "unlocked");
+      } else if (n >= 70) {
+        localStorage.setItem("writing-level-intermediate", "unlocked");
+      }
+
+      let done = JSON.parse(localStorage.getItem("writingCompleted") || "{}");
+      done[moduleId] = true;
+      localStorage.setItem("writingCompleted", JSON.stringify(done));
+    }
+
+    /* ============================================================
+       FINISH
+    ============================================================ */
     function finishWriting() {
-      localStorage.setItem(moduleId, "completed");
       window.location.href = "writing-modules.html";
     }
 
     loadModule();
   </script>
+
+  <script src="theme.js"></script>
 
 </body>
 

@@ -1,6 +1,6 @@
-/* ===========================================
-   RESET & BASE
-=========================================== */
+/* ======================================================
+   RESET + BASE
+====================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -13,107 +13,325 @@ html {
 }
 
 body {
-  background: #f7f9ff;
-  color: #1a1a1a;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
 
-/* ===========================================
-   COLOR VARIABLES
-=========================================== */
+/* ======================================================
+   THEME VARIABLES
+====================================================== */
+
+/* ------ LIGHT MODE ------ */
 :root {
-  --primary: #6f4afa;
-  --primary-light: #ece8ff;
-  --gradient: linear-gradient(135deg, #7c3aed, #5eead4);
-  --text-dark: #1a1a1a;
-  --text-muted: #555;
-  --white: #fff;
-  --danger: #ef4444;
+  --primary: #7c3aed;
+  --primary-soft: #f4eaff;
+
+  --bg: #f7f9ff;
+  --bg-card: #ffffff;
+  --bg-soft: #f2f4ff;
+
+  --text: #1a1a1a;
+  --text-soft: #555;
+  --border: rgba(0, 0, 0, 0.08);
+
+  --nav-blur: rgba(255, 255, 255, 0.75);
 }
 
-/* ===========================================
+/* ======================================================
+   DARK MODE UPGRADE — NEON + VISIBILITY FIX
+====================================================== */
+
+/* Dark mode backgrounds */
+[data-theme="dark"] {
+  --bg: #0b0c0f;
+  --bg-soft: #111217;
+  --bg-card: #15161c;
+
+  --text: #f5f7ff;
+  --text-soft: #b5b7c8;
+  --border: rgba(120, 120, 255, 0.25);
+  /* subtle neon border */
+}
+
+/* ======================================================
+   STRONG NEON — HIGH VISIBILITY GLOW
+====================================================== */
+
+[data-theme="dark"] {
+  --bg: #050507;
+  --bg-soft: #0a0a0f;
+  --bg-card: #0f0f15;
+
+  --text: #f7f8ff;
+  --text-soft: #b4b6d5;
+
+  --neon-purple: #a855ff;
+  --neon-blue: #00d9ff;
+  --neon-green: #00ffbf;
+}
+
+/* Hero background (darker, deeper) */
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #0a0a0f, #050507);
+}
+
+/* ======================================================
+   FIX: SUPER VISIBLE CARDS IN DARK MODE
+====================================================== */
+
+/* CARD BACKGROUND IS LIGHTER IN DARK MODE */
+[data-theme="dark"] .feature-box {
+  background: #1a1a28;
+  /* much lighter than page */
+  border: 2.5px solid var(--neon-purple);
+
+  box-shadow:
+    0 0 14px rgba(168, 85, 255, 0.9),
+    0 0 22px rgba(168, 85, 255, 0.7),
+    inset 0 0 18px rgba(168, 85, 255, 0.25);
+  /* inner glow for visibility */
+}
+
+/* HOVER: STRONGER GLOW AND BRIGHTER BORDER */
+[data-theme="dark"] .feature-box:hover {
+  border-color: var(--neon-blue);
+  box-shadow:
+    0 0 20px rgba(0, 217, 255, 1),
+    0 0 32px rgba(0, 217, 255, 0.9),
+    inset 0 0 25px rgba(0, 217, 255, 0.35);
+  transform: translateY(-8px);
+}
+
+/* TEXT ALWAYS VISIBLE */
+[data-theme="dark"] .feature-box h3,
+[data-theme="dark"] .feature-box p {
+  color: #ffffff !important;
+}
+
+/* ICON ALWAYS VISIBLE */
+[data-theme="dark"] .feature-logo {
+  filter: brightness(3.5) saturate(2);
+  opacity: 1;
+}
+
+/* FORCE SVG ICONS TO BE PURE WHITE IN DARK MODE */
+[data-theme="dark"] .feature-logo {
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .feature-logo {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+  drop-shadow: 0 0 6px rgba(168, 85, 255, 0.6);
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  border-color: var(--neon-blue);
+  box-shadow:
+    0 0 18px var(--neon-blue),
+    0 0 32px var(--neon-blue),
+    0 0 46px rgba(0, 217, 255, 0.8);
+}
+
+/* ================== AUTH CARD NEON =================== */
+.auth-card {
+  background: var(--bg-card);
+  border: 2px solid var(--neon-purple);
+  box-shadow:
+    0 0 12px var(--neon-purple),
+    0 0 25px rgba(168, 85, 255, 0.7);
+}
+
+/* Input fields neon */
+[data-theme="dark"] .auth-card input {
+  background: #161620;
+  border: 1.5px solid var(--neon-blue);
+  color: var(--text);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.4);
+}
+
+/* ================== SVG ICON FIX =================== */
+[data-theme="dark"] .feature-logo {
+  filter: brightness(3.2) saturate(1.6);
+}
+
+/* ================== THEME TOGGLE GLOW =================== */
+.theme-toggle {
+  border: 2px solid var(--neon-green);
+  background: #0f0f15;
+
+  box-shadow:
+    0 0 12px var(--neon-green),
+    0 0 26px var(--neon-blue),
+    0 0 42px rgba(0, 255, 191, 0.7);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.16);
+  box-shadow:
+    0 0 18px var(--neon-blue),
+    0 0 38px var(--neon-green),
+    0 0 58px rgba(0, 255, 191, 1);
+}
+
+/* ======================================================
    NAVBAR
-=========================================== */
+====================================================== */
+/* ===============================
+   FLOATING GRADIENT NAVBAR
+=============================== */
 .navbar {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 20px;
+  /* floating effect */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 1200px;
+
   padding: 1rem 2rem;
-  background: #ffffffdd;
-  backdrop-filter: blur(12px);
+
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #0ea5e9);
+  background-size: 300% 300%;
+  /* smoother transitions */
+  animation: navGradient 8s ease infinite;
+
+  border-radius: 22px;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    0 0 14px rgba(139, 92, 246, 0.4),
+    0 0 28px rgba(236, 72, 153, 0.25);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  z-index: 1000;
+
+  z-index: 2000;
 }
 
-/* Brand */
+/* gradient animation */
+@keyframes navGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Brand text */
 .navbar .brand {
   font-size: 1.7rem;
   font-weight: 700;
-  color: var(--primary);
-  cursor: pointer;
+  color: white;
 }
 
-/* Nav Links */
+/* NAV LINKS – Horizontal Layout */
 .nav-links {
+  list-style: none;
   display: flex;
-  gap: 1.6rem;
   align-items: center;
-  transition: 0.3s ease;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
+/* Remove bullet points */
+.nav-links li {
+  list-style: none;
+}
+
+/* Link styling */
 .nav-links a {
   text-decoration: none;
+  color: white !important;
   font-weight: 500;
-  color: var(--text-dark);
+  padding: 6px 10px;
+  border-radius: 8px;
   transition: 0.25s ease;
-  padding: 6px 4px;
-  border-radius: 6px;
 }
 
 .nav-links a:hover {
-  color: var(--primary);
-  background: var(--primary-light);
+  background: rgba(255, 255, 255, 0.18);
 }
 
-/* Buttons */
-.nav-buttons {
+/* Auth buttons */
+.login-btn,
+.signup-btn,
+.logout-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  padding: 0.45rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  transition: 0.25s;
+}
+
+.login-btn:hover,
+.signup-btn:hover,
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Theme toggle (neon circle) */
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  margin-left: 10px;
+
+  box-shadow:
+    0 0 10px rgba(236, 72, 153, 0.8),
+    0 0 20px rgba(139, 92, 246, 0.6),
+    0 0 30px rgba(14, 165, 233, 0.45);
+
+  transition: 0.25s ease;
 }
 
-button {
-  font-size: 0.9rem;
+.theme-toggle:hover {
+  transform: scale(1.1);
 }
 
-/* Login button */
+/* Push hero section down so navbar doesn't overlap */
+.hero {
+  padding-top: 160px;
+}
+
+/* Login */
 .login-btn {
+  padding: 0.45rem 1rem;
   background: transparent;
   border: 1.5px solid var(--primary);
-  padding: 0.45rem 1rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
   color: var(--primary);
-  transition: 0.25s;
 }
 
 .login-btn:hover {
-  background: var(--primary-light);
+  background: var(--primary-soft);
 }
 
-/* Signup button */
+/* Signup */
 .signup-btn {
   padding: 0.45rem 1rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
   background: var(--primary);
-  border: none;
   color: white;
-  transition: 0.25s;
+  border: none;
 }
 
 .signup-btn:hover {
@@ -121,51 +339,53 @@ button {
   transform: translateY(-1px);
 }
 
-/* Logout button */
+/* Logout */
 .logout-btn {
-  background: var(--danger);
+  background: #e53935;
   color: white;
   padding: 0.45rem 1rem;
-  border-radius: 8px;
   border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.2s;
 }
 
-.logout-btn:hover {
-  opacity: 0.9;
-}
-
-/* ===========================================
-   MOBILE MENU BUTTON
-=========================================== */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: var(--primary);
-}
-
-/* Mobile Expanded Menu */
-.nav-links.mobile-active {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  padding: 1.8rem 0;
-  flex-direction: column;
+/* ======================================================
+   DARK MODE TOGGLE (MINIMAL)
+====================================================== */
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  box-shadow: 0 0 6px var(--border);
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background: white;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.09);
+  cursor: pointer;
+  transition: 0.25s ease;
 }
 
-/* ===========================================
+.theme-toggle:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 12px var(--border);
+}
+
+#themeIcon {
+  font-size: 20px;
+  pointer-events: none;
+}
+
+/* ======================================================
    HERO SECTION
-=========================================== */
+====================================================== */
+
+/* Light Mode Hero = colourful */
 .hero {
   padding: 8rem 2rem 6rem;
-  background: var(--gradient);
+  background: linear-gradient(135deg, #8054ff, #66e3e9);
+}
+
+/* Dark Mode Hero = muted professional */
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #1a1b22, #111216);
 }
 
 .hero-inner {
@@ -178,32 +398,16 @@ button {
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   font-weight: 700;
   color: white;
 }
 
 .hero-subtitle {
+  color: #e9edff;
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: #e8eaff;
-  max-width: 550px;
-}
-
-/* Main CTA */
-.btn-primary {
-  padding: 0.85rem 1.6rem;
-  background: white;
-  color: var(--primary);
-  font-weight: 600;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.btn-primary:hover {
-  background: var(--primary-light);
+  max-width: 520px;
 }
 
 .hero-image img {
@@ -211,18 +415,22 @@ button {
   animation: floatUp 4s ease-in-out infinite alternate;
 }
 
-/* Float Animation */
 @keyframes floatUp {
-  from { transform: translateY(0); }
-  to { transform: translateY(-18px); }
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-14px);
+  }
 }
 
-/* ===========================================
+/* ======================================================
    FEATURES
-=========================================== */
+====================================================== */
 .features-section {
   padding: 5rem 2rem;
-  background: white;
+  background: var(--bg);
 }
 
 .section-title {
@@ -242,41 +450,45 @@ button {
 }
 
 .feature-box {
-  background: white;
+  background: var(--bg-card);
   padding: 2rem 1.5rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  transition: 0.25s;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: 0.25s ease;
 }
 
 .feature-box:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 34px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.12);
 }
 
 .feature-logo {
-  width: 52px;
+  width: 54px;
   margin-bottom: 1rem;
   opacity: 0.9;
-  filter: grayscale(1);
+  filter: grayscale(1) brightness(0.9);
   transition: 0.25s;
 }
 
+[data-theme="dark"] .feature-logo {
+  filter: brightness(2.2);
+}
+
 .feature-box:hover .feature-logo {
-  filter: none;
+  filter: brightness(1.2);
   transform: scale(1.1);
-  opacity: 1;
 }
 
 .feature-box p {
+  color: var(--text-soft);
   font-size: 0.95rem;
-  color: gray;
 }
 
-/* ===========================================
+/* ======================================================
    AUTH FORMS
-=========================================== */
+====================================================== */
 .auth {
   margin-top: 120px;
   padding: 40px 0;
@@ -287,10 +499,11 @@ button {
 
 .auth-card {
   width: 300px;
-  background: white;
   padding: 25px;
+  background: var(--bg-card);
   border-radius: 14px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.04);
 }
 
 .auth-card h3 {
@@ -303,13 +516,15 @@ button {
   width: 100%;
   padding: 0.75rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   margin-bottom: 1rem;
+  background: var(--bg-soft);
+  color: var(--text);
 }
 
-/* ===========================================
+/* ======================================================
    FOOTER
-=========================================== */
+====================================================== */
 .footer {
   background: var(--primary);
   color: white;
@@ -318,9 +533,9 @@ button {
   margin-top: 4rem;
 }
 
-/* ===========================================
+/* ======================================================
    RESPONSIVE
-=========================================== */
+====================================================== */
 @media (max-width: 950px) {
   .hero-inner {
     flex-direction: column;
@@ -333,19 +548,39 @@ button {
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links,
-  .nav-buttons {
+  .nav-links {
     display: none;
   }
 
-  .nav-links.mobile-active,
-  .nav-buttons.mobile-active {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .nav-buttons {
+    display: none;
   }
+}
+
+/* Neon Pulse Animation */
+.neon-pulse {
+  animation: neonFlash 0.6s ease-out;
+}
+
+@keyframes neonFlash {
+  0% {
+    box-shadow:
+      0 0 10px rgba(255, 0, 180, 0.8),
+      0 0 20px rgba(0, 200, 255, 0.8),
+      0 0 40px rgba(0, 150, 255, 0.5);
+    transform: scale(1.1);
+  }
+
+  100% {
+    box-shadow:
+      0 0 6px rgba(255, 0, 180, 0.3),
+      0 0 12px rgba(0, 200, 255, 0.3);
+    transform: scale(1);
+  }
+}
+
+.disabled-card {
+  pointer-events: none;
+  opacity: 0.6;
+  filter: grayscale(1);
 }

@@ -151,7 +151,7 @@
 
   <script>
     /* ----------------------------------------------
-       MODULE IDS — EXACTLY 15 MODULES
+       MODULE LIST (same as your JSON structure)
     ---------------------------------------------- */
     const MODULES = {
       beginner: ["R-B-1", "R-B-2", "R-B-3", "R-B-4", "R-B-5"],
@@ -161,28 +161,33 @@
 
     const TOTAL_MODULES = 15;
 
-    // completed modules stored as: { "R-B-1": true }
     let completed = JSON.parse(localStorage.getItem("readingCompleted") || "{}");
 
     /* ----------------------------------------------
-       CREATE CARD
+       ADAPTIVE FLAGS (set by reading.html)
     ---------------------------------------------- */
-    function createCard(level, moduleId, index, rowId) {
+    const intermediateUnlocked =
+      localStorage.getItem("reading-level-intermediate") === "unlocked";
+
+    const advancedUnlocked =
+      localStorage.getItem("reading-level-advanced") === "unlocked";
+
+    /* ----------------------------------------------
+       CREATE MODULE CARD
+    ---------------------------------------------- */
+    function createCard(moduleId, index, rowId, isLocked) {
       const card = document.createElement("div");
-
-      const locked = isLocked(level, index);
-
-      card.className = "module-card" + (locked ? " locked" : "");
+      card.className = "module-card" + (isLocked ? " locked" : "");
 
       card.onclick = () => {
-        if (!locked) window.location.href = `reading.html?id=${moduleId}`;
+        if (!isLocked) window.location.href = `reading.html?id=${moduleId}`;
       };
 
       card.innerHTML = `
         <div style="font-size:18px; font-weight:600;">
           Module ${index + 1}
         </div>
-        ${locked
+        ${isLocked
           ? `<div class='lock-icon'>🔒</div>`
           : completed[moduleId]
             ? `<div class='check-icon'>✔</div>`
@@ -194,54 +199,38 @@
     }
 
     /* ----------------------------------------------
-       LOCK LOGIC — SAME AS LISTENING
-    ---------------------------------------------- */
-    function isLocked(level, index) {
-      if (level === "beginner") return false;
-
-      if (level === "intermediate") {
-        if (index === 0) return false;
-        const prev = MODULES.beginner[index - 1];
-        return !completed[prev];
-      }
-
-      if (level === "advanced") {
-        if (index === 0) return false;
-        const prev = MODULES.intermediate[index - 1];
-        return !completed[prev];
-      }
-
-      return true;
-    }
-
-    /* ----------------------------------------------
-       LOAD ALL CARDS
+       RENDER ALL MODULES
     ---------------------------------------------- */
     function loadModules() {
+      // Beginner – always unlocked
       MODULES.beginner.forEach((id, i) =>
-        createCard("beginner", id, i, "beginnerRow")
+        createCard(id, i, "beginnerRow", false)
       );
+
+      // Intermediate – locked unless adaptive flag ON
       MODULES.intermediate.forEach((id, i) =>
-        createCard("intermediate", id, i, "intermediateRow")
+        createCard(id, i, "intermediateRow", !intermediateUnlocked)
       );
+
+      // Advanced – locked unless adaptive flag ON
       MODULES.advanced.forEach((id, i) =>
-        createCard("advanced", id, i, "advancedRow")
+        createCard(id, i, "advancedRow", !advancedUnlocked)
       );
     }
 
     /* ----------------------------------------------
-       UPDATE PROGRESS BAR
+       PROGRESS BAR
     ---------------------------------------------- */
     function updateProgress() {
-      const count = Object.keys(completed).length;
-      const percent = Math.round((count / TOTAL_MODULES) * 100);
+      const done = Object.keys(completed).length;
+      const percent = Math.round((done / TOTAL_MODULES) * 100);
       document.getElementById("progressFill").style.width = percent + "%";
     }
 
     loadModules();
     updateProgress();
   </script>
-
+  <script src="theme.js"></script>
 </body>
 
 </html>

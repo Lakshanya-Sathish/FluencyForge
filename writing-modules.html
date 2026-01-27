@@ -63,12 +63,11 @@
         }
 
         .completed {
-            border-color: #43c267;
+            border-color: #43c267 !important;
         }
 
         .locked {
-            opacity: 0.4;
-            cursor: not-allowed !important;
+            opacity: 0.35;
             pointer-events: none;
         }
 
@@ -81,7 +80,7 @@
         }
 
         .lock-icon {
-            color: #999;
+            color: #777;
             font-size: 26px;
             position: absolute;
             top: 10px;
@@ -128,6 +127,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <h1>Writing Practice</h1>
 
@@ -151,84 +151,91 @@
     </div>
 
     <script>
-        const beginnerModules = 5;
-        const intermediateModules = 5;
-        const advancedModules = 5;
+        /* -------------------------------------------------
+           MODULE LIST
+        ------------------------------------------------- */
+        const MODULES = {
+            beginner: ["W-B-1", "W-B-2", "W-B-3", "W-B-4", "W-B-5"],
+            intermediate: ["W-I-1", "W-I-2", "W-I-3", "W-I-4", "W-I-5"],
+            advanced: ["W-A-1", "W-A-2", "W-A-3", "W-A-4", "W-A-5"]
+        };
 
-        const beginnerRow = document.getElementById("beginnerRow");
-        const intermediateRow = document.getElementById("intermediateRow");
-        const advancedRow = document.getElementById("advancedRow");
+        const TOTAL = 15;
 
-        function isModuleCompleted(id) {
-            return localStorage.getItem(id) === "completed";
+        /* Load completed modules */
+        let completed = JSON.parse(localStorage.getItem("writingCompleted") || "{}");
+
+        /* Unlock logic */
+        let intermediateUnlocked =
+            localStorage.getItem("writing-level-intermediate") === "unlocked";
+
+        let advancedUnlocked =
+            localStorage.getItem("writing-level-advanced") === "unlocked";
+
+        function isLocked(level) {
+            if (level === "beginner") return false;
+            if (level === "intermediate") return !intermediateUnlocked;
+            if (level === "advanced") return !advancedUnlocked;
+            return true;
         }
 
-        function createCard(level, index, locked) {
-            const id = `W-${level}-${index}`;
-            const completed = isModuleCompleted(id);
+        /* -------------------------------------------------
+           CREATE MODULE CARD
+        ------------------------------------------------- */
+        function createCard(level, id, index, rowId) {
+            const locked = isLocked(level);
 
-            const div = document.createElement("div");
-            div.className = "module-card";
-            if (completed) div.classList.add("completed");
-            if (locked) div.classList.add("locked");
+            const card = document.createElement("div");
+            card.className = "module-card";
 
-            div.onclick = () => {
+            if (locked) card.classList.add("locked");
+            if (completed[id]) card.classList.add("completed");
+
+            card.onclick = () => {
                 if (!locked) window.location.href = `writing.html?id=${id}`;
             };
 
-            div.innerHTML = `
-                ${completed ? '<div class="check-icon">✔</div>' : ''}
+            card.innerHTML = `
+                ${completed[id] ? '<div class="check-icon">✔</div>' : ''}
                 ${locked ? '<div class="lock-icon">🔒</div>' : ''}
-                Module ${index}
+                Module ${index + 1}
             `;
 
-            return div;
+            document.getElementById(rowId).appendChild(card);
         }
 
-        /* ----- BEGINNER ----- */
-        for (let i = 1; i <= beginnerModules; i++) {
-            const locked = i > 1 && !isModuleCompleted(`W-B-${i - 1}`);
-            beginnerRow.appendChild(createCard("B", i, locked));
+        /* -------------------------------------------------
+           LOAD ALL MODULES
+        ------------------------------------------------- */
+        function loadModules() {
+            MODULES.beginner.forEach((id, i) =>
+                createCard("beginner", id, i, "beginnerRow")
+            );
+
+            MODULES.intermediate.forEach((id, i) =>
+                createCard("intermediate", id, i, "intermediateRow")
+            );
+
+            MODULES.advanced.forEach((id, i) =>
+                createCard("advanced", id, i, "advancedRow")
+            );
         }
 
-        /* ----- INTERMEDIATE LOCKED UNTIL ALL BEGINNER DONE ----- */
-        const beginnerAllDone = [...Array(beginnerModules)].every((_, i) =>
-            isModuleCompleted(`W-B-${i + 1}`)
-        );
-
-        for (let i = 1; i <= intermediateModules; i++) {
-            intermediateRow.appendChild(createCard("I", i, !beginnerAllDone));
-        }
-
-        /* ----- ADVANCED LOCKED UNTIL ALL INTERMEDIATE DONE ----- */
-        const intermediateAllDone = [...Array(intermediateModules)].every((_, i) =>
-            isModuleCompleted(`W-I-${i + 1}`)
-        );
-
-        for (let i = 1; i <= advancedModules; i++) {
-            advancedRow.appendChild(createCard("A", i, !intermediateAllDone));
-        }
-
-        /* ----- PROGRESS BAR ----- */
+        /* -------------------------------------------------
+           UPDATE PROGRESS BAR
+        ------------------------------------------------- */
         function updateProgress() {
-            let completed = 0;
-            const total = beginnerModules + intermediateModules + advancedModules;
-
-            for (let i = 1; i <= beginnerModules; i++)
-                if (isModuleCompleted(`W-B-${i}`)) completed++;
-
-            for (let i = 1; i <= intermediateModules; i++)
-                if (isModuleCompleted(`W-I-${i}`)) completed++;
-
-            for (let i = 1; i <= advancedModules; i++)
-                if (isModuleCompleted(`W-A-${i}`)) completed++;
-
-            const percent = (completed / total) * 100;
+            const done = Object.keys(completed).length;
+            const percent = Math.round((done / TOTAL) * 100);
             document.getElementById("progressFill").style.width = percent + "%";
         }
 
+        loadModules();
         updateProgress();
     </script>
+
+    <script src="theme.js"></script>
+
 </body>
 
 </html>

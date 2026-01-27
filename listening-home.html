@@ -1,53 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Listening | FluencyForge</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Listening | FluencyForge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-<style>
-body{
-  background:#f6f8ff;
-  font-family:Poppins,sans-serif;
-  margin:0;
-}
-.container{
-  max-width:900px;
-  margin:60px auto;
-  background:#fff;
-  padding:40px;
-  border-radius:16px;
-}
-.card{
-  padding:22px;
-  margin:18px 0;
-  border-radius:14px;
-  border:2px solid #4a90e2;
-  text-align:center;
-  cursor:pointer;
-}
-</style>
+  <!-- THIS WAS MISSING -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Override only component-specific stuff, do NOT replace theme variables */
+
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    /* Cards */
+    .card {
+      padding: 22px;
+      margin: 18px 0;
+      border-radius: 14px;
+      border: 2px solid var(--primary);
+      text-align: center;
+      cursor: pointer;
+      background: var(--card-bg);
+      color: var(--text);
+      font-size: 20px;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 14px rgba(124, 58, 237, 0.4);
+    }
+
+    /* Neon in dark mode */
+    [data-theme="dark"] .card {
+      box-shadow: 0 0 14px rgba(124, 58, 237, 0.5);
+    }
+
+    [data-theme="dark"] .card:hover {
+      box-shadow: 0 0 24px rgba(124, 58, 237, 0.8);
+    }
+  </style>
+
 </head>
 
 <body>
 
-<div class="container">
-  <h1>Listening Practice</h1>
+  <div class="container">
+    <h1>Listening Practice</h1>
 
-  <div class="card" onclick="location.href='listening-rules.html'">
-    📜 Listening Rules
+    <div class="card" onclick="location.href='listening-rules.html'">
+      📜 Listening Rules
+    </div>
+
+    <div class="card" onclick="location.href='listening-material.html'">
+      📘 Learning Material
+    </div>
+
+    <div class="card" onclick="location.href='listening-modules.html'">
+      🎧 Practice Modules
+    </div>
   </div>
 
-  <div class="card" onclick="location.href='listening-material.html'">
-    📘 Learning Material
-  </div>
-
-  <div class="card" onclick="location.href='listening-modules.html'">
-    🎧 Practice Modules
-  </div>
-</div>
+  <script src="theme.js"></script>
 
 </body>
+
 </html>

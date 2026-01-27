@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +27,8 @@
       z-index: 10;
     }
 
-    .home-btn, #logoutBtn {
+    .home-btn,
+    #logoutBtn {
       background: var(--purple);
       color: white;
       border: none;
@@ -37,7 +39,8 @@
       transition: .3s;
     }
 
-    .home-btn:hover, #logoutBtn:hover {
+    .home-btn:hover,
+    #logoutBtn:hover {
       background: var(--dusty-rose);
     }
 
@@ -52,14 +55,14 @@
       padding: 1.5rem;
       margin: 1.2rem 0;
       border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
       transition: 0.3s;
       cursor: pointer;
     }
 
     .task-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
     }
 
     .progress {
@@ -76,70 +79,81 @@
       transition: width 1.2s ease;
     }
 
-    .reading { background: var(--blue); }
-    .listening { background: var(--teal); }
-    .writing { background: var(--purple); }
-    .speaking { background: var(--dusty-rose); }
+    .reading {
+      background: var(--blue);
+    }
+
+    .listening {
+      background: var(--teal);
+    }
+
+    .writing {
+      background: var(--purple);
+    }
+
+    .speaking {
+      background: var(--dusty-rose);
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h2>📘 Practice Tools</h2>
-  <div>
-    <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
-    <button id="logoutBtn">Logout</button>
-  </div>
-</header>
+  <header>
+    <h2>📘 Practice Tools</h2>
+    <div>
+      <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
 
-<section class="practice-wrapper">
-  <h2 id="welcomeMsg" style="text-align:center;">Loading...</h2>
+  <section class="practice-wrapper">
+    <h2 id="welcomeMsg" style="text-align:center;">Loading...</h2>
 
-  <div id="tasksContainer"></div>
-</section>
+    <div id="tasksContainer"></div>
+  </section>
 
-<footer style="text-align:center; padding:1rem; font-size:.9rem;">
-  © 2025 FluencyForge — All rights reserved.
-</footer>
+  <footer style="text-align:center; padding:1rem; font-size:.9rem;">
+    © 2025 FluencyForge — All rights reserved.
+  </footer>
 
-<script type="module">
-import { auth, db } from "./firebase.js";
-import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+  <script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
-const tasksContainer = document.getElementById("tasksContainer");
-const welcomeMsg = document.getElementById("welcomeMsg");
+    const tasksContainer = document.getElementById("tasksContainer");
+    const welcomeMsg = document.getElementById("welcomeMsg");
 
-// Mapping tasks → pages
-const pages = {
-  reading: "reading-home.html",
-  listening: "listening.html",
-  writing: "writing.html",
-  speaking: "speaking.html"
-};
+    // Mapping tasks → pages
+    const pages = {
+      reading: "reading-home.html",
+      listening: "listening.html",
+      writing: "writing.html",
+      speaking: "speaking.html"
+    };
 
-onAuthStateChanged(auth, async (user) => {
-  if (!user) return location.href = "index.html";
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) return location.href = "index.html";
 
-  const snap = await getDoc(doc(db, "users", user.uid));
-  const name = snap.exists() ? snap.data().name : "Learner";
-  welcomeMsg.textContent = `Welcome, ${name} 👋`;
+      const snap = await getDoc(doc(db, "users", user.uid));
+      const name = snap.exists() ? snap.data().name : "Learner";
+      welcomeMsg.textContent = `Welcome back! 👋`;
 
-  // Show modules
-  const modules = [
-    { title: "Reading Practice", type: "reading" },
-    { title: "Listening Practice", type: "listening" },
-    { title: "Writing Practice", type: "writing" },
-    { title: "Speaking Practice", type: "speaking" }
-  ];
+      // Show modules
+      const modules = [
+        { title: "Reading Practice", type: "reading" },
+        { title: "Listening Practice", type: "listening" },
+        { title: "Writing Practice", type: "writing" },
+        { title: "Speaking Practice", type: "speaking" }
+      ];
 
-  modules.forEach(mod => {
-    const card = document.createElement("div");
-    card.className = "task-card";
-    const progress = Math.floor(Math.random() * 100);
+      modules.forEach(mod => {
+        const card = document.createElement("div");
+        card.className = "task-card";
+        const progress = Math.floor(Math.random() * 100);
 
-    card.innerHTML = `
+        card.innerHTML = `
       <h3>${mod.title}</h3>
       <div class="progress">
         <div class="progress-bar ${mod.type}" style="width: ${progress}%"></div>
@@ -147,19 +161,20 @@ onAuthStateChanged(auth, async (user) => {
       <p style="font-size:.9rem; color:#444; margin-top:6px;">Progress: ${progress}%</p>
     `;
 
-    card.addEventListener("click", () => {
-      window.location.href = pages[mod.type];
+        card.addEventListener("click", () => {
+          window.location.href = pages[mod.type];
+        });
+
+        tasksContainer.appendChild(card);
+      });
     });
 
-    tasksContainer.appendChild(card);
-  });
-});
+    // Logout
+    document.getElementById("logoutBtn").onclick = () =>
+      signOut(auth).then(() => location.href = "index.html");
 
-// Logout
-document.getElementById("logoutBtn").onclick = () =>
-  signOut(auth).then(() => location.href = "index.html");
-
-</script>
+  </script>
 
 </body>
+
 </html>
