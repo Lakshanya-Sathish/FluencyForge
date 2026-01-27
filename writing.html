@@ -1,48 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Writing | FluencyForge</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../style.css">
-<style>
-body{background:#f6f8ff;font-family:Poppins}
-.container{max-width:800px;margin:40px auto;background:#fff;padding:30px;border-radius:16px}
-textarea{width:100%;height:160px;padding:12px;border-radius:10px}
-button{margin-top:16px;padding:12px;width:100%;border:none;border-radius:12px;background:#9b59b6;color:#fff}
-</style>
+<head>
+  <meta charset="UTF-8" />
+  <title>Writing Task | FluencyForge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f5f7ff;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .main {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* LEFT PANE */
+    #readingPane {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 2px solid #e2e2e2;
+    }
+
+    /* RIGHT PANE */
+    #writingPane {
+      width: 45%;
+      background: #fafafa;
+      padding: 20px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .stickyHeader {
+      position: sticky;
+      top: 0;
+      background: #fafafa;
+      padding: 12px 0;
+      z-index: 100;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #timer {
+      font-weight: bold;
+      background: #4a90e2;
+      padding: 6px 12px;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    #wordCount {
+      font-weight: 600;
+    }
+
+    #wordLimitStatus {
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 350px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+      font-size: 15px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: #4a90e2;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* REVIEW SCREEN */
+    #reviewScreen {
+      display: none;
+      padding: 10px;
+    }
+
+    .completed-btn {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: #43c267;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
-  <h1>Writing Practice</h1>
-  <p>Do you agree or disagree: <b>Reading books is better than watching movies.</b></p>
+  <div class="main">
+    <div id="readingPane">
+      <h2 id="taskTitle"></h2>
 
-  <textarea id="text"></textarea>
-  <button onclick="submit()">Submit</button>
+      <h3 id="readingHeader" style="display:none;">Reading Passage</h3>
+      <div id="readingContent"></div>
 
-  <div id="aiFeedbackBox" style="display:none;margin-top:20px;background:#f3f6ff;padding:20px;border-radius:12px">
-    <h3>AI Feedback 🤖</h3>
-    <p id="feedbackText"></p>
+      <h3 style="margin-top:20px;">Prompt</h3>
+      <div id="promptContent"></div>
+    </div>
+
+    <div id="writingPane">
+      <div class="stickyHeader">
+        <div id="wordCount">Words: 0</div>
+        <div id="timer">00:00</div>
+      </div>
+
+      <div id="wordLimitStatus"></div>
+
+      <textarea id="userResponse" placeholder="Start writing here..."></textarea>
+
+      <button class="submit-btn" onclick="submitWriting()">Next Task</button>
+
+      <div id="reviewScreen">
+        <h2>Review Complete</h2>
+        <p>Your answer has been saved.</p>
+        <button class="completed-btn" onclick="finishWriting()">Finish Module</button>
+      </div>
+
+    </div>
   </div>
-</div>
 
-<script>
-function submit(){
-  const text = document.getElementById("text").value.trim();
-  if(text.length<20) return alert("Write at least 3–4 sentences");
+  <script>
+    /* GET MODULE */
+    const params = new URLSearchParams(window.location.search);
+    const moduleId = params.get("id");
 
-  triggerAIFeedback(text);
-}
+    if (!moduleId) window.location.href = "writing-modules.html";
 
-async function triggerAIFeedback(text){
-  document.getElementById("aiFeedbackBox").style.display="block";
-  document.getElementById("feedbackText").textContent =
-    "✨ AI evaluation will appear here once backend is integrated.";
-}
-</script>
+    const levelCode = moduleId.split("-")[1];
+    const level = levelCode === "B" ? "beginner" :
+      levelCode === "I" ? "intermediate" :
+        "advanced";
+
+    let currentTaskIndex = 0;
+    let moduleData = null;
+
+    /* TIMER CONFIG */
+    const INTEGRATED_TIME = 20 * 60;
+    const INDEPENDENT_TIME = 30 * 60;
+    let seconds = 0;
+    let timerInterval;
+
+    /* WORD LIMITS */
+    const INTEGRATED_MIN = 150;
+    const INTEGRATED_MAX = 225;
+
+    const INDEPENDENT_MIN = 300;
+    const INDEPENDENT_MAX = 400;
+
+    /* LOAD MODULE DATA */
+    async function loadModule() {
+      const res = await fetch(`content/writing/${level}.json`);
+      const data = await res.json();
+
+      moduleData = data.modules.find(m => m.id === moduleId);
+      loadTask();
+    }
+
+    function loadTask() {
+      const task = moduleData.tasks[currentTaskIndex];
+
+      document.getElementById("taskTitle").textContent =
+        `Task ${currentTaskIndex + 1} (${task.type.charAt(0).toUpperCase() + task.type.slice(1)})`;
+
+      document.getElementById("promptContent").innerHTML = task.task;
+
+      if (task.type === "integrated") {
+        document.getElementById("readingHeader").style.display = "block";
+        document.getElementById("readingContent").innerHTML = task.reading;
+        seconds = INTEGRATED_TIME;
+      } else {
+        document.getElementById("readingHeader").style.display = "none";
+        document.getElementById("readingContent").innerHTML = "";
+        seconds = INDEPENDENT_TIME;
+      }
+
+      // Load saved response
+      const saved = localStorage.getItem(`write-${moduleId}-task${currentTaskIndex}`);
+      document.getElementById("userResponse").value = saved || "";
+      updateWordCount();
+
+      startTimer();
+    }
+
+    function startTimer() {
+      clearInterval(timerInterval);
+
+      timerInterval = setInterval(() => {
+        if (seconds <= 0) return;
+
+        seconds--;
+        let m = Math.floor(seconds / 60);
+        let s = seconds % 60;
+        document.getElementById("timer").textContent =
+          `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+      }, 1000);
+    }
+
+    /* WORD COUNT */
+    function updateWordCount() {
+      const text = userResponse.value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+
+      document.getElementById("wordCount").textContent = "Words: " + words;
+
+      const task = moduleData.tasks[currentTaskIndex];
+
+      if (task.type === "integrated") {
+        validateWordLimit(words, INTEGRATED_MIN, INTEGRATED_MAX);
+      } else {
+        validateWordLimit(words, INDEPENDENT_MIN, INDEPENDENT_MAX);
+      }
+
+      localStorage.setItem(
+        `write-${moduleId}-task${currentTaskIndex}`,
+        userResponse.value
+      );
+    }
+
+    function validateWordLimit(words, min, max) {
+      const status = document.getElementById("wordLimitStatus");
+
+      if (words < min) {
+        status.style.color = "red";
+        status.textContent = `Need at least ${min} words`;
+      } else if (words > max) {
+        status.style.color = "orange";
+        status.textContent = `Above recommended limit (${max} words)`;
+      } else {
+        status.style.color = "green";
+        status.textContent = "Within required word range ✔";
+      }
+    }
+
+    userResponse.addEventListener("input", updateWordCount);
+
+    /* NEXT TASK */
+    function submitWriting() {
+      clearInterval(timerInterval);
+
+      currentTaskIndex++;
+
+      if (currentTaskIndex >= moduleData.tasks.length) {
+        document.getElementById("userResponse").style.display = "none";
+        document.querySelector(".submit-btn").style.display = "none";
+        document.getElementById("reviewScreen").style.display = "block";
+      } else {
+        loadTask();
+      }
+    }
+
+    /* FINISH MODULE */
+    function finishWriting() {
+      localStorage.setItem(moduleId, "completed");
+      window.location.href = "writing-modules.html";
+    }
+
+    loadModule();
+  </script>
 
 </body>
+
 </html>

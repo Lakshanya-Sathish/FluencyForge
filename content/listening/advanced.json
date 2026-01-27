@@ -1,0 +1,663 @@
+{
+  "modules": [
+    {
+      "id": "L-A-1",
+      "audio": "assets/audio/h01.mp3.mpeg",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To discuss the grading criteria for an upcoming exam",
+            "B": "To resolve a concern about plagiarism in a submitted essay",
+            "C": "To explain how to attend the academic integrity workshop",
+            "D": "To request an extension for completing an assignment"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "According to the professor, why was the essay flagged for plagiarism?",
+          "options": {
+            "A": "The student reused her own previous work",
+            "B": "The essay contained uncited paraphrased ideas",
+            "C": "The student copied text directly from multiple articles",
+            "D": "The paper lacked a proper introduction section"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the professor mention that the student received only a warning?",
+          "options": {
+            "A": "To reassure her that she can still improve her grade",
+            "B": "To remind her that academic misconduct is a serious offense",
+            "C": "To indicate that the assignment will be re-evaluated later",
+            "D": "To explain the university’s plagiarism policy"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student's understanding of plagiarism?",
+          "options": {
+            "A": "She believes paraphrasing removes the need for citations",
+            "B": "She intentionally avoided citing sources to save time",
+            "C": "She relied heavily on direct quotations without checking rules",
+            "D": "She has previously been warned about plagiarism"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the professor advise the student to revise?",
+          "options": {
+            "A": "Only the last paragraph of her essay",
+            "B": "The introduction and conclusion sections",
+            "C": "Both the essay content and the reference list",
+            "D": "Only the list of references"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What additional recommendation does the professor give?",
+          "options": {
+            "A": "To meet with the department head",
+            "B": "To attend an academic integrity workshop",
+            "C": "To review the course textbook chapters again",
+            "D": "To submit the assignment through a different portal"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How does the professor structure his explanation of the plagiarism issue?",
+          "options": {
+            "A": "He first criticizes the essay, then offers general writing advice",
+            "B": "He begins with the problem, explains the cause, and then provides solutions",
+            "C": "He compares the student’s essay with previous submissions",
+            "D": "He describes multiple cases of plagiarism before addressing hers"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What is the connection between paraphrasing and citation in the professor’s explanation?",
+          "options": {
+            "A": "Paraphrasing is optional if citation is included",
+            "B": "Citation is only needed when paraphrasing complex sentences",
+            "C": "Both paraphrased and quoted material require proper citation",
+            "D": "Citation replaces the need for paraphrasing"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the professor’s attitude toward academic honesty?",
+          "options": {
+            "A": "He is strict but willing to guide students toward improvement",
+            "B": "He is lenient and rarely enforces academic rules",
+            "C": "He believes plagiarism detection tools are unreliable",
+            "D": "He discourages students from using published sources"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the professor mention the academic integrity workshop?",
+          "options": {
+            "A": "Because the student must attend it to pass the course",
+            "B": "Because it will help the student avoid similar mistakes in the future",
+            "C": "Because workshop attendance is required for all writing classes",
+            "D": "Because it will replace the need for revising the essay"
+          },
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "id": "L-A-2",
+      "audio": "assets/audio/h02.mp3.mpeg",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To schedule lab training sessions",
+            "B": "To discuss requirements for joining a research lab",
+            "C": "To assign the student a research project",
+            "D": "To evaluate the student's programming skills"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student meet the lab coordinator?",
+          "options": {
+            "A": "To request a deadline extension",
+            "B": "To ask for help with statistics coursework",
+            "C": "To inquire about joining the neuroscience lab",
+            "D": "To submit an application"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Which course has the student NOT yet taken?",
+          "options": {
+            "A": "Introductory Neuroscience",
+            "B": "Neuroscience Lab Techniques",
+            "C": "Advanced Statistics",
+            "D": "General Biology"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Why is the statistics course recommended?",
+          "options": {
+            "A": "It covers essential lab safety rules",
+            "B": "It teaches data analysis skills required for the lab",
+            "C": "It is required by the department",
+            "D": "It prepares students for graduate school"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "When is the application deadline?",
+          "options": {
+            "A": "March fifth",
+            "B": "March fifteenth",
+            "C": "March twentieth",
+            "D": "April first"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "multi",
+          "question": "Which skills does the coordinator consider essential for the lab?",
+          "options": {
+            "A": "Programming",
+            "B": "Public speaking",
+            "C": "Data interpretation",
+            "D": "Time management"
+          },
+          "answers": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "type": "multi",
+          "question": "Which of the following statements are TRUE?",
+          "options": {
+            "A": "Students must have prior lab experience.",
+            "B": "Students without all prerequisites can still apply.",
+            "C": "Priority is given to fully qualified applicants.",
+            "D": "Advanced statistics is mandatory for admission."
+          },
+          "answers": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize the following based on the coordinator’s statements.",
+          "categories": [
+            "Required",
+            "Preferred",
+            "Strongly Recommended",
+            "Essential Skills"
+          ],
+          "items": [
+            "Prior lab experience",
+            "Advanced statistics",
+            "Data interpretation",
+            "Programming"
+          ],
+          "answers": {
+            "Required": [],
+            "Preferred": [
+              "Prior lab experience"
+            ],
+            "Strongly Recommended": [
+              "Advanced statistics"
+            ],
+            "Essential Skills": [
+              "Data interpretation",
+              "Programming"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each topic with what the coordinator says about it.",
+          "pairs": {
+            "Advanced statistics": "Strongly recommended",
+            "Prior lab experience": "Preferred but not required",
+            "Data interpretation": "Essential skill",
+            "Application deadline": "March fifteenth"
+          }
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student?",
+          "options": {
+            "A": "They lack confidence in their research abilities.",
+            "B": "They are motivated to join the lab despite not meeting all requirements.",
+            "C": "They have already completed advanced coursework.",
+            "D": "They previously worked in another research lab."
+          },
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "id": "L-A-3",
+      "audio": "assets/audio/h03.mp3.mpeg",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the student's visit?",
+          "options": {
+            "A": "To apply for a scholarship",
+            "B": "To request approval for a course substitution",
+            "C": "To ask for an extension on an assignment",
+            "D": "To report a registration issue"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student mention taking a class during an exchange program?",
+          "options": {
+            "A": "To prove they traveled abroad",
+            "B": "To request financial credit",
+            "C": "To show the course matches the requirement",
+            "D": "To explain a delay in graduation"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What requirement does the student want to substitute?",
+          "options": {
+            "A": "Research project",
+            "B": "Advanced theory course",
+            "C": "Laboratory requirement",
+            "D": "Internship credit"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What documents has the student already submitted?",
+          "options": {
+            "A": "Only the transcript",
+            "B": "Only the syllabus",
+            "C": "A recommendation letter",
+            "D": "Both the syllabus and the transcript"
+          },
+          "answer": "D"
+        },
+        {
+          "type": "mcq",
+          "question": "When will the student receive a decision?",
+          "options": {
+            "A": "Tomorrow morning",
+            "B": "In two business days",
+            "C": "Within ten business days",
+            "D": "At the end of the semester"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "multi",
+          "question": "Which TWO details describe the course the student completed?",
+          "options": {
+            "A": "It had the same theoretical framework",
+            "B": "It included laboratory experiments",
+            "C": "It used different assessments",
+            "D": "It was taken during an exchange program"
+          },
+          "answers": [
+            "A",
+            "D"
+          ]
+        },
+        {
+          "type": "multi",
+          "question": "What can be concluded about the department chair's process?",
+          "options": {
+            "A": "They approve all substitutions immediately",
+            "B": "They need documents to verify course content",
+            "C": "They require time to evaluate submissions",
+            "D": "They only accept online requests"
+          },
+          "answers": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize the following based on the conversation.",
+          "categories": [
+            "Provided by the Student",
+            "Required from the Chair"
+          ],
+          "items": [
+            "Syllabus",
+            "Transcript",
+            "Review documents",
+            "Issue approval decision"
+          ],
+          "answers": {
+            "Provided by the Student": [
+              "Syllabus",
+              "Transcript"
+            ],
+            "Required from the Chair": [
+              "Review documents",
+              "Issue approval decision"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each item with the correct description.",
+          "pairs": {
+            "Submission date": "Last week",
+            "Decision timeline": "Within ten business days",
+            "Requested action": "Course substitution approval",
+            "Previously completed course": "Similar theoretical content"
+          }
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student?",
+          "options": {
+            "A": "They want to avoid taking advanced theory again",
+            "B": "They are unsure whether the course matches the requirement",
+            "C": "They often miss deadlines",
+            "D": "They do not want to submit any documents"
+          },
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "L-A-4",
+      "audio": "assets/audio/h04.mp3.mpeg",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To discuss the student's travel plan",
+            "B": "To learn how to register for a course",
+            "C": "To inquire about applying for conference funding",
+            "D": "To request help writing a recommendation letter"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student ask about required documents?",
+          "options": {
+            "A": "He wants to know if he is eligible for funding",
+            "B": "He needs to prepare a complete application",
+            "C": "He wants to compare requirements with another office",
+            "D": "He is unsure if he wants to apply"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What makes the student eligible to apply?",
+          "options": {
+            "A": "He is a first-year student",
+            "B": "The conference is held on campus",
+            "C": "He will be presenting his research",
+            "D": "He has a faculty recommendation"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Which document is NOT required for the funding application?",
+          "options": {
+            "A": "Letter of acceptance",
+            "B": "Faculty recommendation",
+            "C": "Conference registration receipt",
+            "D": "None of the above"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "When will the student receive the funding decision?",
+          "options": {
+            "A": "Next week",
+            "B": "Within three weeks",
+            "C": "At the end of the semester",
+            "D": "It depends on faculty approval"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "multi",
+          "question": "According to the officer, which TWO statements are true?",
+          "options": {
+            "A": "The funding is guaranteed for all presenters",
+            "B": "Applications are competitive",
+            "C": "Only domestic conferences are supported",
+            "D": "A faculty recommendation is required"
+          },
+          "answers": [
+            "B",
+            "D"
+          ]
+        },
+        {
+          "type": "multi",
+          "question": "Which TWO actions must the student take?",
+          "options": {
+            "A": "Register for the conference",
+            "B": "Submit a letter of acceptance",
+            "C": "Get a faculty recommendation",
+            "D": "Attend an interview"
+          },
+          "answers": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize the items mentioned in the conversation.",
+          "categories": [
+            "Required for Application",
+            "Not Required"
+          ],
+          "items": [
+            "Letter of acceptance",
+            "Faculty recommendation",
+            "Interview",
+            "Travel budget breakdown"
+          ],
+          "answers": {
+            "Required for Application": [
+              "Letter of acceptance",
+              "Faculty recommendation"
+            ],
+            "Not Required": [
+              "Interview",
+              "Travel budget breakdown"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each item with the correct description.",
+          "pairs": {
+            "Eligibility": "Student will present research",
+            "Required documents": "Letter of acceptance and recommendation",
+            "Decision timeline": "Within three weeks",
+            "Funding nature": "Competitive, not guaranteed"
+          }
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student?",
+          "options": {
+            "A": "He is unsure about the conference relevance",
+            "B": "He lacks the documents needed to apply",
+            "C": "He wants to complete the application as soon as possible",
+            "D": "He believes funding is easy to obtain"
+          },
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "id": "L-A-5",
+      "audio": "assets/audio/h05.mp3.mpeg",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To ask about graduate school admission requirements",
+            "B": "To request a recommendation letter from the advisor",
+            "C": "To discuss the student's academic performance",
+            "D": "To plan future coursework for next semester"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the advisor request the student's materials?",
+          "options": {
+            "A": "To evaluate if the student qualifies for graduation",
+            "B": "To write a complete and accurate recommendation letter",
+            "C": "To submit them to the department office",
+            "D": "To compare them with other applicants"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How early does the advisor need the materials?",
+          "options": {
+            "A": "Two weeks before the deadline",
+            "B": "Three weeks before the deadline",
+            "C": "Four weeks before the deadline",
+            "D": "Six weeks before the deadline"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What documents must the student provide?",
+          "options": {
+            "A": "Resume and recommendation letters",
+            "B": "Statement of purpose and research proposal",
+            "C": "Transcript, resume, and statement of purpose",
+            "D": "CV, transcript, and portfolio"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "How will the advisor submit the letter?",
+          "options": {
+            "A": "By email",
+            "B": "By printed copy",
+            "C": "Through the online system",
+            "D": "In person at the graduate office"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "multi",
+          "question": "Which TWO statements are true?",
+          "options": {
+            "A": "The advisor requires the materials well in advance",
+            "B": "The student must mail the letter personally",
+            "C": "The application deadline has already passed",
+            "D": "The advisor agrees to write the letter"
+          },
+          "answers": [
+            "A",
+            "D"
+          ]
+        },
+        {
+          "type": "multi",
+          "question": "Which TWO items must the student prepare?",
+          "options": {
+            "A": "A resume",
+            "B": "A transcript",
+            "C": "A writing sample",
+            "D": "A letter of intent"
+          },
+          "answers": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize the items mentioned in the conversation.",
+          "categories": [
+            "Required Materials",
+            "Not Required"
+          ],
+          "items": [
+            "Resume",
+            "Transcript",
+            "Statement of purpose",
+            "Portfolio",
+            "Writing sample"
+          ],
+          "answers": {
+            "Required Materials": [
+              "Resume",
+              "Transcript",
+              "Statement of purpose"
+            ],
+            "Not Required": [
+              "Portfolio",
+              "Writing sample"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each item to its correct description.",
+          "pairs": {
+            "Deadline requirement": "Four weeks before the deadline",
+            "Submission method": "Online system",
+            "Advisor’s condition": "Needs sufficient preparation time",
+            "Student responsibility": "Provide resume and statement of purpose"
+          }
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student's situation?",
+          "options": {
+            "A": "The student has never applied to graduate school before",
+            "B": "The student is trying to ensure the application is strong",
+            "C": "The student already submitted the application",
+            "D": "The student does not meet the eligibility criteria"
+          },
+          "answer": "B"
+        }
+      ]
+    }
+  ]
+}

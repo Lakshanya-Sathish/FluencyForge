@@ -1,84 +1,175 @@
 {
-    "level": "advanced",
+  "level": "advanced",
   "modules": [
     {
       "id": "S-A-1",
-      "type": "independent",
-      "task": "Is success more important than happiness?",
-      "sampleAnswer": "I disagree that success is more important than happiness. While success provides achievement, happiness gives long-term satisfaction. People who are unhappy may feel stressed even if they are successful. Therefore, happiness should be prioritized.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Is success more important than happiness?",
+          "sampleAnswer": "I disagree that success is more important than happiness. While success provides achievement, happiness gives long-term satisfaction...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Is competition good for students?",
+          "sampleAnswer": "I believe competition is good for students because it motivates them to work harder...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "The university recently announced a proposal to replace traditional written exams with project-based assessments across most departments. The administration argues that exams often encourage memorization rather than deep understanding, and they believe projects allow students to demonstrate creativity, research ability, and practical application of theories. Supporters of the proposal say that projects mirror real-world tasks more accurately and help students develop collaboration and problem-solving skills. However, some students worry that projects may require more time and group coordination, which can lead to unequal workloads. Despite these concerns, the university maintains that project-based evaluation will better reflect student learning in a modern academic environment.",
+          "listening": "A professor supports the idea.",
+          "audio": "assets/audio/S-A-1-integrated.mp3.mpeg",
+          "task": "Summarize the professor’s opinion and reasons.",
+          "sampleAnswer": "The professor supports replacing exams with projects because projects test practical skills...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on factors affecting memory.",
+          "audio": "assets/audio/S-A-1-lecture.mp3.mpeg",
+          "task": "Summarize the factors affecting memory.",
+          "sampleAnswer": "The lecturer explains that memory is affected by attention, repetition, and emotional connection...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-A-2",
-      "type": "independent",
-      "task": "Is competition good for students?",
-      "sampleAnswer": "I believe competition is good for students because it motivates them to work harder. Healthy competition encourages improvement and discipline. However, it should be balanced to avoid excessive stress.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Should governments invest more in education than defense?",
+          "sampleAnswer": "Governments should invest more in education because it shapes future generations...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Do failures help people succeed?",
+          "sampleAnswer": "Yes, failures help people succeed because they teach valuable lessons...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "The university cafeteria recently announced that it will increase food prices starting next semester. According to the administration, the rise is necessary due to higher ingredient costs and new hygiene standards introduced after recent health inspections. While the university claims the price adjustment will improve food quality, many students are frustrated because they already struggle with academic expenses, transportation fees, and housing costs. Student groups argue that raising prices will force some students to skip meals or rely on cheaper, unhealthy options. Several student organizations have demanded more transparency about budgeting and have requested financial support for low-income students.",
+          "listening": "A student disagrees with the change.",
+          "audio": "assets/audio/S-A-2-integrated.mp3.mpeg",
+          "task": "Explain why the student disagrees.",
+          "sampleAnswer": "The student disagrees because many students have limited budgets...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on factors affecting memory.",
+          "audio": "assets/audio/S-A-2-lecture.mp3.mpeg",
+          "task": "Summarize the lecture.",
+          "sampleAnswer": "The lecturer explains how emotional connection improves long-term memory storage...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-A-3",
-      "type": "independent",
-      "task": "Should governments invest more in education than defense?",
-      "sampleAnswer": "I believe governments should invest more in education because it shapes future generations. Education improves skills, innovation, and economic growth. A well-educated population contributes more positively to society in the long run.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Is social media more harmful than useful?",
+          "sampleAnswer": "I believe social media is more harmful when overused because it affects mental health...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Should people prioritize work-life balance?",
+          "sampleAnswer": "Yes, work-life balance prevents burnout and improves long-term productivity...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "Cognitive dissonance is a psychological concept that describes the discomfort people feel when their actions do not match their beliefs or values. This conflict often forces individuals to justify their behavior or change their attitude to reduce mental stress. Researchers argue that cognitive dissonance plays a major role in decision-making, especially when people make choices that contradict their long-term goals. For example, someone who knows the importance of healthy living but continues to eat junk food may experience guilt or frustration. Over time, this discomfort may encourage individuals to align their behavior more closely with their beliefs.",
+          "listening": "The professor explains the concept with an example.",
+          "audio": "assets/audio/S-A-3-integrated.mp3.mpeg",
+          "task": "Explain cognitive dissonance.",
+          "sampleAnswer": "Cognitive dissonance occurs when a person’s actions conflict with their beliefs...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on factors affecting memory.",
+          "audio": "assets/audio/S-A-3-lecture.mp3.mpeg",
+          "task": "Summarize the lecture.",
+          "sampleAnswer": "The lecturer highlights that memory improves through repetition and meaningful associations...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-A-4",
-      "type": "independent",
-      "task": "Do failures help people succeed?",
-      "sampleAnswer": "Yes, failures help people succeed because they teach valuable lessons. People learn from mistakes and improve their strategies. Many successful individuals achieved success only after experiencing multiple failures.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Should governments encourage public transportation?",
+          "sampleAnswer": "Yes, public transportation reduces traffic, pollution, and fuel consumption...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Is creativity more important than intelligence?",
+          "sampleAnswer": "Creativity is equally important because it allows people to solve problems in new ways...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "Climate adaptation refers to the strategies and adjustments that humans, animals, and ecosystems make in response to long-term environmental changes. As global temperatures rise, many species must alter their behavior or physical characteristics to survive. For example, some animals migrate to cooler regions, while others develop traits such as thicker fur or changes in breeding patterns. Scientists warn that the speed of climate change is accelerating, making adaptation more challenging. Conservation groups emphasize that protecting habitats and reducing human impact are essential if species are to successfully adjust to rapidly changing conditions.",
+          "listening": "A lecture on animal adaptation.",
+          "audio": "assets/audio/S-A-4-integrated.mp3.mpeg",
+          "task": "Explain climate adaptation.",
+          "sampleAnswer": "The lecturer explains that animals adapt to climate changes by modifying behavior or physical traits...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on factors affecting memory.",
+          "audio": "assets/audio/S-A-4-lecture.mp3.mpeg",
+          "task": "Summarize the lecture.",
+          "sampleAnswer": "The lecturer discusses how attention and repetition influence memory formation...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-A-5",
-      "type": "independent",
-      "task": "Is social media more harmful than useful?",
-      "sampleAnswer": "I believe social media is more harmful when overused. Excessive use affects mental health, productivity, and attention span. However, when used in moderation, it can be useful for communication, networking, and learning.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-A-6",
-      "type": "integrated",
-      "reading": "The university plans to replace exams with projects.",
-      "listening": "A professor supports the idea.",
-      "task": "Summarize the professor’s opinion and reasons.",
-      "sampleAnswer": "The professor supports replacing exams with projects because projects test practical skills. He explains that projects allow students to apply knowledge in real-life situations. Unlike exams, projects improve deeper understanding instead of memorization.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-A-7",
-      "type": "integrated",
-      "reading": "Cafeteria food prices will increase.",
-      "listening": "A student disagrees with the change.",
-      "task": "Explain why the student disagrees.",
-      "sampleAnswer": "The student disagrees with the price increase because many students have limited budgets. He explains that higher prices may force students to skip meals or choose unhealthy food options.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-A-8",
-      "type": "integrated",
-      "reading": "Cognitive dissonance is discomfort caused by conflicting beliefs.",
-      "listening": "The professor explains the concept with an example.",
-      "task": "Explain cognitive dissonance using the lecture.",
-      "sampleAnswer": "Cognitive dissonance occurs when a person’s actions conflict with their beliefs. The professor gives an example of someone who believes smoking is harmful but continues to smoke, which creates psychological discomfort.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-A-9",
-      "type": "integrated",
-      "reading": "Climate adaptation means adjusting to environmental changes.",
-      "listening": "A lecture on animal adaptation.",
-      "task": "Explain climate adaptation using the lecture.",
-      "sampleAnswer": "The lecturer explains that animals adapt to climate changes by modifying their behavior and physical features. For example, animals in colder regions may develop thicker fur to survive harsh conditions.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-A-10",
-      "type": "lecture",
-      "listening": "A lecture on factors affecting memory.",
-      "task": "Summarize the factors affecting memory.",
-      "sampleAnswer": "The lecturer explains that memory is affected by attention, repetition, and emotional connection. He states that information associated with strong emotions is remembered for a longer time.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Is globalization beneficial for countries?",
+          "sampleAnswer": "Globalization is beneficial because it improves trade, cultural exchange, and technological growth...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Should people prioritize health over wealth?",
+          "sampleAnswer": "Yes, health should be prioritized because without good health, wealth loses value...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "The university is considering replacing traditional exams with long-term research projects in several departments. Supporters argue that projects allow students to explore topics in depth, analyze information critically, and demonstrate a more meaningful understanding of concepts. They believe that project-based evaluation better mirrors real-world professional tasks. Critics, however, worry that projects may increase student workload, require complex group coordination, and lead to unequal participation. Some also argue that exams are still useful for testing quick thinking and core knowledge. The administration is currently reviewing feedback before making a final decision.",
+          "listening": "A professor supports the idea.",
+          "audio": "assets/audio/S-A-5-integrated.mp3.mpeg",
+          "task": "Explain the professor’s view.",
+          "sampleAnswer": "The professor supports the idea because projects encourage deeper understanding...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on factors affecting memory.",
+          "audio": "assets/audio/S-A-5-lecture.mp3.mpeg",
+          "task": "Summarize the lecture.",
+          "sampleAnswer": "The lecturer explains how emotional significance and repetition boost memory retention...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     }
   ]
 }

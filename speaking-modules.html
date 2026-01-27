@@ -1,74 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Speaking Modules</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-body{background:#f6f8ff;font-family:Poppins}
-.container{
-  max-width:900px;
-  margin:40px auto;
-  background:#fff;
-  padding:30px;
-  border-radius:16px;
-}
-.card{
-  padding:20px;
-  margin:15px 0;
-  border-radius:12px;
-  border:2px solid #4a90e2;
-  cursor:pointer;
-  text-align:center;
-}
-.locked{
-  opacity:0.4;
-  pointer-events:none;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Speaking Modules | FluencyForge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7ff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .level-title {
+      text-align: left;
+      margin-top: 35px;
+      margin-bottom: 10px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .module-row {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .module-card {
+      width: 160px;
+      height: 160px;
+      background: white;
+      border-radius: 14px;
+      border: 2px solid #d8d8d8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.2s;
+      position: relative;
+    }
+
+    .module-card:hover {
+      border-color: #4a90e2;
+      transform: translateY(-4px);
+    }
+
+    .locked {
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .lock-icon {
+      font-size: 26px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .check-icon {
+      font-size: 24px;
+      color: #28a745;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    /* Progress Bar */
+    .progress-box {
+      margin-top: 50px;
+      text-align: left;
+    }
+
+    .progress-label {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 14px;
+      background: #ddd;
+      border-radius: 7px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #4a90e2;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      padding: 12px 20px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
 
-<div class="container" id="levelBox">
-  <h1>Choose Level</h1>
+    <h1>Speaking Practice</h1>
 
-  <div class="card" onclick="openModules('easy')">Beginner</div>
-  <div class="card locked" id="intermediate">Intermediate</div>
-  <div class="card locked" id="advanced">Advanced</div>
-</div>
+    <!-- BEGINNER -->
+    <div class="level-title">Beginner Level</div>
+    <div class="module-row" id="beginnerRow"></div>
 
-<div class="container" id="moduleBox" style="display:none">
-  <h1 id="title"></h1>
-  <div id="modules"></div>
-  <button onclick="back()">⬅ Back</button>
-</div>
+    <!-- INTERMEDIATE -->
+    <div class="level-title">Intermediate Level</div>
+    <div class="module-row" id="intermediateRow"></div>
 
-<script>
-const progress = JSON.parse(localStorage.getItem("speakingProgress")) || {easy:true, intermediate:false, advanced:false};
+    <!-- ADVANCED -->
+    <div class="level-title">Advanced Level</div>
+    <div class="module-row" id="advancedRow"></div>
 
-if(progress.intermediate) document.getElementById("intermediate").classList.remove("locked");
-if(progress.advanced) document.getElementById("advanced").classList.remove("locked");
+    <!-- PROGRESS BAR -->
+    <div class="progress-box">
+      <div class="progress-label">Overall Progress</div>
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+    </div>
 
-function openModules(level){
-  document.getElementById("levelBox").style.display="none";
-  document.getElementById("moduleBox").style.display="block";
-  document.getElementById("title").innerText = level.toUpperCase()+" MODULES";
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
 
-  const box = document.getElementById("modules");
-  box.innerHTML="";
-  for(let i=1;i<=10;i++){
-    box.innerHTML += `
-      <div class="card" onclick="location.href='speaking.html?level=${level}&module=${i}'">
-        Module ${i}
-      </div>`;
-  }
-}
-function back(){
-  document.getElementById("moduleBox").style.display="none";
-  document.getElementById("levelBox").style.display="block";
-}
-</script>
+  </div>
+
+  <script>
+    /* ----------------------------------------------
+       MODULE IDS (ALL 15) — Must match JSON naming
+    ---------------------------------------------- */
+    const MODULES = {
+      beginner: ["S-B-1", "S-B-2", "S-B-3", "S-B-4", "S-B-5"],
+      intermediate: ["S-I-1", "S-I-2", "S-I-3", "S-I-4", "S-I-5"],
+      advanced: ["S-A-1", "S-A-2", "S-A-3", "S-A-4", "S-A-5"]
+    };
+
+    const TOTAL = 15;
+
+    let completed = JSON.parse(localStorage.getItem("speakingCompleted") || "{}");
+
+    /* ----------------------------------------------
+       CREATE CARD
+    ---------------------------------------------- */
+    function createCard(level, moduleId, index, rowId) {
+      const locked = isLocked(level, index);
+
+      const card = document.createElement("div");
+      card.className = "module-card" + (locked ? " locked" : "");
+
+      card.onclick = () => {
+        if (!locked) window.location.href = `speaking.html?id=${moduleId}`;
+      };
+
+      card.innerHTML = `
+        <div style="font-size:18px; font-weight:600;">Module ${index + 1}</div>
+        ${locked
+          ? `<div class='lock-icon'>🔒</div>`
+          : completed[moduleId]
+            ? `<div class='check-icon'>✔</div>`
+            : ""
+        }
+      `;
+
+      document.getElementById(rowId).appendChild(card);
+    }
+
+    /* ----------------------------------------------
+       LOCKING LOGIC
+    ---------------------------------------------- */
+    function isLocked(level, index) {
+      if (level === "beginner") return false;
+
+      if (level === "intermediate") {
+        if (index === 0) return false;
+        return !completed[MODULES.beginner[index - 1]];
+      }
+
+      if (level === "advanced") {
+        if (index === 0) return false;
+        return !completed[MODULES.intermediate[index - 1]];
+      }
+
+      return true;
+    }
+
+    /* ----------------------------------------------
+       LOAD ALL MODULE CARDS
+    ---------------------------------------------- */
+    function loadModules() {
+      MODULES.beginner.forEach((id, i) =>
+        createCard("beginner", id, i, "beginnerRow")
+      );
+      MODULES.intermediate.forEach((id, i) =>
+        createCard("intermediate", id, i, "intermediateRow")
+      );
+      MODULES.advanced.forEach((id, i) =>
+        createCard("advanced", id, i, "advancedRow")
+      );
+    }
+
+    /* ----------------------------------------------
+       PROGRESS BAR
+    ---------------------------------------------- */
+    function updateProgress() {
+      const done = Object.keys(completed).length;
+      const percent = Math.round((done / TOTAL) * 100);
+      document.getElementById("progressFill").style.width = percent + "%";
+    }
+
+    loadModules();
+    updateProgress();
+  </script>
 
 </body>
+
 </html>

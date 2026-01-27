@@ -1,314 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Speaking Practice | FluencyForge</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Speaking | FluencyForge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f5f7ff;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-<style>
-body{
-  background:#f6f8ff;
-  font-family:Poppins,sans-serif;
-  margin:0;
-}
-.container{
-  max-width:900px;
-  margin:40px auto;
-  background:#fff;
-  padding:30px;
-  border-radius:16px;
-}
-.card{
-  padding:20px;
-  margin:15px 0;
-  border-radius:12px;
-  border:2px solid #4a90e2;
-  cursor:pointer;
-  text-align:center;
-}
-.locked{
-  opacity:0.4;
-  pointer-events:none;
-}
-button{
-  padding:12px 18px;
-  border:none;
-  border-radius:10px;
-  background:#4a90e2;
-  color:#fff;
-  cursor:pointer;
-  font-size:15px;
-  margin:6px 6px 6px 0;
-}
-audio{
-  width:100%;
-  margin-top:15px;
-}
-.timer{
-  font-weight:600;
-  margin:10px 0;
-}
-</style>
+    .main {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* LEFT PANE - Task Details */
+    #leftPane {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 2px solid #e2e2e2;
+    }
+
+    #taskHeader {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .readingBlock {
+      background: #f0f4ff;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border-left: 4px solid #4a90e2;
+    }
+
+    .listeningBlock {
+      background: #fff4d9;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border-left: 4px solid #f5a623;
+    }
+
+    /* RIGHT PANE - Answer & Controls */
+    #rightPane {
+      width: 40%;
+      background: #fafafa;
+      padding: 20px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .stickyHeader {
+      position: sticky;
+      top: 0;
+      background: #fafafa;
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #timer {
+      font-weight: bold;
+      background: #4a90e2;
+      padding: 6px 12px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    #taskProgress {
+      font-weight: 600;
+    }
+
+    #micBtn {
+      margin-top: 20px;
+      padding: 12px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: #4a90e2;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #submitBtn {
+      margin-top: 15px;
+      padding: 12px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      background: #28a745;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #reviewScreen {
+      display: none;
+      padding: 15px;
+    }
+
+    .review-item {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- LEVEL SELECTION -->
-<div class="container" id="levelBox">
-  <h1>Speaking Practice</h1>
+  <div class="main">
 
-  <div class="card" onclick="openModules('beginner')">
-    <h2>Beginner</h2>
+    <!-- LEFT: Task Info -->
+    <div id="leftPane">
+      <h2 id="taskHeader">Loading...</h2>
+
+      <div id="readingContainer"></div>
+      <div id="listeningContainer"></div>
+
+      <div id="taskPrompt" style="margin-top:20px; font-size:18px;"></div>
+    </div>
+
+    <!-- RIGHT: Timer + Recording + Submit -->
+    <div id="rightPane">
+
+      <div class="stickyHeader">
+        <div id="taskProgress">Task 1 of 4</div>
+        <div id="timer">01:00</div>
+      </div>
+
+      <button id="micBtn">🎤 Start Recording</button>
+      <button id="submitBtn" onclick="submitTask()">Submit Task</button>
+
+      <div id="reviewScreen">
+        <h2>Review</h2>
+        <div id="reviewList"></div>
+
+        <button onclick="finishModule()" style="
+        margin-top:20px; padding:12px; width:100%;
+        background:#4a90e2; color:#fff; border:none; border-radius:8px;">
+          Finish Module
+        </button>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="card locked" id="intermediateCard" onclick="openModules('intermediate')">
-    <h2>Intermediate</h2>
-  </div>
+  <script>
+    let params = new URLSearchParams(window.location.search);
+    let moduleId = params.get("id");
+    let level = moduleId.split("-")[1] === "B" ? "beginner" :
+      moduleId.split("-")[1] === "I" ? "intermediate" :
+        moduleId.split("-")[1] === "A" ? "advanced" : null;
 
-  <div class="card locked" id="advancedCard" onclick="openModules('advanced')">
-    <h2>Advanced</h2>
-  </div>
-</div>
+    let tasks = [];
+    let current = 0;
+    let recording = false;
+    let recorder;
+    let audioChunks = [];
+    let timerInterval;
 
-<!-- MODULE LIST -->
-<div class="container" id="moduleBox" style="display:none">
-  <h2 id="moduleTitle"></h2>
-  <div id="modules"></div>
-  <button onclick="backToLevels()">⬅ Back</button>
-</div>
+    /* ---------------- LOAD JSON ---------------- */
+    async function loadSpeaking() {
+      const res = await fetch(`content/speaking/${level}.json`);
+      const data = await res.json();
 
-<!-- TASK VIEW -->
-<div class="container" id="taskBox" style="display:none">
-  <h2 id="taskTitle"></h2>
-  <p id="taskPrompt"></p>
+      let mod = data.modules.find(m => m.id === moduleId);
+      tasks = mod.tasks;
 
-  <div class="timer">Time: <span id="time">0</span>s</div>
+      loadTask();
+    }
 
-  <button onclick="startRecording(); startSpeechToText()">🎤 Start</button>
-<button onclick="stopRecording(); stopSpeechToText()">⏹ Stop</button>
+    function loadTask() {
+      const t = tasks[current];
 
-  <audio id="playback" controls></audio>
+      document.getElementById("taskHeader").innerText = t.type.toUpperCase() + " Task";
+      document.getElementById("taskProgress").innerText = `Task ${current + 1} of ${tasks.length}`;
 
-  <br><br>
-  <button onclick="markCompleted()">✅ Mark Completed</button>
-  <button onclick="backToModules()">⬅ Back</button>
-</div>
+      /* READING */
+      if (t.reading) {
+        document.getElementById("readingContainer").innerHTML =
+          `<div class="readingBlock"><strong>Reading:</strong><br>${t.reading}</div>`;
+      } else {
+        document.getElementById("readingContainer").innerHTML = "";
+      }
 
-<script>
-let currentLevel = null;
-let currentModule = null;
-let mediaRecorder = null;
-let audioChunks = [];
-let timer = 0;
-let timerInterval = null;
+      /* LISTENING */
+      if (t.audio) {
+        document.getElementById("listeningContainer").innerHTML =
+          `<div class="listeningBlock">
+         <strong>Listening:</strong><br>
+         <audio controls src="${t.audio}"></audio>
+       </div>`;
+      } else {
+        document.getElementById("listeningContainer").innerHTML = "";
+      }
 
-/* PROGRESS */
-let progress = JSON.parse(localStorage.getItem("speakingProgress")) || {
-  beginner:false,
-  intermediate:false,
-  advanced:false
-};
+      /* PROMPT */
+      document.getElementById("taskPrompt").innerHTML = `<strong>Task:</strong> ${t.task}`;
 
-if(progress.beginner){
-  document.getElementById("intermediateCard").classList.remove("locked");
-}
-if(progress.intermediate){
-  document.getElementById("advancedCard").classList.remove("locked");
-}
+      startTimer(t.expectedDurationSeconds);
+    }
 
-/* OPEN MODULES */
-function openModules(level){
-  currentLevel = level;
-  document.getElementById("levelBox").style.display = "none";
-  document.getElementById("moduleBox").style.display = "block";
-  document.getElementById("taskBox").style.display = "none";
+    /* ---------------- TIMER ---------------- */
+    function startTimer(seconds) {
+      clearInterval(timerInterval);
+      let s = seconds;
 
-  document.getElementById("moduleTitle").textContent =
-    level.charAt(0).toUpperCase() + level.slice(1) + " Modules";
+      timerInterval = setInterval(() => {
+        if (s <= 0) {
+          clearInterval(timerInterval);
+          return;
+        }
+        s--;
+        let m = Math.floor(s / 60);
+        let sec = s % 60;
+        document.getElementById("timer").innerText =
+          `${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
+      }, 1000);
+    }
 
-  const box = document.getElementById("modules");
-  box.innerHTML = "";
+    /* ---------------- RECORDING ---------------- */
+    document.getElementById("micBtn").onclick = async function () {
+      if (!recording) {
+        startRecording();
+      } else {
+        stopRecording();
+      }
+    };
 
-  for(let i=1;i<=10;i++){
-    box.innerHTML += `
-      <div class="card" onclick="openTask(${i})">
-        Task ${i}
+    async function startRecording() {
+      recording = true;
+      audioChunks = [];
+
+      let stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      recorder = new MediaRecorder(stream);
+
+      recorder.start();
+      recorder.ondataavailable = e => audioChunks.push(e.data);
+
+      document.getElementById("micBtn").innerText = "⏹ Stop Recording";
+    }
+
+    function stopRecording() {
+      recording = false;
+      recorder.stop();
+      recorder.onstop = () => {
+        let blob = new Blob(audioChunks, { type: "audio/mp3" });
+
+        // User audio stored in memory for review (not saved permanently)
+        tasks[current].userAudio = blob;
+
+        document.getElementById("micBtn").innerText = "🎤 Start Recording";
+      };
+    }
+
+    /* ---------------- SUBMIT TASK ---------------- */
+    function submitTask() {
+      if (current < tasks.length - 1) {
+        current++;
+        loadTask();
+      } else {
+        showReview();
+      }
+    }
+
+    /* ---------------- REVIEW SCREEN ---------------- */
+    function showReview() {
+      document.getElementById("reviewScreen").style.display = "block";
+      document.getElementById("micBtn").style.display = "none";
+      document.getElementById("submitBtn").style.display = "none";
+      document.getElementById("taskProgress").style.display = "none";
+
+      let list = document.getElementById("reviewList");
+      list.innerHTML = "";
+
+      tasks.forEach((t, i) => {
+        list.innerHTML += `
+      <div class="review-item">
+        <strong>Task ${i + 1}</strong><br>
+        ${t.userAudio ? "🎤 Response recorded" : "⚠ No audio recorded"}
       </div>
     `;
-  }
-}
-
-/* OPEN TASK */
-async function openTask(num){
-  currentModule = num;
-  document.getElementById("moduleBox").style.display = "none";
-  document.getElementById("taskBox").style.display = "block";
-
-  try{
-    const res = await fetch(`content/speaking/${currentLevel}.json`);
-    const data = await res.json();
-
-    const task = data.modules[num + 1];
-    if(!task){
-      alert("Task not found");
-      return;
+      });
     }
 
-    document.getElementById("taskTitle").textContent =
-      `Speaking Task ${num}`;
-
-    document.getElementById("taskPrompt").textContent = task.task;
-
-    document.getElementById("time").textContent = 0;
-    document.getElementById("playback").src = "";
-
-    window.maxTime = task.expectedDurationSeconds;
-
-  }catch(err){
-    console.error(err);
-    alert("Failed to load speaking content");
-  }
-}
-
-/* START RECORDING */
-async function startRecording(){
-  audioChunks = [];
-  timer = 0;
-  document.getElementById("time").textContent = timer;
-  document.getElementById("playback").src = "";
-
-  const stream = await navigator.mediaDevices.getUserMedia({ audio:true });
-  mediaRecorder = new MediaRecorder(stream);
-
-  mediaRecorder.ondataavailable = e => {
-    if(e.data.size > 0) audioChunks.push(e.data);
-  };
-
-  mediaRecorder.start();
-
-  timerInterval = setInterval(()=>{
-    timer++;
-    document.getElementById("time").textContent = timer;
-
-    if(window.maxTime && timer >= window.maxTime){
-      stopRecording();
+    /* ---------------- FINISH MODULE ---------------- */
+    function finishModule() {
+      alert("Module completed!");
+      window.location.href = "speaking-modules.html";
     }
-  },1000);
-}
 
-/* STOP RECORDING */
-function stopRecording(){
-  if(!mediaRecorder) return;
-
-  mediaRecorder.stop();
-  clearInterval(timerInterval);
-
-  mediaRecorder.onstop = ()=>{
-    const blob = new Blob(audioChunks,{type:"audio/webm"});
-    const url = URL.createObjectURL(blob);
-    document.getElementById("playback").src = url;
-  };
-}
-
-/* MARK COMPLETED */
-async function markCompleted() {
-  const spokenText =
-    transcriptText || `User spoke for ${timer} seconds`;
-
-  const aiFeedback = await sendToAI(spokenText);
-
-  alert("AI Feedback:\n\n" + aiFeedback);
-
-  if (currentLevel === "easy") {
-    progress.easy = true;
-    document.getElementById("intermediateCard").classList.remove("locked");
-  }
-
-  if (currentLevel === "intermediate") {
-    progress.intermediate = true;
-    document.getElementById("advancedCard").classList.remove("locked");
-  }
-
-  localStorage.setItem("speakingProgress", JSON.stringify(progress));
-}
-/* NAVIGATION */
-function backToModules(){
-  document.getElementById("taskBox").style.display = "none";
-  document.getElementById("moduleBox").style.display = "block";
-}
-
-function backToLevels(){
-  document.getElementById("moduleBox").style.display = "none";
-  document.getElementById("levelBox").style.display = "block";
-}
-function initProgress() {
-  if (!localStorage.getItem("progress")) {
-    localStorage.setItem("progress", JSON.stringify({
-      speaking: {
-        beginner: false,
-        intermediate: false,
-        advanced: false
-      },
-      listening: {
-        beginner: null,
-        intermediate: null,
-        advanced: null
-      },
-      reading: {
-        beginner: null,
-        intermediate: null,
-        advanced: null
-      }
-    }));
-  }
-}
-initProgress();
-let transcriptText = "";
-
-function startSpeechToText(){
-  const SpeechRecognition =
-    window.SpeechRecognition || window.webkitSpeechRecognition;
-
-  if(!SpeechRecognition){
-    alert("Speech recognition not supported");
-    return;
-  }
-
-  const recognition = new SpeechRecognition();
-  recognition.lang = "en-US";
-  recognition.continuous = true;
-  recognition.interimResults = false;
-
-  recognition.onresult = (event)=>{
-    transcriptText = "";
-    for(let i=0; i<event.results.length; i++){
-      transcriptText += event.results[i][0].transcript + " ";
-    }
-  };
-
-  recognition.start();
-  window.recognition = recognition;
-}
-
-function stopSpeechToText(){
-  if(window.recognition){
-    window.recognition.stop();
-  }
-}
-async function sendToAI(text) {
-  const res = await fetch("http://localhost:3000/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message: text })
-  });
-
-  const data = await res.json();
-  return data.reply;
-}
-</script>
+    loadSpeaking();
+  </script>
 
 </body>
-</html>
 
+</html>

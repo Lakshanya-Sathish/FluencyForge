@@ -1,1177 +1,544 @@
 {
-  "level": "beginner",
-  "passages": [
+  "modules": [
     {
       "id": "R-B-1",
-      "title": "The Importance of Urban Trees",
-      "text": "In busy cities around the world, people often walk past trees without noticing them. These trees stand along roads, in parks, and near buildings, silently performing important roles that support the health and comfort of human life. Although they appear ordinary, urban trees live complex lives and face unique challenges. Understanding these hidden struggles can help us appreciate how essential they are to modern city environments.\n\nUrban trees differ greatly from forest trees. In natural forests, trees grow in large groups where soil, water, and nutrients are shared. Roots extend freely, and the ecosystem supports itself through organic processes like decomposing leaves and fallen branches. Urban trees, however, grow in limited spaces. Their roots are surrounded by concrete, metal pipes, and compacted soil. Because the soil is often packed tightly from foot traffic and construction activities, tree roots struggle to absorb water and nutrients. This stress makes urban trees more vulnerable to diseases and weak growth.\n\nDespite these challenges, urban trees provide remarkable benefits. One of the most important is controlling air quality. Trees absorb carbon dioxide and release oxygen through photosynthesis, a process essential for maintaining clean air. Additionally, they capture tiny particles from vehicles and industries. These particles often remain in the air in large cities, contributing to respiratory problems. By capturing them on their leaves, urban trees help reduce pollution levels and make the air safer to breathe.\n\nAnother significant contribution comes from their ability to reduce what scientists call the urban heat island effect. Cities are usually hotter than rural areas due to concrete, asphalt, and metal surfaces absorbing and storing heat. During the day, these surfaces become extremely hot, making the environment uncomfortable. Trees help cool the air by providing shade and releasing water vapor through a process called transpiration. This natural cooling effect lowers temperatures by several degrees, making outdoor spaces more pleasant for people.\n\nTrees also play an important role in improving the mental well-being of city residents. Studies around the world show that green spaces reduce stress, improve mood, and increase productivity. Even small interactions, like walking near a row of trees while going to work, can positively affect mental health. Green spaces encourage outdoor activities such as walking, jogging, and cycling, leading to healthier lifestyles. Many cities now aim to include more trees in urban planning for this reason.\n\nHowever, planting and maintaining urban trees can be challenging for city planners. One major issue is the choice of tree species. Not all trees can survive city conditions. Some species require more space for their roots, while others cannot tolerate pollution or high temperatures. Planting the wrong species increases maintenance costs and shortens the tree’s lifespan. Ideally, cities must select hardy species that can survive with limited water, high pollution, and restricted root space.\n\nWater management is another important factor. Trees need consistent water to grow, but cities often face water shortages. In many regions, rainfall is unpredictable, and manual watering requires time and money. To solve this, some cities have installed underground irrigation systems that deliver water directly to roots. Others use recycled water from homes and industries. These sustainable practices help reduce water waste while supporting tree growth.\n\nUrban trees also face threats from pests and diseases. These problems spread faster in cities because trees are often planted in long rows of the same species. When many identical trees grow close together, a single disease can kill them all. This happened in several countries when Dutch elm disease wiped out millions of elm trees. To avoid such disasters, cities now plant a mix of species. Biodiversity increases resilience and helps trees survive environmental challenges.\n\nTree maintenance also requires community involvement. When residents understand the benefits of trees, they are more likely to take care of them. Some cities run volunteer programs where citizens water young trees, remove weeds, and report signs of disease. These programs strengthen community relationships and educate people about environmental care. School programs introduce children to tree planting and teach them about the importance of urban ecosystems.\n\nTechnology is now transforming how cities care for trees. Sensors installed in the soil can measure moisture levels and nutrient content. Drones can monitor the health of trees from above, detecting early signs of disease. Computer models can predict which areas of a city get too hot or too polluted, helping planners decide where to plant more trees. These innovations improve efficiency and reduce maintenance costs.\n\nAs climate change becomes a bigger challenge, urban trees will play an even more critical role. Rising temperatures, unpredictable weather, and stronger storms all affect city environments. Trees help reduce flooding by absorbing rainwater. Their roots stabilize soil and prevent erosion. Their shade cools homes, reducing the need for air-conditioning. All these benefits make urban trees essential elements of climate-resilient cities.\n\nIn the future, many experts believe that cities will invest heavily in green infrastructure. This includes green roofs, vertical gardens, and tree-lined streets designed to make cities cleaner and more livable. Urban forests will become a central part of city planning rather than an afterthought. With proper care, urban trees can thrive and continue supporting human life in ways most people never notice.\n\nUrban trees might seem silent and still, but their hidden life is full of activity, struggle, and contribution. They clean the air, cool the streets, and improve the well-being of millions of people. As cities continue to grow, understanding and protecting these quiet companions will be essential for building healthier, more sustainable communities.",
-
+      "passage": "For centuries, humans have been fascinated by migration—the seasonal movement of animals from one place to another. While many people are familiar with bird migrations, fewer realize that insects also engage in long-distance travel. One of the most remarkable examples is the migration of the monarch butterfly. These butterflies travel thousands of kilometers each year, moving between Canada, the United States, and Mexico.■Scientists have studied this journey for decades, but many mysteries remain.\n\nMonarchs face numerous challenges during migration. [HIGHLIGHT]They must navigate extreme temperatures, predators, and the loss of habitat caused by human activity.[END] Despite these difficulties, monarchs continue their annual journey with extraordinary accuracy. Some researchers believe the butterflies navigate using the position of the sun, while others suggest that they rely on Earth’s magnetic field. Regardless of the exact mechanism, their ability to stay on course is considered one of nature’s most impressive achievements.\n\nIn recent years, climate change has added new dangers to monarch migration. Rising temperatures can disrupt the timing of their journey. Additionally, unusual weather patterns may destroy the milkweed plants that monarch larvae depend on for survival.■Without these plants, young butterflies cannot grow, leading to a decline in the population.\n\nConservationists have begun planting milkweed gardens and creating protected habitats to support the species. These efforts have shown promising results in some regions.■However, experts warn that long-term success will require international cooperation, since monarchs migrate across multiple countries. Their journey reminds us that protecting wildlife often involves more than local action—it requires understanding how ecosystems across the world are connected.",
       "questions": [
         {
-          "id": "R-B-1-Q1",
-          "question": "What is one major difference between urban trees and forest trees?",
+          "type": "mcq",
+          "question": "What is the main topic of the passage?",
           "options": {
-            "a": "Urban trees grow faster",
-            "b": "Urban trees have less space for their roots",
-            "c": "Forest trees need more sunlight",
-            "d": "Urban trees require less water"
+            "A": "The life cycle of insects",
+            "B": "The migration challenges faced by monarch butterflies",
+            "C": "The impact of predators on butterflies",
+            "D": "How plants affect animal behavior"
           },
-          "answer": "b"
+          "answer": "B"
         },
         {
-          "id": "R-B-1-Q2",
-          "question": "What is the main cause of the urban heat island effect?",
+          "type": "mcq",
+          "question": "According to the passage, what makes monarch migration remarkable?",
           "options": {
-            "a": "Heavy rainfall",
-            "b": "Large numbers of trees",
-            "c": "Heat absorption by concrete and metal",
-            "d": "Too many green spaces"
+            "A": "They only travel short distances",
+            "B": "They travel with the help of humans",
+            "C": "They navigate accurately over long distances",
+            "D": "They never face danger"
           },
-          "answer": "c"
+          "answer": "C"
         },
         {
-          "id": "R-B-1-Q3",
-          "question": "Trees improve air quality mainly by:",
+          "type": "mcq",
+          "question": "What is one theory about how monarchs navigate?",
           "options": {
-            "a": "Eating insects",
-            "b": "Releasing carbon dioxide",
-            "c": "Absorbing dust and pollutants",
-            "d": "Growing taller"
+            "A": "By tracking ocean currents",
+            "B": "By using the position of the sun",
+            "C": "By following human settlements",
+            "D": "By responding to loud sounds"
           },
-          "answer": "c"
+          "answer": "B"
         },
         {
-          "id": "R-B-1-Q4",
-          "question": "What psychological benefit do urban trees provide?",
+          "type": "mcq",
+          "question": "What is mentioned as a consequence of climate change?",
           "options": {
-            "a": "Increased hunger",
-            "b": "Reduced stress",
-            "c": "Faster aging",
-            "d": "Lower intelligence"
+            "A": "Butterflies migrate faster",
+            "B": "Milkweed plants may be destroyed",
+            "C": "Predators become less dangerous",
+            "D": "Butterflies stop traveling to Mexico"
           },
-          "answer": "b"
+          "answer": "B"
         },
         {
-          "id": "R-B-1-Q5",
-          "question": "Why is choosing the right species important for city planners?",
+          "type": "mcq",
+          "question": "What do monarch larvae depend on for survival?",
           "options": {
-            "a": "Some trees grow too colorful",
-            "b": "Not all trees survive city conditions",
-            "c": "Some trees attract too many birds",
-            "d": "All trees grow the same everywhere"
+            "A": "Warm sunlight",
+            "B": "Milkweed plants",
+            "C": "Magnetic fields",
+            "D": "Tree bark"
           },
-          "answer": "b"
+          "answer": "B"
         },
         {
-          "id": "R-B-1-Q6",
-          "question": "What is one method cities use to manage water for trees?",
+          "type": "mcq",
+          "question": "What does the highlighted sentence mainly emphasize?",
           "options": {
-            "a": "Coloring the leaves",
-            "b": "Underground irrigation systems",
-            "c": "Cutting roots regularly",
-            "d": "Planting trees only in winter"
+            "A": "Monarch butterflies migrate only in winter",
+            "B": "Monarchs face multiple threats during migration",
+            "C": "Predators are the biggest danger to monarchs",
+            "D": "Human activity helps monarch survival"
           },
-          "answer": "b"
+          "answer": "B"
         },
         {
-          "id": "R-B-1-Q7",
-          "question": "Why are identical tree rows more vulnerable?",
+          "type": "mcq",
+          "question": "What solution have conservationists implemented?",
           "options": {
-            "a": "They grow too slowly",
-            "b": "Birds avoid them",
-            "c": "Diseases spread quickly among similar species",
-            "d": "They cannot photosynthesize"
+            "A": "Building new butterfly museums",
+            "B": "Planting milkweed and creating habitats",
+            "C": "Stopping human travel near forests",
+            "D": "Using satellites to track butterflies"
           },
-          "answer": "c"
+          "answer": "B"
         },
         {
-          "id": "R-B-1-Q8",
-          "question": "How does technology help in tree maintenance?",
+          "type": "mcq",
+          "question": "What does the passage suggest about international cooperation?",
           "options": {
-            "a": "By replacing natural trees",
-            "b": "By increasing pollution",
-            "c": "Through sensors, drones, and prediction tools",
-            "d": "By removing all water needs"
+            "A": "It is unnecessary for migration problems",
+            "B": "It may harm butterfly populations",
+            "C": "It is required for long-term conservation success",
+            "D": "Only scientists should be involved"
           },
-          "answer": "c"
+          "answer": "C"
         },
         {
-          "id": "R-B-1-Q9",
-          "question": "What role do trees play in climate resilience?",
-          "options": {
-            "a": "Increasing flood risk",
-            "b": "Absorbing rainwater and reducing heat",
-            "c": "Melting ice",
-            "d": "Creating storms"
-          },
-          "answer": "b"
+          "type": "ctest",
+          "question": "Complete the sentence using the correct word form.",
+          "textBefore": "Monarch butterflies must ",
+          "gapLength": 6,
+          "answer": "survive",
+          "textAfter": " many dangers during migration."
         },
         {
-          "id": "R-B-1-Q10",
-          "question": "What is the main message of the passage?",
-          "options": {
-            "a": "Urban trees are unimportant",
-            "b": "Urban trees weaken cities",
-            "c": "Urban trees are essential and must be protected",
-            "d": "Urban trees create noise pollution"
-          },
-          "answer": "c"
+          "type": "insert",
+          "question": "Choose the best place to insert the following sentence.",
+          "sentence": "This discovery could help scientists protect future butterfly populations.",
+          "correctSpot": 1
         }
       ]
     },
-  {
-  "id": "R-B-2",
-  "title": "The Evolution of Public Transportation",
-  "text": "Public transportation has been an essential part of human civilization for centuries, allowing people to travel efficiently, connect with others, and access economic opportunities. While modern buses, trains, and subways may seem ordinary today, the evolution of public transportation is a long story of innovation, adaptation, and problem-solving. Understanding this journey helps us appreciate how transportation systems shape the way people live and how cities develop.\n\nHuman mobility began with simple forms of shared transportation, long before engines or electricity existed. In ancient civilizations, communities relied on animal-drawn carts, horse-drawn stagecoaches, and small boats to move people from one place to another. These early systems were slow and limited, but they marked the beginning of organized public travel. In many places, people paid small fees to ride together, forming the earliest version of transport services. These early methods also demonstrated a basic principle that remains true today: transportation becomes more efficient when resources are shared.\n\nA major shift occurred in the early 19th century with the invention of the steam engine. Steam-powered trains revolutionized travel by connecting distant towns and cities at unprecedented speeds. Railroads expanded across continents, shaping economies, migration patterns, and even political relationships. Goods could be transported faster, and people gained easier access to education and jobs. For the first time, long-distance travel became accessible to ordinary citizens instead of being limited to the wealthy. This expansion set the foundation for modern transportation networks.\n\nAs cities grew rapidly during the Industrial Revolution, new challenges arose. Urban populations increased, and narrow streets became crowded with pedestrians, animals, and carts. To ease congestion, several cities introduced horse-drawn streetcars that ran on metal tracks. These streetcars reduced friction, allowing horses to pull more passengers with less effort. However, horses required constant care, produced waste, and could not handle the growing demand for transportation.\n\nThe development of electric power in the late 19th century brought the next major transformation. Electric streetcars replaced horse-drawn vehicles, providing a cleaner, faster, and more reliable mode of transportation. Many cities expanded their streetcar systems, and neighborhoods began to grow around major lines. This pattern of development, known as streetcar suburbs, influenced the structure of cities around the world.\n\nThe 20th century introduced buses and automobiles, which offered greater flexibility. Unlike streetcars, buses did not require tracks and could travel on existing roads. This made them cheaper to operate and allowed cities to adjust routes more easily. Over time, buses became the most common form of public transportation in many parts of the world. Meanwhile, the rise of private cars led to major changes in urban planning, pollution, traffic congestion, and fuel consumption.\n\nIn response to growing traffic problems, many large cities developed rapid transit systems such as subways, metros, and elevated trains. These systems allowed people to move quickly across urban areas without being affected by street-level traffic. Subways became particularly important in densely populated cities like New York, Tokyo, and London.\n\nIn recent decades, concerns about climate change have influenced public transportation policies. Governments and city planners now prioritize environmentally friendly transportation options. Electric buses, hybrid vehicles, and light-rail systems have become more common.\n\nTechnology continues to play a major role in shaping public transportation. Modern ticketing systems allow passengers to pay using smartphones or smart cards. GPS tracking and real-time updates help commuters plan their routes and avoid delays. Artificial intelligence is now used to manage traffic flow and optimize bus routes.\n\nPublic transportation also plays a crucial role in promoting social equality. Affordable and accessible transportation connects people to schools, hospitals, and workplaces. Without it, many individuals would face major challenges.\n\nDespite challenges such as funding shortages and overcrowding, public transportation has continuously adapted. From ancient animal-drawn carts to futuristic autonomous vehicles, public transportation has evolved alongside human civilization and remains essential to modern life.",
-
-  "questions": [
     {
-      "id": "R-B-2-Q1",
-      "question": "What was one major drawback of horse-drawn streetcars?",
-      "options": {
-        "a": "They were too fast",
-        "b": "They required constant care",
-        "c": "They used electricity",
-        "d": "They could fly over traffic"
-      },
-      "answer": "b"
+      "id": "R-B-2",
+      "passage": "Many people believe that creativity is something we are born with, but research shows that creativity can be developed like any other skill. Creative thinking often begins with curiosity—the desire to explore new ideas and possibilities. Children, for example, constantly ask questions about the world around them.■This natural curiosity is the foundation of creative problem-solving.\n\nAs people grow older, creativity can decline because they become more cautious or afraid of making mistakes. [HIGHLIGHT]However, studies show that creativity increases when people allow themselves to think freely without worrying about being judged.[END] This is why brainstorming sessions encourage individuals to generate ideas without filtering them.\n\nAnother factor that boosts creativity is exposure to different experiences. Traveling, reading diverse books, or meeting new people can all provide fresh perspectives.■These experiences help individuals combine ideas in new and unexpected ways.\n\nModern workplaces have begun recognizing the importance of creativity. Companies now design offices with open spaces, bright colors, and comfortable seating to inspire employees.■Some businesses even schedule “innovation hours” where workers focus solely on exploring new concepts. By supporting creative thinking, organizations hope to find better solutions and remain competitive in a rapidly changing world.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main idea of the passage?",
+          "options": {
+            "A": "Creativity is a rare natural talent",
+            "B": "Creativity can be developed through practice and environment",
+            "C": "Children are more intelligent than adults",
+            "D": "Workplaces should avoid creative tasks"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "According to the passage, what is the foundation of creative problem-solving?",
+          "options": {
+            "A": "Experience",
+            "B": "Curiosity",
+            "C": "Competition",
+            "D": "Technology"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does creativity often decline as people grow older?",
+          "options": {
+            "A": "They become too busy",
+            "B": "They avoid taking risks or making mistakes",
+            "C": "They stop learning new skills",
+            "D": "They prefer working alone"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the highlighted sentence suggest?",
+          "options": {
+            "A": "Creativity only happens in groups",
+            "B": "Judgment improves creativity",
+            "C": "Freedom of thought increases creativity",
+            "D": "People should always follow rules"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What type of experiences can boost creativity?",
+          "options": {
+            "A": "Repeating the same tasks",
+            "B": "Avoiding new people",
+            "C": "Traveling and reading various books",
+            "D": "Working in silence"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Why are modern offices designed with open spaces and bright colors?",
+          "options": {
+            "A": "To reduce company costs",
+            "B": "To inspire creativity in employees",
+            "C": "To limit communication",
+            "D": "To follow government rules"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What are 'innovation hours'?",
+          "options": {
+            "A": "Break times for workers",
+            "B": "Scheduled hours for creative thinking",
+            "C": "Mandatory training hours",
+            "D": "Time spent doing physical activities"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why do companies encourage creativity?",
+          "options": {
+            "A": "To entertain employees",
+            "B": "To improve employee attendance",
+            "C": "To remain competitive in a changing world",
+            "D": "To reduce working hours"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "ctest",
+          "question": "Complete the sentence using the correct word form.",
+          "textBefore": "Creativity can ",
+          "gapLength": 5,
+          "answer": "grow",
+          "textAfter": " when people are exposed to new experiences."
+        },
+        {
+          "type": "insert",
+          "question": "Choose the best place to insert the following sentence.",
+          "sentence": "This approach helps people think more openly and generate fresh ideas.",
+          "correctSpot": 1
+        }
+      ]
     },
     {
-      "id": "R-B-2-Q2",
-      "question": "What major innovation revolutionized long-distance travel in the 19th century?",
-      "options": {
-        "a": "Airplanes",
-        "b": "Electric cars",
-        "c": "Steam-powered trains",
-        "d": "Private bicycles"
-      },
-      "answer": "c"
+      "id": "R-B-3",
+      "passage": "Gardening has become one of the most popular hobbies in recent years. Many people are turning to gardening as a way to relax, reduce stress, and reconnect with nature. One reason for this trend is that gardening provides a sense of accomplishment. When individuals plant seeds and watch them grow, they experience a feeling of pride.■This emotional reward motivates them to continue gardening.\n\nAnother reason gardening has grown in popularity is its health benefits. Spending time outdoors exposes people to sunlight, which helps the body produce vitamin D. [HIGHLIGHT]Vitamin D is important for strengthening bones and improving mood.[END] Additionally, gardening involves physical activities like digging, watering, and planting—these movements help improve flexibility and strength.\n\nGardening also offers an opportunity to grow fresh fruits and vegetables. Eating home-grown produce is healthier because it contains fewer chemicals and preservatives.■This encourages families to adopt better eating habits.\n\nFurthermore, gardening helps communities connect. Many neighborhoods have community gardens where people work together to grow plants.■These gardens create shared spaces that encourage teamwork and social bonding. As a result, gardening not only benefits individuals but also strengthens the community as a whole.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the passage?",
+          "options": {
+            "A": "To explain why gardening is becoming popular",
+            "B": "To teach readers how to grow vegetables",
+            "C": "To describe the history of gardening",
+            "D": "To compare gardening with other hobbies"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "Why do people feel motivated to continue gardening?",
+          "options": {
+            "A": "It requires very little effort",
+            "B": "They enjoy spending money on seeds",
+            "C": "They feel proud when plants grow",
+            "D": "Gardening is a competitive activity"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the highlighted sentence explain?",
+          "options": {
+            "A": "How gardening causes stress",
+            "B": "Why sunlight improves health",
+            "C": "Why people prefer indoor hobbies",
+            "D": "How plants produce energy"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Which activity is mentioned as a health benefit of gardening?",
+          "options": {
+            "A": "Running",
+            "B": "Digging and planting",
+            "C": "Swimming",
+            "D": "Cycling"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why is home-grown food considered healthier?",
+          "options": {
+            "A": "It is always cheaper",
+            "B": "It contains fewer chemicals",
+            "C": "It tastes better than restaurant food",
+            "D": "It grows faster"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How does gardening help families?",
+          "options": {
+            "A": "By reducing their food expenses",
+            "B": "By encouraging healthier eating habits",
+            "C": "By helping them travel more",
+            "D": "By limiting their outdoor activities"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What role do community gardens play?",
+          "options": {
+            "A": "They provide competition between neighbors",
+            "B": "They replace public parks",
+            "C": "They encourage teamwork and bonding",
+            "D": "They offer paid gardening jobs"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What is one reason gardening benefits communities?",
+          "options": {
+            "A": "It reduces house rents",
+            "B": "It helps people work together",
+            "C": "It prevents people from moving cities",
+            "D": "It increases business profits"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "ctest",
+          "question": "Complete the sentence using the correct word form.",
+          "textBefore": "Gardening ",
+          "gapLength": 5,
+          "answer": "helps",
+          "textAfter": " improve both physical and mental health."
+        },
+        {
+          "type": "insert",
+          "question": "Choose the best place to insert the following sentence.",
+          "sentence": "This makes gardening a more enjoyable and satisfying activity.",
+          "correctSpot": 0
+        }
+      ]
     },
     {
-      "id": "R-B-2-Q3",
-      "question": "Why did buses become more popular than streetcars in many cities?",
-      "options": {
-        "a": "They required metal tracks",
-        "b": "They were slower",
-        "c": "They were more flexible and cheaper to operate",
-        "d": "They could only travel underground"
-      },
-      "answer": "c"
+      "id": "R-B-4",
+      "passage": "Many people enjoy watching documentaries because they provide knowledge in an interesting way. Documentaries cover a wide range of topics, including history, science, wildlife, and technology.■They help viewers learn new information without feeling bored.\n\nOne major advantage of documentaries is that they use real-life footage. This makes learning feel more realistic and relatable. [HIGHLIGHT]When people see real events and interviews, they understand the topic more deeply.[END] For example, a documentary about space exploration often shows actual videos taken by astronauts.\n\nAnother benefit is that documentaries encourage critical thinking. They present facts from different perspectives and allow viewers to form their own opinions.■This helps students develop analytical skills that are useful in school and daily life.\n\nDocumentaries are also easily accessible. With streaming platforms and online videos, people can watch educational content anytime.■This convenience motivates more people to choose documentaries over regular entertainment. Overall, documentaries are an effective way to learn while staying engaged.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main idea of the passage?",
+          "options": {
+            "A": "Documentaries are becoming less popular",
+            "B": "Documentaries are an enjoyable way to learn",
+            "C": "Documentaries are expensive to create",
+            "D": "People prefer movies over documentaries"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why do documentaries feel realistic?",
+          "options": {
+            "A": "They use animated characters",
+            "B": "They are filmed in studios",
+            "C": "They use real-life footage",
+            "D": "They include long explanations"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the highlighted sentence explain?",
+          "options": {
+            "A": "Why people enjoy cartoons",
+            "B": "How interviews improve understanding",
+            "C": "Why documentaries are expensive",
+            "D": "How technology affects entertainment"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How do documentaries help students?",
+          "options": {
+            "A": "They reduce homework",
+            "B": "They improve analytical thinking",
+            "C": "They teach cooking skills",
+            "D": "They make exams easier"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why are documentaries more accessible today?",
+          "options": {
+            "A": "They are only available on television",
+            "B": "Streaming platforms provide them easily",
+            "C": "They require special equipment to watch",
+            "D": "They are rarely uploaded online"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What encourages people to choose documentaries?",
+          "options": {
+            "A": "They are shorter than movies",
+            "B": "They are extremely cheap to produce",
+            "C": "They combine learning with entertainment",
+            "D": "They are only watched by students"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Which topics are mentioned in the passage?",
+          "options": {
+            "A": "Sports and fashion",
+            "B": "Cooking and travel",
+            "C": "Science and wildlife",
+            "D": "Politics and business"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What skill do documentaries help develop?",
+          "options": {
+            "A": "Drawing",
+            "B": "Critical thinking",
+            "C": "Typing speed",
+            "D": "Teamwork"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "ctest",
+          "question": "Complete the sentence using the correct word form.",
+          "textBefore": "Documentaries ",
+          "gapLength": 5,
+          "answer": "teach",
+          "textAfter": " important facts using real examples."
+        },
+        {
+          "type": "insert",
+          "question": "Choose the best place to insert the following sentence.",
+          "sentence": "This makes documentaries both educational and interesting.",
+          "correctSpot": 0
+        }
+      ]
     },
     {
-      "id": "R-B-2-Q4",
-      "question": "What is one environmental problem caused by private cars?",
-      "options": {
-        "a": "Increased bird populations",
-        "b": "Reduced pollution",
-        "c": "Traffic congestion and fuel consumption",
-        "d": "Faster public buses"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-2-Q5",
-      "question": "Why are subways important in densely populated cities?",
-      "options": {
-        "a": "They operate only at night",
-        "b": "They avoid street-level traffic",
-        "c": "They have no maintenance costs",
-        "d": "They move slower than buses"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-2-Q6",
-      "question": "What is a recent trend influenced by climate change concerns?",
-      "options": {
-        "a": "More horse-drawn carts",
-        "b": "Increased use of electric and hybrid transport",
-        "c": "Stopping all public transportation",
-        "d": "Building more highways"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-2-Q7",
-      "question": "How does technology improve modern transportation?",
-      "options": {
-        "a": "By removing all drivers",
-        "b": "Through real-time updates and smart ticketing",
-        "c": "By replacing roads with forests",
-        "d": "By making travel more confusing"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-2-Q8",
-      "question": "What role does public transportation play in society?",
-      "options": {
-        "a": "It isolates people",
-        "b": "It limits access to education",
-        "c": "It promotes social equality",
-        "d": "It is only useful for tourists"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-2-Q9",
-      "question": "What is a challenge faced by modern transportation systems?",
-      "options": {
-        "a": "Too much funding",
-        "b": "Overcrowding and maintenance issues",
-        "c": "Lack of technological tools",
-        "d": "Unlimited space in cities"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-2-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Public transportation is becoming less important",
-        "b": "Public transportation has evolved and remains essential",
-        "c": "Public transportation is only for rich people",
-        "d": "Public transportation replaced all other travel methods"
-      },
-      "answer": "b"
+      "id": "R-B-5",
+      "passage": "Online shopping has become extremely popular in recent years. People enjoy the convenience of ordering items from home without visiting physical stores.■This trend has grown rapidly due to technology and faster delivery services.\n\nOne major advantage of online shopping is the wide variety of products available. [HIGHLIGHT]Buyers can compare items, read reviews, and choose the best option within minutes.[END] This helps customers make smarter purchasing decisions.\n\nAnother benefit is that online stores often provide discounts that are not available in local shops.■This attracts budget-conscious buyers and makes online shopping even more appealing.\n\nHowever, there are also disadvantages. Some people receive damaged or incorrect products. Others feel unsure about quality because they cannot see or touch the item before buying.■Despite these issues, online shopping continues to grow as companies improve their return policies and customer support.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main idea of the passage?",
+          "options": {
+            "A": "Online shopping is becoming more popular",
+            "B": "Local stores are better than online stores",
+            "C": "Shopping online is very risky",
+            "D": "Technology has slowed down shopping"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "Why do people enjoy online shopping?",
+          "options": {
+            "A": "It requires traveling to a store",
+            "B": "It allows shopping from home",
+            "C": "It only offers expensive products",
+            "D": "It is slower than regular shopping"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the highlighted sentence describe?",
+          "options": {
+            "A": "How to return damaged products",
+            "B": "Why physical stores are disappearing",
+            "C": "How online reviews help customers choose better",
+            "D": "Why people avoid online shopping"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Why do online stores attract budget-conscious buyers?",
+          "options": {
+            "A": "They rarely offer discounts",
+            "B": "They have fewer products",
+            "C": "They offer special discounts",
+            "D": "They allow customers to touch the product"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What is one disadvantage of online shopping?",
+          "options": {
+            "A": "Products always arrive late",
+            "B": "Customers cannot inspect items physically",
+            "C": "There are no customer reviews",
+            "D": "Stores do not accept returns"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why do some people feel unsure about online products?",
+          "options": {
+            "A": "They cannot see or touch them before buying",
+            "B": "There are too many stores online",
+            "C": "Products are always out of stock",
+            "D": "Websites are difficult to use"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "Which factor has helped online shopping grow?",
+          "options": {
+            "A": "Higher prices",
+            "B": "Slower delivery times",
+            "C": "Improved technology",
+            "D": "Fewer product options"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Why do companies improve return policies?",
+          "options": {
+            "A": "Because customers always accept damaged goods",
+            "B": "To encourage more people to buy online",
+            "C": "To make online prices higher",
+            "D": "To reduce the number of products sold"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "ctest",
+          "question": "Complete the sentence using the correct word form.",
+          "textBefore": "Many people prefer online stores because they are ",
+          "gapLength": 7,
+          "answer": "convenient",
+          "textAfter": "."
+        },
+        {
+          "type": "insert",
+          "question": "Choose the best place to insert the following sentence.",
+          "sentence": "This makes online shopping more attractive to many people.",
+          "correctSpot": 1
+        }
+      ]
     }
-  ]
-},
-{
-  "id": "R-B-3",
-  "title": "The Science Behind Human Memory",
-  "text": "Human memory is one of the most fascinating functions of the brain. It allows us to store experiences, learn new skills, recognize people, and make decisions based on previous events. Without memory, daily life would be impossible. We would not remember how to speak, how to walk, or even who we are. Although memory feels natural and effortless, the processes behind it are complex and involve many parts of the brain working together.\n\nScientists usually divide memory into three main stages: encoding, storage, and retrieval. Encoding is the first step, where information enters the brain through the senses. When we see, hear, or touch something, the brain converts these sensory signals into a form it can store. The more attention we give, the stronger the encoding.\n\nThe second stage is storage, which refers to keeping information over time. Memory storage can be short-term or long-term. Long-term memories are stored through physical changes in the connections between neurons, a process known as synaptic plasticity.\n\nRetrieval is the final stage, where stored information is recalled. Retrieval failure occurs when memories cannot be recalled temporarily, often due to stress or distraction.\n\nThere are different types of memory. Explicit memory involves conscious recall of facts and experiences, while implicit memory works unconsciously, such as skills like cycling or typing.\n\nShort-term memory is limited in capacity. Techniques like chunking help improve short-term memory by grouping information. Long-term memory depends on repetition, emotional impact, and meaningful connections.\n\nSleep plays a crucial role in memory consolidation, especially during deep and REM sleep. Physical health, exercise, diet, and stress levels also strongly influence memory performance.\n\nMemory changes with age but can be maintained through mental activity. Memory is not perfectly accurate and can be distorted over time. Different brain regions such as the hippocampus and amygdala work together to support memory.\n\nModern research explores technology-based methods to improve memory, though many are still experimental. Overall, memory is complex, fragile, and essential for daily life.",
-  "questions": [
-    {
-      "id": "R-B-3-Q1",
-      "question": "What is the first stage of memory processing?",
-      "options": {
-        "a": "Storage",
-        "b": "Retrieval",
-        "c": "Encoding",
-        "d": "Forgetting"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-3-Q2",
-      "question": "Which type of memory involves conscious recall?",
-      "options": {
-        "a": "Implicit memory",
-        "b": "Reflex memory",
-        "c": "Explicit memory",
-        "d": "Motor memory"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-3-Q3",
-      "question": "What is the role of synaptic plasticity?",
-      "options": {
-        "a": "It weakens long-term memory",
-        "b": "It forms physical changes that store memories",
-        "c": "It blocks information",
-        "d": "It erases old memories"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-3-Q4",
-      "question": "What technique helps improve short-term memory?",
-      "options": {
-        "a": "Sleeping more",
-        "b": "Chunking",
-        "c": "Eating sugar",
-        "d": "Daydreaming"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-3-Q5",
-      "question": "Which factor strongly supports memory consolidation?",
-      "options": {
-        "a": "Lack of sleep",
-        "b": "Avoiding repetition",
-        "c": "Deep and REM sleep",
-        "d": "Stress"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-3-Q6",
-      "question": "What does the hippocampus mainly help with?",
-      "options": {
-        "a": "Digestion",
-        "b": "Forming new memories",
-        "c": "Breathing",
-        "d": "Moving muscles"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-3-Q7",
-      "question": "What is memory distortion?",
-      "options": {
-        "a": "A perfect recall of events",
-        "b": "Memories never change",
-        "c": "Recalled memories become altered",
-        "d": "Memory stops working"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-3-Q8",
-      "question": "Which activity harms memory?",
-      "options": {
-        "a": "Regular exercise",
-        "b": "Eating omega-3 foods",
-        "c": "Chronic stress",
-        "d": "Sleeping well"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-3-Q9",
-      "question": "What happens during retrieval failure?",
-      "options": {
-        "a": "Memories are erased",
-        "b": "Memories cannot be recalled temporarily",
-        "c": "Memories become stronger",
-        "d": "Old memories are replaced"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-3-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Memory is simple",
-        "b": "Human memory is complex and influenced by many factors",
-        "c": "Memory has no role in life",
-        "d": "Only scientists understand memory"
-      },
-      "answer": "b"
-    }
-  ]
-},
-{
-  "id": "R-B-4",
-  "title": "The World of Coral Reefs",
-  "text": "Coral reefs are among the most vibrant and diverse ecosystems on Earth. Found in warm, shallow waters near tropical coastlines, these underwater habitats support thousands of species, from tiny fish to giant sea turtles. Despite covering less than 1% of the ocean floor, coral reefs are home to almost 25% of all marine life.\n\nA coral reef is made up of tiny living organisms called polyps. Each polyp builds a hard skeleton of calcium carbonate, which forms the reef structure. Coral reefs grow very slowly, making them vulnerable to environmental changes.\n\nCorals depend on microscopic algae called zooxanthellae, which perform photosynthesis and provide nutrients. When corals are stressed by heat or pollution, they expel these algae, causing coral bleaching.\n\nCoral reefs support marine biodiversity and protect coastlines by reducing wave impact. Humans rely on reefs for food, tourism, and coastal protection.\n\nHowever, climate change, pollution, and overfishing threaten coral reefs. Rising temperatures cause mass bleaching, while pollution and destructive fishing damage reef ecosystems.\n\nScientists are working to protect reefs through marine protected areas, coral transplantation, and technology such as underwater drones. Conservation efforts and responsible tourism are essential for the future of coral reefs.",
-  "questions": [
-    {
-      "id": "R-B-4-Q1",
-      "question": "What are coral reefs primarily made up of?",
-      "options": {
-        "a": "Rocks",
-        "b": "Sea plants",
-        "c": "Calcium carbonate from coral polyps",
-        "d": "Sand"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-4-Q2",
-      "question": "What causes coral bleaching?",
-      "options": {
-        "a": "Too much food",
-        "b": "Pollutants and temperature stress",
-        "c": "Increased fish population",
-        "d": "Excessive sunlight"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-4-Q3",
-      "question": "What role do zooxanthellae play?",
-      "options": {
-        "a": "They hunt fish",
-        "b": "They produce nutrients through photosynthesis",
-        "c": "They eat coral polyps",
-        "d": "They build reef skeletons"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-4-Q4",
-      "question": "How do coral reefs benefit humans?",
-      "options": {
-        "a": "By creating deserts",
-        "b": "By protecting coastlines",
-        "c": "By increasing pollution",
-        "d": "By melting ice"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-4-Q5",
-      "question": "Which activity does not harm coral reefs?",
-      "options": {
-        "a": "Overfishing",
-        "b": "Clean beach practices",
-        "c": "Oil spills",
-        "d": "Sedimentation"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-4-Q6",
-      "question": "Why are parrotfish important?",
-      "options": {
-        "a": "They create pollution",
-        "b": "They prevent algae from overwhelming reefs",
-        "c": "They destroy coral skeletons",
-        "d": "They cause bleaching"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-4-Q7",
-      "question": "What is one major threat caused by climate change?",
-      "options": {
-        "a": "Lower sea levels",
-        "b": "Mass coral bleaching",
-        "c": "Increased coral growth",
-        "d": "Stronger coral skeletons"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-4-Q8",
-      "question": "What is one method scientists use to restore reefs?",
-      "options": {
-        "a": "Planting trees underwater",
-        "b": "Transplanting coral fragments",
-        "c": "Removing all fish",
-        "d": "Drying out the ocean"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-4-Q9",
-      "question": "What is an advantage of marine protected areas?",
-      "options": {
-        "a": "Increased pollution",
-        "b": "Less control over fishing",
-        "c": "Preservation of marine habitats",
-        "d": "Encouraging destructive fishing"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-4-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Coral reefs are unimportant",
-        "b": "Coral reefs are fragile ecosystems that need protection",
-        "c": "Coral reefs destroy marine life",
-        "d": "Coral reefs only benefit tourists"
-      },
-      "answer": "b"
-    }
-  ]
-},
-{
-  "id": "R-B-5",
-  "title": "The Rise of Renewable Energy",
-  "text": "For much of human history, people relied on energy sources such as wood, coal, and oil to power their homes, industries, and transportation systems. These sources fueled economic growth but also caused environmental challenges. In recent decades, the world has turned its attention to renewable energy—energy from natural sources that do not run out and cause far less pollution.\n\nRenewable energy comes from sunlight, wind, water, and geothermal heat. Unlike fossil fuels, these resources are naturally replenished, making them ideal for long-term energy planning. The shift toward renewables is driven by concerns about climate change, rising fuel costs, and growing energy demand.\n\nSolar power is one of the most popular renewable sources. Solar panels use photovoltaic cells to convert sunlight into electricity. Wind energy uses turbines to generate power from moving air, especially in open or offshore areas. Hydropower uses flowing water to turn turbines, while geothermal energy relies on heat from inside the Earth.\n\nAnother renewable source is biomass energy, produced from organic materials like plant waste and crops. While renewable, biomass must be managed sustainably to avoid deforestation and pollution.\n\nTechnological advancements such as battery storage and smart grids have accelerated renewable adoption. However, challenges remain, including high initial costs, energy storage limitations, and land use concerns.\n\nGovernment incentives and global agreements encourage renewable energy development. Beyond environmental benefits, renewable energy creates jobs and improves access to electricity. Overall, renewable energy represents a critical step toward a sustainable future.",
-  "questions": [
-    {
-      "id": "R-B-5-Q1",
-      "question": "What makes renewable energy different from fossil fuels?",
-      "options": {
-        "a": "It is more expensive",
-        "b": "It is naturally replenished",
-        "c": "It is always available at night",
-        "d": "It produces more pollution"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-5-Q2",
-      "question": "What do photovoltaic cells do?",
-      "options": {
-        "a": "Store wind energy",
-        "b": "Convert sunlight into electricity",
-        "c": "Measure air temperature",
-        "d": "Heat buildings directly"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-5-Q3",
-      "question": "Why are offshore locations ideal for wind farms?",
-      "options": {
-        "a": "They have strong and steady winds",
-        "b": "They have more tourists",
-        "c": "They are easier to build on",
-        "d": "They reduce turbine size"
-      },
-      "answer": "a"
-    },
-    {
-      "id": "R-B-5-Q4",
-      "question": "What is one disadvantage of hydropower?",
-      "options": {
-        "a": "It cannot produce electricity",
-        "b": "It increases fossil fuel use",
-        "c": "It can disrupt river ecosystems",
-        "d": "It requires wind to operate"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-5-Q5",
-      "question": "Geothermal energy comes from:",
-      "options": {
-        "a": "Ocean waves",
-        "b": "The Earth’s internal heat",
-        "c": "Solar panels",
-        "d": "Burning coal"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-5-Q6",
-      "question": "What is a concern with biomass energy?",
-      "options": {
-        "a": "It cannot produce fuel",
-        "b": "It is not renewable",
-        "c": "Unsustainable production can harm forests",
-        "d": "It produces no emissions"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-5-Q7",
-      "question": "What technology helps store extra solar or wind energy?",
-      "options": {
-        "a": "Televisions",
-        "b": "Battery storage systems",
-        "c": "Refrigerators",
-        "d": "GPS devices"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-5-Q8",
-      "question": "Why do some countries offer incentives for renewable energy?",
-      "options": {
-        "a": "To increase fossil fuel use",
-        "b": "To reduce carbon emissions",
-        "c": "To stop technological development",
-        "d": "To discourage solar panels"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-5-Q9",
-      "question": "Which renewable energy source is extremely reliable due to stable heat?",
-      "options": {
-        "a": "Solar",
-        "b": "Wind",
-        "c": "Geothermal",
-        "d": "Biomass"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-5-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Renewable energy is unnecessary",
-        "b": "Renewable energy is harmful",
-        "c": "Renewable energy is rising globally and supports a sustainable future",
-        "d": "Fossil fuels are better than renewable energy"
-      },
-      "answer": "c"
-    }
-  ]
-},
-{
-  "id": "R-B-6",
-  "title": "The History and Impact of Photography",
-  "text": "Photography is so common today that people rarely stop to think about how revolutionary it once was. With smartphones, digital cameras, and social media, taking and sharing photos has become part of daily life. Yet the history of photography is a fascinating journey of scientific discovery, artistic experimentation, and technological innovation.\n\nLong before cameras existed, people used simple optical devices like the camera obscura. This dark box projected an inverted image onto a surface, helping artists draw accurately and inspiring later photographic inventions.\n\nIn 1826, Joseph Nicéphore Niépce created the world’s earliest surviving photograph using heliography. His partner, Louis Daguerre, later introduced the daguerreotype, producing sharp images on silver plates. However, daguerreotypes could not be reproduced and involved toxic chemicals.\n\nWilliam Henry Fox Talbot developed the calotype process, which used paper negatives to create multiple copies. This negative-to-positive method became the foundation of modern film photography.\n\nIn 1888, George Eastman introduced affordable roll-film cameras through Kodak, making photography accessible to the public. Photography soon became a tool for journalism, documenting wars, social issues, and historical events.\n\nColor photography brought realism and emotional depth, transforming advertising, fashion, and cinema. Later, digital photography replaced film with electronic sensors, allowing instant viewing, easy editing, and mass storage.\n\nSmartphones and social media turned photography into a universal activity, but also introduced challenges such as image manipulation, privacy concerns, and misinformation.\n\nDespite these issues, photography remains essential in art, science, medicine, and communication. With advances like artificial intelligence, drones, and virtual reality, photography continues to evolve and shape how humans see and record the world.",
-  "questions": [
-    {
-      "id": "R-B-6-Q1",
-      "question": "What was the main purpose of the camera obscura?",
-      "options": {
-        "a": "To take permanent photos",
-        "b": "To help artists draw accurately",
-        "c": "To print newspapers",
-        "d": "To store digital images"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-6-Q2",
-      "question": "Who created the first surviving photograph?",
-      "options": {
-        "a": "George Eastman",
-        "b": "Louis Daguerre",
-        "c": "Joseph Nicéphore Niépce",
-        "d": "William Talbot"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-6-Q3",
-      "question": "What was a major advantage of the calotype process?",
-      "options": {
-        "a": "It produced digital images",
-        "b": "It used roll film",
-        "c": "It created multiple copies using negatives",
-        "d": "It required no chemicals"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-6-Q4",
-      "question": "What innovation made photography widely accessible to the public?",
-      "options": {
-        "a": "Silver plates",
-        "b": "Roll film cameras by Kodak",
-        "c": "Long exposure techniques",
-        "d": "Camera obscura"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-6-Q5",
-      "question": "How did photography influence journalism?",
-      "options": {
-        "a": "It slowed down news reporting",
-        "b": "It made articles longer",
-        "c": "It helped document real events visually",
-        "d": "It replaced newspapers"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-6-Q6",
-      "question": "What improvement did color photography bring?",
-      "options": {
-        "a": "Faster printing",
-        "b": "More realistic and expressive images",
-        "c": "More expensive cameras",
-        "d": "Invisible images"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-6-Q7",
-      "question": "What is a major benefit of digital photography?",
-      "options": {
-        "a": "Photos cannot be edited",
-        "b": "Images are available instantly",
-        "c": "It uses dangerous chemicals",
-        "d": "It requires darkrooms"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-6-Q8",
-      "question": "What challenge has emerged with modern digital photography?",
-      "options": {
-        "a": "Lack of storage",
-        "b": "Fewer photos being taken",
-        "c": "Concerns about image authenticity",
-        "d": "Decreased access to cameras"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-6-Q9",
-      "question": "How is photography used in science?",
-      "options": {
-        "a": "To create novels",
-        "b": "To document wildlife and environmental changes",
-        "c": "To replace microscopes",
-        "d": "To paint landscapes"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-6-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Photography is no longer important",
-        "b": "Photography has evolved greatly and impacts society",
-        "c": "Only professionals benefit from photography",
-        "d": "Photography has remained unchanged for centuries"
-      },
-      "answer": "b"
-    }
-  ]
-},
-{
-  "id": "R-B-7",
-  "title": "The Development of Robots in Everyday Life",
-  "text": "Robots have long captured human imagination, appearing in early science-fiction stories as machines that could think and act like humans. Today, robots are becoming a real part of everyday life, appearing in homes, hospitals, schools, and workplaces.\n\nThe earliest robots were mechanical arms used in factories during the mid-20th century. They performed tasks such as lifting heavy objects and assembling products with speed and accuracy, improving safety and efficiency.\n\nA major breakthrough came with computer programming, allowing robots to be reprogrammed for different tasks. Robots then began assisting with dangerous jobs such as exploring volcanoes, cleaning chemical spills, and inspecting deep-sea environments.\n\nIn healthcare, robots assist surgeons with precise movements, help deliver supplies in hospitals, and support patient rehabilitation. These robots reduce recovery time and ease the workload of medical staff.\n\nRobots are also common in homes. Robotic vacuum cleaners, lawn mowers, and smart assistants help people save time and manage daily tasks more easily.\n\nEducation benefits from robotics as well. Educational robots help teach coding and problem-solving and support students with special needs by providing consistent and patient instruction.\n\nTransportation is another growing area. Self-driving cars use sensors and artificial intelligence to navigate roads, potentially reducing accidents caused by human error. Delivery robots and warehouse robots are also increasingly used.\n\nDespite their advantages, robots raise concerns about job replacement, safety, and privacy. While robots may replace some tasks, they also create new job opportunities that require technical skills.\n\nThe future of robotics is promising, with developments such as soft robots made of flexible materials, learning robots that improve over time, and robots used in space and ocean exploration.\n\nRobots are tools that extend human abilities. They help solve problems, perform dangerous tasks, and improve quality of life. As they become more advanced, robots will continue to shape modern society.",
-  "questions": [
-    {
-      "id": "R-B-7-Q1",
-      "question": "What were the earliest robots mainly used for?",
-      "options": {
-        "a": "Space exploration",
-        "b": "Factory tasks like lifting and assembling",
-        "c": "Teaching students",
-        "d": "Home cleaning"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-7-Q2",
-      "question": "What major development allowed robots to become more useful?",
-      "options": {
-        "a": "Painting tools",
-        "b": "Computer programming",
-        "c": "Wooden materials",
-        "d": "Larger engines"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-7-Q3",
-      "question": "How do robots assist doctors in hospitals?",
-      "options": {
-        "a": "By diagnosing diseases",
-        "b": "By performing precise surgical tasks",
-        "c": "By replacing all nurses",
-        "d": "By running the hospital office"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-7-Q4",
-      "question": "Why are educational robots helpful for children?",
-      "options": {
-        "a": "They never make mistakes",
-        "b": "They replace teachers",
-        "c": "They keep students engaged and support learning",
-        "d": "They can fly"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-7-Q5",
-      "question": "What is a potential advantage of self-driving cars?",
-      "options": {
-        "a": "Increased traffic jams",
-        "b": "More accidents",
-        "c": "Safer travel due to fewer human errors",
-        "d": "They require no testing"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-7-Q6",
-      "question": "What is one concern about robots in society?",
-      "options": {
-        "a": "They eat too much electricity",
-        "b": "They may collect personal data",
-        "c": "They always break down",
-        "d": "They cannot perform repetitive tasks"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-7-Q7",
-      "question": "What are soft robots made from?",
-      "options": {
-        "a": "Metal",
-        "b": "Glass",
-        "c": "Flexible materials",
-        "d": "Water"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-7-Q8",
-      "question": "What can learning robots do?",
-      "options": {
-        "a": "Eat food",
-        "b": "Improve their performance over time",
-        "c": "Replace all human workers",
-        "d": "Sleep like humans"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-7-Q9",
-      "question": "How are robots used in space exploration?",
-      "options": {
-        "a": "They build houses on Mars",
-        "b": "They take pictures and collect samples",
-        "c": "They transport tourists",
-        "d": "They only orbit Earth"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-7-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Robots are dangerous and should be avoided",
-        "b": "Robots have stopped developing",
-        "c": "Robots are becoming more advanced and influencing everyday life",
-        "d": "Robots only exist in science fiction"
-      },
-      "answer": "c"
-    }
-  ]
-},
-{
-  "id": "R-B-8",
-  "title": "The Global Importance of Freshwater",
-  "text": "Freshwater is one of the most essential resources on Earth. It sustains life, supports ecosystems, and enables human civilizations to grow and thrive. Although most of the planet is covered with water, less than 3% is freshwater, and much of it is trapped in glaciers or underground, making accessible freshwater extremely scarce.\n\nFreshwater exists in rivers, lakes, streams, groundwater, and glaciers. Early civilizations developed near rivers because they provided drinking water, transportation, and fertile land for agriculture. Even today, many cities are located near freshwater sources.\n\nFreshwater is vital for drinking and sanitation. Millions of people still lack access to clean water, and contaminated water can spread diseases such as cholera and typhoid. Ensuring safe water requires proper filtration and purification systems.\n\nAgriculture is the largest consumer of freshwater. Irrigation helps grow food, but overuse can damage ecosystems, dry wetlands, reduce fish populations, and increase soil salinity. Sustainable practices help conserve water.\n\nIndustry also depends heavily on freshwater for cooling, cleaning, and manufacturing. Hydroelectric power relies on flowing water, but industrial pollution can contaminate rivers and groundwater if waste is not managed properly.\n\nPollution from cities, agriculture, and industries threatens freshwater quality. Fertilizers can cause harmful algal blooms, while plastics and microplastics pollute water sources and harm ecosystems.\n\nClimate change affects freshwater through increased evaporation, droughts, floods, melting glaciers, and warmer water temperatures that disrupt ecosystems.\n\nGroundwater supplies wells and aquifers but is often overused. Excessive pumping can cause wells to dry up and lead to land subsidence.\n\nProtecting freshwater requires technology, government policies, and international cooperation. Water treatment plants, pollution control laws, and conservation strategies help manage water resources.\n\nIndividuals can help by reducing water waste, fixing leaks, using eco-friendly products, and supporting conservation efforts.\n\nFreshwater ecosystems support diverse life and provide benefits such as flood control and water filtration. As demand grows, sustainable solutions are essential to protect freshwater for future generations.",
-  "questions": [
-    {
-      "id": "R-B-8-Q1",
-      "question": "Why is freshwater considered scarce?",
-      "options": {
-        "a": "Most water on Earth is salty",
-        "b": "Lakes are disappearing",
-        "c": "Rainfall is constant",
-        "d": "Rivers contain unlimited water"
-      },
-      "answer": "a"
-    },
-    {
-      "id": "R-B-8-Q2",
-      "question": "Why did early civilizations form near rivers?",
-      "options": {
-        "a": "Rivers provided entertainment",
-        "b": "Rivers offered water, transport, and fertile land",
-        "c": "Rivers were easy to cross",
-        "d": "Rivers contained gold"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-8-Q3",
-      "question": "What is a major cause of waterborne diseases?",
-      "options": {
-        "a": "Clean drinking water",
-        "b": "Contaminated water sources",
-        "c": "Frequent rainfall",
-        "d": "Cold temperatures"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-8-Q4",
-      "question": "Which sector uses the most freshwater worldwide?",
-      "options": {
-        "a": "Tourism",
-        "b": "Agriculture",
-        "c": "Banking",
-        "d": "Entertainment"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-8-Q5",
-      "question": "What problem can agricultural overuse of water cause?",
-      "options": {
-        "a": "Cleaner rivers",
-        "b": "Healthier soil",
-        "c": "Ecosystem damage and soil salinity",
-        "d": "More rainfall"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-8-Q6",
-      "question": "What is a drawback of industrial water use?",
-      "options": {
-        "a": "Industries never use freshwater",
-        "b": "Industries can pollute freshwater sources",
-        "c": "Factories only use seawater",
-        "d": "Industry reduces groundwater pollution"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-8-Q7",
-      "question": "What effect does climate change have on freshwater?",
-      "options": {
-        "a": "More glaciers form",
-        "b": "Increased evaporation and unpredictable rainfall",
-        "c": "More stable water levels",
-        "d": "Rivers stop flowing"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-8-Q8",
-      "question": "What is a risk of over-pumping groundwater?",
-      "options": {
-        "a": "More lakes appear",
-        "b": "Aquifers grow larger",
-        "c": "Wells dry up and land may sink",
-        "d": "Oceans rise instantly"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-8-Q9",
-      "question": "What is one way wetlands help the environment?",
-      "options": {
-        "a": "They produce plastic",
-        "b": "They store floodwater and filter pollutants",
-        "c": "They create deserts",
-        "d": "They reduce biodiversity"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-8-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Freshwater is unlimited",
-        "b": "Freshwater is important and needs protection",
-        "c": "Freshwater is not needed for human life",
-        "d": "Freshwater only benefits animals"
-      },
-      "answer": "b"
-    }
-  ]
-},
-{
-  "id": "R-B-9",
-  "title": "The Exploration of the Deep Ocean",
-  "text": "The deep ocean is one of the least explored regions on Earth. Although humans have traveled across continents, reached the poles, and even visited the Moon, we still know surprisingly little about what lies beneath the waves. The deep sea begins at about 200 meters below the surface, where sunlight no longer reaches. Beyond this point, the ocean becomes a world of darkness, extreme pressure, and freezing temperatures.\n\nFor centuries, people believed the deep ocean was empty and lifeless because there was no way to explore it deeply. Early exploration tools were limited, and myths filled the imagination. In the late 19th century, scientists discovered strange fish, giant squid, and corals, proving life existed at great depths.\n\nAs depth increases, pressure rises dramatically and temperatures remain near freezing. Despite the lack of sunlight, many organisms survive through unique adaptations such as enhanced senses or complete blindness.\n\nOne remarkable feature of deep-sea life is bioluminescence. Many organisms produce their own light to attract prey, avoid predators, or communicate. Anglerfish use glowing lures to capture prey.\n\nIn 1960, the bathyscaphe Trieste reached the deepest known part of the ocean, the Mariana Trench. Modern submersibles, ROVs, and AUVs now collect samples, photographs, and detailed maps of the ocean floor.\n\nHydrothermal vents discovered in 1977 revealed ecosystems that survive through chemosynthesis instead of sunlight. These discoveries changed scientific understanding of life.\n\nThe deep ocean plays a vital role in regulating Earth’s climate by storing heat and carbon dioxide and circulating water globally.\n\nHuman activities threaten the deep ocean through mining, pollution, and climate change. These activities can damage ecosystems that take thousands of years to develop.\n\nAdvanced technology such as sonar, underwater drones, and AI now helps scientists explore and understand the deep sea.\n\nThe deep ocean remains mysterious, full of life, and essential to Earth’s systems. Protecting it is crucial for biodiversity and future scientific discoveries.",
-  "questions": [
-    {
-      "id": "R-B-9-Q1",
-      "question": "Why was the deep ocean once considered lifeless?",
-      "options": {
-        "a": "It had no water",
-        "b": "There was no way to explore it deeply",
-        "c": "Scientists knew it was empty",
-        "d": "It contained only plants"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-9-Q2",
-      "question": "What makes survival difficult in the deep ocean?",
-      "options": {
-        "a": "Bright sunlight",
-        "b": "Warm temperatures",
-        "c": "High pressure and darkness",
-        "d": "Lack of saltwater"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-9-Q3",
-      "question": "What is bioluminescence?",
-      "options": {
-        "a": "Sound produced by fish",
-        "b": "Light produced by organisms",
-        "c": "Heat from hydrothermal vents",
-        "d": "Movement of ocean currents"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-9-Q4",
-      "question": "What was significant about the Trieste mission in 1960?",
-      "options": {
-        "a": "It discovered new continents",
-        "b": "It reached the deepest part of the ocean",
-        "c": "It invented scuba diving",
-        "d": "It found life on Mars"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-9-Q5",
-      "question": "What makes hydrothermal vent ecosystems unique?",
-      "options": {
-        "a": "They depend on sunlight",
-        "b": "They are found on land",
-        "c": "They rely on chemosynthesis",
-        "d": "They are completely dry"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-9-Q6",
-      "question": "What role does the deep ocean play in Earth’s climate?",
-      "options": {
-        "a": "It produces rainfall",
-        "b": "It stores heat and carbon dioxide",
-        "c": "It warms the atmosphere directly",
-        "d": "It increases air pressure"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-9-Q7",
-      "question": "What is a major concern about deep-sea mining?",
-      "options": {
-        "a": "It increases fish populations",
-        "b": "It is inexpensive",
-        "c": "It can destroy delicate ecosystems",
-        "d": "It produces clean energy"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-9-Q8",
-      "question": "What type of pollution is commonly found in the deep ocean?",
-      "options": {
-        "a": "Microplastics",
-        "b": "Newspaper waste",
-        "c": "Sand",
-        "d": "Clean drinking water"
-      },
-      "answer": "a"
-    },
-    {
-      "id": "R-B-9-Q9",
-      "question": "Which technology helps create detailed maps of the ocean floor?",
-      "options": {
-        "a": "Satellites",
-        "b": "Sonar",
-        "c": "Paper maps",
-        "d": "Weather balloons"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-9-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "The deep ocean is empty and unimportant",
-        "b": "The deep ocean is fully understood by scientists",
-        "c": "The deep ocean is mysterious, important, and worth protecting",
-        "d": "The deep ocean is easy to explore"
-      },
-      "answer": "c"
-    }
-  ]
-},
-{
-  "id": "R-B-10",
-  "title": "The Changing World of Global Migration",
-  "text": "Migration—the movement of people from one place to another—has shaped human history for thousands of years. From ancient nomadic tribes to modern travelers seeking new opportunities, migration has always been a part of human society. Today, global migration is more widespread and complex than ever before.\n\nHistorically, people migrated to find food, escape harsh weather, or seek fertile lands. Trade routes encouraged the exchange of goods, ideas, and cultures, while wars and natural disasters forced communities to flee their homes.\n\nIn the modern era, advances in transportation and communication have made migration global. Air travel allows fast movement, and digital communication helps migrants stay connected with families.\n\nEconomic opportunity is one of the most common reasons for migration. Migrants fill labor shortages and send remittances back home to support their families.\n\nEducation also drives migration, with students traveling abroad to gain skills and international experience.\n\nForced migration occurs when people flee war, persecution, or natural disasters. Refugees often face discrimination and legal challenges while rebuilding their lives.\n\nClimate change is increasingly influencing migration through rising sea levels, droughts, and extreme weather.\n\nMigration brings cultural benefits by promoting diversity, innovation, and shared traditions, but it can also cause social tension and conflict.\n\nSuccessful integration involves language learning, education, and community support.\n\nTechnology and global cooperation will shape the future of migration, making it safer and more sustainable.\n\nMigration remains a powerful force shaping the modern world.",
-  "questions": [
-    {
-      "id": "R-B-10-Q1",
-      "question": "What is one historical reason early humans migrated?",
-      "options": {
-        "a": "To reach airports",
-        "b": "To find food and resources",
-        "c": "To attend universities",
-        "d": "To become tourists"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-10-Q2",
-      "question": "What has made modern migration more global?",
-      "options": {
-        "a": "Slower transportation",
-        "b": "Lack of communication",
-        "c": "Air travel and digital communication",
-        "d": "Fewer job opportunities"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-10-Q3",
-      "question": "Why do many people migrate for economic reasons?",
-      "options": {
-        "a": "To avoid learning new skills",
-        "b": "To find better job opportunities",
-        "c": "To escape education",
-        "d": "To reduce salaries"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-10-Q4",
-      "question": "What are remittances?",
-      "options": {
-        "a": "Money migrants send home",
-        "b": "Travel documents",
-        "c": "Student visas",
-        "d": "New languages"
-      },
-      "answer": "a"
-    },
-    {
-      "id": "R-B-10-Q5",
-      "question": "Why do refugees migrate?",
-      "options": {
-        "a": "For tourism",
-        "b": "To enjoy new foods",
-        "c": "To escape war or danger",
-        "d": "For entertainment"
-      },
-      "answer": "c"
-    },
-    {
-      "id": "R-B-10-Q6",
-      "question": "How does climate change affect migration?",
-      "options": {
-        "a": "By making weather more stable",
-        "b": "By forcing people to relocate due to environmental changes",
-        "c": "By reducing sea levels",
-        "d": "By improving farming conditions"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-10-Q7",
-      "question": "What is one cultural benefit of migration?",
-      "options": {
-        "a": "Less diversity",
-        "b": "Cultural exchange and new traditions",
-        "c": "Fewer festivals",
-        "d": "Reduced creativity"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-10-Q8",
-      "question": "What challenge do migrants often face?",
-      "options": {
-        "a": "Unlimited job opportunities",
-        "b": "Discrimination and isolation",
-        "c": "Free housing everywhere",
-        "d": "No need for documents"
-      },
-      "answer": "b"
-    },
-    {
-      "id": "R-B-10-Q9",
-      "question": "What helps migrants integrate into society?",
-      "options": {
-        "a": "Learning the local language",
-        "b": "Avoiding local people",
-        "c": "Hiding their culture",
-        "d": "Not attending school"
-      },
-      "answer": "a"
-    },
-    {
-      "id": "R-B-10-Q10",
-      "question": "What is the main idea of the passage?",
-      "options": {
-        "a": "Migration destroys cultures",
-        "b": "Migration is simple and temporary",
-        "c": "Migration is complex, important, and shapes the modern world",
-        "d": "Migration only benefits wealthy countries"
-      },
-      "answer": "c"
-    }
-  ]
-}
   ]
 }

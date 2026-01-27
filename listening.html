@@ -2,160 +2,444 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Listening Practice | FluencyForge</title>
+<title>Listening | FluencyForge</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 <style>
-body{
-  background:#f6f8ff;
-  font-family:Poppins,sans-serif;
-  margin:0;
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f0f3ff;
+  height: 100vh;
+  overflow: hidden;
 }
-.container{
-  max-width:900px;
-  margin:40px auto;
-  background:#fff;
-  padding:30px;
-  border-radius:16px;
+
+/* MAIN LAYOUT */
+.main {
+  display: flex;
+  height: 100vh;
 }
-h1,h2{margin-top:0}
-.question{margin:20px 0}
-label{display:block;margin:6px 0;cursor:pointer}
-button{
-  margin-top:20px;
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:12px;
-  background:#4a90e2;
-  color:#fff;
-  font-size:16px;
-  cursor:pointer;
+
+/* LEFT PANE: AUDIO */
+#audioPane {
+  width: 42%;
+  background: #ffffff;
+  padding: 25px;
+  border-right: 2px solid #e2e2e2;
+  overflow-y: auto;
 }
-audio{
-  width:100%;
-  margin:15px 0;
+
+#audioPane h2 {
+  margin: 0 0 10px;
 }
-.result{
-  margin-top:20px;
-  font-weight:600;
-  text-align:center;
+
+#audioPlayer {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
 }
-.hidden{display:none}
+
+/* RIGHT: QUESTIONS */
+#questionPane {
+  flex: 1;
+  background: #f7f8ff;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Sticky Header */
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  background: #f7f8ff;
+  z-index: 100;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+#progressText {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#timer {
+  font-weight: 700;
+  background: #4a90e2;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Question card */
+.question {
+  margin: 22px 0;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.question h3 {
+  margin-top: 0;
+}
+
+/* Inputs */
+.optionLabel {
+  display: block;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.optionLabel:hover {
+  background: #eef3ff;
+}
+
+.fill-input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  width: 230px;
+  font-size: 15px;
+}
+
+select {
+  padding: 7px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 15px;
+}
+
+/* Drag and drop */
+.drop-zone {
+  padding: 12px;
+  border: 2px dashed #4a90e2;
+  border-radius: 10px;
+  min-height: 45px;
+  margin-top: 10px;
+  background: #f0f4ff;
+}
+
+.draggable {
+  padding: 8px 12px;
+  background: #dfe4ff;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 5px;
+  cursor: grab;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Submit / Review */
+button {
+  cursor: pointer;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #3a7ccd;
+}
+
+#reviewScreen {
+  display: none;
+}
+
+.review-item {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 8px 0;
+}
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
-  <h1 id="title">Listening Practice</h1>
+<div class="main">
 
-  <audio id="audio" controls></audio>
+  <!-- AUDIO PANEL -->
+  <div id="audioPane">
+    <h2>Listening Audio</h2>
+    <audio id="audioPlayer" controls></audio>
+  </div>
 
-  <div id="questions"></div>
+  <!-- QUESTION PANEL -->
+  <div id="questionPane">
+    <div class="stickyHeader">
+      <div id="progressText">Question 1 of 10</div>
+      <div id="timer">07:00</div>
+    </div>
 
-  <button id="submitBtn">Submit</button>
-  <div class="result" id="result"></div>
+    <div id="questionsContainer"></div>
 
-  <button onclick="location.href='listening-modules.html'">⬅ Back to Modules</button>
+    <button id="submitBtn" class="btn-primary" onclick="submitModule()">Submit Answers</button>
+
+    <div id="reviewScreen">
+      <h2>Review</h2>
+      <div id="reviewList"></div>
+
+      <button class="btn-primary" onclick="finishListening()">Finish Module</button>
+    </div>
+  </div>
+
 </div>
 
+
 <script>
-let correctAnswers = [];
-
+/* ========== URL PARAMS ========== */
 const params = new URLSearchParams(window.location.search);
-const currentLevel = params.get("level");
-const taskParam = params.get("task");
-const currentTaskIndex = parseInt(taskParam, 10) - 1;
+let currentLevel = params.get("level") || "beginner";
+let currentModule = parseInt(params.get("module") || "1");
 
-if (!currentLevel || isNaN(currentTaskIndex)) {
-  alert("Invalid listening task");
-  throw new Error("Invalid params");
+/* ========== TIMER ========== */
+let timerSeconds = 420;
+
+/* ========== STATE ========== */
+let questionsData = [];
+let userAnswers = {};
+
+/* ========== LOAD MODULE ========== */
+async function loadListening() {
+  const res = await fetch(`content/listening/${currentLevel}.json`);
+  const data = await res.json();
+
+  let module = data.modules[currentModule - 1];
+
+  /* AUDIO */
+  document.getElementById("audioPlayer").src = module.audio;
+
+  questionsData = module.questions;
+
+  renderQuestions();
+  startTimer();
 }
 
-async function loadListening(){
-  try{
-    const res = await fetch(`content/listening/${currentLevel}.json`);
-    const data = await res.json();
+/* ========== RENDER QUESTIONS (ALL TYPES) ========== */
+function renderQuestions() {
+  const box = document.getElementById("questionsContainer");
+  box.innerHTML = "";
 
-    const task = data.tasks[currentTaskIndex];
-    if (!task) {
-      alert("Listening task not found");
-      return;
+  questionsData.forEach((q, i) => {
+    let html = `<div class="question"><h3>Q${i + 1}. ${q.question}</h3>`;
+
+    /* MCQ */
+    if (q.type === "mcq") {
+      Object.entries(q.options).forEach(([key, val]) => {
+        html += `
+          <label class="optionLabel">
+            <input type="radio" name="q${i}" value="${key}">
+            (${key}) ${val}
+          </label>`;
+      });
     }
 
-    document.getElementById("title").textContent = task.title;
+    /* MULTI SELECT */
+    if (q.type === "multi") {
+      Object.entries(q.options).forEach(([key, val]) => {
+        html += `
+          <label class="optionLabel">
+            <input type="checkbox" name="q${i}" value="${key}">
+            (${key}) ${val}
+          </label>`;
+      });
+    }
 
-    const audio = document.getElementById("audio");
-    audio.src = task.audio;
+    /* CATEGORIZE */
+    if (q.type === "categorize") {
+      q.categories.forEach(cat => {
+        html += `<p><strong>${cat}</strong></p>
+                 <div class="drop-zone" id="cat_${i}_${cat}" 
+                 ondrop="drop(event)" ondragover="allowDrop(event)"></div>`;
+      });
 
-    const qBox = document.getElementById("questions");
-    qBox.innerHTML = "";
-    correctAnswers = [];
+      html += `<div>`;
+      q.items.forEach((item, idx) => {
+        html += `<div class="draggable" draggable="true" id="drag_${i}_${idx}" 
+                 ondragstart="drag(event)">${item}</div>`;
+      });
+      html += `</div>`;
+    }
 
-    task.questions.forEach((q,i)=>{
-      correctAnswers.push(q.answer);
-      qBox.innerHTML += `
-        <div class="question">
-          <h3>${i+1}. ${q.question}</h3>
-          ${Object.entries(q.options).map(([k,v])=>`
-            <label>
-              <input type="radio" name="q${i}" value="${k}">
-              (${k}) ${v}
-            </label>
-          `).join("")}
-        </div>
-      `;
-    });
+    /* MATCH */
+    if (q.type === "match") {
+      Object.entries(q.pairs).forEach(([left, right]) => {
+        html += `
+          <p><strong>${left}</strong></p>
+          <select id="match_${i}_${left}">
+            <option value="">Select...</option>
+            ${Object.values(q.pairs).map(v => `<option value="${v}">${v}</option>`)}
+          </select>`;
+      });
+    }
 
-  } catch(err){
-    console.error(err);
-    alert("Failed to load listening content");
-  }
+    html += `</div>`;
+    box.innerHTML += html;
+  });
 }
 
-document.getElementById("submitBtn").addEventListener("click",()=>{
+/* DRAG-DROP */
+function allowDrop(e){ e.preventDefault(); }
+function drag(e){ e.dataTransfer.setData("id", e.target.id); }
+function drop(e){
+  e.preventDefault();
+  const id = e.dataTransfer.getData("id");
+  const text = document.getElementById(id).innerText;
+  e.target.innerHTML += `<div>${text}</div>`;
+}
+
+/* ========== TIMER ========== */
+function startTimer() {
+  setInterval(() => {
+    if (timerSeconds <= 0) return;
+    timerSeconds--;
+
+    let m = Math.floor(timerSeconds / 60);
+    let s = timerSeconds % 60;
+
+    document.getElementById("timer").innerText =
+      `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+  }, 1000);
+}
+
+/* ========== COLLECT ANSWERS ========== */
+function collectAnswers() {
+  questionsData.forEach((q, i) => {
+
+    if (q.type === "mcq") {
+      const sel = document.querySelector(`input[name="q${i}"]:checked`);
+      userAnswers[i] = sel ? sel.value : null;
+    }
+
+    if (q.type === "multi") {
+      userAnswers[i] = [...document.querySelectorAll(`input[name="q${i}"]:checked`)]
+        .map(x => x.value);
+    }
+
+    if (q.type === "match") {
+      let obj = {};
+      Object.keys(q.pairs).forEach(key => {
+        obj[key] = document.getElementById(`match_${i}_${key}`).value;
+      });
+      userAnswers[i] = obj;
+    }
+
+    if (q.type === "categorize") {
+      let obj = {};
+      q.categories.forEach(cat => {
+        let zone = document.getElementById(`cat_${i}_${cat}`);
+        obj[cat] = [...zone.querySelectorAll("div")].map(d => d.innerText.trim());
+      });
+      userAnswers[i] = obj;
+    }
+
+  });
+}
+
+/* ========== SCORING ENGINE FULL ========== */
+function calculateScore() {
   let score = 0;
 
-  correctAnswers.forEach((ans,i)=>{
-    const sel = document.querySelector(`input[name="q${i}"]:checked`);
-    if(sel && sel.value === ans) score++;
+  questionsData.forEach((q, i) => {
+    const ua = userAnswers[i];
+
+    if (q.type === "mcq") {
+      if (ua === q.answer) score++;
+    }
+
+    if (q.type === "multi") {
+      const correct = q.answers.sort().join(",");
+      const user = ua.sort().join(",");
+      if (correct === user) score++;
+    }
+
+    if (q.type === "match") {
+      let ok = true;
+      Object.keys(q.pairs).forEach(left => {
+        if (ua[left] !== q.pairs[left]) ok = false;
+      });
+      if (ok) score++;
+    }
+
+    if (q.type === "categorize") {
+      let ok = true;
+      Object.entries(q.answers).forEach(([cat, items]) => {
+        const userList = ua[cat] || [];
+        if (userList.length !== items.length) ok = false;
+        items.forEach(item => {
+          if (!userList.includes(item)) ok = false;
+        });
+      });
+      if (ok) score++;
+    }
+
   });
 
-  const percent = Math.round((score / correctAnswers.length) * 100);
-  document.getElementById("result").textContent =
-    `Score: ${score}/${correctAnswers.length} (${percent}%)`;
+  const percent = Math.round((score / questionsData.length) * 100);
+  return percent;
+}
 
-  let progress = JSON.parse(localStorage.getItem("listeningProgress")) || {};
-  progress[currentLevel] = percent;
-  localStorage.setItem("listeningProgress", JSON.stringify(progress));
-});
+/* ========== SUBMIT ========== */
+function submitModule() {
+  collectAnswers();
+  showReview();
+}
+
+/* ========== REVIEW SCREEN ========== */
+function showReview() {
+  document.getElementById("questionsContainer").style.display = "none";
+  document.getElementById("submitBtn").style.display = "none";
+
+  const review = document.getElementById("reviewScreen");
+  const list = document.getElementById("reviewList");
+  review.style.display = "block";
+
+  questionsData.forEach((_, i) => {
+    let status = userAnswers[i] ? "Answered" : "Skipped";
+    list.innerHTML += `<div class="review-item">Q${i+1} — ${status}</div>`;
+  });
+}
+
+/* ========== FINISH (ADAPTIVE + SAVE) ========== */
+function finishListening() {
+  const percent = calculateScore();
+
+  let completed = JSON.parse(localStorage.getItem("listeningCompleted") || "{}");
+  completed[`${currentLevel}-${currentModule}`] = true;
+  localStorage.setItem("listeningCompleted", JSON.stringify(completed));
+
+  /* Adaptive difficulty */
+  let nextLevel = currentLevel;
+
+  if (percent >= 85) nextLevel = "advanced";
+  else if (percent >= 70) nextLevel = "intermediate";
+  else nextLevel = "beginner";
+
+  alert(
+    `Your Score: ${percent}%\n` +
+    `Next Difficulty: ${nextLevel.toUpperCase()}`
+  );
+
+  window.location.href = "listening-modules.html";
+}
 
 loadListening();
-function initProgress() {
-  if (!localStorage.getItem("progress")) {
-    localStorage.setItem("progress", JSON.stringify({
-      speaking: {
-        beginner: false,
-        intermediate: false,
-        advanced: false
-      },
-      listening: {
-        beginner: null,
-        intermediate: null,
-        advanced: null
-      },
-      reading: {
-        beginner: null,
-        intermediate: null,
-        advanced: null
-      }
-    }));
-  }
-}
-initProgress();
 </script>
 
 </body>

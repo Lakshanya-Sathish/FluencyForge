@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Writing Modules | FluencyForge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f5f7ff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .level-title {
+            text-align: left;
+            margin-top: 35px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .module-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        .module-card {
+            width: 160px;
+            height: 160px;
+            background: white;
+            border-radius: 14px;
+            border: 2px solid #d8d8d8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.2s;
+            position: relative;
+            flex-direction: column;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .module-card:hover {
+            border-color: #4a90e2;
+            transform: translateY(-4px);
+        }
+
+        .completed {
+            border-color: #43c267;
+        }
+
+        .locked {
+            opacity: 0.4;
+            cursor: not-allowed !important;
+            pointer-events: none;
+        }
+
+        .check-icon {
+            color: #43c267;
+            font-size: 26px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .lock-icon {
+            color: #999;
+            font-size: 26px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .progress-box {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .progress-label {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 14px;
+            background: #ddd;
+            border-radius: 7px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #4a90e2;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .back-btn {
+            margin-top: 40px;
+            padding: 12px 20px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Writing Practice</h1>
+
+        <div class="level-title">Beginner Level</div>
+        <div class="module-row" id="beginnerRow"></div>
+
+        <div class="level-title">Intermediate Level</div>
+        <div class="module-row" id="intermediateRow"></div>
+
+        <div class="level-title">Advanced Level</div>
+        <div class="module-row" id="advancedRow"></div>
+
+        <div class="progress-box">
+            <div class="progress-label">Overall Progress</div>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    </div>
+
+    <script>
+        const beginnerModules = 5;
+        const intermediateModules = 5;
+        const advancedModules = 5;
+
+        const beginnerRow = document.getElementById("beginnerRow");
+        const intermediateRow = document.getElementById("intermediateRow");
+        const advancedRow = document.getElementById("advancedRow");
+
+        function isModuleCompleted(id) {
+            return localStorage.getItem(id) === "completed";
+        }
+
+        function createCard(level, index, locked) {
+            const id = `W-${level}-${index}`;
+            const completed = isModuleCompleted(id);
+
+            const div = document.createElement("div");
+            div.className = "module-card";
+            if (completed) div.classList.add("completed");
+            if (locked) div.classList.add("locked");
+
+            div.onclick = () => {
+                if (!locked) window.location.href = `writing.html?id=${id}`;
+            };
+
+            div.innerHTML = `
+                ${completed ? '<div class="check-icon">✔</div>' : ''}
+                ${locked ? '<div class="lock-icon">🔒</div>' : ''}
+                Module ${index}
+            `;
+
+            return div;
+        }
+
+        /* ----- BEGINNER ----- */
+        for (let i = 1; i <= beginnerModules; i++) {
+            const locked = i > 1 && !isModuleCompleted(`W-B-${i - 1}`);
+            beginnerRow.appendChild(createCard("B", i, locked));
+        }
+
+        /* ----- INTERMEDIATE LOCKED UNTIL ALL BEGINNER DONE ----- */
+        const beginnerAllDone = [...Array(beginnerModules)].every((_, i) =>
+            isModuleCompleted(`W-B-${i + 1}`)
+        );
+
+        for (let i = 1; i <= intermediateModules; i++) {
+            intermediateRow.appendChild(createCard("I", i, !beginnerAllDone));
+        }
+
+        /* ----- ADVANCED LOCKED UNTIL ALL INTERMEDIATE DONE ----- */
+        const intermediateAllDone = [...Array(intermediateModules)].every((_, i) =>
+            isModuleCompleted(`W-I-${i + 1}`)
+        );
+
+        for (let i = 1; i <= advancedModules; i++) {
+            advancedRow.appendChild(createCard("A", i, !intermediateAllDone));
+        }
+
+        /* ----- PROGRESS BAR ----- */
+        function updateProgress() {
+            let completed = 0;
+            const total = beginnerModules + intermediateModules + advancedModules;
+
+            for (let i = 1; i <= beginnerModules; i++)
+                if (isModuleCompleted(`W-B-${i}`)) completed++;
+
+            for (let i = 1; i <= intermediateModules; i++)
+                if (isModuleCompleted(`W-I-${i}`)) completed++;
+
+            for (let i = 1; i <= advancedModules; i++)
+                if (isModuleCompleted(`W-A-${i}`)) completed++;
+
+            const percent = (completed / total) * 100;
+            document.getElementById("progressFill").style.width = percent + "%";
+        }
+
+        updateProgress();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+{
+    "level": "intermediate",
+    "modules": [
+        {
+            "id": "W-I-1",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many universities around the world are beginning to adopt online academic platforms that allow students to access lecture notes, submit assignments, participate in discussions, and communicate with teachers more conveniently. Supporters of these platforms argue that digital learning tools make education more flexible, as students can review lessons at their own pace and revisit recorded materials whenever needed. This is especially helpful for students who balance studies with part-time jobs or family responsibilities. Additionally, online platforms help teachers organize documents, track submissions, and provide quick feedback. However, opponents believe that too much reliance on technology reduces valuable face-to-face interaction between students and teachers. They argue that online communication can lead to misunderstandings because tone and emotion are harder to interpret in digital messages. Another concern is inequality: students who do not have stable internet access or updated devices may struggle to keep up with coursework, leading to an unfair academic disadvantage. As universities continue to expand online systems, they must consider how to ensure equal access, maintain communication quality, and preserve meaningful in-person learning experiences.",
+                    "task": "Summarize the key points from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you think online learning can replace traditional classroom learning in the future? Explain your opinion with examples.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-I-2",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many modern workplaces are beginning to adopt hybrid work models where employees are allowed to work from home for part of the week and return to the office on other days. This system gained popularity after many companies realized that remote work can improve employee satisfaction and reduce unnecessary office expenses. Supporters say hybrid work helps people save travel time, reduces stress caused by long commutes, and allows employees to balance personal responsibilities more easily. Some workers also feel they can concentrate better at home without frequent interruptions from colleagues. However, critics argue that remote work weakens teamwork and makes spontaneous communication more difficult. They also claim that online meetings cannot fully replace in-person collaboration, especially for creative tasks or problem-solving discussions. Managers often worry that measuring productivity becomes more challenging when employees work from different locations. There is also a concern that some workers may feel isolated or disconnected from the workplace culture. As hybrid work becomes more common, companies must find ways to maintain strong communication, productivity, and employee well-being across both home and office environments.",
+                    "task": "Summarize the main points from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Should companies allow employees to work from home regularly? Give reasons to support your view.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-I-3",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many cities are investing heavily in public transportation systems such as buses, metro trains, trams, and bicycle-sharing programs to make urban travel more efficient and environmentally friendly. Supporters believe that improving public transportation reduces traffic congestion by encouraging people to use fewer private cars. With fewer vehicles on the road, cities experience lower pollution, cleaner air, and less noise. Public transport is also more affordable, making it accessible to people from different income levels. In addition, reliable transportation helps workers reach their jobs on time and boosts overall productivity. However, critics point out that developing high-quality transportation systems requires large financial investments and years of planning. Some cities may not have enough space to build new lines or expand existing routes. Others argue that people prefer private vehicles because they offer greater comfort, privacy, and flexibility compared to crowded buses or trains. Because of these challenges, city governments must decide how to balance long-term environmental benefits with financial limitations and public preferences when planning transportation projects.",
+                    "task": "Summarize the important ideas from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Is public transportation more important than building more roads? Support your opinion with reasons.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-I-4",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Healthy eating has become an important topic in schools, as educators recognize that students’ physical well-being directly affects their academic performance and overall development. Many schools are now replacing sugary snacks, fried foods, and processed items with fresh fruits, vegetables, and whole-grain meals in their cafeterias. Supporters believe that these changes help students develop good eating habits early in life, which can prevent health problems such as obesity, low energy, and poor concentration. They argue that nutritious meals improve students’ ability to focus in class, participate actively, and maintain stable energy levels throughout the day. However, some students feel that healthy meals are less appealing in taste and do not provide the same satisfaction as familiar junk foods. There are also financial challenges, as healthier ingredients often cost more, requiring schools to increase budgets or find new suppliers. In some cases, schools must also train cafeteria staff to prepare healthier meals correctly. As schools try to promote healthy habits, they must balance cost, taste, student acceptance, and overall nutritional value.",
+                    "task": "Summarize the key ideas from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Should schools be responsible for teaching students healthy eating habits? Explain your opinion.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-I-5",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Tourism has become a major source of income for many countries, especially those with famous natural landscapes, historical sites, and cultural attractions. It creates thousands of jobs in hotels, restaurants, travel agencies, and transportation services. Supporters argue that tourism helps local businesses grow and encourages governments to protect cultural and historical locations because these places attract visitors. Additionally, tourism promotes cultural exchange by allowing people from different countries to interact and learn from one another. However, critics warn that excessive tourism can harm the environment, especially in fragile ecosystems like beaches, forests, and mountains. Large numbers of tourists can lead to overcrowding, pollution, and increased waste. Some cities struggle with rising prices for housing, food, and public services because tourists drive demand higher, making daily life more expensive for local residents. While tourism brings many benefits, it must be managed carefully to protect local communities and the environment.",
+                    "task": "Summarize the main points from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you think tourism is more beneficial or harmful to a country? Provide reasons for your answer.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        }
+    ]
+}

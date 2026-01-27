@@ -1,0 +1,611 @@
+{
+  "modules": [
+    {
+      "id": "L-I-1",
+      "audio": "assets/audio/m01.mp3.mpeg",
+      "transcript": "Student: Hi, I wanted to talk about my course schedule for next semester. Advisor: Sure. What concerns do you have? Student: I’m thinking of dropping my statistics class because it feels overwhelming. Advisor: I understand. Is it the workload or the content that’s difficult? Student: Mostly the content. I’m struggling to keep up with the lectures. Advisor: Have you considered attending the weekly tutoring sessions? Student: I didn’t know those were available. Advisor: Yes, they're held every Wednesday afternoon. Many students find them helpful. Student: If I attend tutoring, do you think I should keep the course? Advisor: I recommend trying tutoring before making a final decision. Student: That sounds reasonable. When is the deadline to drop the course? Advisor: The deadline is next Friday. Student: Thank you. I’ll think it over. Advisor: You’re welcome.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To discuss tutoring methods for statistics",
+            "B": "To get advice about whether to drop a course",
+            "C": "To report issues with a professor",
+            "D": "To request a schedule change for another class"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student meet with the advisor?",
+          "options": {
+            "A": "She needs permission to enroll in a new course",
+            "B": "She wants to know the grading policy",
+            "C": "She is struggling and considering dropping a course",
+            "D": "She is unsure how to register for tutoring"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What part of the statistics class is most challenging for the student?",
+          "options": {
+            "A": "Assignments",
+            "B": "Lectures",
+            "C": "Group projects",
+            "D": "Exams"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "When are the tutoring sessions held?",
+          "options": {
+            "A": "Tuesday morning",
+            "B": "Wednesday afternoon",
+            "C": "Thursday evening",
+            "D": "Friday afternoon"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the advisor recommend?",
+          "options": {
+            "A": "Drop the course immediately",
+            "B": "Attend tutoring before deciding",
+            "C": "Switch to an easier class",
+            "D": "Meet the professor first"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the tutoring sessions?",
+          "options": {
+            "A": "They are optional but helpful",
+            "B": "They are mandatory",
+            "C": "They are taught by the professor",
+            "D": "They require online registration only"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student?",
+          "options": {
+            "A": "She has missed several tutoring sessions",
+            "B": "She prefers group study",
+            "C": "She didn’t know campus support existed",
+            "D": "She wants to change her major"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "How does the advisor seem to feel?",
+          "options": {
+            "A": "Uninterested",
+            "B": "Supportive",
+            "C": "Strict",
+            "D": "Confused"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the advisor mention the deadline?",
+          "options": {
+            "A": "To warn about limited seats",
+            "B": "To ensure she doesn’t miss it",
+            "C": "To encourage early withdrawal",
+            "D": "To explain grading"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "When is the deadline to drop the course?",
+          "options": {
+            "A": "This Friday",
+            "B": "This Monday",
+            "C": "Next Wednesday",
+            "D": "Next Friday"
+          },
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "id": "L-I-2",
+      "audio": "assets/audio/m02.mp3.mpeg",
+      "transcript": "Student: Hi, I’m having trouble accessing the online learning portal. IT Staff: What kind of trouble are you experiencing? Student: It keeps saying my password is incorrect, even though I’m sure it’s right. IT Staff: Have you tried resetting your password? Student: Not yet. I wasn’t sure how to do that. IT Staff: You can click on the 'Forgot Password' option on the login page. Student: Will that fix the issue immediately? IT Staff: Usually yes, but sometimes it can take a few minutes. Student: I need access today to submit an assignment. IT Staff: I recommend resetting it now and clearing your browser cache. Student: Okay, I’ll do that. IT Staff: If the problem continues, contact us again. Student: Thank you for your help. IT Staff: You’re welcome.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To report a broken website",
+            "B": "To fix a login problem",
+            "C": "To request a password reset",
+            "D": "To submit an assignment"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student approach the IT staff?",
+          "options": {
+            "A": "To update her account",
+            "B": "To fix an incorrect password issue",
+            "C": "To ask about deadlines",
+            "D": "To request technical training"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What error does the student face?",
+          "options": {
+            "A": "Browser not supported",
+            "B": "Incorrect password",
+            "C": "Account locked",
+            "D": "Page not loading"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the IT staff advise first?",
+          "options": {
+            "A": "Restart laptop",
+            "B": "Reset password",
+            "C": "Wait for system update",
+            "D": "Visit IT office"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Where can the student reset her password?",
+          "options": {
+            "A": "Profile settings",
+            "B": "Email link",
+            "C": "Login page",
+            "D": "Help center"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What extra step should the student take?",
+          "options": {
+            "A": "Update browser",
+            "B": "Clear cache",
+            "C": "Try incognito mode",
+            "D": "Change device"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student need urgent access?",
+          "options": {
+            "A": "To email her teacher",
+            "B": "To submit an assignment",
+            "C": "To attend a class",
+            "D": "To check grades"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize each action based on whether the student already did it or still needs to do it.",
+          "categories": [
+            "Already did",
+            "Needs to do"
+          ],
+          "items": [
+            "Tried logging in",
+            "Reset password",
+            "Clear browser cache",
+            "Submit assignment"
+          ],
+          "answers": {
+            "Already did": [
+              "Tried logging in"
+            ],
+            "Needs to do": [
+              "Reset password",
+              "Clear browser cache",
+              "Submit assignment"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each item with the correct response from the IT staff.",
+          "pairs": {
+            "Reset password": "Use the 'Forgot Password' option",
+            "Fix continued issues": "Contact IT again",
+            "Slow reset time": "Sometimes takes a few minutes"
+          },
+          "answer": {
+            "Reset password": "Use the 'Forgot Password' option",
+            "Fix continued issues": "Contact IT again",
+            "Slow reset time": "Sometimes takes a few minutes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L-I-3",
+      "audio": "assets/audio/m03.mp3.mpeg",
+      "transcript": "Professor: Today we’ll discuss climate change and its causes. Climate change refers to long-term changes in temperature and weather patterns on Earth. While natural factors can influence climate, human activities have significantly increased the rate of change. Burning fossil fuels such as coal, oil, and gas releases greenhouse gases into the atmosphere. These gases trap heat, causing the Earth’s temperature to rise. This process is known as the greenhouse effect. Climate change can lead to rising sea levels, more extreme weather events, and changes in ecosystems. Addressing climate change requires reducing emissions and using renewable energy sources.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main topic of the lecture?",
+          "options": {
+            "A": "Different types of fossil fuels",
+            "B": "Causes and effects of climate change",
+            "C": "Weather patterns around the world",
+            "D": "How renewable energy works"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the professor mention fossil fuels?",
+          "options": {
+            "A": "To explain how they are formed",
+            "B": "To show their role in human development",
+            "C": "To describe how they contribute to climate change",
+            "D": "To compare them with renewable sources"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What releases greenhouse gases into the atmosphere?",
+          "options": {
+            "A": "Plant growth",
+            "B": "Burning fossil fuels",
+            "C": "Natural disasters",
+            "D": "Ocean currents"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What is the greenhouse effect?",
+          "options": {
+            "A": "Heat escaping into space",
+            "B": "Gases trapping heat in the atmosphere",
+            "C": "Chemicals cooling the atmosphere",
+            "D": "Clouds blocking sunlight"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Which of the following is an effect of climate change?",
+          "options": {
+            "A": "Fewer storms",
+            "B": "Shorter days",
+            "C": "Rising sea levels",
+            "D": "Decreased global temperatures"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the professor say about ecosystems?",
+          "options": {
+            "A": "They remain unaffected by climate change",
+            "B": "They may experience changes",
+            "C": "They produce greenhouse gases",
+            "D": "They prevent climate change"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about human activities?",
+          "options": {
+            "A": "They have no impact on global temperature",
+            "B": "They slow down natural climate processes",
+            "C": "They increase the speed of climate change",
+            "D": "They only affect small regions of the planet"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize each item based on whether it is a cause or an effect of climate change.",
+          "categories": [
+            "Cause",
+            "Effect"
+          ],
+          "items": [
+            "Burning fossil fuels",
+            "Greenhouse gases trapping heat",
+            "Rising sea levels",
+            "More extreme weather"
+          ],
+          "answers": {
+            "Cause": [
+              "Burning fossil fuels",
+              "Greenhouse gases trapping heat"
+            ],
+            "Effect": [
+              "Rising sea levels",
+              "More extreme weather"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each term with the correct description.",
+          "pairs": {
+            "Greenhouse effect": "Gases trap heat in the atmosphere",
+            "Renewable energy": "Energy from natural sources",
+            "Ecosystem changes": "Impact on plant and animal habitats"
+          },
+          "answer": {
+            "Greenhouse effect": "Gases trap heat in the atmosphere",
+            "Renewable energy": "Energy from natural sources",
+            "Ecosystem changes": "Impact on plant and animal habitats"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L-I-4",
+      "audio": "assets/audio/m04.mp3.mpeg",
+      "transcript": "Professor: In today’s lecture, we’ll explore how memory works in the human brain. Memory is the process of encoding, storing, and retrieving information. There are different types of memory, including short-term and long-term memory. Short-term memory holds information for a brief period, while long-term memory stores information for extended periods of time. Repetition and meaningful connections can improve memory retention. Sleep also plays an important role in strengthening memories. Understanding how memory works can help students develop better study strategies.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main topic of the lecture?",
+          "options": {
+            "A": "How the brain controls emotions",
+            "B": "How memory works in the human brain",
+            "C": "Different study techniques",
+            "D": "The structure of the human brain"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the professor mention short-term and long-term memory?",
+          "options": {
+            "A": "To explain two major types of memory",
+            "B": "To compare human and animal memory",
+            "C": "To show why memory is unreliable",
+            "D": "To introduce a homework assignment"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "What does short-term memory do?",
+          "options": {
+            "A": "Stores information for years",
+            "B": "Holds information briefly",
+            "C": "Organizes old memories",
+            "D": "Improves memory automatically"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What improves memory retention?",
+          "options": {
+            "A": "Eating frequently",
+            "B": "Taking long breaks",
+            "C": "Repetition and connections",
+            "D": "Writing faster"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What role does sleep play in memory?",
+          "options": {
+            "A": "It weakens short-term memory",
+            "B": "It removes unnecessary memories",
+            "C": "It strengthens memories",
+            "D": "It only helps during exams"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What is memory described as?",
+          "options": {
+            "A": "Understanding emotions",
+            "B": "Encoding, storing, and retrieving information",
+            "C": "Organizing thoughts for exams",
+            "D": "Learning new languages"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about good study habits?",
+          "options": {
+            "A": "They depend on sleeping less",
+            "B": "They require students to memorize everything",
+            "C": "They improve when memory strategies are used",
+            "D": "They are only useful in science courses"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize each statement as belonging to short-term memory or long-term memory.",
+          "categories": [
+            "Short-term memory",
+            "Long-term memory"
+          ],
+          "items": [
+            "Holds information briefly",
+            "Stores information for a long period",
+            "Used to remember information for minutes",
+            "Used to remember information for months or years"
+          ],
+          "answers": {
+            "Short-term memory": [
+              "Holds information briefly",
+              "Used to remember information for minutes"
+            ],
+            "Long-term memory": [
+              "Stores information for a long period",
+              "Used to remember information for months or years"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each term with its correct meaning.",
+          "pairs": {
+            "Encoding": "Taking in information",
+            "Storing": "Keeping information in memory",
+            "Retrieving": "Bringing information back when needed"
+          },
+          "answer": {
+            "Encoding": "Taking in information",
+            "Storing": "Keeping information in memory",
+            "Retrieving": "Bringing information back when needed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "L-I-5",
+      "audio": "assets/audio/m05.mp3.mpeg",
+      "transcript": "Student: Professor, may I talk to you about the research paper due this week? Professor: Of course. What seems to be the problem? Student: I’ve completed most of it, but I’m having difficulty analyzing the final data. Professor: Have you been attending the discussion sessions? Student: Yes, but I still feel unsure about my conclusions. Professor: I see. When is the paper currently due? Student: It’s due this Thursday. Professor: If you need more time, you may request a short extension. Student: Would that be possible? Professor: Yes, but you must submit a request form by tomorrow. Student: How much extra time would I get? Professor: Two additional days. Student: Thank you. That would really help. Professor: Make sure you use the time wisely.",
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To discuss late submission penalties",
+            "B": "To request help analyzing research data",
+            "C": "To complain about discussion sessions",
+            "D": "To submit the research paper"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student approach the professor?",
+          "options": {
+            "A": "To ask for extra materials",
+            "B": "To get feedback on a presentation",
+            "C": "To get help with the research paper",
+            "D": "To ask about class attendance"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Which part of the research paper is the student struggling with?",
+          "options": {
+            "A": "Formatting the paper",
+            "B": "Writing the bibliography",
+            "C": "Analyzing the final data",
+            "D": "Choosing a topic"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "When is the research paper originally due?",
+          "options": {
+            "A": "Monday",
+            "B": "Tuesday",
+            "C": "Thursday",
+            "D": "Friday"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What must the student do to receive an extension?",
+          "options": {
+            "A": "Attend one more discussion session",
+            "B": "Submit a request form",
+            "C": "Send an email to the professor",
+            "D": "Rewrite the conclusion"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How many extra days would the student get?",
+          "options": {
+            "A": "One day",
+            "B": "Two days",
+            "C": "Three days",
+            "D": "Four days"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student's situation?",
+          "options": {
+            "A": "The student has not started the paper",
+            "B": "The student has ignored all instructions",
+            "C": "The student wants to improve the final part",
+            "D": "The student plans to submit late without asking"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "categorize",
+          "question": "Categorize each statement based on who says it.",
+          "categories": [
+            "Student",
+            "Professor"
+          ],
+          "items": [
+            "Offers a short extension",
+            "Feels unsure about their conclusions",
+            "Says the paper is due Thursday",
+            "Requests extra time",
+            "Reminds to use time wisely"
+          ],
+          "answers": {
+            "Student": [
+              "Feels unsure about their conclusions",
+              "Says the paper is due Thursday",
+              "Requests extra time"
+            ],
+            "Professor": [
+              "Offers a short extension",
+              "Reminds to use time wisely"
+            ]
+          }
+        },
+        {
+          "type": "match",
+          "question": "Match each term with its correct meaning.",
+          "pairs": {
+            "Original deadline": "Thursday",
+            "Extension length": "Two days",
+            "Requirement": "Submit request form"
+          },
+          "answer": {
+            "Original deadline": "Thursday",
+            "Extension length": "Two days",
+            "Requirement": "Submit request form"
+          }
+        }
+      ]
+    }
+  ]
+}

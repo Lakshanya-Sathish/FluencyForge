@@ -5,124 +5,193 @@
 <title>Listening Modules | FluencyForge</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 <style>
-body{
-  background:#f6f8ff;
-  font-family:Poppins,sans-serif;
-  margin:0;
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7ff;
 }
-.container{
-  max-width:900px;
-  margin:50px auto;
-  background:#fff;
-  padding:30px;
-  border-radius:16px;
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
 }
-.card{
-  padding:18px;
-  margin:14px 0;
-  border-radius:12px;
-  border:2px solid #4a90e2;
-  cursor:pointer;
-  text-align:center;
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
-.locked{
-  opacity:0.4;
-  pointer-events:none;
+
+.level-title {
+  text-align: left;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
 }
-button{
-  margin-top:20px;
-  padding:12px 18px;
-  border:none;
-  border-radius:10px;
-  background:#4a90e2;
-  color:#fff;
-  cursor:pointer;
+
+.module-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.module-card {
+  width: 160px;
+  height: 160px;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #d8d8d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+
+.module-card:hover {
+  border-color: #4a90e2;
+  transform: translateY(-3px);
+}
+
+.locked {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.lock-icon {
+  font-size: 26px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Progress Bar */
+.progress-box {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.progress-label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #ddd;
+  border-radius: 7px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4a90e2;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.back-btn {
+  margin-top: 40px;
+  padding: 12px 20px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 </style>
 </head>
 
 <body>
+<div class="container">
 
-<!-- LEVEL SELECTION -->
-<div class="container" id="levelBox">
-  <h1>Listening Modules</h1>
+  <h1>Listening Practice</h1>
 
-  <div class="card" onclick="openModules('easy')">
-    Beginner
+  <!-- BEGINNER -->
+  <div class="level-title">Beginner Level</div>
+  <div class="module-row" id="beginnerRow"></div>
+
+  <!-- INTERMEDIATE -->
+  <div class="level-title">Intermediate Level</div>
+  <div class="module-row" id="intermediateRow"></div>
+
+  <!-- ADVANCED -->
+  <div class="level-title">Advanced Level</div>
+  <div class="module-row" id="advancedRow"></div>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-box">
+    <div class="progress-label">Overall Progress</div>
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill"></div>
+    </div>
   </div>
 
-  <div class="card locked" id="intermediateCard" onclick="openModules('intermediate')">
-    Intermediate
-  </div>
+  <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
 
-  <div class="card locked" id="advancedCard" onclick="openModules('advanced')">
-    Advanced
-  </div>
-
-  <button onclick="location.href='listening-home.html'">⬅ Back</button>
-</div>
-
-<!-- MODULE LIST -->
-<div class="container" id="moduleBox" style="display:none">
-  <h2 id="moduleTitle"></h2>
-  <div id="modules"></div>
-
-  <button onclick="backToLevels()">⬅ Back</button>
 </div>
 
 <script>
-let currentLevel = null;
+const totalModules = 15; // 5 beginner + 5 intermediate + 5 advanced
 
-/* LOAD PROGRESS */
-let progress = JSON.parse(localStorage.getItem("listeningProgress")) || {
-  easy: false,
-  intermediate: false
-};
+// Load completed modules from localStorage
+let completed = JSON.parse(localStorage.getItem("listeningCompleted") || "{}");
 
-/* UNLOCK LEVELS */
-if(progress.easy){
-  document.getElementById("intermediateCard").classList.remove("locked");
+function createCard(level, num, row) {
+  const id = `${level}-${num}`;
+  const isLocked = getLockedStatus(level, num);
+
+  const card = document.createElement("div");
+  card.className = "module-card";
+  if (isLocked) card.classList.add("locked");
+  card.onclick = () => {
+    window.location.href = `listening.html?level=${level}&module=${num}`;
+  };
+
+  card.innerHTML = `
+    <div style="font-size:18px; font-weight:600;">Module ${num}</div>
+    ${isLocked ? `<div class='lock-icon'>🔒</div>` : ""}
+  `;
+
+  document.getElementById(row).appendChild(card);
 }
-if(progress.intermediate){
-  document.getElementById("advancedCard").classList.remove("locked");
+
+function getLockedStatus(level, num) {
+  if (level === "beginner") return false;
+
+  if (level === "intermediate") return num === 1 ? false : !completed[`beginner-${num-1}`];
+
+  if (level === "advanced") return num === 1 ? false : !completed[`intermediate-${num-1}`];
+
+  return true;
 }
 
-/* OPEN MODULE LIST */
-function openModules(level){
-  currentLevel = level;
-
-  document.getElementById("levelBox").style.display = "none";
-  document.getElementById("moduleBox").style.display = "block";
-
-  document.getElementById("moduleTitle").textContent =
-    level.charAt(0).toUpperCase()+level.slice(1)+" Listening Tasks";
-
-  const box = document.getElementById("modules");
-  box.innerHTML = "";
-
-  for(let i=1;i<=10;i++){
-    box.innerHTML += `
-      <div class="card" onclick="openTask(${i})">
-        Task ${i}
-      </div>
-    `;
+function loadAllModules() {
+  for (let i = 1; i <= 5; i++) {
+    createCard("beginner", i, "beginnerRow");
+    createCard("intermediate", i, "intermediateRow");
+    createCard("advanced", i, "advancedRow");
   }
 }
 
-/* OPEN TASK */
-function openTask(num){
-  window.location.href =
-    `listening.html?level=${currentLevel}&task=${num}`;
+// Update Progress Bar
+function updateProgress() {
+  const done = Object.keys(completed).length;
+  const percent = Math.round((done / totalModules) * 100);
+  document.getElementById("progressFill").style.width = percent + "%";
 }
 
-/* BACK */
-function backToLevels(){
-  document.getElementById("moduleBox").style.display = "none";
-  document.getElementById("levelBox").style.display = "block";
-}
+loadAllModules();
+updateProgress();
 </script>
 
 </body>

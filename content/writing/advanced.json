@@ -1,0 +1,85 @@
+{
+    "level": "advanced",
+    "modules": [
+        {
+            "id": "W-A-1",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "In recent years, many universities have shifted toward project-based assessments as a way to better evaluate student learning. Supporters argue that projects allow students to apply theoretical knowledge to real-world problems, encouraging deeper understanding rather than memorization. They also believe that project work helps students develop essential skills such as analytical thinking, teamwork, research, time management, and creative problem-solving — abilities that employers value highly. Projects often require students to explore complex topics from multiple perspectives, which can lead to more meaningful learning outcomes. However, critics raise concerns about fairness and practicality. They point out that in group projects, work is often unevenly distributed, causing some students to take on a heavier workload while others contribute very little. This makes evaluation difficult and may result in grades that do not accurately reflect individual effort. Others note that project-based assessments can be resource-intensive, requiring significant time, access to technology, and availability of materials — all of which may disadvantage students who have limited means or heavy academic schedules. Additionally, grading creativity or originality can be highly subjective, leading to inconsistency across instructors or departments. As universities continue adopting project-centered approaches, they must address these challenges to ensure assessments remain fair, practical, and effective for all students.",
+                    "task": "Summarize the key points presented in the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you think project-based assessments should replace traditional exams in universities? Give detailed reasons and examples to support your opinion.",
+                    "expectedDurationMinutes": 30
+                }
+            ]
+        },
+        {
+            "id": "W-A-2",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many modern cities are investing heavily in smart-technology systems designed to improve public services and overall quality of life. These systems include automated traffic-signal adjustments, real-time public transport updates, energy-efficient street lighting, and digital platforms that allow residents to report issues such as potholes or power outages instantly. Supporters claim that smart-city technologies help reduce traffic congestion, lower pollution levels, and make urban infrastructure more efficient through data-driven planning. Governments can analyze trends, predict potential problems, and respond more quickly to public needs. Additionally, smart systems can improve safety by detecting unusual patterns, monitoring public spaces, and managing emergencies more effectively. However, critics highlight several significant concerns. One major issue is privacy: large-scale data collection often involves tracking residents’ movements, habits, and personal information, raising fears of government surveillance or misuse of data. Implementing smart-city technology is also extremely expensive, potentially widening the gap between wealthy cities and underfunded regions that cannot afford such upgrades. Furthermore, increased dependence on digital systems introduces risks — a single system failure, software glitch, or cyberattack could disrupt transportation, communication, or even emergency services. These concerns suggest that while smart cities offer promising benefits, governments must balance technological progress with ethical, financial, and security considerations.",
+                    "task": "Summarize the key arguments made in the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Should governments invest heavily in smart-city technology, or focus on basic public services first? Defend your viewpoint with strong reasoning.",
+                    "expectedDurationMinutes": 30
+                }
+            ]
+        },
+        {
+            "id": "W-A-3",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Advances in artificial intelligence (AI) are rapidly changing industries across the world by automating tasks that were traditionally performed by humans. Supporters claim that AI enhances efficiency because machines can work continuously, handle repetitive tasks without fatigue, and process complex data faster than humans. They also argue that AI opens new opportunities in fields such as robotics, cybersecurity, healthcare analytics, and machine learning engineering. In these sectors, AI not only assists workers but also creates specialized, high-skill jobs. Furthermore, proponents believe AI-driven systems can reduce human error, leading to more accurate diagnoses in medicine, safer transportation systems, and better financial forecasting. However, critics warn that rapid automation may result in significant job losses, particularly for workers in low-skill or repetitive roles. There are also ethical concerns: algorithms may reflect biases present in their training data, potentially leading to unfair decisions in hiring, law enforcement, or lending. Another challenge is the lack of transparency in how AI systems make decisions, making it difficult to hold them accountable. Some experts fear that AI development is moving faster than regulation, leaving governments unprepared to manage risks related to privacy, misuse, or overreliance on automated systems. As AI continues to evolve, society must weigh its transformative benefits against its potential social and ethical consequences.",
+                    "task": "Summarize the major points discussed in the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you think the benefits of artificial intelligence outweigh the potential risks? Explain your argument with examples.",
+                    "expectedDurationMinutes": 30
+                }
+            ]
+        },
+        {
+            "id": "W-A-4",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Environmental experts and activists increasingly argue that governments should restrict private vehicle usage to reduce pollution and combat climate change. They support policies such as congestion charges, high parking fees, limited driving zones, and expanded investment in public transportation systems. Supporters believe these measures can significantly reduce carbon emissions, ease traffic congestion, and encourage people to adopt eco-friendly alternatives such as cycling or public transit. They argue that cleaner air and reduced traffic benefit public health and contribute to more sustainable urban development. However, critics emphasize the difficulties such policies may create, especially for people who rely on private vehicles due to long commutes, irregular work hours, or limited access to efficient public transport. Low-income individuals may be disproportionately affected if they cannot afford newer, environmentally friendly vehicles or higher transportation costs. Businesses may also experience delays in deliveries or reduced customer accessibility if vehicle restrictions become too strict. Some economists warn that aggressive transportation limits could slow economic growth in cities where mobility is essential for commerce and employment. This debate highlights the challenge governments face in balancing environmental responsibility with fairness, accessibility, and economic stability.",
+                    "task": "Summarize the key ideas presented in the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Should governments limit private vehicle use to protect the environment, even if it inconveniences citizens? Provide a well-reasoned answer.",
+                    "expectedDurationMinutes": 30
+                }
+            ]
+        },
+        {
+            "id": "W-A-5",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many developed countries are experiencing rapidly declining birth rates, leading to concerns about aging populations, shrinking workforces, and long-term economic challenges. Supporters of government intervention argue that policies such as financial incentives, subsidized childcare, extended parental leave, and affordable housing programs can encourage families to have more children. They claim these measures help balance the population, support future labor supply, and reduce pressure on social welfare systems. However, critics argue that declining birth rates are influenced by deeper social and economic factors — including high living costs, demanding careers, and personal lifestyle choices — which may not be easily changed by government incentives. Even generous financial benefits may not persuade couples who prefer smaller families or prioritize career advancement. Others believe immigration offers a more practical solution. By accepting skilled workers from other countries, governments can quickly fill labor shortages, support economic growth, and increase cultural diversity. However, this approach brings its own challenges, such as integration, housing shortages, and political resistance. As countries struggle with demographic decline, they must decide whether to focus on increasing birth rates, expanding immigration, or adopting a balanced combination of both strategies.",
+                    "task": "Summarize the main points of the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Should governments attempt to increase birth rates, or focus instead on accepting more immigrants to solve workforce shortages? Support your position with clear arguments.",
+                    "expectedDurationMinutes": 30
+                }
+            ]
+        }
+    ]
+}

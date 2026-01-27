@@ -1,0 +1,544 @@
+{
+  "modules": [
+    {
+      "id": "L-B-1",
+      "audio": "assets/audio/easy01.mp3.mpeg",
+      "transcript": "Student: Hello, I’m looking for books for my biology assignment. Librarian: Sure. What topic are you studying? Student: It’s about plant growth and how plants develop. Librarian: You can find beginner-level books in the biology section on the second floor. Student: Is there a specific shelf I should look for? Librarian: Yes, look for the shelf labeled 'Plant Science.' ■ Student: Do the books have pictures and diagrams? Librarian: Most of them do. ■ They are very helpful for understanding. Student: How long can I borrow the books? Librarian: The borrowing period is fourteen days. ■ Student: Can I renew them if I need more time? Librarian: Yes, you can renew them online before the due date. Student: Thank you so much for your help. Librarian: You’re welcome.",
+      "insertSentence": "These visual aids make complex topics easier to understand for students.",
+      "correctSpot": 1,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To explain how to write a biology assignment",
+            "B": "To help the student find books for her project",
+            "C": "To teach the student how to use the library website",
+            "D": "To recommend online study materials"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student approach the librarian?",
+          "options": {
+            "A": "To return overdue books",
+            "B": "To ask for help finding biology books",
+            "C": "To report a missing shelf label",
+            "D": "To request a study room"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What topic is the student studying?",
+          "options": {
+            "A": "Animal behavior",
+            "B": "Plant growth",
+            "C": "Human anatomy",
+            "D": "Marine biology"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Where can the student find the books?",
+          "options": {
+            "A": "Ground floor",
+            "B": "First floor",
+            "C": "Second floor",
+            "D": "Third floor"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Which shelf label should the student look for?",
+          "options": {
+            "A": "Plant Biology",
+            "B": "Environmental Studies",
+            "C": "Plant Science",
+            "D": "Life Sciences"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What feature do most of the books have?",
+          "options": {
+            "A": "Practice questions",
+            "B": "Pictures and diagrams",
+            "C": "Online access codes",
+            "D": "Free worksheets"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How long can the student borrow the books?",
+          "options": {
+            "A": "Seven days",
+            "B": "Fourteen days",
+            "C": "Twenty-one days",
+            "D": "One month"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How can the student renew the books?",
+          "options": {
+            "A": "By visiting the front desk",
+            "B": "By calling the library",
+            "C": "By sending an email",
+            "D": "By renewing online"
+          },
+          "answer": "D"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student?",
+          "options": {
+            "A": "She is unfamiliar with library sections",
+            "B": "She needs many books for her assignment",
+            "C": "She prefers digital materials",
+            "D": "She often borrows books late"
+          },
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "L-B-2",
+      "audio": "assets/audio/easy02.mp3.mpeg",
+      "transcript": "Professor: Which part is difficult for you? Student: I don’t understand the difference between producers and consumers. Professor: Producers are organisms like plants that make their own food. ■ Consumers depend on other organisms for food. ■ Student: That helps a lot. Do we need to write examples? Professor: Yes, include at least two examples for each group. ■ Student: When is the homework due? Professor: It’s due on Friday at noon. Student: Can I submit it online? Professor: Yes, submit it through the course portal. Student: Thank you, Professor. Professor: You’re welcome.",
+      "insertSentence": "Understanding the difference is important for completing your assignment correctly.",
+      "correctSpot": 1,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the student having trouble understanding?",
+          "options": {
+            "A": "The homework instructions",
+            "B": "The difference between producers and consumers",
+            "C": "How to submit the assignment",
+            "D": "The examples needed"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What are producers?",
+          "options": {
+            "A": "Organisms that depend on others for food",
+            "B": "Plants that make their own food",
+            "C": "Animals in the food chain",
+            "D": "Consumers that eat plants"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What are consumers?",
+          "options": {
+            "A": "Organisms that eat other organisms",
+            "B": "Plants that produce energy",
+            "C": "Microorganisms that live on plants",
+            "D": "Producers in the food chain"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the professor ask the student to include?",
+          "options": {
+            "A": "Three examples",
+            "B": "Two examples for each group",
+            "C": "Only one example",
+            "D": "A diagram"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "When is the homework due?",
+          "options": {
+            "A": "Tomorrow morning",
+            "B": "Friday evening",
+            "C": "Friday at noon",
+            "D": "Sunday night"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "How should the homework be submitted?",
+          "options": {
+            "A": "Printed and submitted in class",
+            "B": "By email",
+            "C": "Through the course portal",
+            "D": "In the professor’s office"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the student say after understanding the lesson better?",
+          "options": {
+            "A": "He wants more examples",
+            "B": "He needs more time",
+            "C": "It helps a lot",
+            "D": "He still doesn’t understand"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "Which word best describes the professor?",
+          "options": {
+            "A": "Impatient",
+            "B": "Helpful",
+            "C": "Confused",
+            "D": "Strict"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What is the main topic of the conversation?",
+          "options": {
+            "A": "Understanding food chains",
+            "B": "Clarifying homework instructions",
+            "C": "Plant growth and development",
+            "D": "Classroom rules"
+          },
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "L-B-3",
+      "audio": "assets/audio/easy03.mp3.mpeg",
+      "transcript": "Student A: Have you finished your part of the group project yet? Student B: Not completely. I’m still working on the timeline section. Student A: The project is due tomorrow morning, so we don’t have much time. Student B: I know. I plan to finish my work tonight. Student A: That’s good. I’ve already written the introduction, but it needs some editing. ■ Student B: I can help you review it if you want. Student A: That would be great. Thank you. Student B: Why don’t we meet in the library this evening? Student A: Sure. What time should we meet? Student B: Let’s meet at six p.m. Student A: Perfect. See you then.",
+      "insertSentence": "It’s important that we turn in a polished project because it affects our final grade.",
+      "correctSpot": 1,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To decide how to divide project tasks",
+            "B": "To discuss finishing a group project",
+            "C": "To complain about deadlines",
+            "D": "To plan a presentation"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does Student A ask Student B if they finished their part?",
+          "options": {
+            "A": "To check progress before the deadline",
+            "B": "To assign new tasks",
+            "C": "To request the timeline section",
+            "D": "To ask for help with writing"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "What part of the project is Student B still working on?",
+          "options": {
+            "A": "The introduction",
+            "B": "The timeline section",
+            "C": "The conclusion",
+            "D": "The presentation slides"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "When is the project due?",
+          "options": {
+            "A": "Tomorrow afternoon",
+            "B": "Tomorrow morning",
+            "C": "Tonight",
+            "D": "Next week"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What part has Student A already completed?",
+          "options": {
+            "A": "The timeline",
+            "B": "The conclusion",
+            "C": "The introduction",
+            "D": "The references"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What does Student B mean by 'I can help you review it if you want'?",
+          "options": {
+            "A": "They want Student A to rewrite the introduction",
+            "B": "They are offering to help edit the introduction",
+            "C": "They think the introduction is already perfect",
+            "D": "They plan to write another section"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the students?",
+          "options": {
+            "A": "They often work together on projects",
+            "B": "They have not started the project at all",
+            "C": "They do not understand the assignment",
+            "D": "They prefer working individually"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "Where do they plan to meet?",
+          "options": {
+            "A": "In a classroom",
+            "B": "In the library",
+            "C": "In the cafeteria",
+            "D": "Online"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What time will they meet?",
+          "options": {
+            "A": "5 p.m.",
+            "B": "6 p.m.",
+            "C": "7 p.m.",
+            "D": "8 p.m."
+          },
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "id": "L-B-4",
+      "audio": "assets/audio/easy04.mp3.mpeg",
+      "transcript": "Student: Hi, I'd like to join the photography club. Office Staff: That's great. You can sign up through the student activities website. Student: Are there any requirements to join? Office Staff: No, the club is open to all students. Student: Do I need to attend a meeting? Office Staff: Yes, you must attend the first meeting. Student: When is that? Office Staff: Next Tuesday at four p.m. in Room B204. Student: Do I need to bring my camera? Office Staff: Not for the first meeting. ■ They'll discuss equipment later. Student: Is there a membership fee? Office Staff: Yes, it's two hundred rupees for the semester. Student: Okay, thank you for the information. Office Staff: You're welcome.",
+      "insertSentence": "The first session will mainly explain how the club works and what members can expect.",
+      "correctSpot": 1,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To explain the rules of the student website",
+            "B": "To give details about joining the photography club",
+            "C": "To help the student submit an assignment",
+            "D": "To schedule a room reservation"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student speak to the office staff?",
+          "options": {
+            "A": "To borrow a camera",
+            "B": "To sign up for a club",
+            "C": "To pay a fine",
+            "D": "To ask about class timings"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How can the student sign up for the club?",
+          "options": {
+            "A": "By filling a paper form",
+            "B": "Through the student activities website",
+            "C": "By emailing the club leader",
+            "D": "By visiting Room B204"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Who can join the photography club?",
+          "options": {
+            "A": "Only students with cameras",
+            "B": "Only photography majors",
+            "C": "All students",
+            "D": "Only final-year students"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "When is the first meeting?",
+          "options": {
+            "A": "Tomorrow at 4 p.m.",
+            "B": "Next Tuesday at 4 p.m.",
+            "C": "Next Tuesday at 5 p.m.",
+            "D": "Next Monday at 4 p.m."
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Where will the first meeting take place?",
+          "options": {
+            "A": "Room B204",
+            "B": "Room A102",
+            "C": "The auditorium",
+            "D": "The library"
+          },
+          "answer": "A"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the office staff mean by 'Not for the first meeting'?",
+          "options": {
+            "A": "The student should buy a new camera",
+            "B": "The club does not allow cameras",
+            "C": "The student does not need to bring a camera yet",
+            "D": "The student must bring equipment to every meeting"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "How much is the membership fee?",
+          "options": {
+            "A": "100 rupees",
+            "B": "150 rupees",
+            "C": "200 rupees",
+            "D": "250 rupees"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the first meeting?",
+          "options": {
+            "A": "It will involve taking photos outdoors",
+            "B": "It will introduce club activities and expectations",
+            "C": "It will be cancelled due to low enrollment",
+            "D": "It requires students to bring photography equipment"
+          },
+          "answer": "B"
+        }
+      ]
+    },
+    {
+      "id": "L-B-5",
+      "audio": "assets/audio/easy05.mp3.mpeg",
+      "transcript": "Student: Hi, what is today’s special meal? Cafeteria Worker: Today we have vegetable pasta and grilled chicken. Student: Does the pasta contain any dairy products? Cafeteria Worker: Yes, it contains cheese. Student: I’m lactose intolerant. Is there another option? Cafeteria Worker: You can try the grilled chicken. Student: What comes with the chicken meal? Cafeteria Worker: It comes with rice and a small salad. Student: How much does it cost? Cafeteria Worker: It costs one hundred and twenty rupees. Student: Can I pay using my card? Cafeteria Worker: Yes, we accept card and digital payments. Student: Great, I’ll take the chicken meal. Cafeteria Worker: Sure. ■ It’ll be ready shortly.",
+      "insertSentence": "Many students choose this option because it is a healthier choice.",
+      "correctSpot": 0,
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "What is the main purpose of the conversation?",
+          "options": {
+            "A": "To ask about cafeteria payment issues",
+            "B": "To find out meal options and choose a suitable lunch",
+            "C": "To complain about the quality of food",
+            "D": "To ask for help with lactose intolerance"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why does the student approach the cafeteria worker?",
+          "options": {
+            "A": "To pay for a previous meal",
+            "B": "To ask about today's special food options",
+            "C": "To request a refund",
+            "D": "To discuss cafeteria rules"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What are the two special meals today?",
+          "options": {
+            "A": "Veg biryani and paneer curry",
+            "B": "Vegetable pasta and grilled chicken",
+            "C": "Chicken curry and mixed vegetables",
+            "D": "Pasta without cheese and grilled paneer"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "Why can't the student eat the pasta?",
+          "options": {
+            "A": "It is too spicy",
+            "B": "It contains dairy",
+            "C": "It is too expensive",
+            "D": "It is not available"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What sides come with the grilled chicken?",
+          "options": {
+            "A": "Bread and soup",
+            "B": "Fries and a drink",
+            "C": "Rice and a small salad",
+            "D": "Noodles and vegetables"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "How much does the grilled chicken meal cost?",
+          "options": {
+            "A": "100 rupees",
+            "B": "120 rupees",
+            "C": "150 rupees",
+            "D": "200 rupees"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "What does the cafeteria worker imply when saying 'Yes, we accept card and digital payments'?",
+          "options": {
+            "A": "Cash payments are not allowed",
+            "B": "The cafeteria recently added new payment options",
+            "C": "The student can pay conveniently using their card",
+            "D": "Digital payments are preferred"
+          },
+          "answer": "C"
+        },
+        {
+          "type": "mcq",
+          "question": "What can be inferred about the student's preference?",
+          "options": {
+            "A": "They prefer vegetarian food",
+            "B": "They cannot eat dairy products",
+            "C": "They regularly eat at the cafeteria",
+            "D": "They brought their own lunch"
+          },
+          "answer": "B"
+        },
+        {
+          "type": "mcq",
+          "question": "How does the student feel at the end of the conversation?",
+          "options": {
+            "A": "Confused about the menu",
+            "B": "Disappointed by the options",
+            "C": "Satisfied with the meal choice",
+            "D": "Worried about the payment process"
+          },
+          "answer": "C"
+        }
+      ]
+    }
+  ]
+}

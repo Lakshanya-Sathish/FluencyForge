@@ -1,0 +1,85 @@
+{
+    "level": "beginner",
+    "modules": [
+        {
+            "id": "W-B-1",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many schools are beginning to introduce after-school study programs to help students improve their academic performance and develop stronger study habits. These programs usually provide one to two additional hours after regular classes, during which students can complete homework, ask questions, and review lessons with the help of teachers or trained tutors. For some students, this dedicated study time is extremely useful because it offers a quiet and structured environment that is often difficult to find at home. They feel they can focus better without distractions from television, noisy surroundings, or household responsibilities. These programs also allow students to clarify doubts immediately instead of waiting until the next day. However, not everyone supports the idea. Some students believe that staying back after school makes their day unnecessarily long and exhausting. They worry that it reduces the time they have for rest, hobbies, or spending time with family. Parents also express concern that children may feel stressed if they are constantly engaged in academic activities. As a result, schools must carefully balance academic improvement with students’ need for free time and relaxation.",
+                    "task": "Summarize the main ideas from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you think homework is necessary for students? Explain your opinion with reasons.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-B-2",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many people believe that reading books plays an important role in improving creativity because it encourages the mind to imagine characters, settings, and situations in detail. When people read stories, they create mental pictures that help them think more creatively and solve problems in unique ways. Books also expose readers to different ideas, cultures, and perspectives, making them more open-minded. On the other hand, some individuals argue that watching videos is more effective for learning because visual content can explain concepts quickly and clearly. For example, educational videos, animations, and demonstrations make it easier for learners to understand topics that might be difficult to read about. Videos can also be more engaging, especially for young learners who struggle with long texts. However, critics say that videos require less imagination because everything is shown directly. Both reading and watching videos help people learn, but each method suits different types of learners. Some people learn best through imagination and reading, while others prefer visual explanations. Choosing the right method depends on personal learning style and the type of information being studied.",
+                    "task": "Summarize the main ideas from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you prefer reading books or watching videos to learn something new? Give reasons.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-B-3",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "In many communities, people are being encouraged to grow small home gardens as a way to improve their lifestyle and contribute positively to the environment. Home gardens can include vegetables, fruits, herbs, or even simple flowering plants. Growing these plants helps reduce stress because spending time in nature has a calming effect on the mind. It also allows families to eat fresher and healthier food, since homegrown produce is free from harmful chemicals. Additionally, having more plants in a neighborhood helps improve air quality and makes the surroundings more attractive. Despite these benefits, gardening is not easy for everyone. Maintaining a garden requires regular attention, including watering, protecting plants from pests, and ensuring they get enough sunlight. People with busy schedules may find it difficult to give consistent care. Some individuals also lack outdoor space, especially those living in apartments. Others may not have the knowledge or interest required to grow plants successfully. Because of these challenges, home gardening can be rewarding but also demanding, and whether it is suitable depends on each person’s lifestyle and resources.",
+                    "task": "Summarize the main ideas from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you think every home should have a small garden? Why or why not?",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-B-4",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Public parks play an important role in creating healthy and livable cities by providing open spaces where people of all ages can relax, exercise, and enjoy fresh air. Parks give residents a break from the noise, traffic, and stress of busy urban life. They offer peaceful walking paths, playgrounds for children, and green spaces where people can sit, read, or simply connect with nature. Many cities are now planning and building more parks to encourage outdoor activities and improve the mental and physical well-being of their citizens. Spending time outdoors has been shown to reduce stress, improve mood, and increase overall happiness. However, building public parks is not always easy. Creating these spaces requires large areas of land, which can be difficult to find in crowded cities. Construction and maintenance also require significant money and long-term planning. Some communities struggle to prioritize parks because they must focus on other needs such as housing, transportation, and public safety. Despite these challenges, public parks remain an essential part of a balanced and healthy lifestyle.",
+                    "task": "Summarize the main ideas from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Would you rather spend your free time indoors or outdoors? Explain with reasons.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        },
+        {
+            "id": "W-B-5",
+            "tasks": [
+                {
+                    "type": "integrated",
+                    "reading": "Many schools today are increasingly using technology such as tablets, laptops, and digital boards in classrooms. Supporters believe that technology makes lessons more engaging because interactive tools, videos, and animations help students understand difficult topics more easily. Digital devices also allow students to access a wide range of educational resources, including e-books, science simulations, and online research materials. These tools can encourage independent learning and make the classroom experience more enjoyable. However, not everyone agrees that technology is always beneficial. Some teachers worry that too much screen time can reduce students’ ability to focus and make them easily distracted by games or social media. Others argue that students may become too dependent on devices and lose important skills like handwriting or reading printed books. Technical problems, such as slow internet or device failures, can also interrupt lessons. While technology has many advantages, schools must ensure it is used in a balanced and purposeful way to support learning rather than replace traditional teaching methods completely.",
+                    "task": "Summarize the main ideas from the passage.",
+                    "expectedDurationMinutes": 20
+                },
+                {
+                    "type": "independent",
+                    "task": "Do you think technology makes learning better or worse? Give reasons.",
+                    "expectedDurationMinutes": 25
+                }
+            ]
+        }
+    ]
+}

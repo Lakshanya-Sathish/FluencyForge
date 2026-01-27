@@ -1,84 +1,175 @@
 {
-    "level": "intermediate",
+  "level": "intermediate",
   "modules": [
     {
       "id": "S-I-1",
-      "type": "independent",
-      "task": "Do you agree that students should wear uniforms?",
-      "sampleAnswer": "I agree that students should wear uniforms because they promote equality. Uniforms reduce pressure about fashion and help students focus on studies. Additionally, they create discipline and a sense of belonging in schools. Therefore, uniforms are beneficial for students.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Do you agree that students should wear uniforms?",
+          "sampleAnswer": "I agree that students should wear uniforms because they promote equality...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Describe a teacher who influenced you.",
+          "sampleAnswer": "One teacher who influenced me was my English teacher...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "The university recently announced a new plan to reduce the number of parking spaces on campus. According to the administration, the change is meant to encourage students to use public transportation and reduce traffic around the university. However, many students rely on cars because they live far away or have part-time jobs after class. Some students worry that fewer parking spots will make it harder to reach classes on time. The university has said it will introduce alternative transportation options, but details have not yet been shared.",
+          "listening": "A student disagrees with the plan.",
+          "audio": "assets/audio/S-I-1-integrated.mp3.mpeg",
+          "task": "Summarize the student’s opinion and reasons.",
+          "sampleAnswer": "The student disagrees with the plan because many commute from far places...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on the causes of stress.",
+          "audio": "assets/audio/S-I-1-lecture.mp3.mpeg",
+          "task": "Summarize the causes of stress.",
+          "sampleAnswer": "The lecturer explains heavy workload, lack of sleep, and poor time management...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-I-2",
-      "type": "independent",
-      "task": "Describe a teacher who influenced you.",
-      "sampleAnswer": "One teacher who influenced me was my English teacher. She encouraged students to speak confidently and corrected mistakes patiently. Because of her support, my communication skills improved significantly. She inspired me to work harder and believe in myself.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Is it better to study alone or in a group?",
+          "sampleAnswer": "I believe studying in a group is better because students can exchange ideas...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Do you think technology improves education?",
+          "sampleAnswer": "Yes, technology improves education by making learning more accessible...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "The college recently introduced a new attendance policy that requires students to be present for at least 85% of their classes each semester. The administration believes that consistent attendance helps students understand the material better and stay engaged in lessons. Many teachers have supported the policy, saying that students who attend regularly usually perform better in exams. Some students, however, feel the rule is strict, especially for those who balance studies with part-time jobs or personal responsibilities. The college says the policy will improve academic discipline overall.",
+          "listening": "A student supports the policy.",
+          "audio": "assets/audio/S-I-2-integrated.mp3.mpeg",
+          "task": "Explain why the student supports the policy.",
+          "sampleAnswer": "The student supports the policy because it encourages regular attendance...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on the causes of stress.",
+          "audio": "assets/audio/S-I-2-lecture.mp3.mpeg",
+          "task": "Summarize the causes of stress.",
+          "sampleAnswer": "The lecturer explains that stress comes from poor time management...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-I-3",
-      "type": "independent",
-      "task": "Is it better to study alone or in a group?",
-      "sampleAnswer": "I believe studying in a group is better because students can exchange ideas. Group discussions help clarify doubts quickly. For example, when preparing for exams with friends, we explain concepts to each other, which improves understanding.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Should students have part-time jobs?",
+          "sampleAnswer": "I think students should have part-time jobs because they learn responsibility...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Do you agree that competition improves student performance?",
+          "sampleAnswer": "Yes, competition motivates students to push themselves...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "Motivation is the driving force that helps people work toward their goals. Psychologists often explain that motivation can be either intrinsic or extrinsic. Intrinsic motivation comes from personal interest or enjoyment, while extrinsic motivation involves rewards such as grades or money. Many studies show that students who are intrinsically motivated tend to perform better academically because they enjoy the learning process. Teachers often try to encourage this by creating enjoyable activities, giving students choices, and reducing unnecessary pressure in the classroom.",
+          "listening": "The professor explains intrinsic motivation.",
+          "audio": "assets/audio/S-I-3-integrated.mp3.mpeg",
+          "task": "Explain intrinsic motivation.",
+          "sampleAnswer": "Intrinsic motivation means doing something because it is enjoyable...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on the causes of stress.",
+          "audio": "assets/audio/S-I-3-lecture.mp3.mpeg",
+          "task": "Summarize the lecture.",
+          "sampleAnswer": "The lecturer explains stress sources like deadlines and academic pressure...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-I-4",
-      "type": "independent",
-      "task": "Do you think technology improves education?",
-      "sampleAnswer": "Yes, technology improves education by making learning more accessible. Online resources, videos, and digital tools help students learn anytime. Technology also makes classes more interactive and engaging.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Do you agree that online learning is as effective as classroom learning?",
+          "sampleAnswer": "I think online learning is effective because it provides flexibility...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Describe a skill you learned recently.",
+          "sampleAnswer": "I recently learned basic photo editing, which helps me create better presentations...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "Renewable energy comes from natural sources that can be replaced faster than they are used. One common example is solar energy, which comes from the sun. Unlike fossil fuels, sunlight does not run out, making it a sustainable option for future energy needs. Solar panels are becoming more popular because they are clean and produce no pollution. Many countries are investing in solar farms to reduce their dependence on oil and coal. Experts believe that renewable energy will play a major role in fighting climate change.",
+          "listening": "A lecture on solar energy.",
+          "audio": "assets/audio/S-I-4-integrated.mp3.mpeg",
+          "task": "Explain why solar energy is renewable.",
+          "sampleAnswer": "The professor explains that solar energy is renewable because sunlight is unlimited...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on the causes of stress.",
+          "audio": "assets/audio/S-I-4-lecture.mp3.mpeg",
+          "task": "Summarize the lecture.",
+          "sampleAnswer": "The lecturer mentions stress due to lack of planning and external pressure...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     },
     {
       "id": "S-I-5",
-      "type": "independent",
-      "task": "Should students have part-time jobs?",
-      "sampleAnswer": "I think students should have part-time jobs because they learn responsibility and time management. Working also helps students gain practical experience and financial independence.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-I-6",
-      "type": "integrated",
-      "reading": "The university plans to reduce parking spaces.",
-      "listening": "A student disagrees with the plan.",
-      "task": "Summarize the student’s opinion and reasons.",
-      "sampleAnswer": "The student disagrees with the university’s plan to reduce parking spaces. He explains that many students commute from far places and depend on cars. He also says that public transportation is unreliable. Therefore, reducing parking spaces will create problems for students.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-I-7",
-      "type": "integrated",
-      "reading": "A new attendance policy is introduced.",
-      "listening": "A student supports the policy.",
-      "task": "Explain why the student supports the attendance policy.",
-      "sampleAnswer": "The student supports the new attendance policy because it encourages regular class participation. She believes attending lectures helps students understand topics better. She also mentions that regular attendance improves academic performance.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-I-8",
-      "type": "integrated",
-      "reading": "Motivation is the reason people act toward goals.",
-      "listening": "The professor explains intrinsic motivation.",
-      "task": "Explain intrinsic motivation using the lecture.",
-      "sampleAnswer": "Intrinsic motivation refers to doing something because it is enjoyable. The professor explains that students who enjoy learning study without pressure. For example, a student who loves music practices daily because of interest, not rewards.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-I-9",
-      "type": "integrated",
-      "reading": "Renewable energy comes from natural sources.",
-      "listening": "A lecture on solar energy.",
-      "task": "Explain why solar energy is renewable.",
-      "sampleAnswer": "The professor explains that solar energy is a renewable source because it comes from sunlight. He explains how solar panels convert sunlight into electricity. Solar energy reduces pollution and is environmentally friendly.",
-      "expectedDurationSeconds": 60
-    },
-    {
-      "id": "S-I-10",
-      "type": "lecture",
-      "listening": "A lecture on the causes of stress.",
-      "task": "Summarize the causes of stress mentioned in the lecture.",
-      "sampleAnswer": "The lecturer explains that stress is caused by heavy workload, lack of sleep, and poor time management. He mentions that students who do not plan their schedules often feel overwhelmed.",
-      "expectedDurationSeconds": 60
+      "tasks": [
+        {
+          "type": "independent",
+          "task": "Do you think social media helps students learn?",
+          "sampleAnswer": "Yes, social media can help students learn by providing educational content...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "independent",
+          "task": "Is traveling important for personal growth?",
+          "sampleAnswer": "Traveling is important because it exposes people to new cultures and ideas...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "integrated",
+          "reading": "The university recently revealed that it plans to reduce the number of parking spaces available on campus. The administration argues that the decision will reduce traffic and encourage students to use alternatives like cycling or public transport. However, many students feel the plan is unrealistic because buses often arrive late and routes do not cover all neighborhoods. Students who commute long distances worry that limited parking will make their daily travel more stressful and time-consuming.",
+          "listening": "A student disagrees with the plan.",
+          "audio": "assets/audio/S-I-5-integrated.mp3.mpeg",
+          "task": "Summarize the student’s reasons.",
+          "sampleAnswer": "The student disagrees because many students depend on cars...",
+          "expectedDurationSeconds": 60
+        },
+        {
+          "type": "lecture",
+          "listening": "A lecture on the causes of stress.",
+          "audio": "assets/audio/S-I-5-lecture.mp3.mpeg",
+          "task": "Summarize the lecture.",
+          "sampleAnswer": "The lecturer says stress is caused by workload and poor time use...",
+          "expectedDurationSeconds": 60
+        }
+      ]
     }
   ]
 }

@@ -1,247 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Reading | FluencyForge</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Reading | FluencyForge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f5f7ff;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-<style>
-body{
-  background:#f6f8ff;
-  font-family:Poppins,sans-serif;
-  margin:0;
-}
-.container{
-  max-width:900px;
-  margin:40px auto;
-  background:#fff;
-  padding:30px;
-  border-radius:16px;
-}
-.question{margin:20px 0}
-label{display:block;margin:6px 0;cursor:pointer}
-button{
-  margin-top:20px;
-  width:100%;
-  padding:14px;
-  border:none;
-  border-radius:12px;
-  background:#4a90e2;
-  color:#fff;
-  font-size:16px;
-  cursor:pointer;
-}
-.result{
-  margin-top:20px;
-  font-weight:600;
-  text-align:center;
-}
-.card{
-  padding:20px;
-  margin:15px 0;
-  border-radius:12px;
-  border:2px solid #4a90e2;
-  cursor:pointer;
-  text-align:center;
-}
-.locked{
-  opacity:0.4;
-  pointer-events:none;
-}
-</style>
+    .main {
+      display: flex;
+      height: 100vh;
+    }
+
+    #passagePane {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 2px solid #e2e2e2;
+    }
+
+    #questionPane {
+      width: 45%;
+      background: #fafafa;
+      padding: 20px;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .stickyHeader {
+      position: sticky;
+      top: 0;
+      background: #fafafa;
+      padding: 12px 0;
+      z-index: 100;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #timer {
+      font-weight: bold;
+      background: #4a90e2;
+      padding: 6px 12px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .question {
+      margin: 25px 0;
+      padding: 15px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .optionLabel {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+
+    .insert-spot {
+      background: #e5e5e5;
+      padding: 2px 6px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .insert-spot.selected {
+      background: #ffe44d;
+    }
+
+    .toefl-highlight {
+      background: #fff7a6;
+      padding: 2px 4px;
+    }
+
+    #reviewScreen {
+      display: none;
+      padding: 20px;
+    }
+
+    .review-item {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- LEVEL SELECTION -->
-<div class="container" id="levelContainer">
-  <h1>Reading Practice</h1>
+  <div class="main">
 
-  <div class="card" onclick="openModules('easy')">
-    <h2>Beginner</h2>
-  </div>
+    <div id="passagePane">
+      <h2>Reading Passage</h2>
+      <div id="passageContent"></div>
+    </div>
 
-  <div class="card locked" id="intermediateCard" onclick="openModules('intermediate')">
-    <h2>Intermediate</h2>
-  </div>
-
-  <div class="card locked" id="advancedCard" onclick="openModules('advanced')">
-    <h2>Advanced</h2>
-  </div>
-</div>
-
-<!-- MODULE SELECTION -->
-<div class="container" id="moduleContainer" style="display:none">
-  <h1 id="moduleTitle"></h1>
-  <div id="modules"></div>
-  <button onclick="backToLevels()">⬅ Back</button>
-</div>
-
-<!-- READING CONTENT -->
-<div class="container" id="readingContainer" style="display:none">
-  <h1 id="title"></h1>
-  <p id="passage"></p>
-
-  <div id="questions"></div>
-
-  <button id="submitBtn">Submit</button>
-  <div class="result" id="result"></div>
-</div>
-
-<script>
-let correctAnswers = [];
-let currentLevel = null;
-let currentModule = null;
-
-/* LOAD PROGRESS */
-let progress = JSON.parse(localStorage.getItem("readingProgress")) || {
-  easy: null,
-  intermediate: null,
-  advanced: null
-};
-
-/* UNLOCK LEVELS */
-if(progress.easy >= 51){
-  document.getElementById("intermediateCard").classList.remove("locked");
-}
-if(progress.intermediate >= 51){
-  document.getElementById("advancedCard").classList.remove("locked");
-}
-
-/* OPEN MODULE LIST */
-function openModules(level){
-  currentLevel = level;
-
-  document.getElementById("levelContainer").style.display = "none";
-  document.getElementById("moduleContainer").style.display = "block";
-  document.getElementById("readingContainer").style.display = "none";
-
-  document.getElementById("moduleTitle").textContent =
-    level.charAt(0).toUpperCase() + level.slice(1) + " Modules";
-
-  const box = document.getElementById("modules");
-  box.innerHTML = "";
-
-  for(let i=1;i<=10;i++){
-    box.innerHTML += `
-      <div class="card" onclick="openModule('${level}',${i})">
-        Module ${i}
+    <div id="questionPane">
+      <div class="stickyHeader">
+        <div id="progressText"></div>
+        <div id="timer">10:00</div>
       </div>
-    `;
-  }
-}
 
-/* OPEN MODULE */
-function openModule(level, module){
-  currentLevel = level;
-  currentModule = module;
+      <div id="questionsContainer"></div>
 
-  document.getElementById("moduleContainer").style.display = "none";
-  document.getElementById("readingContainer").style.display = "block";
+      <button id="submitBtn" onclick="submitModule()"
+        style="margin-top:20px;padding:12px;width:100%;border:none;border-radius:8px;background:#4a90e2;color:#fff;">
+        Submit Answers
+      </button>
 
-  loadReading();
-}
+      <div id="reviewScreen">
+        <h2>Review Answers</h2>
+        <div id="reviewList"></div>
 
-/* LOAD READING */
-async function loadReading(){
-  try{
-    let jsonFile =
-      currentLevel === "easy" ? "content/reading/beginner.json" :
-      currentLevel === "intermediate" ? "content/reading/intermediate.json" :
-      "content/reading/advanced.json";
+        <button onclick="finishModule()"
+          style="margin-top:20px;padding:12px;width:100%;border:none;border-radius:8px;background:#4a90e2;color:#fff;">
+          Finish Module
+        </button>
+      </div>
 
-    const res = await fetch(jsonFile);
-    if(!res.ok) throw new Error("JSON not found");
+    </div>
+  </div>
 
-    const data = await res.json();
-    const index = currentModule - 1;
-    const passage = data.passages[index];
+  <script>
+    /* ---------------- READ MODULE ID FROM URL ---------------- */
+    const params = new URLSearchParams(window.location.search);
+    let moduleId = params.get("id");
 
-    document.getElementById("title").textContent = passage.title;
-    document.getElementById("passage").textContent = passage.text;
+    if (!moduleId) {
+      alert("Invalid module.");
+      window.location.href = "reading-modules.html";
+    }
 
-    const qBox = document.getElementById("questions");
-    qBox.innerHTML = "";
-    correctAnswers = [];
+    /* LEVEL DETECTION */
+    let prefix = moduleId.split("-")[1]; // B, I, A
+    let currentLevel =
+      prefix === "B" ? "beginner" :
+        prefix === "I" ? "intermediate" :
+          prefix === "A" ? "advanced" :
+            null;
 
-    passage.questions.forEach((q,i)=>{
-      correctAnswers.push(q.answer);
-      qBox.innerHTML += `
-        <div class="question">
-          <h3>${i+1}. ${q.question}</h3>
-          ${Object.entries(q.options).map(([k,v])=>`
-            <label>
-              <input type="radio" name="q${i}" value="${k}">
-              (${k}) ${v}
-            </label>
-          `).join("")}
-        </div>
-      `;
-    });
+    if (!currentLevel) {
+      alert("Invalid module level.");
+      window.location.href = "reading-modules.html";
+    }
 
-    document.getElementById("result").textContent = "";
+    let questionsData = [];
+    let userAnswers = {};
+    let timerSeconds = 600;
+    let selectedInsert = null;
 
-  }catch(err){
-    alert("Failed to load reading content");
-  }
-}
+    /* ---------------- LOAD READING MODULE ---------------- */
+    async function loadReading() {
+      try {
+        const res = await fetch(`content/reading/${currentLevel}.json`);
+        const data = await res.json();
 
-/* SUBMIT */
-document.getElementById("submitBtn").addEventListener("click", ()=>{
-  let score = 0;
+        /* FIND THE MODULE BY ID */
+        let module = data.modules.find(m => m.id === moduleId);
 
-  correctAnswers.forEach((ans,i)=>{
-    const sel = document.querySelector(`input[name="q${i}"]:checked`);
-    if(sel && sel.value === ans) score++;
-  });
+        if (!module) {
+          document.getElementById("passageContent").innerText = "Module not found.";
+          return;
+        }
 
-  const percent = Math.round((score / correctAnswers.length) * 100);
+        /* PASSAGE PROCESSING */
+        let processed = module.passage
+          .replace(/■/g, `<span class="insert-spot" onclick="selectInsert(this)">■</span>`)
+          .replace(/\[HIGHLIGHT\](.*?)\[END\]/g, `<span class="toefl-highlight">$1</span>`);
 
-  document.getElementById("result").textContent =
-    `Score: ${score}/${correctAnswers.length} (${percent}%)`;
+        document.getElementById("passageContent").innerHTML = processed;
 
-  progress[currentLevel] = percent;
-  localStorage.setItem("readingProgress", JSON.stringify(progress));
+        questionsData = module.questions;
+        renderQuestions();
+        startTimer();
 
-  if(currentLevel === "easy" && percent >= 51){
-    document.getElementById("intermediateCard").classList.remove("locked");
-  }
-  if(currentLevel === "intermediate" && percent >= 51){
-    document.getElementById("advancedCard").classList.remove("locked");
-  }
-});
-
-/* BACK */
-function backToLevels(){
-  document.getElementById("moduleContainer").style.display = "none";
-  document.getElementById("readingContainer").style.display = "none";
-  document.getElementById("levelContainer").style.display = "block";
-}
-function initProgress() {
-  if (!localStorage.getItem("progress")) {
-    localStorage.setItem("progress", JSON.stringify({
-      speaking: {
-        beginner: false,
-        intermediate: false,
-        advanced: false
-      },
-      listening: {
-        beginner: null,
-        intermediate: null,
-        advanced: null
-      },
-      reading: {
-        beginner: null,
-        intermediate: null,
-        advanced: null
+      } catch (e) {
+        console.error(e);
+        document.getElementById("passageContent").innerText = "Error loading data.";
       }
-    }));
-  }
-}
-initProgress();
-</script>
+    }
+
+    /* ---------------- RENDER QUESTIONS ---------------- */
+    function renderQuestions() {
+      const qBox = document.getElementById("questionsContainer");
+      qBox.innerHTML = "";
+
+      questionsData.forEach((q, i) => {
+        let html = `<div class="question" id="q${i}">
+      <h3>Q${i + 1}. ${q.question}</h3>`;
+
+        if (q.type === "mcq") {
+          for (let [key, val] of Object.entries(q.options)) {
+            html += `
+        <label class="optionLabel">
+          <input type="radio" name="q${i}" value="${key}">
+          (${key}) ${val}
+        </label>`;
+          }
+        }
+
+        if (q.type === "ctest") {
+          html += `<p>${q.textBefore}
+        <input class="ctest-input" maxlength="${q.gapLength}">
+        ${q.textAfter}</p>`;
+        }
+
+        if (q.type === "insert") {
+          html += `
+        <p><strong>Sentence to insert:</strong> "${q.sentence}"</p>
+        <p>Click on a ■ in the passage.</p>`;
+        }
+
+        html += `</div>`;
+        qBox.innerHTML += html;
+      });
+    }
+
+    /* ---------------- INSERT SENTENCE ---------------- */
+    function selectInsert(el) {
+      document.querySelectorAll(".insert-spot").forEach(s => s.classList.remove("selected"));
+      el.classList.add("selected");
+      selectedInsert = [...document.querySelectorAll(".insert-spot")].indexOf(el);
+    }
+
+    /* ---------------- TIMER ---------------- */
+    function startTimer() {
+      let interval = setInterval(() => {
+        if (timerSeconds <= 0) {
+          clearInterval(interval);
+          return;
+        }
+
+        timerSeconds--;
+        let m = Math.floor(timerSeconds / 60);
+        let s = timerSeconds % 60;
+        document.getElementById("timer").innerText =
+          `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+      }, 1000);
+    }
+
+    /* ---------------- COLLECT ---------------- */
+    function collectAnswers() {
+      userAnswers = {};
+
+      questionsData.forEach((q, i) => {
+        if (q.type === "mcq") {
+          let selected = document.querySelector(`input[name="q${i}"]:checked`);
+          userAnswers[i] = selected ? selected.value : null;
+        }
+
+        if (q.type === "ctest") {
+          userAnswers[i] = document.querySelector(`#q${i} input`).value.trim();
+        }
+
+        if (q.type === "insert") {
+          userAnswers[i] = selectedInsert;
+        }
+      });
+    }
+
+    /* ---------------- SCORE ---------------- */
+    function calculateScore() {
+      let score = 0;
+
+      questionsData.forEach((q, i) => {
+        if (q.type === "mcq" && userAnswers[i] === q.answer) score++;
+        if (q.type === "ctest" && userAnswers[i].toLowerCase() === q.answer.toLowerCase()) score++;
+        if (q.type === "insert" && Number(userAnswers[i]) === Number(q.correctSpot)) score++;
+      });
+
+      return Math.round((score / questionsData.length) * 100);
+    }
+
+    /* ---------------- SUBMIT ---------------- */
+    function submitModule() {
+      collectAnswers();
+      timerSeconds = 0;
+      showReview();
+    }
+
+    /* ---------------- REVIEW ---------------- */
+    function showReview() {
+      document.getElementById("questionsContainer").style.display = "none";
+      document.getElementById("submitBtn").style.display = "none";
+
+      const box = document.getElementById("reviewScreen");
+      const list = document.getElementById("reviewList");
+
+      box.style.display = "block";
+      list.innerHTML = "";
+
+      questionsData.forEach((q, i) => {
+        let ans = userAnswers[i];
+        let done = ans !== null && ans !== "" && ans !== undefined;
+
+        list.innerHTML += `
+      <div class="review-item">
+        <strong>Q${i + 1}</strong> — ${done ? "Answered" : "Skipped"}
+      </div>`;
+      });
+    }
+
+    /* ---------------- FINISH ---------------- */
+    function finishReading() {
+      const percent = calculateScore();
+
+      alert(`Score: ${percent}%`);
+      window.location.href = "reading-modules.html";
+    }
+
+    loadReading();
+  </script>
 
 </body>
+
 </html>
