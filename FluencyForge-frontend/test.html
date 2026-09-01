@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FluencyForge — Mini Test</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="test-header">
+    <div class="brand">Mini Test</div>
+
+    <div class="progress-container">
+      <div class="progress-track">
+        <div id="globalProgress" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <div id="fixedTimer" class="timer">Time Left: 5:00</div>
+  </header>
+
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- ---- INTRO ---- -->
+    <section class="card" id="introCard">
+      <h1>Mini TOEFL Test</h1>
+      <p class="lead">Includes Reading, Listening, and Writing. You must be logged in. You can take this only once.</p>
+
+      <button id="getStartedBtn" class="btn btn-primary">Start Test</button>
+      <button id="howItWorksBtn" class="btn btn-ghost">How it works</button>
+    </section>
+
+
+    <!-- ---- READING ---- -->
+    <section class="card" id="readingCard" hidden>
+      <h2>📖 Reading (3 Questions)</h2>
+
+      <div class="passage">
+        Sleep is essential for good health. During sleep, the body repairs itself and the brain processes information from the day. People who don’t get enough sleep often feel tired, forgetful, and stressed. Experts recommend that adults sleep about seven to eight hours each night to stay healthy and focused.
+      </div>
+
+      <div class="question">
+        <p>1. What happens during sleep?</p>
+        <label><input type="radio" name="r1" value="A">The brain stops working</label>
+        <label><input type="radio" name="r1" value="B">The body repairs itself</label>
+        <label><input type="radio" name="r1" value="C">The body gets weaker</label>
+        <label><input type="radio" name="r1" value="D">The heart rate increases</label>
+      </div>
+
+      <div class="question">
+        <p>2. Experts recommend:</p>
+        <label><input type="radio" name="r2" value="A">Less than 5 hours</label>
+        <label><input type="radio" name="r2" value="B">7–8 hours</label>
+        <label><input type="radio" name="r2" value="C">Stay awake</label>
+        <label><input type="radio" name="r2" value="D">Drink coffee</label>
+      </div>
+
+      <div class="question">
+        <p>3. People who don’t sleep enough feel:</p>
+        <label><input type="radio" name="r3" value="A">Energized</label>
+        <label><input type="radio" name="r3" value="B">Tired</label>
+        <label><input type="radio" name="r3" value="C">Wealthy</label>
+        <label><input type="radio" name="r3" value="D">Indifferent</label>
+      </div>
+
+      <button id="toListeningBtn" class="btn btn-accent">Next → Listening</button>
+    </section>
+
+
+    <!-- ---- LISTENING ---- -->
+    <section class="card" id="listeningCard" hidden>
+      <h2>🎧 Listening (3 Questions)</h2>
+
+      <button id="playAudioBtn" class="btn btn-primary">Play Audio (ONCE)</button>
+      <audio id="listeningAudio" preload="auto" src="assets/audio/Mini_test.mp3"></audio>
+
+      <div class="question">
+        <p>4. What is recycling?</p>
+        <label><input type="radio" name="l1" value="A">Throwing away materials</label>
+        <label><input type="radio" name="l1" value="B">Making new products from old materials</label>
+        <label><input type="radio" name="l1" value="C">Buying new items</label>
+        <label><input type="radio" name="l1" value="D">Saving money</label>
+      </div>
+
+      <div class="question">
+        <p>5. Benefit of recycling?</p>
+        <label><input type="radio" name="l2" value="A">More waste</label>
+        <label><input type="radio" name="l2" value="B">Saves natural resources</label>
+        <label><input type="radio" name="l2" value="C">Uses more plastic</label>
+        <label><input type="radio" name="l2" value="D">Creates pollution</label>
+      </div>
+
+      <div class="question">
+        <p>6. Plastic bottles can become:</p>
+        <label><input type="radio" name="l3" value="A">Clothing</label>
+        <label><input type="radio" name="l3" value="B">Cars</label>
+        <label><input type="radio" name="l3" value="C">Food</label>
+        <label><input type="radio" name="l3" value="D">Money</label>
+      </div>
+
+      <button id="toWritingBtn" class="btn btn-accent">Next → Writing</button>
+    </section>
+
+
+    <!-- ---- WRITING ---- -->
+    <section class="card" id="writingCard" hidden>
+      <h2>✍️ Writing</h2>
+
+      <p class="lead">Write 3–5 sentences:  
+        <strong>“Reading books is better than watching movies.”</strong>
+      </p>
+
+      <textarea id="writingAnswer" placeholder="Write here..."></textarea>
+
+      <button id="submitAllBtn" class="btn btn-primary">Submit Test</button>
+    </section>
+
+  </main>
+
+
+  <!-- ---- RESULT MODAL ---- -->
+  <div class="modal" id="resultModal">
+    <div class="modal-box">
+      <h3>Results</h3>
+      <p>Reading: <strong id="readingScore">0</strong>/3</p>
+      <p>Listening: <strong id="listeningScore">0</strong>/3</p>
+      <p>Writing: <span id="writingNote">—</span></p>
+      <p>Level: <span id="levelBadge" class="badge beginner">Beginner</span></p>
+
+      <button id="goProgressBtn" class="btn btn-accent">Go to Progress</button>
+      <button id="returnHomeBtn" class="btn btn-ghost">Return Home</button>
+    </div>
+  </div>
+
+
+<script type="module" src="mini-test.js"></script>
+</body>
+</html>
