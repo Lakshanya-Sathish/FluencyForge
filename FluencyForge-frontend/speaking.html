@@ -125,138 +125,511 @@
   </div>
 
   <script>
+    // =====================================================
+    // CONFIG
+    // =====================================================
+
+    // TEMPORARILY use your local backend.
+    // Later we will replace this with your Vercel backend URL.
     const API_BASE = "http://127.0.0.1:3001";
-    let params = new URLSearchParams(window.location.search);
-    let moduleId = params.get("id");
+
+    const params = new URLSearchParams(window.location.search);
+    const moduleId = params.get("id");
 
     let tasks = [];
     let current = 0;
-    let recorder;
-    let audioChunks = [];
+
+    // Speech recognition
+    let recognition = null;
     let recording = false;
+    let transcript = "";
+
+    // =====================================================
+    // DETERMINE LEVEL
+    // =====================================================
 
     let level =
-      moduleId.includes("-B") ? "beginner" :
-        moduleId.includes("-I") ? "intermediate" : "advanced";
+      moduleId && moduleId.includes("-B") ? "beginner" :
+        moduleId && moduleId.includes("-I") ? "intermediate" :
+          "advanced";
 
-    async function loadSpeaking() {
-      const res = await fetch(`content/speaking/${level}.json`);
-      const data = await res.json();
-      tasks = data.modules.find(m => m.id === moduleId).tasks;
-      loadTask();
-    }
 
-    function loadTask() {
-      const t = tasks[current];
+    // =====================================================
+    // SPEECH RECOGNITION
+    // =====================================================
 
-      document.getElementById("taskHeader").innerText = `${t.type.toUpperCase()} Task`;
-      document.getElementById("taskProgress").innerText = `Task ${current + 1} of ${tasks.length}`;
+    const SpeechRecognition =
+      window.SpeechRecognition ||
+      window.webkitSpeechRecognition;
 
-      document.getElementById("readingContainer").innerHTML =
-        t.reading ? `<div class="readingBlock">${t.reading}</div>` : "";
+    if (SpeechRecognition) {
 
-      document.getElementById("listeningContainer").innerHTML =
-        t.audio ? `<audio controls src="${t.audio}"></audio>` : "";
+      recognition = new SpeechRecognition();
 
-      document.getElementById("taskPrompt").innerHTML =
-        `<strong>Task:</strong> ${t.task}`;
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = "en-US";
 
-      // RESET FEEDBACK BOX — BUT KEEP IT VISIBLE
-      showAIFeedback("Waiting for your answer...");
-      document.getElementById("nextBtn").style.display = "none";
-      document.getElementById("submitBtn").style.display = "block";
-    }
+      recognition.onstart = () => {
+        console.log("Speech recognition started");
+        recording = true;
 
-    document.getElementById("micBtn").onclick = () =>
-      recording ? stopRecording() : startRecording();
-
-    async function startRecording() {
-      let stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-
-      recorder = new MediaRecorder(stream);
-      audioChunks = [];
-
-      recorder.ondataavailable = e => audioChunks.push(e.data);
-      recorder.start();
-      recording = true;
-
-      document.getElementById("micBtn").innerText = "⏹ Stop Recording";
-    }
-
-    function stopRecording() {
-      recording = false;
-      recorder.stop();
-
-      recorder.onstop = () => {
-        let blob = new Blob(audioChunks, { type: "audio/webm" });
-        tasks[current].userAudio = blob;
-        sendForAI(blob);
+        document.getElementById("micBtn").innerText =
+          "⏹ Stop Speaking";
       };
 
-      document.getElementById("micBtn").innerText = "🎤 Start Recording";
+      recognition.onresult = (event) => {
+
+        let finalTranscript = "";
+        let interimTranscript = "";
+
+        for (
+          let i = event.resultIndex;
+          i < event.results.length;
+          i++
+        ) {
+
+          const result = event.results[i];
+
+          if (result.isFinal) {
+            finalTranscript += result[0].transcript + " ";
+          } else {
+            interimTranscript += result[0].transcript;
+          }
+        }
+
+        transcript += finalTranscript;
+
+        console.log(
+          "Transcript:",
+          transcript + interimTranscript
+        );
+
+        // Show live transcript
+        showAIFeedback(`
+        <strong>Your response:</strong><br><br>
+        ${escapeHTML(transcript + interimTranscript)}
+      `);
+      };
+
+
+      recognition.onerror = (event) => {
+
+        console.error(
+          "Speech recognition error:",
+          event.error
+        );
+
+        recording = false;
+
+        document.getElementById("micBtn").innerText =
+          "🎤 Start Speaking";
+
+        if (event.error === "not-allowed") {
+
+          showAIFeedback(
+            "⚠️ Microphone permission was denied.<br>" +
+            "Please allow microphone access and try again."
+          );
+
+        } else {
+
+          showAIFeedback(
+            "⚠️ Speech recognition failed.<br>" +
+            "Please try speaking again."
+          );
+        }
+      };
+
+
+      recognition.onend = () => {
+
+        console.log("Speech recognition ended");
+
+        if (recording) {
+          try {
+            recognition.start();
+          } catch (error) {
+            console.log("Recognition restart skipped.");
+          }
+        }
+      };
+
+    } else {
+
+      document.getElementById("micBtn").disabled = true;
+
+      showAIFeedback(
+        "⚠️ Speech recognition is not supported in this browser.<br>" +
+        "Please use Google Chrome or Microsoft Edge."
+      );
     }
 
-    async function sendForAI(blob) {
-      const fd = new FormData();
-      fd.append("audio", new File([blob], "speech.webm", { type: "audio/webm" }));
-      fd.append("moduleId", moduleId);
 
-      showAIFeedback("<em>Evaluating... please wait</em>");
+    // =====================================================
+    // LOAD SPEAKING CONTENT
+    // =====================================================
+
+    async function loadSpeaking() {
 
       try {
-        const res = await fetch(`${API_BASE}/api/evaluate-speaking`, {
-          method: "POST",
-          body: fd
-        });
+
+        const res =
+          await fetch(`content/speaking/${level}.json`);
 
         if (!res.ok) {
-          const errorText = await res.text();
-          throw new Error(errorText || "Server error");
+          throw new Error("Unable to load speaking content.");
         }
 
         const data = await res.json();
 
-        showAIFeedback(data.feedback || "No feedback returned");
-        document.getElementById("nextBtn").style.display = "block";
-        document.getElementById("submitBtn").style.display = "none";
+        const selectedModule =
+          data.modules.find(m => m.id === moduleId);
 
-      } catch (err) {
-        console.error("AI ERROR:", err);
+        if (!selectedModule) {
+
+          throw new Error(
+            "Speaking module not found: " + moduleId
+          );
+        }
+
+        tasks = selectedModule.tasks;
+
+        loadTask();
+
+      } catch (error) {
+
+        console.error("CONTENT ERROR:", error);
+
         showAIFeedback(
-          "⚠️ AI evaluation failed.<br>Please try recording again."
+          "⚠️ Unable to load this speaking module."
         );
       }
     }
 
+
+    // =====================================================
+    // LOAD CURRENT TASK
+    // =====================================================
+
+    function loadTask() {
+
+      const t = tasks[current];
+
+      document.getElementById("taskHeader").innerText =
+        `${t.type.toUpperCase()} Task`;
+
+      document.getElementById("taskProgress").innerText =
+        `Task ${current + 1} of ${tasks.length}`;
+
+      document.getElementById("readingContainer").innerHTML =
+        t.reading
+          ? `<div class="readingBlock">${t.reading}</div>`
+          : "";
+
+      document.getElementById("listeningContainer").innerHTML =
+        t.audio
+          ? `<audio controls src="${t.audio}"></audio>`
+          : "";
+
+      document.getElementById("taskPrompt").innerHTML =
+        `<strong>Task:</strong> ${t.task}`;
+
+
+      // Reset transcript
+      transcript = "";
+      recording = false;
+
+
+      // Reset buttons
+      document.getElementById("micBtn").innerText =
+        "🎤 Start Speaking";
+
+      document.getElementById("micBtn").disabled =
+        !SpeechRecognition;
+
+      document.getElementById("submitBtn").style.display =
+        "block";
+
+      document.getElementById("nextBtn").style.display =
+        "none";
+
+
+      showAIFeedback(
+        "Your AI evaluation will appear here after you submit your response."
+      );
+    }
+
+
+    // =====================================================
+    // MICROPHONE BUTTON
+    // =====================================================
+
+    document.getElementById("micBtn").onclick = () => {
+
+      if (!recognition) {
+
+        alert(
+          "Speech recognition is not supported. Please use Chrome or Edge."
+        );
+
+        return;
+      }
+
+      if (recording) {
+        stopRecording();
+      } else {
+        startRecording();
+      }
+    };
+
+
+    // =====================================================
+    // START SPEAKING
+    // =====================================================
+
+    function startRecording() {
+
+      transcript = "";
+      recording = true;
+
+      showAIFeedback(
+        "<strong>🎤 Listening...</strong><br><br>" +
+        "Start speaking. Your response will appear here."
+      );
+
+      try {
+
+        recognition.start();
+
+      } catch (error) {
+
+        console.error(
+          "Recognition start error:",
+          error
+        );
+
+        recording = false;
+      }
+    }
+
+
+    // =====================================================
+    // STOP SPEAKING
+    // =====================================================
+
+    function stopRecording() {
+
+      recording = false;
+
+      if (recognition) {
+        recognition.stop();
+      }
+
+      document.getElementById("micBtn").innerText =
+        "🎤 Start Speaking";
+
+      console.log(
+        "Final transcript:",
+        transcript
+      );
+    }
+
+
+    // =====================================================
+    // SUBMIT TASK
+    // =====================================================
+
+    async function submitTask() {
+
+      if (!transcript || transcript.trim().length === 0) {
+
+        alert(
+          "Please record your answer first."
+        );
+
+        return;
+      }
+
+      // Make sure recognition has stopped
+      if (recording) {
+        stopRecording();
+      }
+
+      const submitBtn =
+        document.getElementById("submitBtn");
+
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Evaluating...";
+
+      showAIFeedback(
+        "<em>🤖 Claude is evaluating your response...</em>"
+      );
+
+
+      try {
+
+        const res =
+          await fetch(
+            `${API_BASE}/api/evaluate-speaking`,
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type": "application/json"
+              },
+
+              body: JSON.stringify({
+                transcript: transcript,
+                moduleId: moduleId
+              })
+            }
+          );
+
+
+        if (!res.ok) {
+
+          const errorText =
+            await res.text();
+
+          throw new Error(
+            errorText || "Server error"
+          );
+        }
+
+
+        const data =
+          await res.json();
+
+
+        console.log(
+          "CLAUDE RESPONSE:",
+          data
+        );
+
+
+        showAIFeedback(
+          formatFeedback(
+            data.feedback || "No feedback returned."
+          )
+        );
+
+
+        document.getElementById("nextBtn").style.display =
+          "block";
+
+        submitBtn.style.display =
+          "none";
+
+
+      } catch (error) {
+
+        console.error(
+          "AI ERROR:",
+          error
+        );
+
+        showAIFeedback(
+          "⚠️ AI evaluation failed.<br><br>" +
+          "Please try again."
+        );
+
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit Task";
+      }
+    }
+
+
+    // =====================================================
+    // FORMAT CLAUDE RESPONSE
+    // =====================================================
+
+    function formatFeedback(text) {
+
+      return `
+      <div>
+        <strong>Your Transcript</strong>
+
+        <p>
+          ${escapeHTML(transcript)}
+        </p>
+
+        <hr>
+
+        <strong>Claude's Evaluation</strong>
+
+        <p>
+          ${escapeHTML(text)
+          .replace(/\n/g, "<br>")}
+        </p>
+      </div>
+    `;
+    }
+
+
+    // =====================================================
+    // SHOW AI FEEDBACK
+    // =====================================================
+
     function showAIFeedback(text) {
-      const box = document.getElementById("aiFeedbackBox");
+
+      const box =
+        document.getElementById("aiFeedbackBox");
 
       box.style.display = "block";
       box.style.visibility = "visible";
       box.style.opacity = "1";
 
-      box.innerHTML = `<h2>AI Evaluation</h2>${text.replace(/\n/g, "<br>")}`;
+      box.innerHTML =
+        `<h2>AI Evaluation</h2>${text}`;
     }
 
-    function submitTask() {
-      if (!tasks[current].userAudio) {
-        alert("Record your answer first.");
-        return;
-      }
-      document.getElementById("nextBtn").style.display = "block";
-      document.getElementById("submitBtn").style.display = "none";
-    }
+
+    // =====================================================
+    // NEXT TASK
+    // =====================================================
 
     function goNextTask() {
+
       if (current < tasks.length - 1) {
+
         current++;
+
         loadTask();
+
       } else {
-        showAIFeedback("🎉 Module Completed!");
+
+        showAIFeedback(
+          "🎉 Module Completed!"
+        );
+
+        document.getElementById("nextBtn").style.display =
+          "none";
       }
     }
 
+
+    // =====================================================
+    // HTML ESCAPE
+    // =====================================================
+
+    function escapeHTML(text) {
+
+      const div =
+        document.createElement("div");
+
+      div.textContent = text;
+
+      return div.innerHTML;
+    }
+
+
+    // =====================================================
+    // START
+    // =====================================================
+
     loadSpeaking();
+
   </script>
 
 </body>
